@@ -2,10 +2,15 @@
 
 module.exports = function(grunt) {
   "use strict";
+  var uCommFiles = {
+      "ucomm/css/base.css": "ucomm/less/base.less"
+    , "ucomm/css/base-responsive.css": "ucomm/less/base-responsive.less"
+  };
+  var homepageRepo = "../su-homepage";
 
   // Project configuration.
   grunt.initConfig({
-
+    
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
     banner: '/*!\n' +
@@ -101,11 +106,34 @@ module.exports = function(grunt) {
       }
     },
 
+    less: {
+      dev: {
+        options: {
+            paths: ["ucomm/less", "less"]
+          , dumpLineNumbers: "comments"
+        },
+        files: uCommFiles
+      },
+      prod: {
+        options: {
+            paths: ["ucomm/less", "less"]
+          , yuicompress: true
+        },
+        files: uCommFiles
+      }
+    },
+
     copy: {
       fonts: {
         expand: true,
         src: ["fonts/*"],
         dest: 'dist/'
+      },
+      ucomm: {
+        src: ["ucomm/css/*"],
+        dest: homepageRepo+'/assets/css/',
+        expand: true,
+        flatten: true
       }
     },
 
@@ -168,6 +196,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-recess');
   grunt.loadNpmTasks('browserstack-runner');
+  grunt.loadNpmTasks('grunt-contrib-less'); // added by UComm
 
   // Docs HTML validation task
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
@@ -190,7 +219,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dist-css', ['recess']);
 
   // Fonts distribution task.
-  grunt.registerTask('dist-fonts', ['copy']);
+  grunt.registerTask('dist-fonts', ['copy:fonts']);
 
   // Full distribution task.
   grunt.registerTask('dist', ['clean', 'dist-css', 'dist-fonts', 'dist-js']);
@@ -218,4 +247,9 @@ module.exports = function(grunt) {
     var files = getFiles('js') + getFiles('less') + getFiles('fonts')
     fs.writeFileSync('assets/js/raw-files.js', files)
   });
+
+  // UComm tasks
+  grunt.registerTask('dev',    ['less:dev']);
+  grunt.registerTask('prod',   ['less:prod']);
+  grunt.registerTask('deploy', ['copy:ucomm']);
 };
