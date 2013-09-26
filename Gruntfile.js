@@ -255,7 +255,8 @@ module.exports = function(grunt) {
   });
 
   // UComm tasks
-  grunt.registerTask('dev',    ['less:dev']);
-  grunt.registerTask('prod',   ['less:prod']);
-  grunt.registerTask('deploy', ['copy:bootstrap', 'copy:ucomm']);
+  grunt.registerTask('dev',     ['less:dev']);
+  grunt.registerTask('prod',    ['less:prod']);
+  grunt.registerTask('deploy',  ['copy:bootstrap', 'copy:ucomm']);
+  grunt.registerTask('rebuild', ['dist-css', 'dev', 'deploy']);
 };
