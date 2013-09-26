@@ -1,0 +1,125 @@
+/*Header (logo and menu)
+------------------------------------*/
+#header {
+	z-index: 999;
+	padding: 12px 0 18px 0;
+	background-color: @su-red;
+}
+#logo {
+	max-width: 360px;
+	min-width: 300px;
+}
+
+/* Search */
+.nav-search {
+	float: right;
+	margin: -65px 0 0 0;
+	min-height: 1px;
+}
+
+#search-block-form {
+	position: relative;
+}
+#search-field {
+	.size(220px; 30px);
+	padding: 4px 33px 4px 10px;
+	border: 2px solid @su-beige-20;
+	border-radius: 8px;
+	color: @su-clay;
+}
+
+#search-type label {
+  margin-right: 1px;
+  color: @su-beige-20;
+}
+#search-type input[type="radio"] {
+	margin-right: 8px;
+}
+
+#search-block-form #search-btn {
+  position: absolute;
+  top: .55em;
+  right: 1em;
+  color: @su-warm-gray-60;
+  cursor: pointer;
+}
+#search-block-form #search-btn:hover {
+	opacity: 0.6;
+}
+
+/* Nav */
+#mainmenu {
+	background-color: @su-beige-bg;
+	margin-bottom: 15px;
+	.box-shadow(0 -4px 8px -2px rgba(0, 0, 0, 0.2));
+}
+#mainmenu ul {
+	padding-left: 0;
+}
+
+.navbar {
+	margin: 0;
+	min-height: 2.3em;
+
+  .nav > li {
+    display: block;
+    position: relative;
+    padding: 0 15px 0 0;
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    & > a {
+      font-size: 1.4em;
+      font-weight: 300;
+      padding: 5px 0 6px 0;
+      margin-right: 30px;
+    }
+  }
+
+  .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+}
+
+#gateways li a:hover,
+#gateways li a:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+	border-bottom: solid 2px #8c1515;
+	padding-bottom: 4px;
+  color: inherit;
+}
+.navbar .menu-text {
+	display: none;
+}
+/*Gateways */
+label[for=gateways] {
+	text-transform: uppercase;
+	display: none;
+}
+#gateways {
+	margin: 0;
+	padding-top: 5px;
+	padding-right: 5px;
+	z-index: 9999;
+	list-style: none;
+	position: relative;
+}
+#gateways li {
+	display: inline;
+	padding-bottom: 0;
+	padding-right: 20px;
+}
+#gateways li a {
+	font-size: .9em;
+	text-transform: uppercase;
+}
+
+
+.nav-pills > li {
+	border-radius: 6px;
+	margin-right: 2px;
+}

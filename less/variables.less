@@ -94,12 +94,12 @@
 @font-size-large:         ceil(@font-size-base * 1.4286); // ~20px
 @font-size-small:         ceil(@font-size-base * 0.85); // ~12px
 
-@font-size-h1:            floor(@font-size-base * 3.2143); // ~45px
-@font-size-h2:            floor(@font-size-base * 1.5714); // ~22px
-@font-size-h3:            @font-size-base;
-@font-size-h4:            @font-size-base;
-@font-size-h5:            @font-size-base;
-@font-size-h6:            @font-size-base;
+@font-size-h1:            unit( round( (45 / unit(@font-size-base)), 5 ), em ); // 45px expressed as em's
+@font-size-h2:            unit( round( (24 / unit(@font-size-base)), 5 ), em ); // 24px expressed as em's
+@font-size-h3:            unit( round( (20 / unit(@font-size-base)), 5 ), em ); // 20px expressed as em's
+@font-size-h4:            unit( round( (18 / unit(@font-size-base)), 5 ), em ); // 18px expressed as em's
+@font-size-h5:            1em;
+@font-size-h6:            1em;
 
 @line-height-base:        1.6;
 @line-height-computed:    floor(@font-size-base * @line-height-base); // ~22.5px
@@ -315,13 +315,13 @@
 @navbar-default-link-hover-color:          @su-black;
 @navbar-default-link-hover-bg:             transparent;
 @navbar-default-link-active-color:         @su-red-text;
-@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-link-active-bg:            @navbar-default-bg;
 @navbar-default-link-disabled-color:       #ccc;
 @navbar-default-link-disabled-bg:          transparent;
 
 // Navbar brand label
 @navbar-default-brand-color:               @navbar-default-link-color;
-@navbar-default-brand-hover-color:         darken(@navbar-default-brand-color, 10%);
+@navbar-default-brand-hover-color:         @navbar-default-brand-color;
 @navbar-default-brand-hover-bg:            transparent;
 
 // Navbar toggle

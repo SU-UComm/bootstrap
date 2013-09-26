@@ -2,9 +2,9 @@
 
 module.exports = function(grunt) {
   "use strict";
+
   var uCommFiles = {
       "ucomm/css/base.css": "ucomm/less/base.less"
-    , "ucomm/css/base-responsive.css": "ucomm/less/base-responsive.less"
   };
   var homepageRepo = "../su-homepage";
 

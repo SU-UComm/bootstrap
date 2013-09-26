@@ -529,32 +529,32 @@ h6 small {
 
 h1,
 .h1 {
-  font-size: 45px;
+  font-size: 3.21429em;
 }
 
 h2,
 .h2 {
-  font-size: 21px;
+  font-size: 1.71429em;
 }
 
 h3,
 .h3 {
-  font-size: 14px;
+  font-size: 1.42857em;
 }
 
 h4,
 .h4 {
-  font-size: 14px;
+  font-size: 1.28571em;
 }
 
 h5,
 .h5 {
-  font-size: 14px;
+  font-size: 1em;
 }
 
 h6,
 .h6 {
-  font-size: 14px;
+  font-size: 1em;
 }
 
 .page-header {
@@ -4465,7 +4465,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #131311;
+  color: #2e2d29;
   background-color: transparent;
 }
 
@@ -4487,7 +4487,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #820000;
-  background-color: #e5e3d7;
+  background-color: #f2f1eb;
 }
 
 .navbar-default .navbar-nav > .disabled > a,
@@ -4525,7 +4525,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
   color: #820000;
-  background-color: #e5e3d7;
+  background-color: #f2f1eb;
 }
 
 .navbar-default .navbar-nav > .open > a .caret,
@@ -4553,7 +4553,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #820000;
-    background-color: #e5e3d7;
+    background-color: #f2f1eb;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
