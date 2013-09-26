@@ -130,10 +130,16 @@ module.exports = function(grunt) {
         dest: 'dist/'
       },
       ucomm: {
-        src: ["ucomm/css/*"],
-        dest: homepageRepo+'/assets/css/',
         expand: true,
-        flatten: true
+        flatten: true,
+        src: ["ucomm/css/*"],
+        dest: homepageRepo+'/assets/css/'
+      },
+      bootstrap: {
+        expand: true,
+        flatten: true,
+        src: ['<%= recess.bootstrap.dest %>'],
+        dest: homepageRepo+'/assets/bootstrap/css/'
       }
     },
 
@@ -251,5 +257,5 @@ module.exports = function(grunt) {
   // UComm tasks
   grunt.registerTask('dev',    ['less:dev']);
   grunt.registerTask('prod',   ['less:prod']);
-  grunt.registerTask('deploy', ['copy:ucomm']);
+  grunt.registerTask('deploy', ['copy:bootstrap', 'copy:ucomm']);
 };

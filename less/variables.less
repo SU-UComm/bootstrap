@@ -11,35 +11,45 @@
 // --------------------------------------------------
 
 // Primary palette
-@su-red:       #8C1515;
-@su-red-text:  #820000;
-@su-black:     #2E2D29;
-@su-cool-gray: #4D4F53;
-@su-warm-gray: #3F3C30;
+@su-red:           #8C1515;
+@su-red-text:      #820000;
+@su-black:         #2E2D29;
+@su-cool-gray:     #4D4F53;
+@su-warm-gray:     #3F3C30;
+@su-warm-gray-90:  #565347;
+@su-warm-gray-60:  #8A587D;
 // Neutral palette
-@su-beige:     #9D9573;
-@su-beige-bg:  #F2F1EB; // Beige 10%
-@su-sandstone: #D2C295;
-@su-sandhill:  #B3995D;
-@su-stone:     #928B81;
-@su-driftwood: #B6B1A9;
-@su-cloud:     #DAD7CB;
-@su-sage:      #C7D1C5;
-@su-sage-gray: #4D5357;
-@su-clay:      #5F574F;
+@su-beige:         #9D9573;
+@su-beige-85:      #ACA68D;
+@su-beige-60:      #C4BFA9;
+@su-beige-40:      #D5D0C0;
+@su-beige-30:      #E3DFD5;
+@su-beige-20:      #E9E6DF;
+@su-beige-10:      #F2F1EB;
+@su-beige-05:      #FBFBF9;
+@su-sandstone:     #D2C295;
+@su-sandhill:      #B3995D;
+@su-stone:         #928B81;
+@su-driftwood:     #B6B1A9;
+@su-cloud:         #DAD7CB;
+@su-sage:          #C7D1C5;
+@su-sage-gray:     #4D5357;
+@su-clay:          #5F574F;
 // Deep tone palette
-@su-brown:     #5E3032;
-@su-redwood:   #8D3C1E;
-@su-teal:      #00505C;
-@su-palo-alto: #175E54;
-@su-purple:    #53284F;
+@su-brown:         #5E3032;
+@su-redwood:       #8D3C1E;
+@su-teal:          #00505C;
+@su-palo-alto:     #175E54;
+@su-purple:        #53284F;
 // Bright palette
-@su-sky:       #0098DB;
-@su-lagunita:  #007C92;
-@su-mint:      #009B76;
-@su-gold:      #B26F16;
-@su-poppy:     #E98300;
-@su-sun:       #EAAB00;
+@su-sky:           #0098DB;
+@su-lagunita:      #007C92;
+@su-mint:          #009B76;
+@su-gold:          #B26F16;
+@su-poppy:         #E98300;
+@su-sun:           #EAAB00;
+
+@su-beige-bg:  @su-beige-10;
 
 
 // Grays
@@ -63,7 +73,7 @@
 // Scaffolding
 // -------------------------
 
-@body-bg:               #fff;
+@body-bg:               @su-beige-05;
 @text-color:            @su-clay; // close to #585754
 
 // Links
@@ -91,11 +101,11 @@
 @font-size-h5:            @font-size-base;
 @font-size-h6:            @font-size-base;
 
-@line-height-base:        1.607143; // 22.5/14
+@line-height-base:        1.6;
 @line-height-computed:    floor(@font-size-base * @line-height-base); // ~22.5px
 
 @headings-font-family:    @font-family-base;
-@headings-font-weight:    400;
+@headings-font-weight:    300;
 @headings-line-height:    1.1;
 @headings-color:          @su-warm-gray;
 
