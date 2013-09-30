@@ -1,44 +1,5 @@
-/////////////////////////////////
-// Bootstrap variables and mixins
-@import "variables.less";
-@import "mixins.less";
-
-// UComm variables
-@border-color: #E3DFD5;
-@btn-txt: #565347;
-@heading-weight: 300;
-
-// UComm mixins
-.font-size-em (@target-px, @base-px:@font-size-base) {
-  font-size: unit( round( (unit(@target-px) / unit(@base-px)), 5 ), em );
-}
-.line-height (@target-px, @base-px:@font-size-base) {
-  line-height: round( (unit(@target-px) / unit(@base-px)), 5 );
-}
-.margin-bottom (@margin) {
-  margin-bottom: unit(@margin, px);
-  clear: both;
-}
-.postcard () {
-	clear: both;
-	display: table;
-	margin-bottom: 15px;
-	position: relative;
-}
-.su-btn (@bg, @fg:white, @border:darken(@bg,5%), @bg-hover:lighten(@bg,5%), @fg-hover:@fg, @border-hover:@border) {
-  background-color: @bg;
-  border-color: @border;
-  color: @fg;
-  text-decoration: none;
-  
-  &:hover, &:focus, &:active {
-    background-color: @bg-hover;
-    border-color: @border-hover;
-    color: @fg-hover;
-    text-decoration: none;
-  }
-}
-
+// All UComm less files should include this
+@import "_less.less";
 
 /////////////////////////////////
 // Elements
@@ -118,6 +79,12 @@ li {
 	font-size: 4em;
 	margin: -25px 5px -25px 0;
 	color: @su-beige-85;
+}
+
+.event {
+  .timestamp {
+    text-transform: uppercase;
+  }
 }
 
 .info-box {
@@ -204,6 +171,10 @@ a.more-link {
     color: @su-red;
     font-size: 1.1em;
   }
+}
+
+.navbar {
+  border: none;
 }
 
 .postcard-left,
