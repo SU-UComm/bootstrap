@@ -1,0 +1,276 @@
+// All UComm less files should include this
+@import "_less.less";
+
+
+//////////////////////////
+// phone
+@media (max-width: 767px) {
+body {
+	padding: 0;
+}
+#header .container {
+	padding: 0 10px;
+}
+#body .container {
+	padding: 0 20px;
+}
+#body .container:first-child {
+	padding: 0;
+}
+#logo {
+	max-width: 300px;
+}
+#search-block-form {
+  #search-field {
+    width: 175px;
+    .font-size-em(12);
+  }
+  .btn-search {
+    width: 22px;
+    height: 22px;
+    top: 5px;
+    right: 5px;	
+  }
+} // #block-search-form
+
+#footer {
+  .container {
+    padding: 0 20px !important;
+  }
+
+  ul.footer-list {
+    margin-bottom: 20px;
+
+    li {
+      font-size: 1.3em;
+      margin-bottom: 10px;
+    }
+  }
+
+  .block h3 {
+    border-bottom: 1px solid @su-red;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    font-size: 1.1em;
+  }
+
+  #hp-buttons {
+    margin-top: 20px;
+
+    .btn-u i {
+      .font-size-em(25);
+      margin: 0 10px;
+    }
+  }
+
+  p.copyright {
+    padding-top: 25px;
+  }
+} // #footer
+} // @media (max-width: 767px)
+
+
+//////////////////////////
+// tablet
+@media (min-width: 768px) and (max-width: 991px) {
+.col-sm-1-4 { // 5 columns across a 12 column grid = 1.4 column width
+  float: left;
+	width: 18%;
+	margin-right: 2%;
+}
+
+#hp-buttons {
+  clear: both;
+
+  li {
+    display: inline;
+
+    a {
+      width: 19%;
+  
+      i {
+        display: block;
+        margin: 0 auto 5px auto;
+        text-align: center;
+      }
+
+      span {
+        display: block;
+        text-align: center;
+        font-size: .9em;
+        line-height: 1;
+      }
+    } // a
+  } // li
+} // #hp-buttons
+} // @media (min-width: 768px) and (max-width: 991px)
+
+
+//////////////////////////
+// phone, tablet
+@media (max-width: 991px) {
+#primary-nav {
+	padding-left: 0.5em;
+}
+#gateway-nav {
+	padding: 0.5em 0;
+	background-color: @su-beige-05;
+}
+
+.navbar {
+	margin: 5px 0 3px 0;	
+
+  .menu-text {
+    display: inline;
+    text-transform: uppercase;
+    left: 50px;
+    margin-top: 7px;
+    position: absolute;
+    color: @su-red-text;
+    font-size: 0.85em;
+    font-weight: 700;
+  }
+
+  .navbar-toggle {
+      background-color: @su-red;
+      border: none;
+      float: none;
+      margin-bottom: 0;
+      margin-right: 0;
+      margin-top: 1px;
+      padding: 7px 10px;
+
+      span.icon-bar {
+        background-color: white;
+      }
+  }
+
+  .nav-search {
+    float: right;
+    margin: 0;
+    min-height: 1px;
+    padding: 0;
+
+    #search-type label {
+      color: @su-black;
+      font-weight: 400;
+    }
+  }
+
+  .nav {
+    margin: 8px 0 15px 0;
+
+    .navbar-collapse.in {
+        overflow-y: visible;
+    }
+
+    & > li {
+      display: block;
+      padding-right: 0;
+    
+      & > a,
+      & > a:focus,
+      & > a:hover  {
+        display: block;
+        border-radius: 3px;
+        padding: 9px 15px;	
+        margin-right: 0;
+        width: 100%;
+      }
+      & > a:hover {
+        background-color: @su-beige-05;
+        border-bottom:none;
+      }
+    } // .nav > li
+  } // .nav
+
+  /*Gateways */
+  #gateway-nav {
+    width: 100%;
+    margin-bottom: 15px;
+
+    label[for=gateways] {
+      display: block;
+      margin-bottom: 0;
+      padding-left: 15px;
+      color: @su-red-text;
+      font-size: 0.85em;
+      font-weight: 700;
+      cursor: pointer;
+      
+      span {
+        padding: 0 0.5em;
+        font-size: 1.5em;
+      }
+    } // label[for=gateways]
+  } // #gateway-nav
+
+  #gateways {
+    margin: 0 0 0 1.4em !important;
+    list-style: none;
+    position: relative;
+    display: none;
+
+    &.pull-right {
+      float: none !important;
+    }
+
+    li {
+      display: block;
+      list-style: none;
+
+      a {
+        font-size: 0.85em;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: block;
+        border-radius: 3px;
+        padding: 9px 15px;
+
+        &:focus, &:hover {
+          text-decoration: none;
+          background-color: @su-beige-bg;
+          border-bottom:  none;
+          padding-bottom: 9px;
+        }
+        &:hover {
+          background-color: @su-beige-05;
+          border-bottom:none;
+        }
+      } // a
+    } // li
+  } // #gateways
+} // .navbar
+} // @media (max-width: 991px)
+
+
+//////////////////////////
+// desktop
+@media (min-width: 992px) {
+#gateways li:last-child {
+	padding-right: 0;
+}
+} // @media (min-width: 992px)
+
+@media (min-width: 992px) and (max-width: 1199px) {
+.navbar .nav > li {
+  padding: 0 10px 0 0;
+ 
+  & > a {
+    font-size: 1.3em;
+  }
+}
+
+#gateways li {
+	padding-right: 10px;
+  a {
+    font-size: .8em;
+  }
+}
+} // @media (min-width: 992px) and (max-width: 1199px)
+
+
+//////////////////////////
+// big desktop
+@media (min-width: 1200px) {
+} // @media (min-width: 1200px)
