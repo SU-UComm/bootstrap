@@ -9,6 +9,12 @@
 @heading-weight: 300;
 
 // UComm mixins
+.font-size-em (@target-px, @base-px:@font-size-base) {
+  font-size: unit( round( (unit(@target-px) / unit(@base-px)), 5 ), em );
+}
+.line-height (@target-px, @base-px:@font-size-base) {
+  line-height: round( (unit(@target-px) / unit(@base-px)), 5 );
+}
 .margin-bottom (@margin) {
   margin-bottom: unit(@margin, px);
   clear: both;
@@ -19,17 +25,16 @@
 	margin-bottom: 15px;
 	position: relative;
 }
-
-.su-btn (@bg, @fg:white, @border:darken(@bg,20%), @bg-hover:lighten(@bg,20%), @fg-hover:@fg, @border-hover:@border) {
+.su-btn (@bg, @fg:white, @border:darken(@bg,5%), @bg-hover:lighten(@bg,5%), @fg-hover:@fg, @border-hover:@border) {
   background-color: @bg;
   border-color: @border;
-  @color: @fg;
+  color: @fg;
   text-decoration: none;
   
   &:hover, &:focus, &:active {
     background-color: @bg-hover;
     border-color: @border-hover;
-    @color: @fg-hover;
+    color: @fg-hover;
     text-decoration: none;
   }
 }
@@ -52,17 +57,25 @@ dl {
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 0 0 5px 0;
+
+  i {
+    margin-right: 7px;
+  }
 }
-h1 i, h2 i, h3 i, h4 i, h5 i {
-	margin-right: 7px;
+h1 {
+  font-weight: 300;
 }
 
 li {
-  line-height: round( (20 / unit(@font-size-base)), 5 ); // 20/14
+  .line-height(20);
 }
 
 /////////////////////////////////
 // General classes, id's
+
+.btn {
+  .line-height(21.43, 15);
+}
 
 .btn-one   { .su-btn(@su-mint); }
 .btn-two   { .su-btn(@su-lagunita); }
@@ -76,7 +89,7 @@ li {
 	cursor: pointer;
 	background: @su-beige-40;
 	color: @btn-txt;
-	font-size: unit( round( (15 / unit(@font-size-base)), 5 ), em ); // 15px expressed as em's
+	.font-size-em(15); // 15px expressed as em's
 	text-decoration: none;
 	text-shadow: none;
 
@@ -88,7 +101,7 @@ li {
   }
 
   i {
-    font-size: unit( round( (17 / 15), 5 ), em );
+    .font-size-em(17; 15);
   }
 }
 
@@ -131,8 +144,8 @@ li {
   }
 
   h2 {
-    color: #5F574F;
-    font-size: 18px;
+    color: @su-clay;
+    .font-size-em(18);
     font-weight: normal;
     line-height: 1em;
     text-transform: uppercase;
@@ -150,15 +163,17 @@ li {
 }
 
 .lead {
-  font-size: unit( round( (20 / unit(@font-size-base)), 5 ), em ); // 20px
-  line-height: round( (28 / 20), 5 );
+  @font-size: 20px;
+  .font-size-em(@font-size);
+  .line-height(28; @font-size);
   color: @su-warm-gray;
 }
 
 .larger {
-  font-size: unit( round( (18 / unit(@font-size-base)), 5 ), em ); // 18px
+  @font-size: 18px;
+  .font-size-em(@font-size);
+  .line-height(20; @font-size);
   font-weight: @headings-font-weight;
-  line-height: round( (20 / 18), 5 );
 }
 
 .margin-bottom-5  { .margin-bottom(5);  }
@@ -231,7 +246,6 @@ ul.vbar {
 }
 
 .well {
-	background: none repeat scroll 0 0 #F2F1EB;
 	box-shadow: none;
 	border: medium none;
 	border-radius: 10px 10px 10px 10px;
