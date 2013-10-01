@@ -286,3 +286,28 @@
 @media (min-width: 1200px) {
   
 }
+@media (max-width: 767px) {
+  
+}
+@media (max-width: 991px) {
+  
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  
+}
+@media (max-width: 1199px) {
+  /* line 25, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/landing-responsive.less */
+  #content .postcard-image,
+  #content .postcard-image img {
+    width: 125px;
+  }
+}
+@media (min-width: 992px) {
+  
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  
+}
+@media (min-width: 1200px) {
+  
+}

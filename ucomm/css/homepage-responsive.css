@@ -152,19 +152,23 @@
     font-weight: 400;
   }
   /* line 164, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
+  .navbar .navbar-collapse {
+    width: 100%;
+  }
+  /* line 167, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
+  .navbar .navbar-collapse.in {
+    overflow-y: visible;
+  }
+  /* line 172, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar .nav {
     margin: 8px 0 15px 0;
   }
-  /* line 167, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
-  .navbar .nav .navbar-collapse.in {
-    overflow-y: visible;
-  }
-  /* line 171, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
+  /* line 175, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar .nav > li {
     display: block;
     padding-right: 0;
   }
-  /* line 175, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
+  /* line 179, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar .nav > li > a,
   .navbar .nav > li > a:focus,
   .navbar .nav > li > a:hover {
@@ -174,17 +178,17 @@
     margin-right: 0;
     width: 100%;
   }
-  /* line 184, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
+  /* line 188, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar .nav > li > a:hover {
     background-color: #fbfbf9;
     border-bottom: none;
   }
-  /* line 192, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
+  /* line 196, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar #gateway-nav {
     width: 100%;
     margin-bottom: 15px;
   }
-  /* line 196, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
+  /* line 200, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar #gateway-nav label[for=gateways] {
     display: block;
     margin-bottom: 0;
@@ -194,28 +198,28 @@
     font-weight: 700;
     cursor: pointer;
   }
-  /* line 205, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
+  /* line 209, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar #gateway-nav label[for=gateways] span {
     padding: 0 0.5em;
     font-size: 1.5em;
   }
-  /* line 212, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
+  /* line 216, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar #gateways {
     margin: 0 0 0 1.4em;
     list-style: none;
     position: relative;
     display: none;
   }
-  /* line 218, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
-  .navbar #gateways.pull-right {
-    float: none;
-  }
   /* line 222, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
+  .navbar #gateways.pull-right {
+    float: none !important;
+  }
+  /* line 226, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar #gateways li {
     display: block;
     list-style: none;
   }
-  /* line 226, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
+  /* line 230, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar #gateways li a {
     font-size: 0.85em;
     text-transform: uppercase;
@@ -224,7 +228,7 @@
     border-radius: 3px;
     padding: 9px 15px;
   }
-  /* line 234, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
+  /* line 238, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar #gateways li a:focus,
   .navbar #gateways li a:hover {
     text-decoration: none;
@@ -232,32 +236,49 @@
     border-bottom: none;
     padding-bottom: 9px;
   }
-  /* line 240, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
+  /* line 244, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar #gateways li a:hover {
     background-color: #fbfbf9;
     border-bottom: none;
   }
+  /* line 254, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
+  .footer ul.footer-list {
+    padding-bottom: 0;
+  }
+  /* line 257, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
+  .footer ul.footer-list li {
+    padding-bottom: 0;
+  }
 }
 @media (min-width: 992px) {
-  /* line 254, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
+  /* line 268, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   #gateways li:last-child {
     padding-right: 0;
   }
+  /* line 272, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
+  .two-column {
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    column-count: 2;
+    column-gap: 20px;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 260, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
+  /* line 283, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar .nav > li {
     padding: 0 10px 0 0;
   }
-  /* line 263, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
+  /* line 286, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar .nav > li > a {
     font-size: 1.3em;
   }
-  /* line 268, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
+  /* line 291, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   #gateways li {
     padding-right: 10px;
   }
-  /* line 270, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
+  /* line 293, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   #gateways li a {
     font-size: .8em;
   }
