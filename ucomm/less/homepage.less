@@ -1,0 +1,386 @@
+@import "base.less";
+
+#content ul {
+  padding-left: 0;
+}
+
+/////////////////////////////////
+// Feature Banner (Home Top)
+
+#feature-banner {
+	clear: both;
+	position: relative;
+
+  #browsable {
+    position: relative;
+    width: 100%;
+    height: 425px;
+    overflow:hidden;
+  }
+
+  #slides {
+    width: 1000em;
+    position: absolute;
+    clear: both;
+
+    .slide {
+      height: 425px;
+      width: auto;
+      min-width: 1170px;
+      float: left;
+      position: relative;
+    }
+  }
+
+  a {
+    &:active, &:focus {
+      outline: none;
+    }
+    &.browse {
+      background: transparent url(../images/slides/arrows-30.png) no-repeat left top;
+      display: block;
+      width: 32px;
+      height: 80px;
+      margin: 40px 10px;
+      cursor: pointer;
+      font-size: 1px;
+      z-index: 1;
+      position: relative;
+      border-bottom: 0;
+
+      &.prev, &.next {
+        display: block;
+      }
+    }
+    &.right {
+      background-position: 0 -80px;
+      position: absolute;
+      right: 0;
+      top: 140px;
+
+      &:hover  { background-position: -32px -80px; }
+      &:active { background-position: -64px -80px; }
+    }
+    &.left {
+      position: absolute;
+      top: 140px;
+
+      &:hover  { background-position: -32px 0; }
+      &:active { background-position: -64px 0; }
+    }
+  } // #feature-banner a
+
+  .navi {
+    width: 80px;
+    height: 20px;
+    margin: auto;
+    z-index: 1;
+    margin-top: 5px;
+
+    a {
+      width: 12px;
+      height: 12px;
+      float: left;
+      margin: 3px;
+      background: url(../images/slides/navigator.png) no-repeat;
+      display: block;
+      font-size: 1px;
+      border-bottom: 0;
+      cursor: pointer;
+
+      &:hover  { background-position: 0 -12px; }
+      &.active { background-position: 0 -24px; }
+    }
+  } // #feature-banner .navi
+
+  #slides {
+    a {
+      border-bottom: none;
+      color: #585754;
+    }
+
+    img {
+      margin: 0;
+      padding: 0;
+      width: 1170px;
+      max-width: 1170px;
+    }
+
+    .textblock {
+      width: 250px;
+      position: absolute;
+      bottom: 40px;
+      left: 90px;
+    }
+
+    .videoblock {
+      position: absolute;
+      width: 560px;
+      height: 315px;
+      left: 450px;
+      top: 55px;
+      overflow: hidden;
+      z-index: 2;
+    }
+    .videoblock iframe,
+    .video-container object,
+    .video-container embed {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .right {}
+    .top {}
+    .bottom { bottom: 40px; }
+
+    h3 {
+      font-size: 3.5em;
+      font-weight: 400;
+      color: #585754;
+      line-height: 1em;
+      letter-spacing: -.02em;
+      margin: 0 0 10px 0;
+    }
+
+    p {
+      color: #585754;
+      font-size: 1.4em;
+      line-height: 1.4em;
+      font-weight: 300;
+    }
+
+    .white       { color: #fff; }
+    .sandstone   { color: @su-sandstone; }
+    .sandstone50 { color: @su-sandstone-50; }
+    .sandstone25 { color: @su-sandstone-25; }
+    .red         { color: @su-red; }
+
+  } // #feature-banner #slides
+
+  #feature-banner .disabled {
+    background-color: #000;
+
+    .textblock,
+    .videoblock {
+      display: none !important;
+    }
+    
+    img {
+      opacity: 0.5;
+      -webkit-filter: grayscale(50%);
+      filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'saturate\' values=\'0.5\'/></filter></svg>#grayscale"); /* Firefox 10+ */
+      filter: gray alpha(opacity=50); /* IE6-9 */
+    }
+  } // #feature-banner .disabled
+
+} // #feature-banner
+
+
+/////////////////////////////////
+// News
+
+.headline {
+	display: block;
+	margin: 10px 0 15px 0;
+	border-bottom: 1px solid #d5d0c0;
+
+  h2, h3, h4 {
+    color: @su-clay;
+    font-weight: 300;
+    margin: 0 0 -2px 0;
+    padding-right: 10px;
+    display: inline-block;
+  }
+}
+
+.news-item {
+  .news-img {
+    position: relative;
+  }
+  
+  .news-text {
+    h3 {
+      margin: 5px 0 5px 0;
+      .line-height(26; 20);
+    
+      a {
+  
+        &:hover {
+          color: #8c1515;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+} // .news-item
+
+#more-news {
+   h4 {
+    text-transform: uppercase;
+    color: @su-red-text;
+    font-size: 1em;
+    font-weight: 600;
+    margin: 5px 0 10px 0;
+  }
+  
+  ul {
+    margin: 0 0 10px 0;	
+
+    li {
+      list-style-type: none;
+      font-size: 1.15em;
+      margin-bottom: 10px;
+      .line-height(20, 16.1);
+    }
+  }
+}
+
+
+/////////////////////////////////
+// Social Media
+
+#social-feature {
+	font-family: "Source Sans Pro", Arial;
+	background-color: @su-beige-bg;
+	border-radius: 4px;
+  margin: 0;
+	padding: 10px 0;
+
+  #tweet_info {
+    padding: 0;
+  }
+
+  p,
+  button {
+    display: inline-block;
+  }
+  p {
+    font-size: 1.3em;
+    line-height: 1.4em;
+    font-weight: 300;
+    margin: 10px 10px 0 0;
+    vertical-align: middle;
+
+    &.social-timestamp {
+      margin: 10px;
+      padding: 10px;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1.2em;
+      font-size: 1em;
+      font-weight: 400;
+    }
+  }
+  button {
+    color: #0098DB; // Twitter blue
+    background-color: @su-beige-05;
+    margin-top: 0.3em;
+  }
+} // #social-feature
+
+
+#social-icons {
+  padding-right: 0;
+
+  ul {
+    margin-top: 20px;
+    margin-left: 0;
+    list-style: none;
+
+    li {
+      display: inline;
+    }
+  }
+
+  a:hover img {
+    opacity: 0.6;
+    .transition(all 0.4s ease-in-out);
+  }
+} // #social-icons
+
+
+/////////////////////////////////
+// At Stanford
+
+#at-stanford {
+	padding-right: 10px;
+
+  p {
+    padding: 10px;
+    background-color: @su-beige-bg;
+
+    span {
+      text-transform: uppercase;
+      color: @su-red-text;
+      font-weight: 600;
+      padding-right: 5px;
+    }
+  }
+} // #at-stanford
+
+//// ARE THESE USED???
+.dl-horizontal dt {
+	overflow: visible;
+}
+/* This rule is read by Galleria to define the gallery height: */
+.galleria-stage { /* modify line 17 of your galleria.classic.css stylesheet */
+	top: 2px;
+	left: 2px;
+	bottom: 10px; /* define the bottom spacing, same as top/left/right */
+}
+.galleria-container {
+	background: none;
+}
+
+
+/////////////////////////////////
+// Events
+
+#event-list {
+  h4 {
+    font-size: 15px;
+  }
+
+  .event-date {
+    vertical-align: top;
+    width: 35px;
+    padding-right: 15px;
+
+    .event-month {
+      padding-left: 3px;
+      font-weight: 400;
+      font-size: 1em;
+      text-transform: uppercase;
+      display: block;
+      text-align: center;
+      line-height: 1.1;
+      letter-spacing: 1px;
+    }
+    .event-day {
+      font-weight: 200;
+      display: block;
+      text-align: center;
+      font-size: 2.1em;
+      color: @su-red-text;
+      line-height: 0.8;
+    }
+  } // .event-date
+  
+  .more-link {
+    padding-left: 42px;
+  }
+}
+
+
+/////////////////////////////////
+// Athletics
+
+#sports img {
+	padding-right: 10px;
+	vertical-align: top;
+	width: 100px;
+  display: inline-block;
+}

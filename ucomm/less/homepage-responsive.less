@@ -1,0 +1,230 @@
+@import "base-responsive.less";
+
+//////////////////////////
+// phone
+@media (max-width: @screen-xs-max) {
+#mainmenu {
+	margin-bottom: 0;
+}
+
+.more-link {
+	float: right;
+
+  a {
+    font-size: 1.1em;
+  }
+}
+
+#feature-banner {
+  #browsable {
+    overflow: hidden;
+    height: 325px;
+  }
+
+  a.right,
+  a.left {
+    top: 80px;
+  }
+
+  #slides {
+    h3 {
+      font-size: 3em !important;
+    }
+    p {
+      font-size: 1.2em;
+    }
+    .textblock {
+      width: 250px;
+      top: 140px;
+    }
+    .videoblock {
+      display: none;
+    }
+  } // #feature-banner #slides
+} // #feature-banner
+
+.news-item {
+	clear: both;
+  display: table;
+	margin-bottom: 50px;
+	position: relative;
+
+  & > div {
+    display: table-cell;
+    position: relative;
+  }
+
+  .news-img {
+    overflow: hidden;
+    padding-right: 15px;
+    width: 100px;
+
+    img {
+      width: 150px;
+      max-width: none;
+      position: absolute;
+      top: 0;
+      clip: rect(0px, 100px, 150px, 0px);
+    }
+  } // .news-img
+
+  .news-text {
+    vertical-align: top;
+    padding-left: 10px;
+
+    h3 {
+      margin-top: 0;
+      line-height: 1;
+    }
+    p {
+      font-size: 1.1em;
+    }
+  } // .news-text
+} // .news-item
+
+#social-feature p {
+  margin: 0 20px;
+}
+
+#social-icons ul {
+	display: block;
+	width: 170px;
+	margin: 10px auto 0 auto;
+}
+
+#at-stanford {
+	margin-bottom: 30px;
+}
+
+#event-list .more-link {
+	margin-left: 100px;
+	padding-left: 10px;
+}
+
+#sports img {
+	width: 100px;
+	height: 100px;
+	max-width: none;
+}
+} // @media (max-width: @screen-xs-max)
+
+
+//////////////////////////
+// phone, tablet
+@media (max-width: @screen-sm-max) {
+#social-icons img {
+  width: 25px;
+}
+} // @media (max-width: @screen-sm-max)
+
+
+//////////////////////////
+// tablet
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+#feature-banner #slides {
+  .slide {
+    min-width: 724px;
+    max-width: 724px;
+    width: 724px;
+  }
+
+  .textblock {
+    width: 230px;
+    left: 70px;
+  }
+  .videoblock {
+    width: 320px;
+    height: 180px;
+    top: 130px;
+    left: 350px;
+  }
+
+  h3 {
+    font-size: 2.5em !important;
+  }
+
+  p {
+    font-size: 1.25em !important;
+  }
+}
+
+#social-feature {
+  button {
+    width: 50%;
+    margin: 5px 0;
+    padding: 0;
+  }
+
+  p {
+    vertical-align: middle;
+    font-size: 1.1em;
+
+    &.social-timestamp {
+      margin: 5px;
+      margin-top: -10px;
+      padding: 10px 0 10px 10px;
+      font-size: .9em;
+    }
+  }
+} // #social-feature
+} // @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)
+
+
+//////////////////////////
+// desktop
+@media (min-width: @screen-md-min) {
+} // @media (min-width: @screen-md-min)
+
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+#feature-banner #slides {
+  .slide {
+    min-width: 940px;
+    max-width: 940px;
+    width: 940px;
+  }
+  .videoblock {
+    width: 480px;
+    height: 270px;
+    left: 390px;
+    top: 100px;
+  }
+}
+
+#social-feature {
+  button {
+    width: 50%;
+  }
+  p.social-timestamp {
+    margin-top: -10px;
+  }
+}
+
+#sports .postcard-left .postcard-text {
+  padding-left: 0;
+}
+} // @media (min-width: @screen-md-min) and (max-width: @screen-md-max)
+
+
+//////////////////////////
+// big desktop
+@media (min-width: @screen-lg-min) {
+#feature-banner #slides .slide {
+	min-width: 1170px;
+}
+
+#social-icons li {
+	margin-right: 5px;
+}
+#sports .more-link {
+	padding-left: 110px;
+}
+
+.postcard-left {
+  .postcard-image {
+    width: 100px;
+  }
+  .postcard-text {
+    padding-left: 10px;
+  }
+}
+} // @media (min-width: @screen-lg-min)

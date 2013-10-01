@@ -265,3 +265,213 @@
 @media (min-width: 1200px) {
   
 }
+@media (max-width: 767px) {
+  /* line 6, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #mainmenu {
+    margin-bottom: 0;
+  }
+  /* line 10, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  .more-link {
+    float: right;
+  }
+  /* line 13, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  .more-link a {
+    font-size: 1.1em;
+  }
+  /* line 19, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #feature-banner #browsable {
+    overflow: hidden;
+    height: 325px;
+  }
+  /* line 24, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #feature-banner a.right,
+  #feature-banner a.left {
+    top: 80px;
+  }
+  /* line 30, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #feature-banner #slides h3 {
+    font-size: 3em !important;
+  }
+  /* line 33, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #feature-banner #slides p {
+    font-size: 1.2em;
+  }
+  /* line 36, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #feature-banner #slides .textblock {
+    width: 250px;
+    top: 140px;
+  }
+  /* line 40, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #feature-banner #slides .videoblock {
+    display: none;
+  }
+  /* line 46, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  .news-item {
+    clear: both;
+    display: table;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  /* line 52, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  .news-item > div {
+    display: table-cell;
+    position: relative;
+  }
+  /* line 57, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  .news-item .news-img {
+    overflow: hidden;
+    padding-right: 15px;
+    width: 100px;
+  }
+  /* line 62, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  .news-item .news-img img {
+    width: 150px;
+    max-width: none;
+    position: absolute;
+    top: 0;
+    clip: rect(0px, 100px, 150px, 0px);
+  }
+  /* line 71, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  .news-item .news-text {
+    vertical-align: top;
+    padding-left: 10px;
+  }
+  /* line 75, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  .news-item .news-text h3 {
+    margin-top: 0;
+    line-height: 1;
+  }
+  /* line 79, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  .news-item .news-text p {
+    font-size: 1.1em;
+  }
+  /* line 85, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #social-feature p {
+    margin: 0 20px;
+  }
+  /* line 89, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #social-icons ul {
+    display: block;
+    width: 170px;
+    margin: 10px auto 0 auto;
+  }
+  /* line 95, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #at-stanford {
+    margin-bottom: 30px;
+  }
+  /* line 99, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #event-list .more-link {
+    margin-left: 100px;
+    padding-left: 10px;
+  }
+  /* line 104, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #sports img {
+    width: 100px;
+    height: 100px;
+    max-width: none;
+  }
+}
+@media (max-width: 991px) {
+  /* line 115, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #social-icons img {
+    width: 25px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 125, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #feature-banner #slides .slide {
+    min-width: 724px;
+    max-width: 724px;
+    width: 724px;
+  }
+  /* line 131, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #feature-banner #slides .textblock {
+    width: 230px;
+    left: 70px;
+  }
+  /* line 135, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #feature-banner #slides .videoblock {
+    width: 320px;
+    height: 180px;
+    top: 130px;
+    left: 350px;
+  }
+  /* line 142, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #feature-banner #slides h3 {
+    font-size: 2.5em !important;
+  }
+  /* line 146, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #feature-banner #slides p {
+    font-size: 1.25em !important;
+  }
+  /* line 152, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #social-feature button {
+    width: 50%;
+    margin: 5px 0;
+    padding: 0;
+  }
+  /* line 158, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #social-feature p {
+    vertical-align: middle;
+    font-size: 1.1em;
+  }
+  /* line 162, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #social-feature p.social-timestamp {
+    margin: 5px;
+    margin-top: -10px;
+    padding: 10px 0 10px 10px;
+    font-size: .9em;
+  }
+}
+@media (min-width: 992px) {
+  
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 180, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #feature-banner #slides .slide {
+    min-width: 940px;
+    max-width: 940px;
+    width: 940px;
+  }
+  /* line 185, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #feature-banner #slides .videoblock {
+    width: 480px;
+    height: 270px;
+    left: 390px;
+    top: 100px;
+  }
+  /* line 194, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #social-feature button {
+    width: 50%;
+  }
+  /* line 197, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #social-feature p.social-timestamp {
+    margin-top: -10px;
+  }
+  /* line 202, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #sports .postcard-left .postcard-text {
+    padding-left: 0;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 211, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #feature-banner #slides .slide {
+    min-width: 1170px;
+  }
+  /* line 215, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #social-icons li {
+    margin-right: 5px;
+  }
+  /* line 218, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  #sports .more-link {
+    padding-left: 110px;
+  }
+  /* line 223, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  .postcard-left .postcard-image {
+    width: 100px;
+  }
+  /* line 226, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
+  .postcard-left .postcard-text {
+    padding-left: 10px;
+  }
+}
