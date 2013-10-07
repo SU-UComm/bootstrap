@@ -1,0 +1,93 @@
+@import "base.less";
+
+
+h1 {
+	margin-bottom: 20px;
+}
+h2 {
+	color: @su-red-text;
+	font-size: 1.6em;
+}
+
+#main-content > hr {
+  margin-top: 0;
+}
+
+#content .nav {
+  background-color: @su-beige-05;
+}
+.nav-pills > li {
+  margin: 0 .3em 1em 0;
+}
+.nav-pills > li > a {
+  border: 1px solid @su-beige-30;
+  background-color: @su-beige-bg;
+  padding: .4em .9em;
+  text-transform: uppercase;
+}
+.nav-pills > li > a.active {
+  border: 1px solid @su-red;
+  background-color: @su-red;
+  color: white;
+}
+.nav-pills > li > a:hover {
+  border: 1px solid @su-beige;
+}
+
+#sort-options {
+  margin-top: 1em;
+}
+#sort-options .active {
+  font-weight: 600;
+  color: @su-red-text;
+}
+#sort-options a {
+  cursor: pointer;
+}
+
+#sidebar-second .btn {
+  margin-bottom: 15px;
+}
+
+.list-content {
+  list-style: none;
+}
+.list-content li {
+  margin-bottom: 1em;
+  font-size: 1.3em;
+}
+// FOR INTERNAL USE ONLY - highlights list items that aren't assigned to a school / subject
+.list-content li[data-school=""],
+.list-content li[data-subject=""] {
+  background-color:#FFDDBB;
+}
+
+#list-alpha > div {
+  display: table;
+  margin-bottom: 10px;
+}
+.list-pull-heading,
+.list-content {
+  display: table-cell;
+}
+.list-pull-heading h6 {
+  font-size: 2em;
+  color: @su-red-text;
+  min-width: 1em;
+}
+
+#list-school {
+  display: none;
+}
+#list-school h3 {
+  margin: 1.5em 0 0.75em;
+}
+#list-school h3:first-of-type {
+  margin-top: 0;
+}
+#list-school h3 a {
+  color: @su-red-text;
+}
+#list-school ul {
+  padding-left: 20px;
+}
