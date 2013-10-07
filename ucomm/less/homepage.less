@@ -4,96 +4,15 @@
   padding-left: 0;
 }
 
+
 /////////////////////////////////
-// Feature Banner (Home Top)
+// Feature Banner / Carousel (Home Top)
 
 #feature-banner {
 	clear: both;
 	position: relative;
 
-  #browsable {
-    position: relative;
-    width: 100%;
-    height: 425px;
-    overflow:hidden;
-  }
-
-  #slides {
-    width: 1000em;
-    position: absolute;
-    clear: both;
-
-    .slide {
-      height: 425px;
-      width: auto;
-      min-width: 1170px;
-      float: left;
-      position: relative;
-    }
-  }
-
-  a {
-    &:active, &:focus {
-      outline: none;
-    }
-    &.browse {
-      background: transparent url(../images/slides/arrows-30.png) no-repeat left top;
-      display: block;
-      width: 32px;
-      height: 80px;
-      margin: 40px 10px;
-      cursor: pointer;
-      font-size: 1px;
-      z-index: 1;
-      position: relative;
-      border-bottom: 0;
-
-      &.prev, &.next {
-        display: block;
-      }
-    }
-    &.right {
-      background-position: 0 -80px;
-      position: absolute;
-      right: 0;
-      top: 140px;
-
-      &:hover  { background-position: -32px -80px; }
-      &:active { background-position: -64px -80px; }
-    }
-    &.left {
-      position: absolute;
-      top: 140px;
-
-      &:hover  { background-position: -32px 0; }
-      &:active { background-position: -64px 0; }
-    }
-  } // #feature-banner a
-
-  .navi {
-    width: 80px;
-    height: 20px;
-    margin: auto;
-    z-index: 1;
-    margin-top: 5px;
-
-    a {
-      width: 12px;
-      height: 12px;
-      float: left;
-      margin: 3px;
-      background: url(../images/slides/navigator.png) no-repeat;
-      display: block;
-      font-size: 1px;
-      border-bottom: 0;
-      cursor: pointer;
-
-      &:hover  { background-position: 0 -12px; }
-      &.active { background-position: 0 -24px; }
-    }
-  } // #feature-banner .navi
-
-  #slides {
+  .item {
     a {
       border-bottom: none;
       color: #585754;
@@ -106,11 +25,12 @@
       max-width: 1170px;
     }
 
-    .textblock {
+    .carousel-caption {
       width: 250px;
       position: absolute;
-      bottom: 40px;
+      bottom: 20px;
       left: 90px;
+      text-align: left;
     }
 
     .videoblock {
@@ -150,6 +70,7 @@
       font-size: 1.4em;
       line-height: 1.4em;
       font-weight: 300;
+      text-shadow: none;
     }
 
     .white       { color: #fff; }
@@ -158,23 +79,46 @@
     .sandstone25 { color: @su-sandstone-25; }
     .red         { color: @su-red; }
 
-  } // #feature-banner #slides
-
-  #feature-banner .disabled {
-    background-color: #000;
-
-    .textblock,
-    .videoblock {
-      display: none !important;
+  } // #feature-banner .item
+  
+  .carousel-indicators {
+    bottom: -40px;
+  
+    .active {
+      background-color: @su-red;
+      margin: 2px;
     }
-    
-    img {
+  
+    li {
+      height: 12px;
+      width: 12px;
+      border-radius: 7px;
+      border: 1px solid @su-red;
+      background-color: #fff;
+      margin: 2px;	
+  
+      &:hover {
+        background-color: #8c1515;
+        cursor: pointer;
+      }
+    }
+  } // #feature-banner .carousel-indicators
+  
+  .carousel-control {
+      background: none repeat scroll 0 0 @su-black;
+      border: 3px solid #FFFFFF;
+      border-radius: 25px;
+      color: #FFFFFF;
+      height: 45px;
+      left: 15px;
       opacity: 0.5;
-      -webkit-filter: grayscale(50%);
-      filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'saturate\' values=\'0.5\'/></filter></svg>#grayscale"); /* Firefox 10+ */
-      filter: gray alpha(opacity=50); /* IE6-9 */
-    }
-  } // #feature-banner .disabled
+      top: 40%;
+      width: 45px;
+  
+      &.right {
+        right: 15px;
+      }
+  } // #feature-banner .carousel-control
 
 } // #feature-banner
 
@@ -340,13 +284,13 @@
 // Events
 
 #event-list {
-  h4 {
+  h3, h4 {
     font-size: 15px;
   }
 
   .event-date {
     vertical-align: top;
-    width: 35px;
+    width: 45px;
     padding-right: 15px;
 
     .event-month {
@@ -378,9 +322,14 @@
 /////////////////////////////////
 // Athletics
 
-#sports img {
-	padding-right: 10px;
-	vertical-align: top;
-	width: 100px;
-  display: inline-block;
+#sports {
+  h3 {
+    font-size: 18px;
+  }
+  img {
+    padding-right: 10px;
+    vertical-align: top;
+    width: 100px;
+    display: inline-block;
+  }
 }
