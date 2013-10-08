@@ -722,14 +722,15 @@ body.facstaff #nav-facstaff a {
 /* line 118, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 #feature-banner .carousel-control.right {
   right: 15px;
+  left: auto;
 }
-/* line 129, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 130, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 .headline {
   display: block;
   margin: 10px 0 15px 0;
   border-bottom: 1px solid #d5d0c0;
 }
-/* line 134, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 135, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 .headline h2,
 .headline h3,
 .headline h4 {
@@ -739,21 +740,21 @@ body.facstaff #nav-facstaff a {
   padding-right: 10px;
   display: inline-block;
 }
-/* line 144, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 145, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 .news-item .news-img {
   position: relative;
 }
-/* line 149, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 150, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 .news-item .news-text h3 {
   margin: 5px 0 5px 0;
   line-height: 1.3;
 }
-/* line 155, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 156, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 .news-item .news-text h3 a:hover {
   color: #8c1515;
   text-decoration: none;
 }
-/* line 165, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 166, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 #more-news h4 {
   text-transform: uppercase;
   color: #820000;
@@ -761,18 +762,18 @@ body.facstaff #nav-facstaff a {
   font-weight: 600;
   margin: 5px 0 10px 0;
 }
-/* line 173, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 174, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 #more-news ul {
   margin: 0 0 10px 0;
 }
-/* line 176, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 177, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 #more-news ul li {
   list-style-type: none;
   font-size: 1.15em;
   margin-bottom: 10px;
   line-height: 1.24224;
 }
-/* line 189, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 190, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 #social-feature {
   font-family: "Source Sans Pro", Arial;
   background-color: #f2f1eb;
@@ -780,16 +781,16 @@ body.facstaff #nav-facstaff a {
   margin: 0;
   padding: 10px 0;
 }
-/* line 196, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 197, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 #social-feature #tweet_info {
   padding: 0;
 }
-/* line 200, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 201, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 #social-feature p,
 #social-feature button {
   display: inline-block;
 }
-/* line 204, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 205, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 #social-feature p {
   font-size: 1.3em;
   line-height: 1.4em;
@@ -797,7 +798,7 @@ body.facstaff #nav-facstaff a {
   margin: 10px 10px 0 0;
   vertical-align: middle;
 }
-/* line 211, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 212, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 #social-feature p.social-timestamp {
   margin: 10px;
   padding: 10px;
@@ -807,54 +808,54 @@ body.facstaff #nav-facstaff a {
   font-size: 1em;
   font-weight: 400;
 }
-/* line 221, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 222, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 #social-feature button {
   color: #0098DB;
   background-color: #fbfbf9;
   margin-top:  0.3em;
 }
-/* line 229, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 230, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 #social-icons {
   padding-right: 0;
 }
-/* line 232, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 233, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 #social-icons ul {
   margin-top: 20px;
   margin-left: 0;
   list-style: none;
 }
-/* line 237, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 238, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 #social-icons ul li {
   display: inline;
 }
-/* line 242, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 243, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 #social-icons a:hover img {
   opacity: 0.6;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-/* line 252, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 253, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 #at-stanford {
   padding-right: 10px;
 }
-/* line 255, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 256, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 #at-stanford p {
   padding: 10px;
   background-color: #f2f1eb;
 }
-/* line 259, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 260, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 #at-stanford p span {
   text-transform: uppercase;
   color: #820000;
   font-weight: 600;
   padding-right: 5px;
 }
-/* line 269, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 270, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 .dl-horizontal dt {
   overflow: visible;
 }
 /* This rule is read by Galleria to define the gallery height: */
-/* line 273, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 274, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 .galleria-stage {
   /* modify line 17 of your galleria.classic.css stylesheet */
 
@@ -864,22 +865,22 @@ body.facstaff #nav-facstaff a {
   /* define the bottom spacing, same as top/left/right */
 
 }
-/* line 278, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 279, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 .galleria-container {
   background: none;
 }
-/* line 287, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 288, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 #event-list h3,
 #event-list h4 {
   font-size: 15px;
 }
-/* line 291, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 292, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 #event-list .event-date {
   vertical-align: top;
   width: 45px;
   padding-right: 15px;
 }
-/* line 296, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 297, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 #event-list .event-date .event-month {
   padding-left: 3px;
   font-weight: 400;
@@ -890,7 +891,7 @@ body.facstaff #nav-facstaff a {
   line-height: 1.1;
   letter-spacing: 1px;
 }
-/* line 306, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 307, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 #event-list .event-date .event-day {
   font-weight: 200;
   display: block;
@@ -899,15 +900,15 @@ body.facstaff #nav-facstaff a {
   color: #820000;
   line-height: 0.8;
 }
-/* line 316, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 317, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 #event-list .more-link {
   padding-left: 42px;
 }
-/* line 326, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 327, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 #sports h3 {
   font-size: 18px;
 }
-/* line 329, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
+/* line 330, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage.less */
 #sports img {
   padding-right: 10px;
   vertical-align: top;
