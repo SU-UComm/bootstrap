@@ -1,5 +1,21 @@
 /*Header (logo and menu)
 ------------------------------------*/
+#skip { // skip navigation (accessibility)
+  a, a:hover, a:visited {
+    position:absolute; 
+    left:0px; 
+    top:-500px; 
+    width:1px; 
+    height:1px; 
+    overflow:hidden;
+  }
+  a:active, a:focus {
+    position:static; 
+    width:auto; 
+    height:auto; 
+    color: white;
+  }
+}
 #header {
 	z-index: 999;
 	padding: 12px 0 18px 0;
