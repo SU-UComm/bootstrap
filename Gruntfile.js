@@ -123,6 +123,12 @@ module.exports = function(grunt) {
         },
         files: uCommFiles
       },
+      stage: {
+        options: {
+            paths: ["ucomm/less", "less"]
+        },
+        files: uCommFiles
+      },
       prod: {
         options: {
             paths: ["ucomm/less", "less"]
@@ -265,7 +271,8 @@ module.exports = function(grunt) {
 
   // UComm tasks
   grunt.registerTask('dev',     ['less:dev']);
+  grunt.registerTask('stage',   ['less:stage']);
   grunt.registerTask('prod',    ['less:prod']);
   grunt.registerTask('deploy',  ['copy:bootstrap', 'copy:ucomm']);
-  grunt.registerTask('rebuild', ['dist-css', 'dev', 'deploy']);
+  grunt.registerTask('rebuild', ['dist-css', 'stage', 'deploy']);
 };

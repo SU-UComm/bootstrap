@@ -1,96 +1,76 @@
 @media (max-width: 767px) {
-  /* line 8, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   body {
     padding: 0;
   }
-  /* line 11, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   #header .container {
     padding: 0 10px;
   }
-  /* line 14, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   #body .container {
     padding: 0 20px;
   }
-  /* line 17, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   #body .container:first-child {
     padding: 0;
   }
-  /* line 20, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   #logo {
     max-width: 300px;
   }
-  /* line 24, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   #search-block-form #search-field {
     width: 175px;
     font-size: 0.85714em;
   }
-  /* line 28, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   #search-block-form .btn-search {
     width: 22px;
     height: 22px;
     top: 5px;
     right: 5px;
   }
-  /* line 37, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   #footer .container {
     padding: 0 20px !important;
   }
-  /* line 41, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   #footer ul.footer-list {
     margin-bottom: 20px;
   }
-  /* line 44, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   #footer ul.footer-list li {
     font-size: 1.3em;
     margin-bottom: 10px;
   }
-  /* line 50, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   #footer .block h3 {
     border-bottom: 1px solid #8c1515;
     margin-bottom: 10px;
     padding-bottom: 5px;
     font-size: 1.1em;
   }
-  /* line 57, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   #footer #hp-buttons {
     margin-top: 20px;
   }
-  /* line 60, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   #footer #hp-buttons .btn-u i {
     font-size: 1.78571em;
     margin: 0 10px;
   }
-  /* line 66, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   #footer p.copyright {
     padding-top: 25px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 76, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .col-sm-1-4 {
     float: left;
     width: 18%;
     margin-right: 2%;
   }
-  /* line 83, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .footer #hp-buttons {
     clear: both;
   }
-  /* line 87, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .footer #hp-buttons ul li {
     display: inline;
   }
-  /* line 90, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .footer #hp-buttons ul li a {
     width: 19%;
   }
-  /* line 93, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .footer #hp-buttons ul li a i {
     display: block;
     margin: 0 auto 5px;
     text-align: center;
   }
-  /* line 99, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .footer #hp-buttons ul li a span {
     display: block;
     text-align: center;
@@ -99,22 +79,18 @@
   }
 }
 @media (max-width: 991px) {
-  /* line 116, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   #primary-nav {
     padding-left: 0.5em;
   }
-  /* line 119, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   #gateway-nav {
     padding: 0.5em 0;
     background-color: #fbfbf9;
   }
-  /* line 124, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar {
     margin: 5px 0 3px 0;
     /*Gateways */
   
   }
-  /* line 127, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar .menu-text {
     display: inline;
     text-transform: uppercase;
@@ -125,7 +101,6 @@
     font-size: 0.85em;
     font-weight: 700;
   }
-  /* line 138, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar .navbar-toggle {
     background-color: #8c1515;
     border: none;
@@ -135,40 +110,32 @@
     margin-top: 1px;
     padding: 7px 10px;
   }
-  /* line 147, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar .navbar-toggle span.icon-bar {
     background-color: white;
   }
-  /* line 152, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar .nav-search {
     float: right;
     margin: 0;
     min-height: 1px;
     padding: 0;
   }
-  /* line 158, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar .nav-search #search-type label {
     color: #2e2d29;
     font-weight: 400;
   }
-  /* line 164, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar .navbar-collapse {
     width: 100%;
   }
-  /* line 167, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar .navbar-collapse.in {
     overflow-y: visible;
   }
-  /* line 172, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar .nav {
     margin: 8px 0 15px 0;
   }
-  /* line 175, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar .nav > li {
     display: block;
     padding-right: 0;
   }
-  /* line 179, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar .nav > li > a,
   .navbar .nav > li > a:focus,
   .navbar .nav > li > a:hover {
@@ -178,17 +145,14 @@
     margin-right: 0;
     width: 100%;
   }
-  /* line 188, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar .nav > li > a:hover {
     background-color: #fbfbf9;
     border-bottom: none;
   }
-  /* line 196, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar #gateway-nav {
     width: 100%;
     margin-bottom: 15px;
   }
-  /* line 200, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar #gateway-nav label[for=gateways] {
     display: block;
     margin-bottom: 0;
@@ -198,28 +162,23 @@
     font-weight: 700;
     cursor: pointer;
   }
-  /* line 209, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar #gateway-nav label[for=gateways] span {
     padding: 0 0.5em;
     font-size: 1.5em;
   }
-  /* line 216, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar #gateways {
     margin: 0 0 0 1.4em;
     list-style: none;
     position: relative;
     display: none;
   }
-  /* line 222, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar #gateways.pull-right {
     float: none !important;
   }
-  /* line 226, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar #gateways li {
     display: block;
     list-style: none;
   }
-  /* line 230, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar #gateways li a {
     font-size: 0.85em;
     text-transform: uppercase;
@@ -228,7 +187,6 @@
     border-radius: 3px;
     padding: 9px 15px;
   }
-  /* line 238, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar #gateways li a:focus,
   .navbar #gateways li a:hover {
     text-decoration: none;
@@ -236,26 +194,21 @@
     border-bottom: none;
     padding-bottom: 9px;
   }
-  /* line 244, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar #gateways li a:hover {
     background-color: #fbfbf9;
     border-bottom: none;
   }
-  /* line 254, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .footer ul.footer-list {
     padding-bottom: 0;
   }
-  /* line 257, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .footer ul.footer-list li {
     padding-bottom: 0;
   }
 }
 @media (min-width: 992px) {
-  /* line 268, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   #gateways li:last-child {
     padding-right: 0;
   }
-  /* line 272, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .two-column {
     -moz-column-count: 2;
     -moz-column-gap: 20px;
@@ -266,19 +219,15 @@
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 283, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar .nav > li {
     padding: 0 10px 0 0;
   }
-  /* line 286, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   .navbar .nav > li > a {
     font-size: 1.3em;
   }
-  /* line 291, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   #gateways li {
     padding-right: 10px;
   }
-  /* line 293, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base-responsive.less */
   #gateways li a {
     font-size: .8em;
   }
@@ -287,64 +236,51 @@
   
 }
 @media (max-width: 767px) {
-  /* line 6, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #mainmenu {
     margin-bottom: 0;
   }
-  /* line 10, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   .more-link {
     float: right;
   }
-  /* line 13, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   .more-link a {
     font-size: 1.1em;
   }
-  /* line 19, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #feature-banner #browsable {
     overflow: hidden;
     height: 325px;
   }
-  /* line 24, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #feature-banner a.right,
   #feature-banner a.left {
     top: 80px;
   }
-  /* line 30, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #feature-banner #slides h3 {
     font-size: 3em !important;
   }
-  /* line 33, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #feature-banner #slides p {
     font-size: 1.2em;
   }
-  /* line 36, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #feature-banner #slides .textblock {
     width: 250px;
     top: 140px;
   }
-  /* line 40, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #feature-banner #slides .videoblock {
     display: none;
   }
-  /* line 46, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   .news-item {
     clear: both;
     display: table;
     margin-bottom: 50px;
     position: relative;
   }
-  /* line 52, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   .news-item > div {
     display: table-cell;
     position: relative;
   }
-  /* line 57, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   .news-item .news-img {
     overflow: hidden;
     padding-right: 15px;
     width: 100px;
   }
-  /* line 62, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   .news-item .news-img img {
     width: 150px;
     max-width: none;
@@ -352,40 +288,32 @@
     top: 0;
     clip: rect(0px, 100px, 150px, 0px);
   }
-  /* line 71, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   .news-item .news-text {
     vertical-align: top;
     padding-left: 10px;
   }
-  /* line 75, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   .news-item .news-text h3 {
     margin-top: 0;
     line-height: 1;
   }
-  /* line 79, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   .news-item .news-text p {
     font-size: 1.1em;
   }
-  /* line 85, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #social-feature p {
     margin: 0 20px;
   }
-  /* line 89, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #social-icons ul {
     display: block;
     width: 170px;
     margin: 10px auto 0 auto;
   }
-  /* line 95, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #at-stanford {
     margin-bottom: 30px;
   }
-  /* line 99, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #event-list .more-link {
     margin-left: 100px;
     padding-left: 10px;
   }
-  /* line 104, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #sports img {
     width: 100px;
     height: 100px;
@@ -393,50 +321,41 @@
   }
 }
 @media (max-width: 991px) {
-  /* line 115, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #social-icons img {
     width: 25px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 125, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #feature-banner #slides .slide {
     min-width: 724px;
     max-width: 724px;
     width: 724px;
   }
-  /* line 131, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #feature-banner #slides .textblock {
     width: 230px;
     left: 70px;
   }
-  /* line 135, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #feature-banner #slides .videoblock {
     width: 320px;
     height: 180px;
     top: 130px;
     left: 350px;
   }
-  /* line 142, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #feature-banner #slides h3 {
     font-size: 2.5em !important;
   }
-  /* line 146, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #feature-banner #slides p {
     font-size: 1.25em !important;
   }
-  /* line 152, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #social-feature button {
     width: 50%;
     margin: 5px 0;
     padding: 0;
   }
-  /* line 158, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #social-feature p {
     vertical-align: middle;
     font-size: 1.1em;
   }
-  /* line 162, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #social-feature p.social-timestamp {
     margin: 5px;
     margin-top: -10px;
@@ -448,50 +367,40 @@
   
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 180, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #feature-banner #slides .slide {
     min-width: 940px;
     max-width: 940px;
     width: 940px;
   }
-  /* line 185, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #feature-banner #slides .videoblock {
     width: 480px;
     height: 270px;
     left: 390px;
     top: 100px;
   }
-  /* line 194, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #social-feature button {
     width: 50%;
   }
-  /* line 197, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #social-feature p.social-timestamp {
     margin-top: -10px;
   }
-  /* line 202, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #sports .postcard-left .postcard-text {
     padding-left: 0;
   }
 }
 @media (min-width: 1200px) {
-  /* line 211, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #feature-banner #slides .slide {
     min-width: 1170px;
   }
-  /* line 215, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #social-icons li {
     margin-right: 5px;
   }
-  /* line 218, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   #sports .more-link {
     padding-left: 110px;
   }
-  /* line 223, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   .postcard-left .postcard-image {
     width: 100px;
   }
-  /* line 226, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/homepage-responsive.less */
   .postcard-left .postcard-text {
     padding-left: 10px;
   }

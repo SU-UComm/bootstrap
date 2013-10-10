@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700);
-/* line 11, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 a,
 a:focus,
 a:hover,
@@ -7,15 +6,12 @@ a:active {
   outline: 0 !important;
   text-decoration: none;
 }
-/* line 16, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 blockquote {
   border-left: 5px solid #e3dfd5;
 }
-/* line 20, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 dl {
   margin-top: 5px;
 }
-/* line 24, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 h1,
 h2,
 h3,
@@ -24,7 +20,6 @@ h5,
 h6 {
   margin: 0 0 5px 0;
 }
-/* line 27, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 h1 i,
 h2 i,
 h3 i,
@@ -33,26 +28,21 @@ h5 i,
 h6 i {
   margin-right: 7px;
 }
-/* line 31, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 h1 {
   font-weight: 300;
 }
-/* line 35, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 li {
   line-height: 1.42857;
 }
-/* line 43, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .btn {
   line-height: 1.42867;
 }
-/* line 47, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .btn-one {
   background-color: #009b76;
   border-color: #008263;
   color: #ffffff;
   text-decoration: none;
 }
-/* line 38, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_less.less */
 .btn-one:hover,
 .btn-one:focus,
 .btn-one:active {
@@ -61,14 +51,12 @@ li {
   color: #ffffff;
   text-decoration: none;
 }
-/* line 48, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .btn-two {
   background-color: #007c92;
   border-color: #006679;
   color: #ffffff;
   text-decoration: none;
 }
-/* line 38, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_less.less */
 .btn-two:hover,
 .btn-two:focus,
 .btn-two:active {
@@ -77,14 +65,12 @@ li {
   color: #ffffff;
   text-decoration: none;
 }
-/* line 49, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .btn-three {
   background-color: #4d5357;
   border-color: #414649;
   color: #ffffff;
   text-decoration: none;
 }
-/* line 38, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_less.less */
 .btn-three:hover,
 .btn-three:focus,
 .btn-three:active {
@@ -93,7 +79,6 @@ li {
   color: #ffffff;
   text-decoration: none;
 }
-/* line 51, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .btn-u {
   display: inline-block;
   position: relative;
@@ -106,7 +91,6 @@ li {
   text-decoration: none;
   text-shadow: none;
 }
-/* line 63, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .btn-u:hover {
   color: #fbfbf9;
   background: #3f3c30;
@@ -114,61 +98,49 @@ li {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-/* line 70, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .btn-u i {
   font-size: 1.13333em;
 }
-/* line 75, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .color-red {
   color: #820000;
 }
-/* line 79, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 #content {
   margin-bottom: 20px;
 }
-/* line 83, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .dropcap {
   float: left;
   font-size: 4em;
   margin: -25px 5px -25px 0;
   color: #aca68d;
 }
-/* line 91, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .event .timestamp {
   text-transform: uppercase;
 }
-/* line 96, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 #hero-image img {
   display: block;
   max-width: 100%;
   height: auto;
 }
-/* line 100, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .info-box {
   margin: 30px 15px;
   display: table;
 }
-/* line 104, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .info-box .icon-container,
 .info-box .text-container {
   display: table-cell;
   vertical-align: top;
   min-width: 50px;
 }
-/* line 110, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .info-box .text-container {
   padding-left: 15px;
 }
-/* line 114, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .info-box .offset {
   padding-left: 65px;
 }
-/* line 118, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .info-box i {
   color: #DAD7CB;
   margin: 0;
 }
-/* line 123, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .info-box h2 {
   color: #5f574f;
   font-size: 1.28571em;
@@ -176,69 +148,56 @@ li {
   line-height: 1em;
   text-transform: uppercase;
 }
-/* line 131, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .info-box ul {
   padding-left: 0;
   list-style: none;
 }
-/* line 135, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .info-box ul li {
   margin-bottom: 10px;
   line-height: 1.2em;
 }
-/* line 142, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .lead {
   font-size: 1.42857em;
   line-height: 1.4;
   color: #3f3c30;
 }
-/* line 149, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .larger {
   font-size: 1.28571em;
   line-height: 1.11111;
   font-weight: 400;
 }
-/* line 156, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .margin-bottom-5 {
   margin-bottom: 5px;
   clear: both;
 }
-/* line 157, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .margin-bottom-10 {
   margin-bottom: 10px;
   clear: both;
 }
-/* line 158, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .margin-bottom-20 {
   margin-bottom: 20px;
   clear: both;
 }
-/* line 159, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .margin-bottom-25 {
   margin-bottom: 25px;
   clear: both;
 }
-/* line 160, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .margin-bottom-30 {
   margin-bottom: 30px;
   clear: both;
 }
-/* line 161, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .margin-bottom-40 {
   margin-bottom: 40px;
   clear: both;
 }
-/* line 162, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .margin-bottom-50 {
   margin-bottom: 50px;
   clear: both;
 }
-/* line 163, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .margin-bottom-60 {
   margin-bottom: 60px;
   clear: both;
 }
-/* line 165, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .more-link a,
 a.more-link {
   font-weight: 600;
@@ -250,22 +209,18 @@ a.more-link {
   text-transform: uppercase;
   text-decoration: none;
 }
-/* line 176, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .more-link a:hover,
 a.more-link:hover {
   color: #820000;
 }
-/* line 180, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .more-link a i,
 a.more-link i {
   color: #8c1515;
   font-size: 1.1em;
 }
-/* line 186, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .navbar {
   border: none;
 }
-/* line 190, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .postcard-left,
 .postcard-right {
   clear: both;
@@ -273,106 +228,87 @@ a.more-link i {
   margin-bottom: 15px;
   position: relative;
 }
-/* line 194, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .postcard-left > div,
 .postcard-right > div {
   display: table-cell;
   position: relative;
 }
-/* line 199, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .postcard-left .postcard-image img,
 .postcard-right .postcard-image img {
   display: block;
   max-width: 100%;
   height: auto;
 }
-/* line 204, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 #su-content {
   overflow: visible;
   padding-bottom: 390px !important;
 }
-/* line 209, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 #su-wrap {
   overflow-x: hidden;
 }
-/* line 213, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 #top {
   min-height: 10px;
   padding: 4px 0 0;
   background-color: #8c1515;
   color: #8c1515;
 }
-/* line 220, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 ul.vbar {
   list-style: none;
   padding: 0;
 }
-/* line 224, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 ul.vbar li {
   display: inline-block;
   padding: 0 0.5em;
   border-right: 1px solid #5f574f;
 }
-/* line 229, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 ul.vbar li:first-of-type {
   padding-left: 0;
 }
-/* line 230, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 ul.vbar li:last-of-type {
   border-right: none;
 }
-/* line 233, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .well {
   box-shadow: none;
   border: medium none;
   border-radius: 10px 10px 10px 10px;
   padding: 20px;
 }
-/* line 239, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .well h2 {
   padding: 10px 0;
   font-size: 1.2em;
   text-transform: uppercase;
 }
-/* line 245, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .well h3 {
   font-size: 1em;
   text-transform: uppercase;
 }
-/* line 250, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .well ul {
   list-style: square;
 }
-/* line 254, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/base.less */
 .well a {
   border-bottom: 1px dotted #827252;
   text-decoration: none;
 }
 /*Header (logo and menu)
 ------------------------------------*/
-/* line 3, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_header.less */
 #header {
   z-index: 999;
   padding: 12px 0 18px 0;
   background-color: #8c1515;
 }
-/* line 8, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_header.less */
 #logo {
   max-width: 360px;
   min-width: 300px;
 }
 /* Search */
-/* line 14, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_header.less */
 .nav-search {
   float: right;
   margin: -65px 0 0 0;
   min-height: 1px;
 }
-/* line 20, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_header.less */
 #search-block-form {
   position: relative;
 }
-/* line 23, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_header.less */
 #search-field {
   width: 220px;
   height: 30px;
@@ -381,16 +317,13 @@ ul.vbar li:last-of-type {
   border-radius: 8px;
   color: #5f574f;
 }
-/* line 31, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_header.less */
 #search-type label {
   margin-right: 1px;
   color: #e9e6df;
 }
-/* line 35, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_header.less */
 #search-type input[type="radio"] {
   margin-right: 8px;
 }
-/* line 39, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_header.less */
 #search-block-form #search-btn {
   position: absolute;
   top: .55em;
@@ -398,38 +331,31 @@ ul.vbar li:last-of-type {
   color: #8a587d;
   cursor: pointer;
 }
-/* line 46, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_header.less */
 #search-block-form #search-btn:hover {
   opacity: 0.6;
 }
 /* Nav */
-/* line 51, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_header.less */
 #mainmenu {
   background-color: #f2f1eb;
   margin-bottom: 15px;
   -webkit-box-shadow: 0 -4px 8px -2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 -4px 8px -2px rgba(0, 0, 0, 0.2);
 }
-/* line 56, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_header.less */
 #mainmenu ul {
   padding-left: 0;
 }
-/* line 60, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_header.less */
 .navbar {
   margin: 0;
   min-height: 2.3em;
 }
-/* line 64, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_header.less */
 .navbar .nav > li {
   display: block;
   position: relative;
   padding: 0 15px 0 0;
 }
-/* line 69, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_header.less */
 .navbar .nav > li:last-child {
   padding-right: 0;
 }
-/* line 73, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_header.less */
 .navbar .nav > li > a {
   font-size: 1.4em;
   font-weight: 300;
@@ -437,12 +363,10 @@ ul.vbar li:last-of-type {
   margin-right: 30px;
   line-height: 1em;
 }
-/* line 82, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_header.less */
 .navbar .navbar-collapse {
   padding: 0;
   max-height: none;
 }
-/* line 88, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_header.less */
 #gateways li a:hover,
 #gateways li a:focus,
 .navbar-default .navbar-nav > li > a:hover,
@@ -451,17 +375,14 @@ ul.vbar li:last-of-type {
   padding-bottom: 4px;
   color: inherit;
 }
-/* line 96, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_header.less */
 .navbar .menu-text {
   display: none;
 }
 /*Gateways */
-/* line 100, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_header.less */
 label[for=gateways] {
   text-transform: uppercase;
   display: none;
 }
-/* line 104, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_header.less */
 #gateways {
   margin: 0;
   padding-top: 5px;
@@ -470,23 +391,19 @@ label[for=gateways] {
   list-style: none;
   position: relative;
 }
-/* line 112, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_header.less */
 #gateways li {
   display: inline;
   padding-bottom: 0;
   padding-right: 20px;
 }
-/* line 117, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_header.less */
 #gateways li a {
   font-size: .9em;
   text-transform: uppercase;
 }
-/* line 125, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_header.less */
 .nav-pills > li {
   border-radius: 6px;
   margin-right: 2px;
 }
-/* line 131, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_header.less */
 body.about #nav-about a,
 body.admission #nav-admission a,
 body.academics #nav-academics a,
@@ -497,7 +414,6 @@ body.facstaff #nav-facstaff a {
   color: #820000;
   font-weight: 400;
 }
-/* line 1, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_footer.less */
 .footer {
   padding: 0 !important;
   position: relative;
@@ -508,26 +424,21 @@ body.facstaff #nav-facstaff a {
   box-shadow: 0 4px 8px -8px rgba(0, 0, 0, 0.2) inset;
   background-color: #f2f1eb;
 }
-/* line 10, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_footer.less */
 .footer ul {
   padding-left: 0;
   margin: 0 0 10px 0;
   list-style: none;
 }
-/* line 15, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_footer.less */
 .footer ul.footer-list {
   padding-bottom: .4em;
 }
-/* line 18, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_footer.less */
 .footer ul.footer-list li {
   line-height: 1.1;
   padding-bottom: .4em;
 }
-/* line 24, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_footer.less */
 .footer #footer-content {
   padding: 30px 0;
 }
-/* line 27, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_footer.less */
 .footer h3 {
   color: #820000;
   font-size: 1em;
@@ -535,39 +446,31 @@ body.facstaff #nav-facstaff a {
   text-transform: uppercase;
   font-weight: 600;
 }
-/* line 34, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_footer.less */
 .footer p,
 .footer a {
   color: #565347;
 }
-/* line 38, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_footer.less */
 .footer a:hover {
   color: #820000;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-/* line 43, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_footer.less */
 .footer #hp-buttons ul {
   margin-bottom: 0;
 }
-/* line 46, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_footer.less */
 .footer #hp-buttons ul li {
   margin-bottom: 5px;
 }
-/* line 49, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_footer.less */
 .footer #hp-buttons ul li a {
   text-align: left;
 }
-/* line 52, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_footer.less */
 .footer #hp-buttons ul li a:hover {
   color: white;
 }
-/* line 56, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_footer.less */
 .footer #hp-buttons ul li a i {
   margin: 0 5px 0 10px;
 }
 /* Global Footer and Copyright*/
-/* line 66, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_footer.less */
 #global-footer {
   position: relative;
   margin-top: 0 !important;
@@ -576,21 +479,17 @@ body.facstaff #nav-facstaff a {
   height: 120px;
   clear: both;
 }
-/* line 72, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_footer.less */
 #global-footer #bottom-text ul {
   margin: 0;
 }
-/* line 75, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_footer.less */
 #global-footer #bottom-text ul li a {
   font-size: 15px;
 }
-/* line 80, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_footer.less */
 #global-footer p.copyright {
   color: #e3dfd5;
   padding: 0 15px;
   font-size: 13px;
 }
-/* line 85, /Users/jbchrsty/repos/ucomm-bootstrap/ucomm/less/_footer.less */
 #global-footer p.timestamp {
   text-transform: uppercase;
 }
