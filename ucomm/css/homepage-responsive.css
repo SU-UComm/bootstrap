@@ -79,6 +79,9 @@
   }
 }
 @media (max-width: 991px) {
+  .container {
+    padding: 0 15px;
+  }
   #primary-nav {
     padding-left: 0.5em;
   }
