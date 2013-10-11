@@ -26,7 +26,7 @@
     top: 80px;
   }
 
-  #slides {
+  .item {
     h3 {
       font-size: 3em !important;
     }
@@ -40,7 +40,7 @@
     .videoblock {
       display: none;
     }
-  } // #feature-banner #slides
+  } // #feature-banner .item
 } // #feature-banner
 
 .news-item {
@@ -121,20 +121,18 @@
 //////////////////////////
 // tablet
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-#feature-banner #slides {
-  .slide {
-    min-width: 724px;
-    max-width: 724px;
-    width: 724px;
-  }
+#feature-banner .item {
+  min-width: 724px;
+  max-width: 724px;
+  width: 724px;
 
   .textblock {
     width: 230px;
     left: 70px;
   }
   .videoblock {
-    width: 320px;
-    height: 180px;
+    width: 310px;
+    height: 175px;
     top: 130px;
     left: 350px;
   }
@@ -176,12 +174,11 @@
 } // @media (min-width: @screen-md-min)
 
 @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-#feature-banner #slides {
-  .slide {
-    min-width: 940px;
-    max-width: 940px;
-    width: 940px;
-  }
+#feature-banner .item {
+  min-width: 940px;
+  max-width: 940px;
+  width: 940px;
+
   .videoblock {
     width: 480px;
     height: 270px;
@@ -208,7 +205,7 @@
 //////////////////////////
 // big desktop
 @media (min-width: @screen-lg-min) {
-#feature-banner #slides .slide {
+#feature-banner .item {
 	min-width: 1170px;
 }
 

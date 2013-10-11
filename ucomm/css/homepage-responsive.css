@@ -256,17 +256,17 @@
   #feature-banner a.left {
     top: 80px;
   }
-  #feature-banner #slides h3 {
+  #feature-banner .item h3 {
     font-size: 3em !important;
   }
-  #feature-banner #slides p {
+  #feature-banner .item p {
     font-size: 1.2em;
   }
-  #feature-banner #slides .textblock {
+  #feature-banner .item .textblock {
     width: 250px;
     top: 140px;
   }
-  #feature-banner #slides .videoblock {
+  #feature-banner .item .videoblock {
     display: none;
   }
   .news-item {
@@ -329,25 +329,25 @@
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  #feature-banner #slides .slide {
+  #feature-banner .item {
     min-width: 724px;
     max-width: 724px;
     width: 724px;
   }
-  #feature-banner #slides .textblock {
+  #feature-banner .item .textblock {
     width: 230px;
     left: 70px;
   }
-  #feature-banner #slides .videoblock {
-    width: 320px;
-    height: 180px;
+  #feature-banner .item .videoblock {
+    width: 310px;
+    height: 175px;
     top: 130px;
     left: 350px;
   }
-  #feature-banner #slides h3 {
+  #feature-banner .item h3 {
     font-size: 2.5em !important;
   }
-  #feature-banner #slides p {
+  #feature-banner .item p {
     font-size: 1.25em !important;
   }
   #social-feature button {
@@ -370,12 +370,12 @@
   
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  #feature-banner #slides .slide {
+  #feature-banner .item {
     min-width: 940px;
     max-width: 940px;
     width: 940px;
   }
-  #feature-banner #slides .videoblock {
+  #feature-banner .item .videoblock {
     width: 480px;
     height: 270px;
     left: 390px;
@@ -392,7 +392,7 @@
   }
 }
 @media (min-width: 1200px) {
-  #feature-banner #slides .slide {
+  #feature-banner .item {
     min-width: 1170px;
   }
   #social-icons li {
