@@ -549,6 +549,19 @@ h3 {
   position: relative;
   line-height: 1.5em;
 }
+#content .postcard-image {
+  width: 350px;
+}
+#content .postcard-image img {
+  width: 100%;
+  border-bottom: 3px solid #c4bfa9;
+  padding-bottom: 2px;
+}
+#content .postcard-text {
+  vertical-align: top;
+  padding-top: 10px;
+  padding-left: 20px;
+}
 #content #main-content ul li:before {
   color: #9d9573;
   position: absolute;

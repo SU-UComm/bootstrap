@@ -719,11 +719,11 @@ body.facstaff #nav-facstaff a {
 #at-stanford {
   padding-right: 10px;
 }
-#at-stanford p {
+#at-stanford div p {
   padding: 10px;
   background-color: #f2f1eb;
 }
-#at-stanford p span {
+#at-stanford div p span {
   text-transform: uppercase;
   color: #820000;
   font-weight: 600;
