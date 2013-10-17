@@ -611,7 +611,7 @@ body.facstaff #nav-facstaff a {
 }
 #feature-banner .carousel-control {
   background: none repeat scroll 0 0 #2e2d29;
-  border: 3px solid #FFFFFF;
+  border: none;
   border-radius: 25px;
   color: #FFFFFF;
   height: 45px;
@@ -719,15 +719,41 @@ body.facstaff #nav-facstaff a {
 #at-stanford {
   padding-right: 10px;
 }
-#at-stanford div p {
-  padding: 10px;
-  background-color: #f2f1eb;
+#at-stanford-carousel .carousel-indicators,
+#at-stanford-carousel .carousel-control {
+  display: none;
 }
-#at-stanford div p span {
+#at-stanford-carousel .item {
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out 0s;
+  transition: opacity 1s ease-in-out 0s;
+}
+#at-stanford-carousel .item.active {
+  opacity: 1;
+}
+#at-stanford-carousel .item .carousel-caption {
+  background-color: #f2f1eb;
+  color: inherit;
+  text-shadow: none;
+  width: 100%;
+  position: static;
+  text-align: left;
+  padding: 10px;
+}
+#at-stanford-carousel .item .carousel-caption h3,
+#at-stanford-carousel .item .carousel-caption p {
+  display: inline;
+  margin: 0;
+}
+#at-stanford-carousel .item .carousel-caption h3 {
+  font-size: 1em;
+  font-weight: 600;
   text-transform: uppercase;
   color: #820000;
-  font-weight: 600;
-  padding-right: 5px;
+  margin-right: .4em;
+}
+#at-stanford-carousel .item a:hover {
+  color: inherit;
 }
 .dl-horizontal dt {
   overflow: visible;

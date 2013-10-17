@@ -106,7 +106,7 @@
   
   .carousel-control {
       background: none repeat scroll 0 0 @su-black;
-      border: 3px solid #FFFFFF;
+      border: none;
       border-radius: 25px;
       color: #FFFFFF;
       height: 45px;
@@ -252,21 +252,50 @@
 
 #at-stanford {
 	padding-right: 10px;
+} // #at-stanford
 
-  div{
-    p {
-      padding: 10px;
+#at-stanford-carousel {
+  .carousel-indicators,
+  .carousel-control {
+    display: none;
+  }
+
+  .item {
+    opacity: 0;
+    &.active {
+      opacity: 1;
+    }
+    .transition(opacity 1s ease-in-out 0s);
+
+    .carousel-caption {
       background-color: @su-beige-bg;
-  
-      span {
+      color: inherit;
+      text-shadow: none;
+      width: 100%;
+      position: static;
+      text-align: left;
+      padding: 10px;
+
+      h3,
+      p {
+        display: inline;
+        margin: 0;
+      }
+
+      h3 {
+        font-size: 1em;
+        font-weight: 600;
         text-transform: uppercase;
         color: @su-red-text;
-        font-weight: 600;
-        padding-right: 5px;
+        margin-right: .4em;
       }
+    } // .carousel-caption
+
+    a:hover {
+      color: inherit;
     }
-  }
-} // #at-stanford
+  } // .item
+} // #at-stanford-carousel
 
 //// ARE THESE USED???
 .dl-horizontal dt {
