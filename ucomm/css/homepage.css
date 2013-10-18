@@ -725,11 +725,17 @@ body.facstaff #nav-facstaff a {
 }
 #at-stanford-carousel .item {
   opacity: 0.1;
-  -webkit-transition: opacity 1s ease-in-out 0s;
-  transition: opacity 1s ease-in-out 0s;
+  -webkit-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
 }
 #at-stanford-carousel .item.active {
   opacity: 1;
+}
+#at-stanford-carousel .item.left {
+  left: 0 !important;
+  opacity: 0.1 !important;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 #at-stanford-carousel .item .carousel-caption {
   background-color: #f2f1eb;
