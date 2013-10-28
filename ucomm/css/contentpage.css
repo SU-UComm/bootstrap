@@ -578,6 +578,15 @@ h3 {
   margin: 0 0 0 -15px;
   content: '\25AA';
 }
+#main-content dt {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #820000;
+}
+#main-content dd {
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
 #main-content .postcard-image {
   width: 350px;
 }
