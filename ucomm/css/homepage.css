@@ -382,7 +382,7 @@ ul.vbar li:last-of-type {
   position: absolute;
   top: .55em;
   right: 1em;
-  color: #8a587d;
+  color: #3f3c30;
   cursor: pointer;
 }
 #search-block-form #search-btn:hover {
@@ -635,6 +635,7 @@ body.facstaff #nav-facstaff a {
 #feature-banner .carousel-indicators .active {
   background-color: #8c1515;
   margin: 2px;
+  border: 2px solid #8c1515;
 }
 #feature-banner .carousel-indicators li {
   height: 12px;
