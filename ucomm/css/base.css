@@ -161,8 +161,7 @@ li {
   line-height: 1.1em;
   margin-bottom: 5px;
 }
-.info-box dt,
-.info-box li {
+.info-box dt {
   font-size: 1.1em;
 }
 .info-box dt a,
