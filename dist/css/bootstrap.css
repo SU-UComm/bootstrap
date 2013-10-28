@@ -320,7 +320,7 @@ textarea {
 
 a {
   color: #5f574f;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover,

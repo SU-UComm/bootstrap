@@ -4,7 +4,9 @@
   padding-left: 0;
 }
 
-
+#content h3 a, #content h4 a {
+	text-decoration: none;
+}
 /////////////////////////////////
 // Feature Banner / Carousel (Home Top)
 
@@ -181,6 +183,9 @@
       .line-height(20, 16.1);
     }
   }
+  a{
+	  text-decoration: none;
+  }
 }
 
 
@@ -191,11 +196,14 @@
 	font-family: "Source Sans Pro", Arial;
 	background-color: @su-beige-bg;
 	border-radius: 4px;
-  margin: 0;
+	margin: 0;
 	padding: 10px 0;
 
   #tweet_info {
     padding: 0;
+    a{
+	    text-decoration: none;
+    }
   }
 
   p,
@@ -297,6 +305,9 @@
       }
     } // .carousel-caption
 
+	a {
+	  	text-decoration: none;	
+	}
     a:hover {
       color: inherit;
     }

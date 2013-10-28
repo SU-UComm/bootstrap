@@ -15,18 +15,7 @@ h3{
 	margin-bottom: 30px;
 }
 
-#content {
-	margin-bottom: 20px;
-
-  /***
-  a {
-    color: #827252;
-  
-    &:hover {
-        color: @su-red-text;
-    }
-  }
-  ***/
+#main-content {
 
   ul {
     list-style: none;
@@ -37,7 +26,14 @@ h3{
       line-height: 1.5em;
     }
   }
-
+  ul li:before {
+    color: @su-beige;
+    position: absolute;  
+    top: 0;
+    margin: 0 0 0 -15px;    
+    content: '\25AA';	
+  }
+  
   .postcard-image {
     width: 350px;
   
@@ -52,34 +48,22 @@ h3{
     padding-top: 10px;
     padding-left: 20px;
   }
+} //#main-content
 
-
-  #main-content ul li:before {
-    color: @su-beige;
-    position: absolute;  
-    top: 0;
-    margin: 0 0 0 -15px;    
-    content: '\25AA';	
-  }
-
-  #sidebar-first {
-    a:hover {
-      text-decoration: underline;
+#sidebar-first {
+    a {
+      text-decoration: none;
     }
     
     ul {
       padding-left: 0;
-  
+      list-style: none;  
+      
       li {
         border-bottom: 1px solid @su-beige-30;
         padding: 10px 0;
       }
     }
-  }
-
-  #sidebar-second {
-    a:hover {
-      text-decoration: underline;
-    }
-  }
 }
+
+

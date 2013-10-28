@@ -17,7 +17,6 @@
 // Elements
 a, a:hover, a:active {
 	outline: 0;
-	text-decoration: none;
 }
 a:focus {
   outline: 5px auto -webkit-focus-ring-color;
@@ -115,7 +114,7 @@ li {
   .text-container {
     display: table-cell;
     vertical-align: top;
-    min-width: 50px;
+    min-width: 65px;
   }
   .text-container {
     padding-left: 15px;
@@ -134,7 +133,8 @@ li {
     color: @su-clay;
     .font-size-em(18);
     font-weight: normal;
-    line-height: 1em;
+    line-height: 1.2em;
+    padding: 5px 0;
     text-transform: uppercase;
   }
   
@@ -143,10 +143,20 @@ li {
     list-style: none;
 
     li {
-      margin-bottom: 10px;
-      line-height: 1.2em;
+      line-height: 1.1em;
+      margin-bottom: 5px;
     }
   }
+  
+  	dt, li {
+	  font-size: 1.1em;
+	  a	{
+		  text-decoration: none;
+		  &:hover, &:active {
+		      text-decoration: underline;
+		}
+	  }
+    }
 }
 
 .lead {
@@ -264,6 +274,21 @@ ul.vbar {
   a {
     border-bottom: 1px dotted #827252;
     text-decoration: none;
+  }
+  .more-link {
+    text-align:right;
+  
+    a {
+      padding-right: 0;
+      border-bottom: none;
+      color: @su-clay;
+      font-size: .9em;
+      font-weight: 600;
+    
+      &:hover, &:active {
+        color: @su-red-text;
+      }
+    }
   }
 }
 

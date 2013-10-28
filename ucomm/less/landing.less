@@ -13,15 +13,7 @@ h2 {
 	margin-bottom: 30px;
 }
 
-#content {
-  a {
-    font-size: 1.1em;
-  
-    &:hover{
-      color: @su-red-text;
-      text-decoration: underline;
-    }
-  } // a
+#main-content {
 
   ul {
     list-style: none;
@@ -31,6 +23,7 @@ h2 {
       position: relative;
       line-height: 1.1em;
       margin-bottom: 7px;
+      font-size: 1.1em;
   
       &:before {
         color: @su-beige;
@@ -38,6 +31,12 @@ h2 {
         top: 0;
         margin: 0 0 0 -15px;    
         content: '\25AA';	
+      }
+      a {
+	      text-decoration: none;
+		  &:hover, &:active {
+		      text-decoration: underline;
+		  }
       }
     } // li
   } // ul
@@ -56,42 +55,26 @@ h2 {
     padding-top: 10px;
     padding-left: 20px;
   }
+} //#main-content
   
-  #sidebar-first {
+#sidebar-first {
     ul {
       padding-left: 0;
   
       li {
          border-bottom: 1px solid @su-beige-30;
          padding: 10px 0;
+         a {
+	         text-decoration: none;
+         }
       }
     }
-  }
+} //#sidebar-first
   
-  /***
-  #sidebar-first li:before, .info-box li:before {
-    content: '' !important;
-  }
-  ***/
-  #sidebar-second {
+
+#sidebar-second {
     .btn {
       margin-bottom: 15px;
     }
-  }
-  
-  .well .more-link {
-    text-align:right;
-  
-    a {
-      padding-right: 0;
-      border-bottom: none;
-      color: @su-clay;
-      font-size: .9em;
-      font-weight: 600;
-    
-      &:hover, &:active {
-        color: @su-red-text;
-      }
-    }
-  }
-} // #content
+}
+

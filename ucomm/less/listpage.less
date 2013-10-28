@@ -17,13 +17,25 @@ h2 {
   margin-top: 0;
 }
 
-#content .nav {
-  background-color: @su-beige-05;
+#main-content {
+      a {
+	      text-decoration: none;
+		  &:hover, &:active {
+		      text-decoration: underline;
+		  }
+      }
+	
+	.nav {
+	  background-color: @su-beige-05;
+	}
+
 }
+
 .nav-pills > li {
   margin: 0 .3em 1em 0;
 }
 .nav-pills > li > a {
+  text-decoration: none;
   border: 1px solid @su-beige-30;
   background-color: @su-beige-bg;
   padding: .4em .9em;

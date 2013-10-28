@@ -6,7 +6,6 @@ a,
 a:hover,
 a:active {
   outline: 0;
-  text-decoration: none;
 }
 a:focus {
   outline: 5px auto -webkit-focus-ring-color;
@@ -134,7 +133,7 @@ li {
 .info-box .text-container {
   display: table-cell;
   vertical-align: top;
-  min-width: 50px;
+  min-width: 65px;
 }
 .info-box .text-container {
   padding-left: 15px;
@@ -150,7 +149,8 @@ li {
   color: #5f574f;
   font-size: 1.28571em;
   font-weight: normal;
-  line-height: 1em;
+  line-height: 1.2em;
+  padding: 5px 0;
   text-transform: uppercase;
 }
 .info-box ul {
@@ -158,8 +158,22 @@ li {
   list-style: none;
 }
 .info-box ul li {
-  margin-bottom: 10px;
-  line-height: 1.2em;
+  line-height: 1.1em;
+  margin-bottom: 5px;
+}
+.info-box dt,
+.info-box li {
+  font-size: 1.1em;
+}
+.info-box dt a,
+.info-box li a {
+  text-decoration: none;
+}
+.info-box dt a:hover,
+.info-box li a:hover,
+.info-box dt a:active,
+.info-box li a:active {
+  text-decoration: underline;
 }
 .lead {
   font-size: 1.42857em;
@@ -294,6 +308,20 @@ ul.vbar li:last-of-type {
   border-bottom: 1px dotted #827252;
   text-decoration: none;
 }
+.well .more-link {
+  text-align: right;
+}
+.well .more-link a {
+  padding-right: 0;
+  border-bottom: none;
+  color: #5f574f;
+  font-size: .9em;
+  font-weight: 600;
+}
+.well .more-link a:hover,
+.well .more-link a:active {
+  color: #820000;
+}
 /*Header (logo and menu)
 ------------------------------------*/
 #skip a,
@@ -321,6 +349,10 @@ ul.vbar li:last-of-type {
 #logo {
   max-width: 360px;
   min-width: 300px;
+}
+#header a,
+#mainmenu a {
+  text-decoration: none;
 }
 /* Search */
 .nav-search {
@@ -472,6 +504,9 @@ body.facstaff #nav-facstaff a {
 .footer p,
 .footer a {
   color: #565347;
+}
+.footer a {
+  text-decoration: none;
 }
 .footer a:hover {
   color: #820000;
