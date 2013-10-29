@@ -301,7 +301,16 @@ ul.vbar li:last-of-type {
   text-transform: uppercase;
 }
 .well ul {
-  list-style: square;
+  list-style: none;
+}
+.well ul li {
+  margin-bottom: 7px;
+  line-height: 1.1em;
+}
+.well ul li:before {
+  margin: 0 0 0 -15px;
+  padding-right: 10px;
+  content: '\25AA';
 }
 .well a {
   border-bottom: 1px dotted #827252;
