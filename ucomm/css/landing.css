@@ -628,3 +628,19 @@ h2 {
 #sidebar-second .btn {
   margin-bottom: 15px;
 }
+#hero-image {
+  position: relative;
+}
+#hero-image .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #fbfbf9;
+  padding: 6px 12px;
+  background-color: rgba(46, 45, 45, 0.4);
+  display: none;
+}
+#hero-image:hover .caption {
+  display: inherit;
+}
