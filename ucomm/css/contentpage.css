@@ -575,6 +575,27 @@ h3 {
 #mainmenu {
   margin-bottom: 30px;
 }
+.image-caption {
+  background-color: #f2f1eb;
+  color: inherit;
+  text-shadow: none;
+  width: 100%;
+  position: static;
+  text-align: left;
+  padding: 10px;
+}
+.image-caption h3,
+.image-caption p {
+  display: inline;
+  margin: 0;
+}
+.image-caption h3 {
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #820000;
+  margin-right: .4em;
+}
 #main-content ul {
   list-style: none;
 }
