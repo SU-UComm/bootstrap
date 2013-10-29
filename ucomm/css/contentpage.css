@@ -135,6 +135,9 @@ li {
   vertical-align: top;
   min-width: 65px;
 }
+.info-box .icon-container {
+  text-align: center;
+}
 .info-box .text-container {
   padding-left: 15px;
 }
