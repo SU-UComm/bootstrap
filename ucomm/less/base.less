@@ -125,12 +125,11 @@ li {
   }
 
   i {
-    color: #DAD7CB;
+    color: @su-beige-40;
     margin: 0;
   }
 
   h2 {
-    color: @su-clay;
     .font-size-em(18);
     font-weight: normal;
     line-height: 1.2em;
@@ -166,7 +165,7 @@ li {
   @font-size: 20px;
   .font-size-em(@font-size);
   .line-height(28; @font-size);
-  color: @su-warm-gray;
+  color: @su-black;
 }
 
 .larger {
@@ -271,7 +270,15 @@ ul.vbar {
   }
 
   ul {
-    list-style: square;
+    list-style: none;
+
+    li {
+      position: relative;
+
+      &:before {
+        .small-square;
+      }
+    }
   }
 
   a {
