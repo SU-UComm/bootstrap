@@ -1,4 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700);
+.small-square {
+  color: #5f574f;
+  position: absolute;
+  top: 0;
+  margin: 0 0 0 -15px;
+  content: '\25AA';
+}
 .container {
   padding: 0;
 }
@@ -90,7 +97,7 @@ li {
   border: 0;
   cursor: pointer;
   background: #d5d0c0;
-  color: #565347;
+  color: #5f574f;
   font-size: 1.07143em;
   text-decoration: none;
   text-shadow: none;
@@ -135,6 +142,9 @@ li {
   vertical-align: top;
   min-width: 65px;
 }
+.info-box .icon-container {
+  text-align: center;
+}
 .info-box .text-container {
   padding-left: 15px;
 }
@@ -159,7 +169,7 @@ li {
 }
 .info-box ul li {
   line-height: 1.1em;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 .info-box dt {
   font-size: 1.1em;
@@ -277,7 +287,7 @@ ul.vbar {
 ul.vbar li {
   display: inline-block;
   padding: 0 0.5em;
-  border-right: 1px solid #5f574f;
+  border-right: 1px solid #2e2d29;
 }
 ul.vbar li:first-of-type {
   padding-left: 0;
@@ -301,11 +311,18 @@ ul.vbar li:last-of-type {
   text-transform: uppercase;
 }
 .well ul {
-  list-style: square;
+  list-style: none;
 }
-.well a {
-  border-bottom: 1px dotted #827252;
-  text-decoration: none;
+.well ul li {
+  margin-bottom: 7px;
+  line-height: 1.1em;
+}
+.well ul li:before {
+  color: #5f574f;
+  position: absolute;
+  top: 0;
+  margin: 0 0 0 -15px;
+  content: '\25AA';
 }
 .well .more-link {
   text-align: right;
@@ -373,7 +390,7 @@ ul.vbar li:last-of-type {
 #search-type label {
   margin-right: 1px;
   font-weight: 400;
-  color: #e9e6df;
+  color: #f2f1eb;
 }
 #search-type input[type="radio"] {
   margin-right: 8px;
@@ -382,7 +399,7 @@ ul.vbar li:last-of-type {
   position: absolute;
   top: .55em;
   right: 1em;
-  color: #3f3c30;
+  color: #5f574f;
   cursor: pointer;
 }
 #search-block-form #search-btn:hover {
@@ -480,7 +497,7 @@ body.facstaff #nav-facstaff a {
 }
 .footer ul {
   padding-left: 0;
-  margin: 0 0 10px 0;
+  margin: 0 0 20px 0;
   list-style: none;
 }
 .footer ul.footer-list {
@@ -502,12 +519,14 @@ body.facstaff #nav-facstaff a {
 }
 .footer p,
 .footer a {
-  color: #565347;
+  color: #5f574f;
 }
 .footer a {
   text-decoration: none;
 }
-.footer a:hover {
+.footer a:hover,
+.footer a:active {
+  text-decoration: underline;
   color: #820000;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
@@ -564,14 +583,13 @@ h2 {
   list-style: none;
 }
 #main-content ul li {
-  color: #565347;
   position: relative;
   line-height: 1.1em;
   margin-bottom: 7px;
   font-size: 1.1em;
 }
 #main-content ul li:before {
-  color: #9d9573;
+  color: #5f574f;
   position: absolute;
   top: 0;
   margin: 0 0 0 -15px;

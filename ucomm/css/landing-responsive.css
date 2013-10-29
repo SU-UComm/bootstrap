@@ -1,3 +1,10 @@
+.small-square {
+  color: #5f574f;
+  position: absolute;
+  top: 0;
+  margin: 0 0 0 -15px;
+  content: '\25AA';
+}
 @media (max-width: 767px) {
   body {
     padding: 0;
@@ -28,7 +35,7 @@
     padding: 0 20px !important;
   }
   #footer ul.footer-list {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   #footer ul.footer-list li {
     font-size: 1.3em;
@@ -123,7 +130,7 @@
     padding: 0;
   }
   .navbar .nav-search #search-type label {
-    color: #2e2d29;
+    color: #5f574f;
     font-weight: 400;
   }
   .navbar .navbar-collapse {

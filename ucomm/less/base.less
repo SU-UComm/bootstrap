@@ -116,6 +116,10 @@ li {
     vertical-align: top;
     min-width: 65px;
   }
+
+  .icon-container {
+    text-align: center;
+  }
   .text-container {
     padding-left: 15px;
   }
@@ -125,11 +129,12 @@ li {
   }
 
   i {
-    color: @su-beige-40;
+    color: #DAD7CB;
     margin: 0;
   }
 
   h2 {
+    color: @su-clay;
     .font-size-em(18);
     font-weight: normal;
     line-height: 1.2em;
@@ -143,7 +148,7 @@ li {
 
     li {
       line-height: 1.1em;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
   }
   
@@ -165,7 +170,7 @@ li {
   @font-size: 20px;
   .font-size-em(@font-size);
   .line-height(28; @font-size);
-  color: @su-black;
+  color: @su-warm-gray;
 }
 
 .larger {
@@ -271,20 +276,17 @@ ul.vbar {
 
   ul {
     list-style: none;
-
+    
     li {
-      position: relative;
-
+      margin-bottom: 7px;
+      line-height: 1.1em;
+      
       &:before {
         .small-square;
       }
     }
   }
 
-  a {
-    border-bottom: 1px dotted #827252;
-    text-decoration: none;
-  }
   .more-link {
     text-align:right;
   

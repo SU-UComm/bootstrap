@@ -262,14 +262,15 @@
 	padding-right: 10px;
 } // #at-stanford
 
-#at-stanford-carousel {
-  .carousel-indicators,
-  .carousel-control {
+#at-stanford-carousel {  
+  .carousel-indicators, .carousel-control {
     display: none;
   }
 
+
   .item {
-    opacity: 0.1;
+
+     opacity: 0.1;
     .transition(opacity 2s ease-in-out);
 
     &.active {
@@ -314,38 +315,27 @@
   } // .item
 } // #at-stanford-carousel
 
-//// ARE THESE USED???
-.dl-horizontal dt {
-	overflow: visible;
-}
-/* This rule is read by Galleria to define the gallery height: */
-.galleria-stage { /* modify line 17 of your galleria.classic.css stylesheet */
-	top: 2px;
-	left: 2px;
-	bottom: 10px; /* define the bottom spacing, same as top/left/right */
-}
-.galleria-container {
-	background: none;
-}
-
 
 /////////////////////////////////
 // Events
 
 #event-list {
   h3, h4 {
-    font-size: 15px;
+    font-size: 16px;
   }
 
+  .timestamp {
+    font-weight: 600;
+  }
   .event-date {
     vertical-align: top;
-    width: 45px;
+    width: 60px;
     padding-right: 15px;
 
     .event-month {
       padding-left: 3px;
       font-weight: 400;
-      font-size: 1em;
+      font-size: 1.1em;
       text-transform: uppercase;
       display: block;
       text-align: center;
@@ -356,14 +346,14 @@
       font-weight: 200;
       display: block;
       text-align: center;
-      font-size: 2.1em;
+      font-size: 2.2em;
       color: @su-red-text;
       line-height: 0.8;
     }
   } // .event-date
   
   .more-link {
-    padding-left: 42px;
+    padding-left: 57px;
   }
 }
 
