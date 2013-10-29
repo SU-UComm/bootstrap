@@ -208,12 +208,6 @@
     background-color: #fbfbf9;
     border-bottom: none;
   }
-  .footer ul.footer-list {
-    padding-bottom: 0;
-  }
-  .footer ul.footer-list li {
-    padding-bottom: 0;
-  }
 }
 @media (min-width: 992px) {
   #gateways li:last-child {
