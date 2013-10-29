@@ -810,35 +810,22 @@ body.facstaff #nav-facstaff a {
 #at-stanford-carousel .item a:hover {
   color: inherit;
 }
-.dl-horizontal dt {
-  overflow: visible;
-}
-/* This rule is read by Galleria to define the gallery height: */
-.galleria-stage {
-  /* modify line 17 of your galleria.classic.css stylesheet */
-
-  top: 2px;
-  left: 2px;
-  bottom: 10px;
-  /* define the bottom spacing, same as top/left/right */
-
-}
-.galleria-container {
-  background: none;
-}
 #event-list h3,
 #event-list h4 {
-  font-size: 15px;
+  font-size: 16px;
+}
+#event-list .timestamp {
+  font-weight: 600;
 }
 #event-list .event-date {
   vertical-align: top;
-  width: 45px;
+  width: 60px;
   padding-right: 15px;
 }
 #event-list .event-date .event-month {
   padding-left: 3px;
   font-weight: 400;
-  font-size: 1em;
+  font-size: 1.1em;
   text-transform: uppercase;
   display: block;
   text-align: center;
@@ -849,12 +836,12 @@ body.facstaff #nav-facstaff a {
   font-weight: 200;
   display: block;
   text-align: center;
-  font-size: 2.1em;
+  font-size: 2.2em;
   color: #820000;
   line-height: 0.8;
 }
 #event-list .more-link {
-  padding-left: 42px;
+  padding-left: 57px;
 }
 #sports h3 {
   font-size: 18px;
