@@ -9,7 +9,7 @@
 
   ul {
     padding-left: 0;
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
     list-style: none;
 
     &.footer-list {
@@ -38,7 +38,8 @@
   a {
 	text-decoration: none;  
   }
-  a:hover {
+  a:hover, a:active {
+    text-decoration: underline;
     color: @su-red-text;
     .transition(all 0.4s ease-in-out);
   }

@@ -162,7 +162,7 @@ li {
 }
 .info-box ul li {
   line-height: 1.1em;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 .info-box dt {
   font-size: 1.1em;
@@ -314,10 +314,6 @@ ul.vbar li:last-of-type {
   margin: 0 0 0 -15px;
   padding-right: 10px;
   content: '\25AA';
-}
-.well a {
-  border-bottom: 1px dotted #827252;
-  text-decoration: none;
 }
 .well .more-link {
   text-align: right;
@@ -492,7 +488,7 @@ body.facstaff #nav-facstaff a {
 }
 .footer ul {
   padding-left: 0;
-  margin: 0 0 10px 0;
+  margin: 0 0 20px 0;
   list-style: none;
 }
 .footer ul.footer-list {
@@ -519,7 +515,9 @@ body.facstaff #nav-facstaff a {
 .footer a {
   text-decoration: none;
 }
-.footer a:hover {
+.footer a:hover,
+.footer a:active {
+  text-decoration: underline;
   color: #820000;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
