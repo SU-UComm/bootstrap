@@ -483,7 +483,7 @@ body.campuslife #nav-campuslife a,
 body.students #nav-students a,
 body.facstaff #nav-facstaff a {
   color: #820000;
-  font-weight: 400;
+  border-bottom: 2px solid #8c1515;
 }
 .footer {
   padding: 0 !important;
