@@ -249,8 +249,10 @@
   .more-link a {
     font-size: 1.1em;
   }
-  #feature-banner #browsable {
-    overflow: hidden;
+  #feature-banner {
+    padding: 0;
+  }
+  #feature-banner .carousel-inner {
     height: 325px;
   }
   #feature-banner a.right,
@@ -258,7 +260,7 @@
     top: 80px;
   }
   #feature-banner .item h3 {
-    font-size: 3em !important;
+    font-size: 2em !important;
   }
   #feature-banner .item p {
     font-size: 1.2em;
@@ -269,6 +271,9 @@
   }
   #feature-banner .item .videoblock {
     display: none;
+  }
+  #feature-banner .item .carousel-caption {
+    bottom: 125px;
   }
   .news-item {
     clear: both;
@@ -350,6 +355,15 @@
   }
   #feature-banner .item p {
     font-size: 1.25em !important;
+  }
+  #feature-banner .item .carousel-caption {
+    bottom: 50px;
+  }
+  #feature-banner .carousel-control {
+    left: 20px;
+  }
+  #feature-banner .carousel-control.right {
+    right: 20px;
   }
   #social-feature button {
     width: 50%;

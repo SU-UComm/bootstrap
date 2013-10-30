@@ -16,8 +16,10 @@
 }
 
 #feature-banner {
-  #browsable {
-    overflow: hidden;
+
+  padding: 0;
+  
+  .carousel-inner {
     height: 325px;
   }
 
@@ -28,7 +30,7 @@
 
   .item {
     h3 {
-      font-size: 3em !important;
+      font-size: 2em !important;
     }
     p {
       font-size: 1.2em;
@@ -40,6 +42,11 @@
     .videoblock {
       display: none;
     }
+    
+    .carousel-caption {
+      bottom: 125px;
+    }
+    
   } // #feature-banner .item
 } // #feature-banner
 
@@ -121,29 +128,41 @@
 //////////////////////////
 // tablet
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-#feature-banner .item {
-  min-width: 724px;
-  max-width: 724px;
-  width: 724px;
-
-  .textblock {
-    width: 230px;
-    left: 70px;
+#feature-banner {
+  .item {
+    min-width: 724px;
+    max-width: 724px;
+    width: 724px;
+  
+    .textblock {
+      width: 230px;
+      left: 70px;
+    }
+    .videoblock {
+      width: 310px;
+      height: 175px;
+      top: 130px;
+      left: 350px;
+    }
+  
+    h3 {
+      font-size: 2.5em !important;
+    }
+  
+    p {
+      font-size: 1.25em !important;
+    }
+  
+    .carousel-caption {
+       bottom: 50px;
+    }
   }
-  .videoblock {
-    width: 310px;
-    height: 175px;
-    top: 130px;
-    left: 350px;
+  .carousel-control {
+    left: 20px;
   }
-
-  h3 {
-    font-size: 2.5em !important;
-  }
-
-  p {
-    font-size: 1.25em !important;
-  }
+  .carousel-control.right {
+    right: 20px;
+  } 
 }
 
 #social-feature {
