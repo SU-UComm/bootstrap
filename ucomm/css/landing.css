@@ -641,8 +641,10 @@ h2 {
   padding: 6px 12px;
   background-color: rgba(46, 45, 45, 0.4);
   opacity: 0;
+  filter: alpha(opacity=0);
   transition: all .3s linear;
 }
 #hero-image:hover .caption {
   opacity: 1;
+  filter: alpha(opacity=100);
 }
