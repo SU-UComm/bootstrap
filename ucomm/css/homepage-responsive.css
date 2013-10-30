@@ -252,28 +252,29 @@
   #feature-banner {
     padding: 0;
   }
-  #feature-banner .carousel-inner {
-    height: 325px;
-  }
   #feature-banner a.right,
   #feature-banner a.left {
     top: 80px;
   }
+  #feature-banner .carousel-control {
+    display: none;
+  }
+  #feature-banner .item img {
+    width: 600px;
+  }
   #feature-banner .item h3 {
-    font-size: 2em !important;
+    font-size: 1.42857em;
   }
   #feature-banner .item p {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
-  #feature-banner .item .textblock {
-    width: 250px;
-    top: 140px;
+  #feature-banner .item .carousel-caption {
+    width: 200px;
+    left: 50px;
+    bottom: 0;
   }
   #feature-banner .item .videoblock {
     display: none;
-  }
-  #feature-banner .item .carousel-caption {
-    bottom: 125px;
   }
   .news-item {
     clear: both;

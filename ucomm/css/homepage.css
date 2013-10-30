@@ -597,6 +597,7 @@ body.facstaff #nav-facstaff a {
   bottom: 20px;
   left: 90px;
   text-align: left;
+  text-shadow: none;
 }
 #feature-banner .item .videoblock {
   position: absolute;
@@ -625,14 +626,14 @@ body.facstaff #nav-facstaff a {
   margin: 0 0 10px 0;
 }
 #feature-banner .item p {
-  color: #5f574f;
+  color: #2e2d29;
   font-size: 1.4em;
   line-height: 1.4em;
   font-weight: 300;
   text-shadow: none;
 }
 #feature-banner .item .white {
-  color: #fff;
+  color: #fbfbf9;
 }
 #feature-banner .item .clay {
   color: #5f574f;
