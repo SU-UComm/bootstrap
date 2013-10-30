@@ -228,6 +228,54 @@ a.more-link {
   }
 }
 
+.image-caption {
+  background-color: @su-beige-bg;
+  color: inherit;
+  text-shadow: none;
+  width: 100%;
+  position: static;
+  text-align: left;
+  padding: 10px;
+
+  h4,
+  p {
+    display: inline;
+    margin: 0;
+  }
+
+  h4 {
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: @su-red-text;
+    margin-right: .4em;
+  }
+
+  &.overlay { // USAGE: ensure containing element has position:relative and :hover .overlay { .opacity(1); }
+    .opacity(0);
+    transition: all .3s linear;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: @su-beige-05;
+    background-color: rgba(46, 45, 45, .4);
+
+    h4, p {
+      color: @su-beige-05;
+    }
+  }
+} // .image-caption
+
+#hero-image {
+  clear: both;
+  margin-bottom: 20px;
+  position: relative;
+
+  &:hover .overlay {
+    .opacity(1);
+  }
+}
+
 #su-content {
 	overflow: visible;
 	padding-bottom: 390px !important; // must be same height as the footer
