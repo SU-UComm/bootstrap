@@ -209,7 +209,7 @@
   }
 
   p,
-  button {
+  #badge {
     display: inline-block;
   }
   p {
@@ -229,10 +229,15 @@
       font-weight: 400;
     }
   }
-  button {
-    color: #0098DB; // Twitter blue
-    background-color: @su-beige-05;
+  #badge {
     margin-top: 0.3em;
+    padding: 8px 13px;
+    background-color: @su-beige-05;
+    .font-size-em(15); // 15px expressed as em's
+
+    .icon-twitter {
+      color: #0098DB; // Twitter blue
+    }
   }
 } // #social-feature
 

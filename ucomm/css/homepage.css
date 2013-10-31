@@ -786,7 +786,7 @@ body.facstaff #nav-facstaff a {
   text-decoration: none;
 }
 #social-feature p,
-#social-feature button {
+#social-feature #badge {
   display: inline-block;
 }
 #social-feature p {
@@ -805,10 +805,14 @@ body.facstaff #nav-facstaff a {
   font-size: 1em;
   font-weight: 400;
 }
-#social-feature button {
-  color: #0098DB;
-  background-color: #fbfbf9;
+#social-feature #badge {
   margin-top:  0.3em;
+  padding: 8px 13px;
+  background-color: #fbfbf9;
+  font-size: 1.07143em;
+}
+#social-feature #badge .icon-twitter {
+  color: #0098DB;
 }
 #social-icons {
   padding-right: 0;
