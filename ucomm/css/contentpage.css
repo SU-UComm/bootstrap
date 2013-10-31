@@ -683,6 +683,7 @@ h3 {
 #sidebar-first ul {
   padding-left: 0;
   list-style: none;
+  margin-bottom: 30px;
 }
 #sidebar-first ul li {
   border-bottom: 1px solid #e3dfd5;

@@ -60,6 +60,10 @@
   #footer p.copyright {
     padding-top: 25px;
   }
+  /* Global Footer and Copyright*/
+  #global-footer p.copyright {
+    padding: 15px 0;
+  }
 }
 @media (max-width: 991px) {
   .container {

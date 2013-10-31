@@ -60,6 +60,10 @@
   #footer p.copyright {
     padding-top: 25px;
   }
+  /* Global Footer and Copyright*/
+  #global-footer p.copyright {
+    padding: 15px 0;
+  }
 }
 @media (max-width: 991px) {
   .container {
@@ -325,9 +329,7 @@
   .news-item .news-text h3 {
     margin-top: 0;
     line-height: 1;
-  }
-  .news-item .news-text p {
-    font-size: 1.1em;
+    font-size: 18px;
   }
   #social-feature p {
     margin: 0 20px;

@@ -840,6 +840,9 @@ body.facstaff #nav-facstaff a {
 #social-icons ul li {
   display: inline;
 }
+#social-icons img {
+  width: 33px;
+}
 #social-icons a:hover img {
   opacity: 0.6;
   -webkit-transition: all 0.4s ease-in-out;
