@@ -110,6 +110,7 @@
       padding: 5px 0 6px 0;
       margin-right: 30px;
       line-height: 1em;
+      border-bottom: 2px solid @su-beige-10;
     }
   }
 
@@ -124,11 +125,8 @@
 }
 
 #gateways li a:hover,
-#gateways li a:focus,
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-	border-bottom: solid 2px @su-red;
-	padding-bottom: 4px;
+.navbar-nav > li > a:hover{
+	border-bottom: solid 2px @su-clay;
   color: inherit;
 }
 
@@ -154,6 +152,7 @@
     a {
       font-size: .9em;
       text-transform: uppercase;
+      padding-bottom: 4px;
     }
   }
 }
@@ -172,6 +171,5 @@ body.research #nav-research a,
 body.campuslife #nav-campuslife a,
 body.students #nav-students a,
 body.facstaff #nav-facstaff a {
-  color: @su-red-text;
   border-bottom: 2px solid @su-red;
 }

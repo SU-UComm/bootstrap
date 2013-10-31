@@ -119,9 +119,11 @@
   .navbar .navbar-toggle span.icon-bar {
     background-color: white;
   }
-  .navbar .navbar-toggle:hover,
-  .navbar .navbar-toggle:focus {
+  .navbar .navbar-toggle:hover {
     background-color: #5f574f;
+  }
+  .navbar button.collapsed {
+    background-color: #8c1515 !important;
   }
   .navbar .navbar-collapse {
     width: 100%;

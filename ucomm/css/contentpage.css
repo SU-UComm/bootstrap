@@ -491,6 +491,7 @@ ul.vbar li:last-of-type {
   padding: 5px 0 6px 0;
   margin-right: 30px;
   line-height: 1em;
+  border-bottom: 2px solid #f2f1eb;
 }
 .navbar .navbar-collapse {
   padding: 0;
@@ -500,11 +501,8 @@ ul.vbar li:last-of-type {
   display: none;
 }
 #gateways li a:hover,
-#gateways li a:focus,
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  border-bottom: solid 2px #8c1515;
-  padding-bottom: 4px;
+.navbar-nav > li > a:hover {
+  border-bottom: solid 2px #5f574f;
   color: inherit;
 }
 /*Gateways */
@@ -528,6 +526,7 @@ ul.vbar li:last-of-type {
 #gateways li a {
   font-size: .9em;
   text-transform: uppercase;
+  padding-bottom: 4px;
 }
 .nav-pills > li {
   border-radius: 6px;
@@ -540,7 +539,6 @@ body.research #nav-research a,
 body.campuslife #nav-campuslife a,
 body.students #nav-students a,
 body.facstaff #nav-facstaff a {
-  color: #820000;
   border-bottom: 2px solid #8c1515;
 }
 .footer {
