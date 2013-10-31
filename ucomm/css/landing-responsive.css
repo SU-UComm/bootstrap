@@ -153,7 +153,7 @@
     padding: 0.5em 0;
     background-color: #fbfbf9;
   }
-  .navbar #gateway-nav label[for=gateways] {
+  .navbar #gateway-nav h4 {
     display: block;
     margin-bottom: 0;
     padding-left: 15px;
@@ -162,7 +162,7 @@
     font-weight: 700;
     cursor: pointer;
   }
-  .navbar #gateway-nav label[for=gateways] span {
+  .navbar #gateway-nav h4 span {
     padding: 0 0.5em;
     font-size: 1.5em;
   }

@@ -496,6 +496,9 @@ ul.vbar li:last-of-type {
   padding: 0;
   max-height: none;
 }
+.navbar .menu-text {
+  display: none;
+}
 #gateways li a:hover,
 #gateways li a:focus,
 .navbar-default .navbar-nav > li > a:hover,
@@ -504,11 +507,8 @@ ul.vbar li:last-of-type {
   padding-bottom: 4px;
   color: inherit;
 }
-.navbar .menu-text {
-  display: none;
-}
 /*Gateways */
-label[for=gateways] {
+#gateway-nav h4 {
   text-transform: uppercase;
   display: none;
 }
