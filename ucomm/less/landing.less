@@ -72,22 +72,3 @@ h2 {
     margin-bottom: 15px;
   }
 }
-
-#hero-image {
-  position: relative;
-  
-  .caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    color: @su-beige-05;
-    padding: @padding-base-vertical @padding-base-horizontal;
-    background-color: rgba(46, 45, 45, .4);
-    .opacity(0);
-    transition: all .3s linear;
-  }
-  &:hover .caption {
-    .opacity(1);
-  }
-}
