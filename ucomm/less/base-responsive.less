@@ -20,7 +20,11 @@ body {
 #logo {
 	max-width: 300px;
 }
-#search-block-form {
+
+#nav-search {
+  width: 300px;
+}
+#search-form {
   #search-field {
     width: 175px;
     .font-size-em(12);
@@ -69,47 +73,6 @@ body {
 } // #footer
 } // @media (max-width: @screen-xs-max)
 
-
-//////////////////////////
-// tablet
-@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-.col-sm-1-4 { // 5 columns across a 12 column grid = 1.4 column width
-  float: left;
-	width: 18%;
-	margin-right: 2%;
-}
-
-.footer {
-  #hp-buttons {
-    clear: both;
-  
-    ul {
-      li {
-        display: inline;
-    
-        a {
-          width: 19%;
-      
-          i {
-            display: block;
-            margin: 0 auto 5px;
-            text-align: center;
-          }
-    
-          span {
-            display: block;
-            text-align: center;
-            font-size: .9em;
-            line-height: 1;
-          }
-        } // a
-      } // li
-    } // ul
-  } // #hp-buttons
-} // .footer
-} // @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)
-
-
 //////////////////////////
 // phone, tablet
 @media (max-width: @screen-sm-max) {
@@ -117,13 +80,29 @@ body {
   padding: 0 15px; // put 15px padding back on left and right
 }
 
-#primary-nav {
-	padding-left: 0.5em;
+#search-field {
+  -webkit-appearance:none; 
+  left: 0;
 }
-#gateway-nav {
-	padding: 0.5em 0;
-	background-color: @su-beige-05;
+#search-btn {
+  left: 140px;
 }
+#search-type {
+  right: 0;
+
+  label {
+    color: @su-clay;
+    font-size: .9em;
+  }
+}
+
+body.about #nav-about a, body.admission #nav-admission a, 
+body.academics #nav-academics a, body.research #nav-research a, 
+body.campuslife #nav-campuslife a, body.students #nav-students a, 
+body.facstaff #nav-facstaff a {
+  border-bottom: none;
+  }
+
 
 .navbar {
 	margin: 5px 0 3px 0;	
@@ -153,18 +132,9 @@ body {
       }
   }
 
-  .nav-search {
-    float: right;
-    margin: 0;
-    min-height: 1px;
-    padding: 0;
-
-    #search-type label {
-      color: @su-clay;
-      font-weight: 400;
-    }
-  }
-
+  .navbar-toggle:hover, .navbar-toggle:focus{
+    background-color: @su-clay;
+  }  
   .navbar-collapse {
     width: 100%;
 
@@ -189,7 +159,8 @@ body {
         margin-right: 0;
         width: 100%;
       }
-      & > a:hover {
+      & > a:hover,
+      & > a:focus {
         background-color: @su-beige-05;
         border-bottom:none;
       }
@@ -200,6 +171,9 @@ body {
   #gateway-nav {
     width: 100%;
     margin-bottom: 15px;
+    border-radius: 3px;
+    padding: 0.5em 0;
+    background-color: @su-beige-05;
 
     label[for=gateways] {
       display: block;
@@ -245,10 +219,6 @@ body {
           border-bottom:  none;
           padding-bottom: 9px;
         }
-        &:hover {
-          background-color: @su-beige-05;
-          border-bottom:none;
-        }
       } // a
     } // li
   } // #gateways
@@ -257,8 +227,57 @@ body {
 
 
 //////////////////////////
+// tablet
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+.col-sm-1-4 { // 5 columns across a 12 column grid = 1.4 column width
+  float: left;
+	width: 18%;
+	margin-right: 2%;
+}
+
+#search-btn {
+  left: 190px;
+}
+
+.footer {
+  #hp-buttons {
+    clear: both;
+  
+    ul {
+      li {
+        display: inline;
+    
+        a {
+          width: 19%;
+      
+          i {
+            display: block;
+            margin: 0 auto 5px;
+            text-align: center;
+          }
+    
+          span {
+            display: block;
+            text-align: center;
+            font-size: .9em;
+            line-height: 1;
+          }
+        } // a
+      } // li
+    } // ul
+  } // #hp-buttons
+} // .footer
+} // @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)
+
+//////////////////////////
 // desktop
 @media (min-width: @screen-md-min) {
+
+#nav-search {
+  float: right;
+  margin: -65px 0 0 0;
+}
+
 #gateways li:last-child {
 	padding-right: 0;
 }
@@ -273,7 +292,11 @@ body {
 }
 } // @media (min-width: @screen-md-min)
 
+
+//////////////////////////
+// small desktop
 @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+
 .navbar .nav > li {
   padding: 0 10px 0 0;
  
