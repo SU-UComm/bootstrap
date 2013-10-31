@@ -21,11 +21,14 @@
   #logo {
     max-width: 300px;
   }
-  #search-block-form #search-field {
+  #nav-search {
+    width: 300px;
+  }
+  #search-form #search-field {
     width: 175px;
     font-size: 0.85714em;
   }
-  #search-block-form .btn-search {
+  #search-form .btn-search {
     width: 22px;
     height: 22px;
     top: 5px;
@@ -58,43 +61,32 @@
     padding-top: 25px;
   }
 }
-@media (min-width: 768px) and (max-width: 991px) {
-  .col-sm-1-4 {
-    float: left;
-    width: 18%;
-    margin-right: 2%;
-  }
-  .footer #hp-buttons {
-    clear: both;
-  }
-  .footer #hp-buttons ul li {
-    display: inline;
-  }
-  .footer #hp-buttons ul li a {
-    width: 19%;
-  }
-  .footer #hp-buttons ul li a i {
-    display: block;
-    margin: 0 auto 5px;
-    text-align: center;
-  }
-  .footer #hp-buttons ul li a span {
-    display: block;
-    text-align: center;
-    font-size: .9em;
-    line-height: 1;
-  }
-}
 @media (max-width: 991px) {
   .container {
     padding: 0 15px;
   }
-  #primary-nav {
-    padding-left: 0.5em;
+  #search-field {
+    -webkit-appearance: none;
+    left: 0;
   }
-  #gateway-nav {
-    padding: 0.5em 0;
-    background-color: #fbfbf9;
+  #search-btn {
+    left: 140px;
+  }
+  #search-type {
+    right: 0;
+  }
+  #search-type label {
+    color: #5f574f;
+    font-size: .9em;
+  }
+  body.about #nav-about a,
+  body.admission #nav-admission a,
+  body.academics #nav-academics a,
+  body.research #nav-research a,
+  body.campuslife #nav-campuslife a,
+  body.students #nav-students a,
+  body.facstaff #nav-facstaff a {
+    border-bottom: none;
   }
   .navbar {
     margin: 5px 0 3px 0;
@@ -123,15 +115,9 @@
   .navbar .navbar-toggle span.icon-bar {
     background-color: white;
   }
-  .navbar .nav-search {
-    float: right;
-    margin: 0;
-    min-height: 1px;
-    padding: 0;
-  }
-  .navbar .nav-search #search-type label {
-    color: #5f574f;
-    font-weight: 400;
+  .navbar .navbar-toggle:hover,
+  .navbar .navbar-toggle:focus {
+    background-color: #5f574f;
   }
   .navbar .navbar-collapse {
     width: 100%;
@@ -155,15 +141,19 @@
     margin-right: 0;
     width: 100%;
   }
-  .navbar .nav > li > a:hover {
+  .navbar .nav > li > a:hover,
+  .navbar .nav > li > a:focus {
     background-color: #fbfbf9;
     border-bottom: none;
   }
   .navbar #gateway-nav {
     width: 100%;
     margin-bottom: 15px;
+    border-radius: 3px;
+    padding: 0.5em 0;
+    background-color: #fbfbf9;
   }
-  .navbar #gateway-nav label[for=gateways] {
+  .navbar #gateway-nav h4 {
     display: block;
     margin-bottom: 0;
     padding-left: 15px;
@@ -172,7 +162,7 @@
     font-weight: 700;
     cursor: pointer;
   }
-  .navbar #gateway-nav label[for=gateways] span {
+  .navbar #gateway-nav h4 span {
     padding: 0 0.5em;
     font-size: 1.5em;
   }
@@ -204,12 +194,42 @@
     border-bottom: none;
     padding-bottom: 9px;
   }
-  .navbar #gateways li a:hover {
-    background-color: #fbfbf9;
-    border-bottom: none;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-sm-1-4 {
+    float: left;
+    width: 18%;
+    margin-right: 2%;
+  }
+  #search-btn {
+    left: 190px;
+  }
+  .footer #hp-buttons {
+    clear: both;
+  }
+  .footer #hp-buttons ul li {
+    display: inline;
+  }
+  .footer #hp-buttons ul li a {
+    width: 19%;
+  }
+  .footer #hp-buttons ul li a i {
+    display: block;
+    margin: 0 auto 5px;
+    text-align: center;
+  }
+  .footer #hp-buttons ul li a span {
+    display: block;
+    text-align: center;
+    font-size: .9em;
+    line-height: 1;
   }
 }
 @media (min-width: 992px) {
+  #nav-search {
+    float: right;
+    margin: -65px 0 0 0;
+  }
   #gateways li:last-child {
     padding-right: 0;
   }

@@ -20,7 +20,11 @@ body {
 #logo {
 	max-width: 300px;
 }
-#search-block-form {
+
+#nav-search {
+  width: 300px;
+}
+#search-form {
   #search-field {
     width: 175px;
     .font-size-em(12);
@@ -69,6 +73,158 @@ body {
 } // #footer
 } // @media (max-width: @screen-xs-max)
 
+//////////////////////////
+// phone, tablet
+@media (max-width: @screen-sm-max) {
+.container {
+  padding: 0 15px; // put 15px padding back on left and right
+}
+
+#search-field {
+  -webkit-appearance:none; 
+  left: 0;
+}
+#search-btn {
+  left: 140px;
+}
+#search-type {
+  right: 0;
+
+  label {
+    color: @su-clay;
+    font-size: .9em;
+  }
+}
+
+body.about #nav-about a, body.admission #nav-admission a, 
+body.academics #nav-academics a, body.research #nav-research a, 
+body.campuslife #nav-campuslife a, body.students #nav-students a, 
+body.facstaff #nav-facstaff a {
+  border-bottom: none;
+  }
+
+
+.navbar {
+	margin: 5px 0 3px 0;	
+
+  .menu-text {
+    display: inline;
+    text-transform: uppercase;
+    left: 50px;
+    margin-top: 7px;
+    position: absolute;
+    color: @su-red-text;
+    font-size: 0.85em;
+    font-weight: 700;
+  }
+
+  .navbar-toggle {
+      background-color: @su-red;
+      border: none;
+      float: none;
+      margin-bottom: 0;
+      margin-right: 0;
+      margin-top: 1px;
+      padding: 7px 10px;
+
+      span.icon-bar {
+        background-color: white;
+      }
+  }
+
+  .navbar-toggle:hover, .navbar-toggle:focus{
+    background-color: @su-clay;
+  }  
+  .navbar-collapse {
+    width: 100%;
+
+    &.in {
+      overflow-y: visible;
+    }
+  }
+
+  .nav {
+    margin: 8px 0 15px 0;
+
+    & > li {
+      display: block;
+      padding-right: 0;
+    
+      & > a,
+      & > a:focus,
+      & > a:hover  {
+        display: block;
+        border-radius: 3px;
+        padding: 9px 15px;	
+        margin-right: 0;
+        width: 100%;
+      }
+      & > a:hover,
+      & > a:focus {
+        background-color: @su-beige-05;
+        border-bottom:none;
+      }
+    } // .nav > li
+  } // .nav
+
+  /*Gateways */
+  #gateway-nav {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    padding: 0.5em 0;
+    background-color: @su-beige-05;
+
+    h4 {
+      display: block;
+      margin-bottom: 0;
+      padding-left: 15px;
+      color: @su-red-text;
+      font-size: 0.85em;
+      font-weight: 700;
+      cursor: pointer;
+      
+      span {
+        padding: 0 0.5em;
+        font-size: 1.5em;
+      }
+    } // Information For... header
+  } // #gateway-nav
+
+  #gateways {
+    margin: 0 0 0 1.4em;
+    list-style: none;
+    position: relative;
+    display: none;
+
+    &.pull-right {
+      float: none !important;
+    }
+
+    li {
+      display: block;
+      list-style: none;
+
+      a {
+        font-size: 0.85em;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: block;
+        border-radius: 3px;
+        padding: 9px 15px;
+
+        &:focus, &:hover {
+          text-decoration: none;
+          background-color: @su-beige-bg;
+          border-bottom:  none;
+          padding-bottom: 9px;
+        }
+      } // a
+    } // li
+  } // #gateways
+} // .navbar
+} // @media (max-width: @screen-sm-max)
+
 
 //////////////////////////
 // tablet
@@ -77,6 +233,10 @@ body {
   float: left;
 	width: 18%;
 	margin-right: 2%;
+}
+
+#search-btn {
+  left: 190px;
 }
 
 .footer {
@@ -109,156 +269,15 @@ body {
 } // .footer
 } // @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)
 
-
-//////////////////////////
-// phone, tablet
-@media (max-width: @screen-sm-max) {
-.container {
-  padding: 0 15px; // put 15px padding back on left and right
-}
-
-#primary-nav {
-	padding-left: 0.5em;
-}
-#gateway-nav {
-	padding: 0.5em 0;
-	background-color: @su-beige-05;
-}
-
-.navbar {
-	margin: 5px 0 3px 0;	
-
-  .menu-text {
-    display: inline;
-    text-transform: uppercase;
-    left: 50px;
-    margin-top: 7px;
-    position: absolute;
-    color: @su-red-text;
-    font-size: 0.85em;
-    font-weight: 700;
-  }
-
-  .navbar-toggle {
-      background-color: @su-red;
-      border: none;
-      float: none;
-      margin-bottom: 0;
-      margin-right: 0;
-      margin-top: 1px;
-      padding: 7px 10px;
-
-      span.icon-bar {
-        background-color: white;
-      }
-  }
-
-  .nav-search {
-    float: right;
-    margin: 0;
-    min-height: 1px;
-    padding: 0;
-
-    #search-type label {
-      color: @su-clay;
-      font-weight: 400;
-    }
-  }
-
-  .navbar-collapse {
-    width: 100%;
-
-    &.in {
-      overflow-y: visible;
-    }
-  }
-
-  .nav {
-    margin: 8px 0 15px 0;
-
-    & > li {
-      display: block;
-      padding-right: 0;
-    
-      & > a,
-      & > a:focus,
-      & > a:hover  {
-        display: block;
-        border-radius: 3px;
-        padding: 9px 15px;	
-        margin-right: 0;
-        width: 100%;
-      }
-      & > a:hover {
-        background-color: @su-beige-05;
-        border-bottom:none;
-      }
-    } // .nav > li
-  } // .nav
-
-  /*Gateways */
-  #gateway-nav {
-    width: 100%;
-    margin-bottom: 15px;
-
-    label[for=gateways] {
-      display: block;
-      margin-bottom: 0;
-      padding-left: 15px;
-      color: @su-red-text;
-      font-size: 0.85em;
-      font-weight: 700;
-      cursor: pointer;
-      
-      span {
-        padding: 0 0.5em;
-        font-size: 1.5em;
-      }
-    } // label[for=gateways]
-  } // #gateway-nav
-
-  #gateways {
-    margin: 0 0 0 1.4em;
-    list-style: none;
-    position: relative;
-    display: none;
-
-    &.pull-right {
-      float: none !important;
-    }
-
-    li {
-      display: block;
-      list-style: none;
-
-      a {
-        font-size: 0.85em;
-        text-transform: uppercase;
-        font-weight: 700;
-        display: block;
-        border-radius: 3px;
-        padding: 9px 15px;
-
-        &:focus, &:hover {
-          text-decoration: none;
-          background-color: @su-beige-bg;
-          border-bottom:  none;
-          padding-bottom: 9px;
-        }
-        &:hover {
-          background-color: @su-beige-05;
-          border-bottom:none;
-        }
-      } // a
-    } // li
-  } // #gateways
-} // .navbar
-} // @media (max-width: @screen-sm-max)
-
-
 //////////////////////////
 // desktop
 @media (min-width: @screen-md-min) {
+
+#nav-search {
+  float: right;
+  margin: -65px 0 0 0;
+}
+
 #gateways li:last-child {
 	padding-right: 0;
 }
@@ -273,7 +292,11 @@ body {
 }
 } // @media (min-width: @screen-md-min)
 
+
+//////////////////////////
+// small desktop
 @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+
 .navbar .nav > li {
   padding: 0 10px 0 0;
  
