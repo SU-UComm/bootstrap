@@ -491,7 +491,7 @@ ul.vbar li:last-of-type {
   padding: 5px 0 6px 0;
   margin-right: 30px;
   line-height: 1em;
-  border-bottom: 2px solid #f2f1eb;
+  border-bottom: none;
 }
 .navbar .navbar-collapse {
   padding: 0;
@@ -499,11 +499,6 @@ ul.vbar li:last-of-type {
 }
 .navbar .menu-text {
   display: none;
-}
-#gateways li a:hover,
-.navbar-nav > li > a:hover {
-  border-bottom: solid 2px #5f574f;
-  color: inherit;
 }
 /*Gateways */
 #gateway-nav h4 {
@@ -531,15 +526,6 @@ ul.vbar li:last-of-type {
 .nav-pills > li {
   border-radius: 6px;
   margin-right: 2px;
-}
-body.about #nav-about a,
-body.admission #nav-admission a,
-body.academics #nav-academics a,
-body.research #nav-research a,
-body.campuslife #nav-campuslife a,
-body.students #nav-students a,
-body.facstaff #nav-facstaff a {
-  border-bottom: 2px solid #8c1515;
 }
 .footer {
   padding: 0 !important;

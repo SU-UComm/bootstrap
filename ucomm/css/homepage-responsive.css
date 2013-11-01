@@ -90,6 +90,7 @@
   body.campuslife #nav-campuslife a,
   body.students #nav-students a,
   body.facstaff #nav-facstaff a {
+    color: #820000;
     border-bottom: none;
   }
   .navbar {
@@ -236,6 +237,17 @@
     float: right;
     margin: -65px 0 0 0;
   }
+  .navbar .nav li a {
+    border-bottom: 2px solid #f2f1eb;
+  }
+  .navbar .nav li a:hover {
+    border-bottom: 2px solid #5f574f;
+    color: inherit;
+  }
+  #gateways li a:hover {
+    border-bottom: solid 2px #5f574f;
+    color: inherit;
+  }
   #gateways li:last-child {
     padding-right: 0;
   }
@@ -246,6 +258,15 @@
     -webkit-column-gap: 20px;
     column-count: 2;
     column-gap: 20px;
+  }
+  body.about #nav-about a,
+  body.admission #nav-admission a,
+  body.academics #nav-academics a,
+  body.research #nav-research a,
+  body.campuslife #nav-campuslife a,
+  body.students #nav-students a,
+  body.facstaff #nav-facstaff a {
+    border-bottom: 2px solid #8c1515;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
