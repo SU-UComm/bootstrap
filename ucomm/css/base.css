@@ -45,6 +45,22 @@ h1 {
 li {
   line-height: 1.42857;
 }
+::-webkit-input-placeholder {
+  color: #565347 !important;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+
+  color: #565347 !important;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+
+  color: #565347 !important;
+}
+:-ms-input-placeholder {
+  color: #565347 !important;
+}
 .btn {
   line-height: 1.42867;
 }
