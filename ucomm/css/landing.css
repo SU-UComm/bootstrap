@@ -600,6 +600,7 @@ ul.vbar li:last-of-type {
   text-align: left;
 }
 .footer #hp-buttons ul li a:hover {
+  text-decoration: none;
   color: white;
 }
 .footer #hp-buttons ul li a i {
