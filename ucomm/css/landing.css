@@ -365,6 +365,7 @@ ul.vbar li:last-of-type {
   padding: 10px 0;
   font-size: 1.2em;
   text-transform: uppercase;
+  color: #820000;
 }
 .well h3 {
   font-size: 1em;
