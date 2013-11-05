@@ -131,6 +131,9 @@ li {
 .color-red {
   color: #820000;
 }
+.toc_current {
+  color: #820000;
+}
 #content {
   margin-bottom: 20px;
 }
