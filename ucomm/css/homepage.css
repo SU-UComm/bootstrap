@@ -802,11 +802,11 @@ ul.vbar li:last-of-type {
   margin: 0;
   padding: 10px 0;
 }
+#social-feature a {
+  text-decoration: none;
+}
 #social-feature #tweet_info {
   padding: 0;
-}
-#social-feature #tweet_info a {
-  text-decoration: none;
 }
 #social-feature p,
 #social-feature #badge {
