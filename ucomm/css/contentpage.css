@@ -45,6 +45,9 @@ h1 {
 li {
   line-height: 1.42857;
 }
+hr {
+  border-color: #d5d0c0;
+}
 ::-webkit-input-placeholder {
   color: #565347 !important;
 }
