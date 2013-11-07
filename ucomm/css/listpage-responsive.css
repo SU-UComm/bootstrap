@@ -281,7 +281,7 @@
     bottom: 0;
     left: 0;
     color: #fbfbf9;
-    background-color: rgba(46, 45, 45, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
   }
   .image-caption.overlay h4,
   .image-caption.overlay p {
