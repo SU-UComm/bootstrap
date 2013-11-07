@@ -326,6 +326,25 @@ body.facstaff #nav-facstaff a {
   border-bottom: 2px solid @su-red;
 }
 
+.image-caption.overlay { // USAGE: ensure containing element has position:relative and :hover .overlay { .opacity(1); }
+  .opacity(0);
+  transition: all .3s linear;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: @su-beige-05;
+  background-color: rgba(46, 45, 45, .6);
+
+  h4, p {
+    color: @su-beige-05;
+  }
+}
+#hero-image:hover {
+  .overlay {
+    .opacity(1);
+  }
+}
+
 } // @media (min-width: @screen-md-min)
 
 
