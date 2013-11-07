@@ -201,6 +201,11 @@
     border-bottom: none;
     padding-bottom: 9px;
   }
+  #sidebar-second {
+    border-top: 1px solid #d5d0c0;
+    padding-top: 15px;
+    margin-top: 30px;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .col-sm-1-4 {
