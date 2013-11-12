@@ -203,6 +203,11 @@
     border-bottom: none;
     padding-bottom: 9px;
   }
+  #sidebar-second {
+    border-top: 1px solid #d5d0c0;
+    padding-top: 15px;
+    margin-top: 30px;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .col-sm-1-4 {
@@ -269,6 +274,24 @@
   body.students #nav-students a,
   body.facstaff #nav-facstaff a {
     border-bottom: 2px solid #8c1515;
+  }
+  .image-caption.overlay {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transition: all .3s linear;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fbfbf9;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .image-caption.overlay h4,
+  .image-caption.overlay p {
+    color: #fbfbf9;
+  }
+  #hero-image:hover .overlay {
+    opacity: 1;
+    filter: alpha(opacity=100);
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -381,6 +404,9 @@
   #social-icons img {
     width: 25px;
   }
+  #social-feature p.social-timestamp {
+    margin: -10px 0 0;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   #feature-banner .item {
@@ -423,8 +449,6 @@
     font-size: 1.1em;
   }
   #social-feature p.social-timestamp {
-    margin: 5px;
-    margin-top: -10px;
     padding: 10px 0 10px 10px;
     font-size: .9em;
   }
@@ -444,11 +468,11 @@
     left: 390px;
     top: 100px;
   }
-  #social-feature button {
-    width: 50%;
+  #social-feature #tweet_info {
+    margin-top: 10px;
   }
   #social-feature p.social-timestamp {
-    margin-top: -10px;
+    margin: 0;
   }
   #sports .postcard-left .postcard-text {
     padding-left: 0;
