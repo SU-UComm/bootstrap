@@ -73,11 +73,13 @@
     -webkit-appearance: none;
     left: 0;
   }
-  #search-btn {
+  #search-form #search-btn {
     left: 140px;
+    right: 0;
+    padding: 0;
   }
   #search-type {
-    right: 0;
+    right: -2px;
   }
   #search-type label {
     color: #5f574f;
