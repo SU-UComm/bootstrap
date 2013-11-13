@@ -717,6 +717,9 @@ ul.vbar li:last-of-type {
   background-color: #8c1515;
   cursor: pointer;
 }
+#feature-banner .carousel-indicators li a {
+  margin-left: -9999px;
+}
 #feature-banner .carousel-control {
   background: none repeat scroll 0 0 #2e2d29;
   border: none;
