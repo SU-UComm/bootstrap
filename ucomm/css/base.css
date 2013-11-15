@@ -315,6 +315,12 @@ a.more-link i {
   margin-bottom: 20px;
   position: relative;
 }
+.screen-reader {
+  display: inline-block;
+  font-size: 0;
+  height: 1px;
+  overflow: hidden;
+}
 #su-content {
   overflow: visible;
   padding-bottom: 390px !important;
