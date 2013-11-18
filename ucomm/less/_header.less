@@ -21,6 +21,7 @@
 	padding: 12px 0 18px 0;
 	background-color: @su-red;
 }
+
 #logo {
 	max-width: 360px;
 	min-width: 300px;
@@ -36,6 +37,7 @@
 	position:relative;
 	margin-top: 10px;
 }
+
 
 #search-form {
   position: relative;
@@ -55,6 +57,11 @@
   position:absolute;
   top: 5px;
 }
+
+#search-type input:focus {
+  outline: 2px solid @su-sky; 
+}
+
 #search-type label {
   font-weight: 400;
   color: @su-beige-bg;
@@ -79,6 +86,9 @@
 }
 #search-form #search-btn:hover {
 	opacity: 0.6;
+}
+#search-form #search-btn:focus {
+  outline: 2px solid @su-sky;
 }
 
 /* Nav */
