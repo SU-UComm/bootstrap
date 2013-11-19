@@ -923,6 +923,9 @@ ul.vbar li:last-of-type {
 #event-list .more-link {
   padding-left: 57px;
 }
+#sports .postcard-text {
+  vertical-align: top;
+}
 #sports h3 {
   font-size: 18px;
 }
@@ -930,5 +933,4 @@ ul.vbar li:last-of-type {
   padding-right: 10px;
   vertical-align: top;
   width: 100px;
-  display: inline-block;
 }
