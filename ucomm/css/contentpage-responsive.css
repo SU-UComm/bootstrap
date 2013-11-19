@@ -104,7 +104,7 @@
     display: inline;
     text-transform: uppercase;
     left: 50px;
-    margin-top: 7px;
+    top: 7px;
     position: absolute;
     color: #820000;
     font-size: 0.85em;
@@ -215,7 +215,7 @@
     width: 18%;
     margin-right: 2%;
   }
-  #search-btn {
+  #search-form #search-btn {
     left: 190px;
   }
   .footer #hp-buttons {
