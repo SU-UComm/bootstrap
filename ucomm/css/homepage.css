@@ -15,7 +15,11 @@ a:active {
   outline: 0;
 }
 a:focus {
+  outline: thin dotted #333;
+  outline: 2px solid #0098db;
+  text-decoration: none;
   outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
 blockquote {
   border-left: 5px solid #e3dfd5;
@@ -451,6 +455,9 @@ ul.vbar li:last-of-type {
   position: absolute;
   top: 5px;
 }
+#search-type input:focus {
+  outline: 2px solid #0098db;
+}
 #search-type label {
   font-weight: 400;
   color: #f2f1eb;
@@ -473,6 +480,9 @@ ul.vbar li:last-of-type {
 }
 #search-form #search-btn:hover {
   opacity: 0.6;
+}
+#search-form #search-btn:focus {
+  outline: 2px solid #0098db;
 }
 /* Nav */
 #mainmenu {
@@ -596,6 +606,9 @@ ul.vbar li:last-of-type {
 .footer #hp-buttons ul li a:hover {
   text-decoration: none;
   color: white;
+}
+.footer #hp-buttons ul li a:focus {
+  outline: 2px solid #0098db;
 }
 .footer #hp-buttons ul li a i {
   margin: 0 5px 0 10px;
@@ -742,6 +755,9 @@ ul.vbar li:last-of-type {
 #feature-banner .carousel-control.right {
   right: 15px;
   left: auto;
+}
+#feature-banner .carousel-control:focus {
+  outline: 2px solid #0098db;
 }
 .headline {
   display: block;
@@ -907,6 +923,9 @@ ul.vbar li:last-of-type {
 #event-list .more-link {
   padding-left: 57px;
 }
+#sports .postcard-text {
+  vertical-align: top;
+}
 #sports h3 {
   font-size: 18px;
 }
@@ -914,5 +933,4 @@ ul.vbar li:last-of-type {
   padding-right: 10px;
   vertical-align: top;
   width: 100px;
-  display: inline-block;
 }
