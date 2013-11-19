@@ -52,21 +52,24 @@ li {
 hr {
   border-color: #d5d0c0;
 }
-::-webkit-input-placeholder {
-  color: #565347 !important;
+label {
+  font-weight: 600;
 }
-:-moz-placeholder {
-  /* Firefox 18- */
-
-  color: #565347 !important;
+input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6) !important;
 }
-::-moz-placeholder {
+input::-moz-placeholder {
   /* Firefox 19+ */
 
-  color: #565347 !important;
+  color: #000000 !important;
 }
-:-ms-input-placeholder {
-  color: #565347 !important;
+input:-moz-placeholder {
+  /* Firefox 18- */
+
+  color: #000000 !important;
+}
+input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.6) !important;
 }
 .btn {
   line-height: 1.42867;

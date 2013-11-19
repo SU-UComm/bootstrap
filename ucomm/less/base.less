@@ -49,20 +49,24 @@ hr {
   border-color: @su-beige-40;
 }
 
-::-webkit-input-placeholder {
-   color: @su-warm-gray-90 !important;  
+label {
+  font-weight: 600;
 }
 
-:-moz-placeholder { /* Firefox 18- */
-   color: @su-warm-gray-90 !important;  
+input::-webkit-input-placeholder {
+   color: rgba(0,0,0,.6) !important; 
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
-   color: @su-warm-gray-90 !important;  
+input::-moz-placeholder {  /* Firefox 19+ */
+   color: rgba(0,0,0,1) !important; 
 }
 
-:-ms-input-placeholder {  
-   color: @su-warm-gray-90 !important;  
+input:-moz-placeholder { /* Firefox 18- */
+   color: rgba(0,0,0,1) !important;  
+}
+
+input:-ms-input-placeholder {  
+   color: rgba(0,0,0,.6) !important; 
 }
 
 
