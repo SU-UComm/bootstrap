@@ -316,8 +316,8 @@ a.more-link i {
   position: relative;
 }
 .screen-reader {
-  display: inline-block;
-  font-size: 0;
+  position: absolute;
+  left: -9999px;
   height: 1px;
   overflow: hidden;
 }
