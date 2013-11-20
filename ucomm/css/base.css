@@ -24,6 +24,9 @@ a:focus {
 blockquote {
   border-left: 5px solid #e3dfd5;
 }
+div:focus {
+  outline: none;
+}
 dl {
   margin-top: 5px;
 }

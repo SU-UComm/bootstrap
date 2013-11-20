@@ -26,6 +26,10 @@ blockquote {
 	border-left: 5px solid @border-color;
 }
 
+div:focus { // for accessbility, some div's get focus - don't outline them
+  outline: none;
+}
+
 dl {
 	margin-top: 5px;
 }
