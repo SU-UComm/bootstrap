@@ -55,21 +55,24 @@ li {
 hr {
   border-color: #d5d0c0;
 }
-::-webkit-input-placeholder {
-  color: #565347 !important;
+label {
+  font-weight: 600;
 }
-:-moz-placeholder {
-  /* Firefox 18- */
-
-  color: #565347 !important;
+input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6) !important;
 }
-::-moz-placeholder {
+input::-moz-placeholder {
   /* Firefox 19+ */
 
-  color: #565347 !important;
+  color: #000000 !important;
 }
-:-ms-input-placeholder {
-  color: #565347 !important;
+input:-moz-placeholder {
+  /* Firefox 18- */
+
+  color: #000000 !important;
+}
+input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.6) !important;
 }
 .btn {
   line-height: 1.42867;
@@ -268,7 +271,7 @@ a.more-link {
 }
 .more-link a:hover,
 a.more-link:hover {
-  color: #820000;
+  color: #8c1515;
 }
 .more-link a i,
 a.more-link i {
@@ -305,11 +308,13 @@ a.more-link i {
   text-align: left;
   padding: 10px;
 }
+.image-caption h3,
 .image-caption h4,
 .image-caption p {
   display: inline;
   margin: 0;
 }
+.image-caption h3,
 .image-caption h4 {
   font-size: 1em;
   font-weight: 600;
@@ -348,7 +353,7 @@ ul.vbar {
 ul.vbar li {
   display: inline-block;
   padding: 0 0.5em;
-  border-right: 1px solid #2e2d29;
+  border-right: 1px solid #4d4f53;
 }
 ul.vbar li:first-of-type {
   padding-left: 0;
@@ -399,7 +404,7 @@ ul.vbar li:last-of-type {
 }
 .well .more-link a:hover,
 .well .more-link a:active {
-  color: #820000;
+  color: #8c1515;
 }
 /*Header (logo and menu)
 ------------------------------------*/

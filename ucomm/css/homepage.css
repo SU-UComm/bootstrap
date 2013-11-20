@@ -55,21 +55,24 @@ li {
 hr {
   border-color: #d5d0c0;
 }
-::-webkit-input-placeholder {
-  color: #565347 !important;
+label {
+  font-weight: 600;
 }
-:-moz-placeholder {
-  /* Firefox 18- */
-
-  color: #565347 !important;
+input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6) !important;
 }
-::-moz-placeholder {
+input::-moz-placeholder {
   /* Firefox 19+ */
 
-  color: #565347 !important;
+  color: #000000 !important;
 }
-:-ms-input-placeholder {
-  color: #565347 !important;
+input:-moz-placeholder {
+  /* Firefox 18- */
+
+  color: #000000 !important;
+}
+input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.6) !important;
 }
 .btn {
   line-height: 1.42867;
@@ -268,7 +271,7 @@ a.more-link {
 }
 .more-link a:hover,
 a.more-link:hover {
-  color: #820000;
+  color: #8c1515;
 }
 .more-link a i,
 a.more-link i {
@@ -305,11 +308,13 @@ a.more-link i {
   text-align: left;
   padding: 10px;
 }
+.image-caption h3,
 .image-caption h4,
 .image-caption p {
   display: inline;
   margin: 0;
 }
+.image-caption h3,
 .image-caption h4 {
   font-size: 1em;
   font-weight: 600;
@@ -348,7 +353,7 @@ ul.vbar {
 ul.vbar li {
   display: inline-block;
   padding: 0 0.5em;
-  border-right: 1px solid #2e2d29;
+  border-right: 1px solid #4d4f53;
 }
 ul.vbar li:first-of-type {
   padding-left: 0;
@@ -399,7 +404,7 @@ ul.vbar li:last-of-type {
 }
 .well .more-link a:hover,
 .well .more-link a:active {
-  color: #820000;
+  color: #8c1515;
 }
 /*Header (logo and menu)
 ------------------------------------*/
@@ -646,6 +651,10 @@ ul.vbar li:last-of-type {
 #content h4 a {
   text-decoration: none;
 }
+#content h3 a:hover,
+#content h4 a:hover {
+  text-decoration: underline;
+}
 #feature-banner {
   clear: both;
   position: relative;
@@ -782,10 +791,6 @@ ul.vbar li:last-of-type {
   margin: 5px 0 5px 0;
   line-height: 1.3;
 }
-.news-item .news-text h3 a:hover {
-  color: #820000;
-  text-decoration: none;
-}
 #more-news h4 {
   text-transform: uppercase;
   color: #820000;
@@ -802,8 +807,11 @@ ul.vbar li:last-of-type {
   margin-bottom: 15px;
   line-height: 1.24224;
 }
-#more-news a {
+#more-news ul li a {
   text-decoration: none;
+}
+#more-news ul li a:hover {
+  text-decoration: underline;
 }
 #social-feature {
   font-family: "Source Sans Pro", Arial;
@@ -811,9 +819,15 @@ ul.vbar li:last-of-type {
   border-radius: 4px;
   margin: 0;
   padding: 10px 0;
+  color: #2e2d29;
 }
 #social-feature a {
+  color: #827252;
   text-decoration: none;
+}
+#social-feature a:hover {
+  text-decoration: underline;
+  color: #8c1515;
 }
 #social-feature #tweet_info {
   padding: 0;
@@ -841,11 +855,25 @@ ul.vbar li:last-of-type {
 #social-feature #badge {
   margin-top:  0.3em;
   padding: 8px 13px;
+  border-radius: 4px;
   background-color: #fbfbf9;
+  color: #565347;
   font-size: 1.07143em;
 }
 #social-feature #badge .icon-twitter {
   color: #0098DB;
+}
+#social-feature #badge:hover {
+  text-decoration: none;
+  background-color: #0098DB;
+  color: white;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+#social-feature #badge:hover .icon-twitter {
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  color: white;
 }
 #social-icons {
   padding-right: 0;
@@ -869,33 +897,31 @@ ul.vbar li:last-of-type {
 #at-stanford {
   padding-right: 10px;
 }
-#at-stanford-carousel .carousel-indicators,
-#at-stanford-carousel .carousel-control {
-  display: none;
-}
 #at-stanford-carousel .item {
-  opacity: 0.1;
-  -webkit-transition: opacity 2s ease-in-out;
-  transition: opacity 2s ease-in-out;
-}
-#at-stanford-carousel .item.active {
-  opacity: 1;
-}
-#at-stanford-carousel .item.left {
-  left: 0 !important;
-  opacity: 0.1 !important;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
+  display: none;
 }
 #at-stanford-carousel .item a {
   text-decoration: none;
 }
-#at-stanford-carousel .item a:hover {
-  color: inherit;
+#at-stanford-carousel .item a:hover img {
+  opacity: 0.6;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+#at-stanford-carousel .item a h3 {
+  color: #5e3032;
+}
+#at-stanford-carousel .item a p {
+  color: #4d4f53;
+}
+#at-stanford-carousel .item a:hover h3,
+#at-stanford-carousel .item a:hover p {
+  color: #8c1515;
 }
 #event-list h3,
 #event-list h4 {
   font-size: 16px;
+  margin-bottom: 0;
 }
 #event-list .timestamp {
   font-weight: 600;

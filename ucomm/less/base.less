@@ -53,20 +53,24 @@ hr {
   border-color: @su-beige-40;
 }
 
-::-webkit-input-placeholder {
-   color: @su-warm-gray-90 !important;  
+label {
+  font-weight: 600;
 }
 
-:-moz-placeholder { /* Firefox 18- */
-   color: @su-warm-gray-90 !important;  
+input::-webkit-input-placeholder {
+   color: rgba(0,0,0,.6) !important; 
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
-   color: @su-warm-gray-90 !important;  
+input::-moz-placeholder {  /* Firefox 19+ */
+   color: rgba(0,0,0,1) !important; 
 }
 
-:-ms-input-placeholder {  
-   color: @su-warm-gray-90 !important;  
+input:-moz-placeholder { /* Firefox 18- */
+   color: rgba(0,0,0,1) !important;  
+}
+
+input:-ms-input-placeholder {  
+   color: rgba(0,0,0,.6) !important; 
 }
 
 
@@ -229,7 +233,7 @@ a.more-link {
 	text-decoration: none;
 
   &:hover {
-    color: @su-red-text;
+    color: @su-red;
   }
 
   i {
@@ -265,13 +269,12 @@ a.more-link {
   text-align: left;
   padding: 10px;
 
-  h4,
-  p {
+  h3, h4, p {
     display: inline;
     margin: 0;
   }
 
-  h4 {
+  h3, h4 {
     font-size: 1em;
     font-weight: 600;
     text-transform: uppercase;
@@ -365,7 +368,7 @@ ul.vbar {
       font-weight: 600;
     
       &:hover, &:active {
-        color: @su-red-text;
+        color: @su-red;
       }
     }
   }

@@ -308,7 +308,7 @@ body {
   font-family: 'Source Sans Pro', Arial, sans-serif;
   font-size: 14px;
   line-height: 1.6;
-  color: #2e2d29;
+  color: #4d4f53;
   background-color: #fbfbf9;
 }
 
@@ -322,13 +322,13 @@ textarea {
 }
 
 a {
-  color: #5f574f;
+  color: #5e3032;
   text-decoration: underline;
 }
 
 a:hover,
 a:focus {
-  color: #820000;
+  color: #8c1515;
   text-decoration: underline;
 }
 
@@ -2163,7 +2163,7 @@ textarea.input-lg {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #716f65;
+  color: #8c8e94;
 }
 
 @media (min-width: 768px) {
@@ -2534,7 +2534,7 @@ fieldset[disabled] .btn-info.active {
 
 .btn-link {
   font-weight: normal;
-  color: #5f574f;
+  color: #5e3032;
   cursor: pointer;
   border-radius: 0;
 }
@@ -2557,7 +2557,7 @@ fieldset[disabled] .btn-link {
 
 .btn-link:hover,
 .btn-link:focus {
-  color: #820000;
+  color: #8c1515;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -4099,14 +4099,14 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #f2f1eb;
-  border-color: #5f574f;
+  border-color: #5e3032;
 }
 
 .nav .open > a .caret,
 .nav .open > a:hover .caret,
 .nav .open > a:focus .caret {
-  border-top-color: #820000;
-  border-bottom-color: #820000;
+  border-top-color: #8c1515;
+  border-bottom-color: #8c1515;
 }
 
 .nav .nav-divider {
@@ -4301,13 +4301,13 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .nav .caret {
-  border-top-color: #5f574f;
-  border-bottom-color: #5f574f;
+  border-top-color: #5e3032;
+  border-bottom-color: #5e3032;
 }
 
 .nav a:hover .caret {
-  border-top-color: #820000;
-  border-bottom-color: #820000;
+  border-top-color: #8c1515;
+  border-bottom-color: #8c1515;
 }
 
 .nav-tabs .dropdown-menu {
@@ -5216,7 +5216,7 @@ a.badge:focus {
 
 a.list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #5f574f;
+  color: #5e3032;
   background-color: #ffffff;
 }
 
@@ -5287,12 +5287,12 @@ a.list-group-item.active > .badge,
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #5f574f;
+  border-color: #5e3032;
 }
 
 .thumbnail .caption {
   padding: 9px;
-  color: #2e2d29;
+  color: #4d4f53;
 }
 
 .alert {
