@@ -648,6 +648,10 @@ ul.vbar li:last-of-type {
 #content h4 a {
   text-decoration: none;
 }
+#content h3 a:hover,
+#content h4 a:hover {
+  text-decoration: underline;
+}
 #feature-banner {
   clear: both;
   position: relative;
@@ -780,17 +784,9 @@ ul.vbar li:last-of-type {
 .news-item .news-img {
   position: relative;
 }
-.news-item .news-img a:hover img {
-  opacity: 0.6;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
 .news-item .news-text h3 {
   margin: 5px 0 5px 0;
   line-height: 1.3;
-}
-.news-item .news-text h3 a:hover {
-  text-decoration: none;
 }
 #more-news h4 {
   text-transform: uppercase;
@@ -808,8 +804,11 @@ ul.vbar li:last-of-type {
   margin-bottom: 15px;
   line-height: 1.24224;
 }
-#more-news a {
+#more-news ul li a {
   text-decoration: none;
+}
+#more-news ul li a:hover {
+  text-decoration: underline;
 }
 #social-feature {
   font-family: "Source Sans Pro", Arial;

@@ -6,7 +6,11 @@
 
 #content h3 a, #content h4 a {
 	text-decoration: none;
+	&:hover {
+		text-decoration: underline;	
+	}
 }
+
 /////////////////////////////////
 // Feature Banner / Carousel (Home Top)
 
@@ -158,22 +162,12 @@
 .news-item {
   .news-img {
     position: relative;
-    a:hover img {
-    opacity: 0.6;
-    .transition(all 0.4s ease-in-out);
-	}
   }
   
   .news-text {
     h3 {
       margin: 5px 0 5px 0;
       .line-height(26; 20);
-    
-      a {		
-        &:hover {
-          text-decoration: none;
-        }
-      }
     }
   }
 } // .news-item
@@ -195,10 +189,14 @@
       font-size: 1.15em;
       margin-bottom: 15px;
       .line-height(20, 16.1);
+      a {
+	      text-decoration: none;
+		  &:hover {
+			  text-decoration: underline;
+		  }
+      }
+      
     }
-  }
-  a{
-	  text-decoration: none;
   }
 }
 
