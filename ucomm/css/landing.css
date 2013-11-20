@@ -268,7 +268,7 @@ a.more-link {
 }
 .more-link a:hover,
 a.more-link:hover {
-  color: #820000;
+  color: #8c1515;
 }
 .more-link a i,
 a.more-link i {
@@ -305,11 +305,13 @@ a.more-link i {
   text-align: left;
   padding: 10px;
 }
+.image-caption h3,
 .image-caption h4,
 .image-caption p {
   display: inline;
   margin: 0;
 }
+.image-caption h3,
 .image-caption h4 {
   font-size: 1em;
   font-weight: 600;
@@ -348,7 +350,7 @@ ul.vbar {
 ul.vbar li {
   display: inline-block;
   padding: 0 0.5em;
-  border-right: 1px solid #2e2d29;
+  border-right: 1px solid #4d4f53;
 }
 ul.vbar li:first-of-type {
   padding-left: 0;
@@ -399,7 +401,7 @@ ul.vbar li:last-of-type {
 }
 .well .more-link a:hover,
 .well .more-link a:active {
-  color: #820000;
+  color: #8c1515;
 }
 /*Header (logo and menu)
 ------------------------------------*/

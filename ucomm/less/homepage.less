@@ -158,6 +158,10 @@
 .news-item {
   .news-img {
     position: relative;
+    a:hover img {
+    opacity: 0.6;
+    .transition(all 0.4s ease-in-out);
+	}
   }
   
   .news-text {
@@ -165,10 +169,8 @@
       margin: 5px 0 5px 0;
       .line-height(26; 20);
     
-      a {
-  
+      a {		
         &:hover {
-          color: @su-red-text;
           text-decoration: none;
         }
       }
@@ -212,9 +214,14 @@
 	padding: 10px 0;
 
   a {
-    text-decoration: none;
+   color: @su-link;
+   text-decoration: none;
   }
 
+  a:hover {
+	  text-decoration: underline;
+	  color: @su-red;
+  }
   #tweet_info {
     padding: 0;
   }
@@ -243,13 +250,26 @@
   #badge {
     margin-top: 0.3em;
     padding: 8px 13px;
+    border-radius: 4px;
     background-color: @su-beige-05;
+	color: @su-warm-gray-90;
     .font-size-em(15); // 15px expressed as em's
 
     .icon-twitter {
       color: #0098DB; // Twitter blue
     }
+   &:hover {
+	    text-decoration: none;
+		background-color: #0098DB;
+		color: white;
+		.transition(all 0.4s ease-in-out);
+		    .icon-twitter {
+				.transition(all 0.4s ease-in-out);
+				color: white; // Twitter blue
+			}
+    }
   }
+
 } // #social-feature
 
 
@@ -284,32 +304,27 @@
 } // #at-stanford
 
 #at-stanford-carousel {  
-  .carousel-indicators, .carousel-control {
-    display: none;
-  }
-
-
   .item {
-
-     opacity: 0.1;
-    .transition(opacity 2s ease-in-out);
-
-    &.active {
-      opacity: 1;
-    }
-    &.left {
-      left: 0 !important;
-      opacity: 0.1 !important;
-      .transition(opacity .5s ease-in-out);
-
-    }
+	  display: none;
 
 	a {
 	  	text-decoration: none;	
 	}
-    a:hover {
-      color: inherit;
-    }
+    a:hover img {
+    opacity: 0.6;
+    .transition(all 0.4s ease-in-out);
+	}
+	a h3 {
+		color: @su-brown;
+	}
+
+	a p {
+		color: @su-cool-gray;
+	}
+    a:hover h3, a:hover p {
+		color: @su-red;
+	}
+
   } // .item
 } // #at-stanford-carousel
 
@@ -320,6 +335,7 @@
 #event-list {
   h3, h4 {
     font-size: 16px;
+    margin-bottom: 0;
   }
 
   .timestamp {
