@@ -153,7 +153,6 @@
 
     isCycling && this.cycle()
 
-    if (this.options.ariaFocus) $next.children().first('a').focus();
     return this
   }
 
