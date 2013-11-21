@@ -10,7 +10,10 @@
 		text-decoration: underline;	
 	}
 }
-
+.more-link a,
+a.more-link {
+  padding-right: 20px;
+}
 /////////////////////////////////
 // Feature Banner / Carousel (Home Top)
 
@@ -95,7 +98,6 @@
     .active {
       background-color: @su-red;
       margin: 2px;
-      border: 2px solid @su-red;
     }
   
     li {
@@ -166,8 +168,7 @@
   
   .news-text {
     h3 {
-      margin: 5px 0 5px 0;
-      .line-height(26; 20);
+      margin: 10px 0 5px 0;
     }
   }
 } // .news-item
@@ -178,11 +179,11 @@
     color: @su-red-text;
     font-size: 1em;
     font-weight: 600;
-    margin: 5px 0 10px 0;
+    margin: 5px 0 15px 0;
   }
   
   ul {
-    margin: 0 0 10px 0;	
+    margin: 0 0 10px 15px;	
 
     li {
       list-style-type: none;
@@ -191,11 +192,16 @@
       .line-height(20, 16.1);
       a {
 	      text-decoration: none;
-		  &:hover {
-			  text-decoration: underline;
-		  }
-      }
-      
+  		  &:hover {
+  			  text-decoration: underline;
+  		  }
+      }      
+    }
+    li:before {    
+      font-family: 'FontAwesome';
+      content: '\F105';
+      margin:0 10px 0 -15px;
+      font-size: 13px;
     }
   }
 }
@@ -213,7 +219,7 @@
 	color: @su-black;
 
   a {
-   color: @su-link;
+   color: @su-red-text;
    text-decoration: none;
   }
 
@@ -310,19 +316,19 @@
 	  	text-decoration: none;	
 	}
     a:hover img {
-    opacity: 0.6;
+    opacity: 0.8;
     .transition(all 0.4s ease-in-out);
 	}
 	a h3 {
-		color: @su-brown;
-	}
-
-	a p {
-		color: @su-cool-gray;
-	}
-    a:hover h3, a:hover p {
 		color: @su-red;
 	}
+
+  a:hover h3 {
+		text-decoration: underline;
+	}
+  a:hover p {
+    color: @su-black;
+  }
 
   } // .item
 } // #at-stanford-carousel
@@ -337,9 +343,6 @@
     margin-bottom: 0;
   }
 
-  .timestamp {
-    font-weight: 600;
-  }
   .event-date {
     vertical-align: top;
     width: 60px;

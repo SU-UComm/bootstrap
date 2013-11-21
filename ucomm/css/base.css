@@ -156,9 +156,6 @@ input:-ms-input-placeholder {
   margin: -25px 5px -25px 0;
   color: #aca68d;
 }
-.event .timestamp {
-  text-transform: uppercase;
-}
 #hero-image img {
   display: block;
   max-width: 100%;
@@ -188,12 +185,12 @@ input:-ms-input-placeholder {
   margin: 0;
 }
 .info-box h2 {
-  color: #5f574f;
   font-size: 1.28571em;
   font-weight: normal;
   line-height: 1.2em;
   padding: 5px 0;
   text-transform: uppercase;
+  color: #820000;
 }
 .info-box ul {
   padding-left: 0;
@@ -263,15 +260,16 @@ a.more-link {
   font-weight: 600;
   font-size: .9em;
   padding-left: 0;
-  padding-right: 20px;
   padding-top: 2px;
   display: inline;
   text-transform: uppercase;
   text-decoration: none;
+  color: #5f574f;
 }
-.more-link a:hover,
-a.more-link:hover {
+.more-link a:hover span,
+a.more-link:hover span {
   color: #8c1515;
+  text-decoration: underline;
 }
 .more-link a i,
 a.more-link i {
@@ -353,7 +351,7 @@ ul.vbar {
 ul.vbar li {
   display: inline-block;
   padding: 0 0.5em;
-  border-right: 1px solid #4d4f53;
+  border-right: 1px solid #696969;
 }
 ul.vbar li:first-of-type {
   padding-left: 0;
@@ -394,17 +392,6 @@ ul.vbar li:last-of-type {
 }
 .well .more-link {
   text-align: right;
-}
-.well .more-link a {
-  padding-right: 0;
-  border-bottom: none;
-  color: #5f574f;
-  font-size: .9em;
-  font-weight: 600;
-}
-.well .more-link a:hover,
-.well .more-link a:active {
-  color: #8c1515;
 }
 /*Header (logo and menu)
 ------------------------------------*/
@@ -551,6 +538,7 @@ ul.vbar li:last-of-type {
   font-size: .9em;
   text-transform: uppercase;
   padding-bottom: 4px;
+  color: #2e2d29;
 }
 .nav-pills > li {
   border-radius: 6px;

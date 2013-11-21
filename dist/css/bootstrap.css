@@ -308,7 +308,7 @@ body {
   font-family: 'Source Sans Pro', Arial, sans-serif;
   font-size: 14px;
   line-height: 1.6;
-  color: #4d4f53;
+  color: #696969;
   background-color: #fbfbf9;
 }
 
@@ -322,7 +322,7 @@ textarea {
 }
 
 a {
-  color: #5e3032;
+  color: #2e2d29;
   text-decoration: underline;
 }
 
@@ -2163,7 +2163,7 @@ textarea.input-lg {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #8c8e94;
+  color: #a9a9a9;
 }
 
 @media (min-width: 768px) {
@@ -2534,7 +2534,7 @@ fieldset[disabled] .btn-info.active {
 
 .btn-link {
   font-weight: normal;
-  color: #5e3032;
+  color: #2e2d29;
   cursor: pointer;
   border-radius: 0;
 }
@@ -4099,7 +4099,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #f2f1eb;
-  border-color: #5e3032;
+  border-color: #2e2d29;
 }
 
 .nav .open > a .caret,
@@ -4301,8 +4301,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .nav .caret {
-  border-top-color: #5e3032;
-  border-bottom-color: #5e3032;
+  border-top-color: #2e2d29;
+  border-bottom-color: #2e2d29;
 }
 
 .nav a:hover .caret {
@@ -5216,7 +5216,7 @@ a.badge:focus {
 
 a.list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #5e3032;
+  color: #2e2d29;
   background-color: #ffffff;
 }
 
@@ -5287,12 +5287,12 @@ a.list-group-item.active > .badge,
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #5e3032;
+  border-color: #2e2d29;
 }
 
 .thumbnail .caption {
   padding: 9px;
-  color: #4d4f53;
+  color: #696969;
 }
 
 .alert {
