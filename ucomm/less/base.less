@@ -128,11 +128,6 @@ input:-ms-input-placeholder {
 	color: @su-beige-85;
 }
 
-.event {
-  .timestamp {
-    text-transform: uppercase;
-  }
-}
 
 #hero-image img {
   .img-responsive;
@@ -166,12 +161,12 @@ input:-ms-input-placeholder {
   }
 
   h2 {
-    color: @su-clay;
     .font-size-em(18);
     font-weight: normal;
     line-height: 1.2em;
     padding: 5px 0;
     text-transform: uppercase;
+    color: @su-red-text;
   }
   
   ul {
@@ -226,20 +221,22 @@ a.more-link {
 	font-weight: 600;
 	font-size: .9em;
 	padding-left: 0;
-	padding-right: 20px;
 	padding-top: 2px;
 	display: inline;
 	text-transform: uppercase;
 	text-decoration: none;
+	color: @su-clay;
 
-  &:hover {
+  &:hover span {
     color: @su-red;
+    text-decoration: underline;
   }
 
   i {
     color: @su-red;
     font-size: 1.1em;
   }
+  
 }
 
 .navbar {
@@ -359,18 +356,6 @@ ul.vbar {
 
   .more-link {
     text-align:right;
-  
-    a {
-      padding-right: 0;
-      border-bottom: none;
-      color: @su-clay;
-      font-size: .9em;
-      font-weight: 600;
-    
-      &:hover, &:active {
-        color: @su-red;
-      }
-    }
   }
 }
 

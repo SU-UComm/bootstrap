@@ -21,19 +21,23 @@ h2 {
     li {
       position: relative;
       line-height: 1.1em;
-      margin-bottom: 7px;
+      margin-bottom: 10px;
       font-size: 1.1em;
   
-      &:before {
-        .small-square;
-      }
       a {
 	      text-decoration: none;
         &:hover, &:active {
 		      text-decoration: underline;
-		  }
+        }
       }
     } // li
+    li:before {    
+      font-family: 'FontAwesome';
+      content: '\F105';
+      margin:0 10px 0 -15px;
+      font-size: 13px;
+    }
+
   } // ul
 
   .postcard-image {
