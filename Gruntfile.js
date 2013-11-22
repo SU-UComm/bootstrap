@@ -61,17 +61,17 @@ module.exports = function(grunt) {
       bootstrap: {
         src: [
           'js/transition.js',
-          'js/alert.js',
-          'js/button.js',
+          //'js/alert.js',
+          //'js/button.js',
           'js/carousel.js',
           'js/collapse.js',
-          'js/dropdown.js',
-          'js/modal.js',
-          'js/tooltip.js',
-          'js/popover.js',
-          'js/scrollspy.js',
-          'js/tab.js',
-          'js/affix.js'
+          //'js/dropdown.js',
+          //'js/modal.js',
+          //'js/tooltip.js',
+          //'js/popover.js',
+          //'js/scrollspy.js',
+          //'js/tab.js',
+          //'js/affix.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       }
@@ -152,11 +152,17 @@ module.exports = function(grunt) {
         src: ["ucomm/css/*"],
         dest: homepageRepo+'/assets/css/'
       },
-      bootstrap: {
+      bootstrapCss: {
         expand: true,
         flatten: true,
-        src: ['<%= recess.bootstrap.dest %>'],
-        dest: homepageRepo+'/assets/bootstrap/css/'
+        src: ['dist/css/*'],
+        dest: homepageRepo+'/assets/bootstrap/css'
+      },
+      bootstrapJs: {
+        expand: true,
+        flatten: true,
+        src: ['dist/js/*'],
+        dest: homepageRepo+'/assets/bootstrap/js'
       }
     },
 
@@ -261,7 +267,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dist-fonts', ['copy:fonts']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean', 'dist-css', 'dist-fonts', 'dist-js']);
+  grunt.registerTask('dist', ['clean', 'dist-css', 'dist-fonts', 'dist-js', 'copy:bootstrapCss', 'copy:bootstrapJs']);
 
   // Default task.
   grunt.registerTask('default', ['test', 'dist', 'build-customizer']);
@@ -296,6 +302,6 @@ module.exports = function(grunt) {
   grunt.registerTask('dev',     ['less:dev']);
   grunt.registerTask('stage',   ['less:stage']);
   grunt.registerTask('prod',    ['less:prod']);
-  grunt.registerTask('deploy',  ['copy:bootstrap', 'copy:ucomm']);
+  grunt.registerTask('deploy',  ['copy:ucomm']);
   grunt.registerTask('rebuild', ['dist-css', 'stage', 'deploy']);
 };
