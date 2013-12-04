@@ -14,7 +14,8 @@ a:hover,
 a:active {
   outline: 0;
 }
-a:focus {
+a:focus,
+button:focus {
   outline: thin dotted #333;
   outline: 2px solid #0098db;
   text-decoration: none;
@@ -725,24 +726,32 @@ a.more-link {
 #feature-banner .carousel-indicators {
   bottom: -40px;
 }
-#feature-banner .carousel-indicators .active {
-  background-color: #8c1515;
-  margin: 2px;
-}
 #feature-banner .carousel-indicators li {
+  position: relative;
+  margin: 3px;
+  height: 12px;
+  width: 12px;
+}
+#feature-banner .carousel-indicators li.active button {
+  background-color: #8c1515;
+}
+#feature-banner .carousel-indicators li button {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 12px;
   width: 12px;
   border-radius: 7px;
   border: 1px solid #8c1515;
   background-color: #fff;
   margin: 2px;
+  padding: 0;
 }
-#feature-banner .carousel-indicators li:hover {
+#feature-banner .carousel-indicators li button:hover {
   background-color: #8c1515;
-  cursor: pointer;
 }
-#feature-banner .carousel-indicators li a {
-  margin-left: -9999px;
+#feature-banner .carousel-indicators li button:focus {
+  outline-offset: 0;
 }
 #feature-banner .carousel-control {
   background: none repeat scroll 0 0 #2e2d29;
@@ -752,7 +761,7 @@ a.more-link {
   height: 45px;
   left: 15px;
   opacity: 0.5;
-  top: 40%;
+  top: 43%;
   width: 45px;
   text-decoration: none;
   font-size: 2em;

@@ -14,7 +14,8 @@ a:hover,
 a:active {
   outline: 0;
 }
-a:focus {
+a:focus,
+button:focus {
   outline: thin dotted #333;
   outline: 2px solid #0098db;
   text-decoration: none;
