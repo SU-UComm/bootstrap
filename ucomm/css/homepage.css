@@ -944,6 +944,60 @@ a.more-link {
 #event-list .more-link {
   padding-left: 57px;
 }
+#cboxLoadedContent {
+  padding: 10px;
+}
+#cboxLoadedContent h2 {
+  color: #820000;
+}
+#cboxLoadedContent #event-banner {
+  background-color: #8c1515;
+  border-bottom: 2px solid #DDCF99;
+  height: 50px;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+}
+#cboxLoadedContent #event-banner span {
+  color: #F2F1EB;
+  display: block;
+  float: left;
+  font: 300 22px 'Source Sans Pro', arial, sans-serif;
+  padding-left: 10px;
+  padding-top: 2px;
+}
+#cboxLoadedContent #event-banner img {
+  float: left;
+  padding-right: 10px;
+  border-right: 1px solid #F2F1EB;
+}
+#cboxLoadedContent #event-record {
+  margin: 0 15px;
+  padding: 0 0 15px;
+}
+#cboxLoadedContent #event-record dl {
+  margin: 15px 0 0;
+  padding: 0;
+}
+#cboxLoadedContent #event-record dt {
+  clear: left;
+  float: left;
+  font-weight: bold;
+  margin: 0 0 20px;
+  text-align: right;
+  width: 95px;
+}
+#cboxLoadedContent #event-record dd {
+  margin: 0 0 20px 105px;
+}
+#cboxLoadedContent #event-sidebar {
+  float: right;
+  margin: 10px 0 20px 20px;
+  width: 150px;
+}
+#cboxLoadedContent #event-footer {
+  text-align: right;
+  font-style: italic;
+}
 #sports .postcard-text {
   vertical-align: top;
 }
