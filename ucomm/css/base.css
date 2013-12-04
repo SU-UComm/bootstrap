@@ -327,7 +327,9 @@ a.more-link i {
 }
 .screen-reader {
   display: inline-block;
+  position: absolute;
   font-size: 0;
+  line-height: 0;
   height: 1px;
   overflow: hidden;
 }

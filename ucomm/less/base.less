@@ -19,7 +19,7 @@ a, a:hover, a:active {
 	outline: 0;
 }
 a:focus {
-    .tab-focus();
+  .tab-focus();
 }
 
 blockquote {
@@ -288,7 +288,9 @@ a.more-link {
 
 .screen-reader { // text that should be read by a screen reader but not rendered on screen
   display: inline-block;
+  position: absolute;
   font-size: 0;
+  line-height: 0;
   height: 1px;
   overflow: hidden;
 }
