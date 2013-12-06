@@ -881,7 +881,8 @@ a.more-link {
   color: #565347;
   font-size: 1.07143em;
 }
-#social-feature #badge .icon-twitter {
+#social-feature #badge .icon-twitter,
+#social-feature #badge .fa-twitter {
   color: #0098DB;
 }
 #social-feature #badge:hover {
