@@ -624,7 +624,7 @@ ul.vbar li:last-of-type {
   outline: 2px solid #0098db;
 }
 .footer #hp-buttons ul li a i {
-  margin: 0 5px 0 10px;
+  margin: 0 5px 0 0;
 }
 /* Global Footer and Copyright*/
 #global-footer {
