@@ -407,6 +407,19 @@
   #social-feature p.social-timestamp {
     margin: -10px 0 0;
   }
+  #mini-alert,
+  #default-alert {
+    background-color: #fbfbf9;
+  }
+  #mini-alert h3,
+  #default-alert h3 {
+    display: block;
+    padding-right: 0;
+  }
+  #mini-alert p,
+  #default-alert p {
+    display: block;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   #feature-banner .item {

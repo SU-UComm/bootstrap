@@ -120,6 +120,20 @@ input:-ms-input-placeholder {
   color: #ffffff;
   text-decoration: none;
 }
+.btn-su-alert {
+  background-color: #3f3c30;
+  border-color: #312e25;
+  color: #ffffff;
+  text-decoration: none;
+}
+.btn-su-alert:hover,
+.btn-su-alert:focus,
+.btn-su-alert:active {
+  background-color: #4d4a3b;
+  border-color: #312e25;
+  color: #ffffff;
+  text-decoration: none;
+}
 .btn-u {
   display: inline-block;
   position: relative;

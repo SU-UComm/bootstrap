@@ -120,6 +120,20 @@ input:-ms-input-placeholder {
   color: #ffffff;
   text-decoration: none;
 }
+.btn-su-alert {
+  background-color: #3f3c30;
+  border-color: #312e25;
+  color: #ffffff;
+  text-decoration: none;
+}
+.btn-su-alert:hover,
+.btn-su-alert:focus,
+.btn-su-alert:active {
+  background-color: #4d4a3b;
+  border-color: #312e25;
+  color: #ffffff;
+  text-decoration: none;
+}
 .btn-u {
   display: inline-block;
   position: relative;
@@ -1019,4 +1033,39 @@ a.more-link {
   padding-right: 10px;
   vertical-align: top;
   width: 100px;
+}
+#mini-alert {
+  margin-bottom: 10px;
+  padding: 15px 0 10px 15px;
+  background-color: #f2f1eb;
+}
+#mini-alert h3 {
+  display: inline-block;
+  text-transform: uppercase;
+  padding-right: 20px;
+  color: #820000;
+  font-weight: 600;
+  font-size: 18px;
+}
+#mini-alert p {
+  display: inline-block;
+}
+#default-alert {
+  margin-bottom: 10px;
+  padding: 15px 0 10px 15px;
+  background-color: #f2f1eb;
+}
+#default-alert #su-alert-icon {
+  color: #e98300;
+  text-align: center;
+}
+#default-alert #su-alert-icon span {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1;
+}
+#default-alert h3 {
+  font-size: 22px;
 }
