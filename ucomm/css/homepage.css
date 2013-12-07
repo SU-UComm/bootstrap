@@ -1042,16 +1042,18 @@ a.more-link {
   padding: 15px 0 10px 15px;
   background-color: #f2f1eb;
 }
-#mini-alert h3 {
+#mini-alert h2 {
   display: inline-block;
   text-transform: uppercase;
   padding-right: 20px;
+  padding-top: 5px;
   color: #820000;
   font-weight: 600;
   font-size: 18px;
 }
 #mini-alert p {
   display: inline-block;
+  padding-top: 5px;
 }
 #default-alert {
   margin-bottom: 10px;
@@ -1062,8 +1064,8 @@ a.more-link {
   color: #e98300;
   text-align: center;
 }
-#default-alert #su-alert-icon span {
-  display: block;
+#default-alert h2 {
+  color: #e98300;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 20px;
@@ -1071,4 +1073,40 @@ a.more-link {
 }
 #default-alert h3 {
   font-size: 22px;
+}
+#emergency-alert {
+  min-height: 425px;
+  margin-bottom: 10px;
+  padding: 25px 15px;
+  background-color: #2e2d29;
+  display: block;
+}
+#emergency-alert #su-alert-icon {
+  color: #ffff00;
+  text-align: center;
+}
+#emergency-alert #su-alert-icon span {
+  display: block;
+  color: #ffff00;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1;
+}
+#emergency-alert h2 {
+  font-size: 55px;
+  color: #fbfbf9;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#emergency-alert h3 {
+  font-size: 30px;
+  color: #fbfbf9;
+}
+#emergency-alert p {
+  font-size: 20px;
+  color: #fbfbf9;
+}
+#emergency-alert a {
+  color: #ffff00;
 }
