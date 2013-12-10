@@ -18,6 +18,7 @@
 #feature-banner {
 
   padding: 0;
+  margin-bottom: 40px;
   
   a.right,
   a.left {
@@ -48,12 +49,23 @@
     }
         
   } // #feature-banner .item
+
+  .carousel-indicators {
+    li {
+      margin: 0 12px;
+
+      button {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
 } // #feature-banner
 
 .news-item {
 	clear: both;
   display: table;
-	margin-bottom: 50px;
+	margin-bottom: 1em;
 	position: relative;
 
   & > div {
@@ -84,11 +96,14 @@
       line-height: 1;
       font-size: 18px;
     }
+    p {
+      min-height: 70px; // accommodate absolutely positioned image
+    }
   } // .news-text
 } // .news-item
 
-#social-feature p {
-  margin: 0 20px;
+#tweet_text p {
+  margin: 6px 0 0;
 }
 
 #social-icons ul {

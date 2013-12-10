@@ -745,7 +745,7 @@ a.more-link {
   margin: 3px;
   height: 12px;
   width: 12px;
-  background-color: #fbfbf9;
+  background-color: transparent;
   border: none;
 }
 #feature-banner .carousel-indicators li.active button {
@@ -757,7 +757,7 @@ a.more-link {
   left: 0;
   height: 12px;
   width: 12px;
-  border-radius: 7px;
+  border-radius: 50%;
   border: 1px solid #8c1515;
   background-color: #fff;
   margin: 2px;
