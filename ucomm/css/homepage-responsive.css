@@ -341,13 +341,27 @@
   #feature-banner .item p {
     font-size: 1.1em;
   }
+  #feature-banner .item a {
+    text-decoration: none;
+  }
   #feature-banner .item .carousel-caption {
-    width: 200px;
-    left: 50px;
+    width: auto;
+    left: 0;
     bottom: 0;
+    position: relative;
+    background-color: #f2f1eb;
+    padding: 12px 15px 6px;
+  }
+  #feature-banner .item .carousel-caption h3,
+  #feature-banner .item .carousel-caption p {
+    color: inherit !important;
   }
   #feature-banner .item .videoblock {
-    display: none;
+    top: 0;
+    left: auto;
+    right: 0;
+    width: 75%;
+    height: 279px;
   }
   #feature-banner .carousel-indicators li {
     margin: 0 12px;

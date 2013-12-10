@@ -685,6 +685,7 @@ a.more-link {
   left: 90px;
   text-align: left;
   text-shadow: none;
+  color: inherit;
 }
 #feature-banner .item .videoblock {
   position: absolute;

@@ -39,13 +39,26 @@
     p {
       font-size: 1.1em;
     }
+    a {
+      text-decoration: none;
+    }
     .carousel-caption {
-      width: 200px;
-      left: 50px;
+      width: auto;
+      left: 0;
       bottom: 0;
+      position: relative;
+      background-color: @su-beige-bg;
+      padding:12px 15px 6px;
+      h3, p {
+        color: inherit !important;
+      }
     }
     .videoblock {
-      display: none;
+      top: 0;
+      left: auto;
+      right: 0;
+      width: 75%;
+      height: 279px;
     }
         
   } // #feature-banner .item
