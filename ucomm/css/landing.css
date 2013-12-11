@@ -640,20 +640,95 @@ ul.vbar li:last-of-type {
 
   height: 120px;
   clear: both;
+  background-color: #8c1515;
+  color: #e3dfd5;
+  box-shadow: inset 0 4px 8px -2px rgba(0, 0, 0, 0.2);
+  /* Horizontal offset , vertical offset, blur, internal spacing */
+
+}
+#global-footer .clear {
+  clear: both;
+}
+#global-footer .container {
+  background-color: #8c1515;
+  color: #e3dfd5;
+}
+#global-footer .container .row {
+  margin: 30px 0 0 0;
+}
+#global-footer a {
+  color: #e3dfd5;
+}
+#global-footer #bottom-logo {
+  margin: 0 0 10px;
+  padding: 0;
+}
+#global-footer #bottom-logo img {
+  display: block;
+  margin: 0 auto;
 }
 #global-footer #bottom-text ul {
   margin: 0;
+  line-height: 1em;
+}
+#global-footer #bottom-text ul li {
+  display: block;
+  list-style: none;
 }
 #global-footer #bottom-text ul li a {
   font-size: 15px;
+  line-height: 20px;
 }
 #global-footer p.copyright {
   color: #e3dfd5;
   padding: 0 15px;
+  margin: 0;
   font-size: 13px;
+  line-height: 1.5em;
+  text-align: center;
 }
-#global-footer p.timestamp {
-  text-transform: uppercase;
+#global-footer p.copyright #termsofuse {
+  margin-left: 10px;
+  font-size: 12px;
+}
+/*
+Sticky Footer Solution
+by Steve Hatcher 
+http://stever.ca
+http://www.cssstickyfooter.com
+*/
+html,
+body {
+  height: 100%;
+}
+#su-wrap {
+  min-height: 100%;
+}
+#su-content {
+  overflow: visible;
+  padding-bottom: 120px;
+  /* must be same height as the footer */
+
+}
+#global-footer {
+  position: relative;
+  margin-top: -120px;
+  /* negative value of footer height */
+
+  height: 120px;
+  clear: both;
+}
+/*Opera Fix*/
+body:before {
+  /* thanks to Maleika (Kohoutec)*/
+
+  content: "";
+  height: 100%;
+  float: left;
+  width: 0;
+  margin-top: -32767px;
+  /* thank you Erik J - negate effect of float*/
+
 }
 h1 {
   margin-bottom: 20px;
