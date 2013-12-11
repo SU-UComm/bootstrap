@@ -333,7 +333,7 @@
     display: none;
   }
   #feature-banner .item img {
-    width: 767px;
+    width: 100%;
   }
   #feature-banner .item h3 {
     font-size: 1.42857em;
