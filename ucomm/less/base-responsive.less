@@ -5,6 +5,7 @@
 //////////////////////////
 // phone
 @media (max-width: @screen-xs-max) {
+.size-detect-xs { display:inline; }
 body {
 	padding: 0;
 }
@@ -249,6 +250,7 @@ body.facstaff #nav-facstaff a {
 //////////////////////////
 // tablet
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+.size-detect-sm { display:inline; }
 .col-sm-1-4 { // 5 columns across a 12 column grid = 1.4 column width
   float: left;
 	width: 18%;
@@ -360,6 +362,7 @@ body.facstaff #nav-facstaff a {
 //////////////////////////
 // small desktop
 @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+.size-detect-md { display:inline; }
 
 .navbar .nav > li {
   padding: 0 10px 0 0;
@@ -381,4 +384,5 @@ body.facstaff #nav-facstaff a {
 //////////////////////////
 // big desktop
 @media (min-width: @screen-lg-min) {
+.size-detect-lg { display:inline; }
 } // @media (min-width: @screen-lg-min)

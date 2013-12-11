@@ -348,6 +348,12 @@ a.more-link i {
   height: 1px;
   overflow: hidden;
 }
+.size-detect-xs,
+.size-detect-sm,
+.size-detect-md,
+.size-detect-lg {
+  display: none;
+}
 #su-content {
   overflow: visible;
   padding-bottom: 390px !important;

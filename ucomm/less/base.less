@@ -297,6 +297,15 @@ a.more-link {
   overflow: hidden;
 }
 
+// classes whose visibility we can test in JS to determine screen size
+// classes will be made visible in the appropriate breakpoint in base-responsive.less
+.size-detect-xs,
+.size-detect-sm,
+.size-detect-md,
+.size-detect-lg  {
+  display: none;
+}
+
 #su-content {
 	overflow: visible;
 	padding-bottom: 390px !important; // must be same height as the footer

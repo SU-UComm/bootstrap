@@ -6,6 +6,9 @@
   content: '\25AA';
 }
 @media (max-width: 767px) {
+  .size-detect-xs {
+    display: inline;
+  }
   body {
     padding: 0;
   }
@@ -210,6 +213,9 @@
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+  .size-detect-sm {
+    display: inline;
+  }
   .col-sm-1-4 {
     float: left;
     width: 18%;
@@ -295,6 +301,9 @@
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
+  .size-detect-md {
+    display: inline;
+  }
   .navbar .nav > li {
     padding: 0 10px 0 0;
   }
@@ -309,7 +318,9 @@
   }
 }
 @media (min-width: 1200px) {
-  
+  .size-detect-lg {
+    display: inline;
+  }
 }
 @media (max-width: 767px) {
   
