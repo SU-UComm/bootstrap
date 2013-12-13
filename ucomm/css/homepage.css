@@ -751,6 +751,7 @@ a.more-link {
 }
 #feature-banner .item a {
   border-bottom: none;
+  text-decoration: none;
   color: #5f574f;
 }
 #feature-banner .item img {
