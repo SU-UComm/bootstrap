@@ -736,6 +736,11 @@ h1 {
 h2 {
   font-size: 1.6em;
 }
+.ie7-clear {
+  font-size: 0;
+  height: 1px;
+  clear: both;
+}
 #mainmenu {
   margin-bottom: 30px;
 }
