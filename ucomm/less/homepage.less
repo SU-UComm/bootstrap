@@ -319,32 +319,31 @@ a.more-link {
 
 #at-stanford {
 	padding-right: 10px;
-} // #at-stanford
 
-#at-stanford-carousel {  
   .item {
-	  display: none;
+    margin-bottom: 20px;
 
-	a {
-	  	text-decoration: none;	
-	}
-    a:hover img {
-    opacity: 0.8;
-    .transition(all 0.4s ease-in-out);
-	}
-	a h3 {
-		color: @su-red;
-	}
+    a {
+      text-decoration: none;	
 
-  a:hover h3 {
-		text-decoration: underline;
-	}
-  a:hover p {
-    color: @su-black;
-  }
+      &:hover img {
+        opacity: 0.8;
+        .transition(all 0.4s ease-in-out);
+      }
+    }
+    a h3 {
+      color: @su-red;
+    }
+  
+    a:hover h3 {
+      text-decoration: underline;
+    }
+    a:hover p {
+      color: @su-black;
+    }
 
   } // .item
-} // #at-stanford-carousel
+} // #at-stanford
 
 
 /////////////////////////////////

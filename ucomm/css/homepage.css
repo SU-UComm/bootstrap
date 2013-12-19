@@ -1004,24 +1004,24 @@ a.more-link {
 #at-stanford {
   padding-right: 10px;
 }
-#at-stanford-carousel .item {
-  display: none;
+#at-stanford .item {
+  margin-bottom: 20px;
 }
-#at-stanford-carousel .item a {
+#at-stanford .item a {
   text-decoration: none;
 }
-#at-stanford-carousel .item a:hover img {
+#at-stanford .item a:hover img {
   opacity: 0.8;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-#at-stanford-carousel .item a h3 {
+#at-stanford .item a h3 {
   color: #8c1515;
 }
-#at-stanford-carousel .item a:hover h3 {
+#at-stanford .item a:hover h3 {
   text-decoration: underline;
 }
-#at-stanford-carousel .item a:hover p {
+#at-stanford .item a:hover p {
   color: #2e2d29;
 }
 #event-list h3,
