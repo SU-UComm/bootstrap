@@ -1006,6 +1006,7 @@ a.more-link {
 }
 #at-stanford .item {
   margin-bottom: 20px;
+  visibility: hidden;
 }
 #at-stanford .item a {
   text-decoration: none;
