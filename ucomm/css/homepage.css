@@ -977,7 +977,7 @@ a.more-link {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-#social-feature #badge:hover .icon-twitter {
+#social-feature #badge:hover .fa-twitter {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   color: white;
