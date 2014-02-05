@@ -5,15 +5,10 @@ module.exports = function(grunt) {
 
   var uCommFiles = {
       "ucomm/css/base.css": "ucomm/less/base.less"
-    , "ucomm/css/base-responsive.css": "ucomm/less/base-responsive.less"
     , "ucomm/css/homepage.css": "ucomm/less/homepage.less"
-    , "ucomm/css/homepage-responsive.css": "ucomm/less/homepage-responsive.less"
     , "ucomm/css/landing.css": "ucomm/less/landing.less"
-    , "ucomm/css/landing-responsive.css": "ucomm/less/landing-responsive.less"
     , "ucomm/css/contentpage.css": "ucomm/less/contentpage.less"
-    , "ucomm/css/contentpage-responsive.css": "ucomm/less/contentpage-responsive.less"
     , "ucomm/css/listpage.css": "ucomm/less/listpage.less"
-    , "ucomm/css/listpage-responsive.css": "ucomm/less/listpage-responsive.less"
   };
   var homepageRepo = "../su-homepage";
 
