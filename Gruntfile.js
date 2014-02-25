@@ -3,17 +3,15 @@
 module.exports = function(grunt) {
   "use strict";
 
-  var uCommFiles = {
-      "ucomm/css/base.css": "ucomm/less/base.less"
-    , "ucomm/css/homepage.css": "ucomm/less/homepage.less"
-    , "ucomm/css/landing.css": "ucomm/less/landing.less"
-    , "ucomm/css/contentpage.css": "ucomm/less/contentpage.less"
-    , "ucomm/css/listpage.css": "ucomm/less/listpage.less"
-  };
   var homepageRepo = "../su-homepage";
 
-  RegExp.quote = require('regexp-quote')
-  var btoa = require('btoa')
+  var globalConfig = {
+    theme:  'homepage', // default theme, but may be overridden on command line
+    themes: ['homepage', 'wilbur', 'bootstrap'] // valid themes
+  };
+
+  RegExp.quote = require('regexp-quote');
+  var btoa = require('btoa');
   // Project configuration.
   grunt.initConfig({
     
@@ -27,6 +25,8 @@ module.exports = function(grunt) {
               ' * Designed and built with all the love in the world by @mdo and @fat.\n' +
               ' */\n\n',
     jqueryCheck: 'if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery") }\n\n',
+
+    globalConfig: globalConfig,
 
     // Task configuration.
     clean: {
@@ -115,23 +115,47 @@ module.exports = function(grunt) {
     less: {
       dev: {
         options: {
-            paths: ["ucomm/less", "less"]
+            paths: ['themes/<%= globalConfig.theme %>/less', 'less']
           , dumpLineNumbers: "comments"
         },
-        files: uCommFiles
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            src: 'themes/<%= globalConfig.theme %>/less/[!_]*.less',
+            dest: 'themes/<%= globalConfig.theme %>/dist/css',
+            ext: '.dev.css'
+          }
+        ]
       },
       stage: {
         options: {
-            paths: ["ucomm/less", "less"]
+            paths: ['themes/<%= globalConfig.theme %>/less', 'less']
         },
-        files: uCommFiles
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            src: 'themes/<%= globalConfig.theme %>/less/[!_]*.less',
+            dest: 'themes/<%= globalConfig.theme %>/dist/css',
+            ext: '.css'
+          }
+        ]
       },
       prod: {
         options: {
-            paths: ["ucomm/less", "less"]
+            paths: ['themes/<%= globalConfig.theme %>/less', 'less']
           , yuicompress: true
         },
-        files: uCommFiles
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            src: 'themes/<%= globalConfig.theme %>/less/[!_]*.less',
+            dest: 'themes/<%= globalConfig.theme %>/dist/css',
+            ext: '.min.css'
+          }
+        ]
       }
     },
 
@@ -158,6 +182,19 @@ module.exports = function(grunt) {
         flatten: true,
         src: ['dist/js/*'],
         dest: homepageRepo+'/assets/bootstrap/js'
+      },
+      themeBefore: { // copy customized bootstrap files to bootstrap's build directory
+        expand: true,
+        flatten: true,
+        cwd: 'themes/<%= globalConfig.theme %>', // look for src files in this directory
+        src: 'bootstrap/less/*',
+        dest: 'less'
+      },
+      themeAfter: { // copy generated bootstrap files to theme's dist dirctories
+        expand: true,
+        cwd: 'dist',
+        src: ['css/{bootstrap,bootstrap.min}.css','js/*.js','fonts/*'],
+        dest: 'themes/<%= globalConfig.theme %>/dist'
       }
     },
 
@@ -299,4 +336,26 @@ module.exports = function(grunt) {
   grunt.registerTask('prod',    ['less:prod']);
   grunt.registerTask('deploy',  ['copy:ucomm']);
   grunt.registerTask('rebuild', ['dist-css', 'stage', 'deploy']);
+  
+  // Theme tasks
+  grunt.registerTask('theme', "Specify theme to be built", function(theme, env) {
+    grunt.log.writeln(globalConfig.theme);
+    if (typeof theme == "undefined") {
+      grunt.log.writeln("Error: Must specify a theme, e.g. 'grunt theme:homepage' or 'grunt theme:wilbur'");
+      return false;
+    }
+    if (globalConfig.themes.indexOf(theme) < 0) {
+      grunt.log.writeln("Error: Must specify a valid theme. Please specify one of");
+      grunt.log.writeln(globalConfig.themes);
+      return false;
+    }
+    globalConfig.theme = theme;
+    env = env || 'dev';
+    grunt.log.writeln("Generating bootstrap files and " + env + " css for " + globalConfig.theme);
+    grunt.task.run([
+      'copy:themeBefore', 'dist-css', 'dist-js', 'dist-fonts', 'copy:themeAfter', // build customized bootstrap
+      'less:dev', 'less:stage', 'less:prod' // build theme's css
+     
+    ]);
+  });
 };
