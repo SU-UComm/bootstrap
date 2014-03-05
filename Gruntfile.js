@@ -6,8 +6,14 @@ module.exports = function(grunt) {
   var homepageRepo = "../su-homepage";
 
   var globalConfig = {
-    theme:  'homepage', // default theme, but may be overridden on command line
-    themes: ['homepage', 'wilbur', 'bootstrap'] // valid themes
+    themes: ['homepage', 'wilbur', 'bootstrap'], // valid themes
+    repos:  { // repos where theme's files should be deployed
+      homepage:  '../su-homepage',
+      wilbur:    '../themes-dw/wilbur',
+      bootstrap: '../themes-dw/bootstrap'
+    },
+    theme: 'homepage', // default theme, but may be overridden on command line
+    repo:  '../su-homepage' // default repo, but may be overridden on command line
   };
 
   RegExp.quote = require('regexp-quote');
@@ -190,11 +196,17 @@ module.exports = function(grunt) {
         src: 'bootstrap/less/*',
         dest: 'less'
       },
-      themeAfter: { // copy generated bootstrap files to theme's dist dirctories
+      themeAfter: { // copy generated bootstrap files to theme's dist directories
         expand: true,
         cwd: 'dist',
         src: ['css/{bootstrap,bootstrap.min}.css','js/*.js','fonts/*'],
         dest: 'themes/<%= globalConfig.theme %>/dist'
+      },
+      themeDeploy: { // copy theme's dist directories to appropriate repo
+        expand: true,
+        cwd: 'themes/<%= globalConfig.theme %>/dist', // look for src files in this directory
+        src: '*/*',
+        dest: '<%= globalConfig.repo %>/assets'
       }
     },
 
@@ -334,11 +346,20 @@ module.exports = function(grunt) {
   grunt.registerTask('dev',     ['less:dev']);
   grunt.registerTask('stage',   ['less:stage']);
   grunt.registerTask('prod',    ['less:prod']);
-  grunt.registerTask('deploy',  ['copy:ucomm']);
   grunt.registerTask('rebuild', ['dist-css', 'stage', 'deploy']);
   
+  grunt.registerTask('echo', 'Echo back input', function(theme){
+    if (typeof theme != "undefined") {
+      globalConfig.theme = theme;
+      globalConfig.repo  = globalConfig.repos[theme];
+    }
+    grunt.log.writeln('Repo is ' + globalConfig.repo);
+  });
+
   // Theme tasks
-  grunt.registerTask('theme', "Specify theme to be built", function(theme, env) {
+  // typical usage: grunt theme:homepage build deploy
+
+  grunt.registerTask('theme', "Specify theme to be built", function(theme) {
     grunt.log.writeln(globalConfig.theme);
     if (typeof theme == "undefined") {
       grunt.log.writeln("Error: Must specify a theme, e.g. 'grunt theme:homepage' or 'grunt theme:wilbur'");
@@ -350,12 +371,17 @@ module.exports = function(grunt) {
       return false;
     }
     globalConfig.theme = theme;
-    env = env || 'dev';
-    grunt.log.writeln("Generating bootstrap files and " + env + " css for " + globalConfig.theme);
+    globalConfig.repo  = globalConfig.repos[theme];
+    grunt.log.writeln("Set theme to " + globalConfig.theme);
+  });
+
+  grunt.registerTask('build', 'Build customized bootstrap and css for a theme', function() {
+    grunt.log.writeln("Generating bootstrap files and css for " + globalConfig.theme);
     grunt.task.run([
       'copy:themeBefore', 'dist-css', 'dist-js', 'dist-fonts', 'copy:themeAfter', // build customized bootstrap
       'less:dev', 'less:stage', 'less:prod' // build theme's css
-     
     ]);
   });
+
+  grunt.registerTask('deploy',  ['copy:themeDeploy']);
 };
