@@ -375,12 +375,23 @@ module.exports = function(grunt) {
     grunt.log.writeln("Set theme to " + globalConfig.theme);
   });
 
-  grunt.registerTask('build', 'Build customized bootstrap and css for a theme', function() {
-    grunt.log.writeln("Generating bootstrap files and css for " + globalConfig.theme);
-    grunt.task.run([
-      'copy:themeBefore', 'dist-css', 'dist-js', 'dist-fonts', 'copy:themeAfter', // build customized bootstrap
-      'less:dev', 'less:stage', 'less:prod' // build theme's css
-    ]);
+  // grunt build, grunt build:theme (same as grunt build), grunt build:bootstrap or grunt build:all
+  grunt.registerTask('build', 'Build customized bootstrap and css for a theme', function(target) {
+    if (typeof target == "undefined") { // if no target specified, just build theme files
+      target = 'theme';
+    }
+    if (target == 'bootstrap' || target == 'all') {
+      grunt.log.writeln("Generating bootstrap files for " + globalConfig.theme);
+      grunt.task.run([
+        'copy:themeBefore', 'dist-css', 'dist-js', 'dist-fonts', 'copy:themeAfter'
+      ]);
+    }
+    if (target == 'theme' || target == 'all') {
+      grunt.log.writeln("Generating theme files for " + globalConfig.theme);
+      grunt.task.run([
+        'less:dev', 'less:stage', 'less:prod' // build theme's css
+      ]);
+    }
   });
 
   grunt.registerTask('deploy',  ['copy:themeDeploy']);
