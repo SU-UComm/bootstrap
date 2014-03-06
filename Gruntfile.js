@@ -3,17 +3,21 @@
 module.exports = function(grunt) {
   "use strict";
 
-  var uCommFiles = {
-      "ucomm/css/base.css": "ucomm/less/base.less"
-    , "ucomm/css/homepage.css": "ucomm/less/homepage.less"
-    , "ucomm/css/landing.css": "ucomm/less/landing.less"
-    , "ucomm/css/contentpage.css": "ucomm/less/contentpage.less"
-    , "ucomm/css/listpage.css": "ucomm/less/listpage.less"
-  };
   var homepageRepo = "../su-homepage";
 
-  RegExp.quote = require('regexp-quote')
-  var btoa = require('btoa')
+  var globalConfig = {
+    themes: ['homepage', 'wilbur', 'bootstrap'], // valid themes
+    repos:  { // repos where theme's files should be deployed
+      homepage:  '../su-homepage',
+      wilbur:    '../themes-dw/wilbur',
+      bootstrap: '../themes-dw/bootstrap'
+    },
+    theme: 'homepage', // default theme, but may be overridden on command line
+    repo:  '../su-homepage' // default repo, but may be overridden on command line
+  };
+
+  RegExp.quote = require('regexp-quote');
+  var btoa = require('btoa');
   // Project configuration.
   grunt.initConfig({
     
@@ -27,6 +31,8 @@ module.exports = function(grunt) {
               ' * Designed and built with all the love in the world by @mdo and @fat.\n' +
               ' */\n\n',
     jqueryCheck: 'if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery") }\n\n',
+
+    globalConfig: globalConfig,
 
     // Task configuration.
     clean: {
@@ -115,23 +121,47 @@ module.exports = function(grunt) {
     less: {
       dev: {
         options: {
-            paths: ["ucomm/less", "less"]
+            paths: ['themes/<%= globalConfig.theme %>/less', 'less']
           , dumpLineNumbers: "comments"
         },
-        files: uCommFiles
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            src: 'themes/<%= globalConfig.theme %>/less/[!_]*.less',
+            dest: 'themes/<%= globalConfig.theme %>/dist/css',
+            ext: '.dev.css'
+          }
+        ]
       },
       stage: {
         options: {
-            paths: ["ucomm/less", "less"]
+            paths: ['themes/<%= globalConfig.theme %>/less', 'less']
         },
-        files: uCommFiles
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            src: 'themes/<%= globalConfig.theme %>/less/[!_]*.less',
+            dest: 'themes/<%= globalConfig.theme %>/dist/css',
+            ext: '.css'
+          }
+        ]
       },
       prod: {
         options: {
-            paths: ["ucomm/less", "less"]
+            paths: ['themes/<%= globalConfig.theme %>/less', 'less']
           , yuicompress: true
         },
-        files: uCommFiles
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            src: 'themes/<%= globalConfig.theme %>/less/[!_]*.less',
+            dest: 'themes/<%= globalConfig.theme %>/dist/css',
+            ext: '.min.css'
+          }
+        ]
       }
     },
 
@@ -158,6 +188,25 @@ module.exports = function(grunt) {
         flatten: true,
         src: ['dist/js/*'],
         dest: homepageRepo+'/assets/bootstrap/js'
+      },
+      themeBefore: { // copy customized bootstrap files to bootstrap's build directory
+        expand: true,
+        flatten: true,
+        cwd: 'themes/<%= globalConfig.theme %>', // look for src files in this directory
+        src: 'bootstrap/less/*',
+        dest: 'less'
+      },
+      themeAfter: { // copy generated bootstrap files to theme's dist directories
+        expand: true,
+        cwd: 'dist',
+        src: ['css/{bootstrap,bootstrap.min}.css','js/*.js','fonts/*'],
+        dest: 'themes/<%= globalConfig.theme %>/dist'
+      },
+      themeDeploy: { // copy theme's dist directories to appropriate repo
+        expand: true,
+        cwd: 'themes/<%= globalConfig.theme %>/dist', // look for src files in this directory
+        src: '*/*',
+        dest: '<%= globalConfig.repo %>/assets'
       }
     },
 
@@ -297,6 +346,53 @@ module.exports = function(grunt) {
   grunt.registerTask('dev',     ['less:dev']);
   grunt.registerTask('stage',   ['less:stage']);
   grunt.registerTask('prod',    ['less:prod']);
-  grunt.registerTask('deploy',  ['copy:ucomm']);
   grunt.registerTask('rebuild', ['dist-css', 'stage', 'deploy']);
+  
+  grunt.registerTask('echo', 'Echo back input', function(theme){
+    if (typeof theme != "undefined") {
+      globalConfig.theme = theme;
+      globalConfig.repo  = globalConfig.repos[theme];
+    }
+    grunt.log.writeln('Repo is ' + globalConfig.repo);
+  });
+
+  // Theme tasks
+  // typical usage: grunt theme:homepage build deploy
+
+  grunt.registerTask('theme', "Specify theme to be built", function(theme) {
+    grunt.log.writeln(globalConfig.theme);
+    if (typeof theme == "undefined") {
+      grunt.log.writeln("Error: Must specify a theme, e.g. 'grunt theme:homepage' or 'grunt theme:wilbur'");
+      return false;
+    }
+    if (globalConfig.themes.indexOf(theme) < 0) {
+      grunt.log.writeln("Error: Must specify a valid theme. Please specify one of");
+      grunt.log.writeln(globalConfig.themes);
+      return false;
+    }
+    globalConfig.theme = theme;
+    globalConfig.repo  = globalConfig.repos[theme];
+    grunt.log.writeln("Set theme to " + globalConfig.theme);
+  });
+
+  // grunt build, grunt build:theme (same as grunt build), grunt build:bootstrap or grunt build:all
+  grunt.registerTask('build', 'Build customized bootstrap and css for a theme', function(target) {
+    if (typeof target == "undefined") { // if no target specified, just build theme files
+      target = 'theme';
+    }
+    if (target == 'bootstrap' || target == 'all') {
+      grunt.log.writeln("Generating bootstrap files for " + globalConfig.theme);
+      grunt.task.run([
+        'copy:themeBefore', 'dist-css', 'dist-js', 'dist-fonts', 'copy:themeAfter'
+      ]);
+    }
+    if (target == 'theme' || target == 'all') {
+      grunt.log.writeln("Generating theme files for " + globalConfig.theme);
+      grunt.task.run([
+        'less:dev', 'less:stage', 'less:prod' // build theme's css
+      ]);
+    }
+  });
+
+  grunt.registerTask('deploy',  ['copy:themeDeploy']);
 };
