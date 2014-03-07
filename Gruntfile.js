@@ -342,19 +342,7 @@ module.exports = function(grunt) {
     fs.writeFileSync('docs-assets/js/raw-files.js', files)
   });
 
-  // UComm tasks
-  grunt.registerTask('dev',     ['less:dev']);
-  grunt.registerTask('stage',   ['less:stage']);
-  grunt.registerTask('prod',    ['less:prod']);
-  grunt.registerTask('rebuild', ['dist-css', 'stage', 'deploy']);
-  
-  grunt.registerTask('echo', 'Echo back input', function(theme){
-    if (typeof theme != "undefined") {
-      globalConfig.theme = theme;
-      globalConfig.repo  = globalConfig.repos[theme];
-    }
-    grunt.log.writeln('Repo is ' + globalConfig.repo);
-  });
+  //// UComm tasks
 
   // Theme tasks
   // typical usage: grunt theme:homepage build deploy
