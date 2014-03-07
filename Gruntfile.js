@@ -266,6 +266,12 @@ module.exports = function(grunt) {
         })(),
         replacement: grunt.option('newver'),
         recursive: true
+      },
+      devComments: {
+        path: 'themes/<%= globalConfig.theme %>/dist/css',
+        pattern: '([Ll]ine \\d+,).*/themes/',
+        replacement: '$1 themes/',
+        recursive: true
       }
     }
   });
@@ -319,7 +325,7 @@ module.exports = function(grunt) {
   // Version numbering task.
   // grunt change-version-number --oldver=A.B.C --newver=X.Y.Z
   // This can be overzealous, so its changes should always be manually reviewed!
-  grunt.registerTask('change-version-number', ['sed']);
+  grunt.registerTask('change-version-number', ['sed:versionNumber']);
 
   // task for building customizer
   grunt.registerTask('build-customizer', 'Add scripts/less files to customizer.', function () {
@@ -371,15 +377,16 @@ module.exports = function(grunt) {
     if (target == 'bootstrap' || target == 'all') {
       grunt.log.writeln("Generating bootstrap files for " + globalConfig.theme);
       grunt.task.run([
-        'copy:themeBefore', // copy theme's customized Bootstrap files into Bootstrap's build space
-        'dist-css', 'dist-js', 'dist-fonts', // run Bootstrap's build tasks
-        'copy:themeAfter' // copy Bootstrap's dist/ directory into theme's dist/ directory
+          'copy:themeBefore' // copy theme's customized Bootstrap files into Bootstrap's build space
+        , 'dist-css', 'dist-js', 'dist-fonts' // run Bootstrap's build tasks
+        , 'copy:themeAfter' // copy Bootstrap's dist/ directory into theme's dist/ directory
       ]);
     }
     if (target == 'theme' || target == 'all') {
       grunt.log.writeln("Generating theme files for " + globalConfig.theme);
       grunt.task.run([
-        'less:dev', 'less:stage', 'less:prod' // build theme's css
+          'less:dev', 'less:stage', 'less:prod' // build theme's css
+        , 'sed:devComments' // remove user-specific paths from comments in .dev.css
       ]);
     }
   });
