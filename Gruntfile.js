@@ -371,7 +371,9 @@ module.exports = function(grunt) {
     if (target == 'bootstrap' || target == 'all') {
       grunt.log.writeln("Generating bootstrap files for " + globalConfig.theme);
       grunt.task.run([
-        'copy:themeBefore', 'dist-css', 'dist-js', 'dist-fonts', 'copy:themeAfter'
+        'copy:themeBefore', // copy theme's customized Bootstrap files into Bootstrap's build space
+        'dist-css', 'dist-js', 'dist-fonts', // run Bootstrap's build tasks
+        'copy:themeAfter' // copy Bootstrap's dist/ directory into theme's dist/ directory
       ]);
     }
     if (target == 'theme' || target == 'all') {
