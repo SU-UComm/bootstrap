@@ -6,15 +6,16 @@ module.exports = function(grunt) {
   var homepageRepo = "../su-homepage";
 
   var globalConfig = {
-    themes: ['homepage', 'wilbur', 'bootstrap'], // valid themes
-    repos:  { // repos where theme's files should be deployed
-      homepage:  '../su-homepage',
-      wilbur:    '../themes-dw/wilbur',
-      bootstrap: '../themes-dw/bootstrap'
-    },
-    theme: 'homepage', // default theme, but may be overridden on command line
-    repo:  '../su-homepage' // default repo, but may be overridden on command line
+      themes: ['homepage', 'cardinal', 'wilbur', 'bootstrap'] // valid themes
+    , repos:  { // repos where theme's files should be deployed
+        homepage:  '../su-homepage/assets',
+        cardinal:  '../themes-dw/assets/cardinal',
+        wilbur:    '../themes-dw/assets/wilbur',
+        bootstrap: '../themes-dw/assets/bootstrap'
+      }
   };
+  globalConfig.theme = 'homepage'; // default theme, but may be overridden on command line
+  globalConfig.repo  = globalConfig.repos[globalConfig.theme]; // default repo, but may be overridden on command line
 
   RegExp.quote = require('regexp-quote');
   var btoa = require('btoa');
@@ -206,7 +207,7 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'themes/<%= globalConfig.theme %>/dist', // look for src files in this directory
         src: '*/*',
-        dest: '<%= globalConfig.repo %>/assets'
+        dest: '<%= globalConfig.repo %>'
       }
     },
 
@@ -354,7 +355,8 @@ module.exports = function(grunt) {
   // typical usage: grunt theme:homepage build deploy
 
   grunt.registerTask('theme', "Specify theme to be built", function(theme) {
-    grunt.log.writeln(globalConfig.theme);
+    // grunt.log.writeln('Default theme: ' + globalConfig.theme); //// DEBUG
+    // grunt.log.writeln('Default repo:  ' + globalConfig.repo); //// DEBUG
     if (typeof theme == "undefined") {
       grunt.log.writeln("Error: Must specify a theme, e.g. 'grunt theme:homepage' or 'grunt theme:wilbur'");
       return false;
@@ -366,7 +368,9 @@ module.exports = function(grunt) {
     }
     globalConfig.theme = theme;
     globalConfig.repo  = globalConfig.repos[theme];
-    grunt.log.writeln("Set theme to " + globalConfig.theme);
+    grunt.log.writeln("Theme set to " + globalConfig.theme);
+    // grunt.log.writeln('Working theme: ' + globalConfig.theme); //// DEBUG
+    // grunt.log.writeln('Working repo:  ' + globalConfig.repo); //// DEBUG
   });
 
   // grunt build, grunt build:theme (same as grunt build), grunt build:bootstrap or grunt build:all
