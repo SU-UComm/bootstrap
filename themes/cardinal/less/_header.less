@@ -18,18 +18,52 @@
 }
 #header {
 	z-index: 999;
-	padding: 12px 0 18px 0;
+	padding: 4px 0 26px 0;
 	background-color: @su-red;
 }
 
 #logo {
-	max-width: 360px;
-	min-width: 300px;
+	border-right: 1px solid @su-beige-10;
+    display: table-cell;
+    float: none;
+    margin: 0;
+    padding: 0 10px 0 0;
+    vertical-align: bottom;
+
+	img {max-width: 180px;}
 }
 
 #header a, #mainmenu a {
 	text-decoration: none;
 }
+#name-and-slogan {
+    display: table-cell;
+    height: auto;
+    vertical-align: bottom;
+	&.with-logo {
+	    padding-left: 10px;
+	}
+}
+#site-name, #site-title-first-line {
+    margin-bottom: -4px;
+    margin-top: -6px;
+}
+#site-name, #site-title-first-line, #site-title-second-line {
+    color: @su-beige-10;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.2em;
+    a {
+	    color: @su-beige-10;
+	    text-decoration: none;
+	}
+}
+.site-name, #site-slogan {
+    font-family: inherit;
+    text-rendering: optimizelegibility;
+}
+
 /* Search */
 #nav-search {
 	min-height: 30px;
