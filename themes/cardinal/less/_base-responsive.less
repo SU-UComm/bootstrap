@@ -59,15 +59,6 @@ body {
     font-size: 1.1em;
   }
 
-  #hp-buttons {
-    margin-top: 20px;
-
-    .btn-u i {
-      .font-size-em(25);
-      margin: 0 10px;
-    }
-  }
-
   p.copyright {
     padding-top: 25px;
   }
@@ -109,14 +100,13 @@ body {
   }
 }
 
-body.about #nav-about a, body.admission #nav-admission a, 
-body.academics #nav-academics a, body.research #nav-research a, 
-body.campuslife #nav-campuslife a, body.students #nav-students a, 
-body.facstaff #nav-facstaff a {
+body.home #nav-home a, body.nav-1 #nav-1 a, 
+body.nav-2 #nav-2 a, body.nav-3 #nav-3 a, 
+body.nav-4 #nav-4 a, body.nav-5 #nav-5 a, 
+body.nav-6 #nav-6 a {
   color: @su-red-text;
   border-bottom: none;
   }
-
 
 .navbar {
 	margin: 5px 0 3px 0;	
@@ -184,62 +174,6 @@ body.facstaff #nav-facstaff a {
       }
     } // .nav > li
   } // .nav
-
-  /*Gateways */
-  #gateway-nav {
-    width: 100%;
-    margin-bottom: 15px;
-    border-radius: 3px;
-    padding: 0.5em 0;
-    background-color: @su-beige-05;
-
-    h4 {
-      display: block;
-      margin-bottom: 0;
-      padding-left: 15px;
-      color: @su-red-text;
-      font-size: 0.85em;
-      font-weight: 700;
-      cursor: pointer;
-      
-      span {
-        padding: 0 0.5em;
-        font-size: 1.5em;
-      }
-    } // Information For... header
-  } // #gateway-nav
-
-  #gateways {
-    margin: 0 0 0 1.4em;
-    list-style: none;
-    position: relative;
-    display: none;
-
-    &.pull-right {
-      float: none !important;
-    }
-
-    li {
-      display: block;
-      list-style: none;
-
-      a {
-        font-size: 0.85em;
-        text-transform: uppercase;
-        font-weight: 700;
-        display: block;
-        border-radius: 3px;
-        padding: 9px 15px;
-
-        &:focus, &:hover {
-          text-decoration: none;
-          background-color: @su-beige-bg;
-          border-bottom:  none;
-          padding-bottom: 9px;
-        }
-      } // a
-    } // li
-  } // #gateways
 } // .navbar
 
 #sidebar-second {
@@ -294,35 +228,6 @@ body.facstaff #nav-facstaff a {
 #search-form #search-btn {
   left: 190px;
 }
-
-.footer {
-  #hp-buttons {
-    clear: both;
-  
-    ul {
-      li {
-        display: inline;
-    
-        a {
-          width: 19%;
-      
-          i {
-            display: block;
-            margin: 0 auto 5px;
-            text-align: center;
-          }
-    
-          span {
-            display: block;
-            text-align: center;
-            font-size: .9em;
-            line-height: 1;
-          }
-        } // a
-      } // li
-    } // ul
-  } // #hp-buttons
-} // .footer
 } // @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)
 
 //////////////////////////
@@ -344,16 +249,6 @@ body.facstaff #nav-facstaff a {
     }
 }
 
-#gateways li a:hover {
-	border-bottom: solid 2px @su-clay;
-  color: inherit;
-}
-
-
-#gateways li:last-child {
-	padding-right: 0;
-}
-
 .two-column {
   -moz-column-count: 2;
   -moz-column-gap: 20px;
@@ -364,10 +259,10 @@ body.facstaff #nav-facstaff a {
 }
 
 // highlight active nav item
-body.about #nav-about a, body.admission #nav-admission a, 
-body.academics #nav-academics a, body.research #nav-research a, 
-body.campuslife #nav-campuslife a, body.students #nav-students a, 
-body.facstaff #nav-facstaff a {
+body.home #nav-home a, body.nav-1 #nav-1 a, 
+body.nav-2 #nav-2 a, body.nav-3 #nav-3 a, 
+body.nav-4 #nav-4 a, body.nav-5 #nav-5 a, 
+body.nav-6 #nav-6 a {
   border-bottom: 2px solid @su-red;
 }
 
@@ -403,13 +298,6 @@ body.facstaff #nav-facstaff a {
  
   & > a {
     font-size: 1.3em;
-  }
-}
-
-#gateways li {
-	padding-right: 10px;
-  a {
-    font-size: .8em;
   }
 }
 } // @media (min-width: @screen-md-min) and (max-width: @screen-md-max)
