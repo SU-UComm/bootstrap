@@ -40,26 +40,38 @@
     display: table-cell;
     height: auto;
     vertical-align: bottom;
-	&.with-logo {
-	    padding-left: 10px;
-	}
+    padding-left: 10px;
 }
-#site-name, #site-title-first-line {
-    margin-bottom: -4px;
-    margin-top: -6px;
+#site-name {
+    margin-bottom: -3px;
 }
-#site-name, #site-title-first-line, #site-title-second-line {
+#site-name {
     color: @su-beige-10;
     font-size: 30px;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    line-height: 1.2em;
+    font-weight: 300;
+    line-height: 1em;
     a {
 	    color: @su-beige-10;
 	    text-decoration: none;
-	}
+	  }
 }
-.site-name, #site-slogan {
+
+#site-slogan {
+  display: none;
+}
+
+body.two-line-header #site-name span {display: block; font-size: .7em; line-height: 1.1em;}
+body.site-slogan #site-slogan{
+    display: block;
+    color: @su-beige-10;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.2em;
+    margin-bottom: -4px;
+    margin-top: 4px;
+}    
+#site-name, #site-slogan {
     font-family: inherit;
     text-rendering: optimizelegibility;
 }

@@ -365,9 +365,33 @@ ul.vbar {
     }
   }
 
+  img {
+      .img-responsive;
+      background-color: rgba(0, 0, 0, 0);
+      border: 4px solid @su-beige-60;
+      margin-bottom: 6px;
+      padding: 2px;
+  }
+
+  p.caption {
+    color: @su-warm-gray-60;
+    font-size: 13px;
+    font-style: italic;
+    letter-spacing: 0.01em;
+  }
   .more-link {
     text-align:right;
   }
+}
+
+.descriptor {
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    line-height: 1.5em;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    color: @su-cool-gray;
+    
 }
 
 /////////////////////////////////
@@ -382,6 +406,36 @@ ul.vbar {
   padding: 4px 0 0;
   background-color: @su-red;
   color: @su-red;
+}
+
+#feature-banner{
+  position: relative;
+    
+  .feature-caption{
+    background-color: @su-beige-10;
+    opacity: 0.8;
+    bottom: 18px;
+    color: inherit;
+    left: 18px;
+    padding: 15px 20px;
+    position: absolute;
+    right: inherit;
+    text-align: left;
+    text-shadow: none;
+    top: inherit;
+    width: 500px;
+    
+    h3{
+      color: @su-red;
+      font-size: 1.8em;
+    }
+    p{
+      color: @su-black;
+      font-size: 1.2em;
+      line-height: 1.3em;
+    }
+  }
+
 }
 
 #main-content {
@@ -413,9 +467,8 @@ ul.vbar {
     margin-bottom: 15px;
   }
   .postcard-image {
-    width: 350px;
    img {
-      width: 100%;
+      height: auto;
       border-bottom: 3px solid #c4bfa9;
       padding-bottom: 2px;
     }
