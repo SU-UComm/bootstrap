@@ -457,19 +457,13 @@ ul.vbar {
 #main-content {
 
   ul {
-    list-style: none;
+    list-style-type: square;
+    list-style-image: url('../images/bullet.gif');
 
     li {
       color: @su-black;
       position: relative;
       line-height: 1.5em;
-    }
-    li:before {
-      color: @su-clay;
-      position: absolute;
-      top: 0;
-      margin: 0 0 0 -15px;
-      content: '\25AA';
     }
   }
 
