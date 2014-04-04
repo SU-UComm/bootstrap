@@ -136,6 +136,7 @@ input:-ms-input-placeholder {
 .toc_current, 
 .toc_current a {
   color: @su-red;
+  background-color: @su-beige-bg;
 }
 
 .dropcap {
@@ -198,6 +199,7 @@ input:-ms-input-placeholder {
       margin-bottom: 10px;
     }
   }
+
   
   dt {
 	  font-size: 1.1em;
@@ -367,17 +369,15 @@ ul.vbar {
     text-transform: uppercase;
   }
 
+
   ul {
-    list-style: none;
+    list-style-type: square;
+    list-style-image: url('../images/bullet.gif');
     
     li {
       position: relative;
       margin-bottom: 7px;
-      line-height: 1.1em;
-      
-      &:before {
-        .small-square;
-      }
+      line-height: 1.1em;      
     }
   }
 
@@ -466,7 +466,7 @@ ul.vbar {
       line-height: 1.5em;
     }
   }
-
+  
   dt {
     font-size: 1.3em;
     font-weight: 600;
