@@ -174,9 +174,8 @@ module.exports = function(grunt) {
       },
       themeBefore: { // copy customized bootstrap files to bootstrap's build directory
         expand: true,
-        flatten: true,
-        cwd: 'themes/<%= globalConfig.theme %>', // look for src files in this directory
-        src: 'bootstrap/less/*',
+        cwd: 'themes/<%= globalConfig.theme %>/bootstrap/less', // look for src files in this directory
+        src: '*',
         dest: 'less'
       },
       themeAfter: { // copy generated bootstrap files to theme's dist directories
