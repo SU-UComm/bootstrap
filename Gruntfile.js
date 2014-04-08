@@ -144,7 +144,7 @@ module.exports = function(grunt) {
           {
             expand: true,
             flatten: true,
-            src: 'themes/<%= globalConfig.theme %>/less/[!_]*.less',
+            src: ['themes/<%= globalConfig.theme %>/less/[!_]*.less', '!themes/<%= globalConfig.theme %>/less/custom.less'],
             dest: 'themes/<%= globalConfig.theme %>/dist/css',
             ext: '.dev.css'
           }
@@ -173,7 +173,7 @@ module.exports = function(grunt) {
           {
             expand: true,
             flatten: true,
-            src: 'themes/<%= globalConfig.theme %>/less/[!_]*.less',
+            src: ['themes/<%= globalConfig.theme %>/less/[!_]*.less', '!themes/<%= globalConfig.theme %>/less/custom.less'],
             dest: 'themes/<%= globalConfig.theme %>/dist/css',
             ext: '.min.css'
           }
