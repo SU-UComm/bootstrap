@@ -172,24 +172,6 @@ module.exports = function(grunt) {
         src: ["fonts/*"],
         dest: 'dist/'
       },
-      ucomm: {
-        expand: true,
-        flatten: true,
-        src: ["ucomm/css/*"],
-        dest: homepageRepo+'/assets/css/'
-      },
-      bootstrapCss: {
-        expand: true,
-        flatten: true,
-        src: ['dist/css/*'],
-        dest: homepageRepo+'/assets/bootstrap/css'
-      },
-      bootstrapJs: {
-        expand: true,
-        flatten: true,
-        src: ['dist/js/*'],
-        dest: homepageRepo+'/assets/bootstrap/js'
-      },
       themeBefore: { // copy customized bootstrap files to bootstrap's build directory
         expand: true,
         flatten: true,
@@ -318,7 +300,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dist-fonts', ['copy:fonts']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean', 'dist-css', 'dist-fonts', 'dist-js', 'copy:bootstrapCss', 'copy:bootstrapJs']);
+  grunt.registerTask('dist', ['clean', 'dist-css', 'dist-fonts', 'dist-js']);
 
   // Default task.
   grunt.registerTask('default', ['test', 'dist', 'build-customizer']);
