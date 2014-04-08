@@ -8,14 +8,25 @@ module.exports = function(grunt) {
   var globalConfig = {
       themes: ['homepage', 'cardinal', 'wilbur', 'bootstrap'] // valid themes
     , repos:  { // repos where theme's files should be deployed
-        homepage:  '../su-homepage/assets',
-        cardinal:  '../themes-dw/assets/cardinal',
-        wilbur:    '../themes-dw/assets/wilbur',
-        bootstrap: '../themes-dw/assets/bootstrap'
+          homepage:  '../su-homepage/assets'
+        , cardinal:  '../themes-dw/assets/cardinal'
+        , wilbur:    '../themes-dw/assets/wilbur'
+        , bootstrap: '../themes-dw/assets/bootstrap'
+      }
+    , bootstrapJS:  { // Bootstrap js files which should be included with theme
+          homepage: [
+              'js/transition.js'
+            , 'js/carousel.js'
+            , 'js/collapse.js'
+          ]
+        , cardinal:  'js/*\\.js' // all
+        , wilbur:    'js/*\\.js' // all
+        , bootstrap: 'js/*\\.js' // all
       }
   };
   globalConfig.theme = 'homepage'; // default theme, but may be overridden on command line
   globalConfig.repo  = globalConfig.repos[globalConfig.theme]; // default repo, but may be overridden on command line
+  globalConfig.js    = globalConfig.bootstrapJS[globalConfig.theme]; // default js, but may be overridden on command line
 
   RegExp.quote = require('regexp-quote');
   var btoa = require('btoa');
@@ -59,6 +70,10 @@ module.exports = function(grunt) {
       options: {
         banner: '<%= banner %><%= jqueryCheck %>',
         stripBanners: false
+      },
+      theme: { // before bootstrap so bootstrap's default dist-js target works properly (it runs all concat tasks)
+        src: ['<%= globalConfig.js %>'],
+        dest: 'dist/js/<%= pkg.name %>.js'
       },
       bootstrap: {
         src: [
@@ -349,9 +364,11 @@ module.exports = function(grunt) {
     }
     globalConfig.theme = theme;
     globalConfig.repo  = globalConfig.repos[theme];
+    globalConfig.js    = globalConfig.bootstrapJS[theme];
     grunt.log.writeln("Theme set to " + globalConfig.theme);
-    // grunt.log.writeln('Working theme: ' + globalConfig.theme); //// DEBUG
-    // grunt.log.writeln('Working repo:  ' + globalConfig.repo); //// DEBUG
+//    grunt.log.writeln('Working theme: ' + globalConfig.theme); //// DEBUG
+//    grunt.log.writeln('Working repo:  ' + globalConfig.repo); //// DEBUG
+//    grunt.log.writeln('Working js:    ' + globalConfig.js); //// DEBUG
   });
 
   // grunt build, grunt build:theme (same as grunt build), grunt build:bootstrap or grunt build:all
@@ -363,7 +380,7 @@ module.exports = function(grunt) {
       grunt.log.writeln("Generating bootstrap files for " + globalConfig.theme);
       grunt.task.run([
           'copy:themeBefore' // copy theme's customized Bootstrap files into Bootstrap's build space
-        , 'dist-css', 'dist-js', 'dist-fonts' // run Bootstrap's build tasks
+        , 'dist-css', 'concat:theme', 'uglify', 'dist-fonts' // build custom Bootstrap
         , 'copy:themeAfter' // copy Bootstrap's dist/ directory into theme's dist/ directory
       ]);
     }
