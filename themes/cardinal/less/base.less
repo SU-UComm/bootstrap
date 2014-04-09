@@ -274,7 +274,17 @@ a.more-link {
     position: relative;
   }
 
-  .postcard-image img {
+  .postcard-image {
+     img {
+        height: auto;
+        border-bottom: 3px solid @su-beige-60;
+        padding-bottom: 2px;
+     }
+  }
+  .postcard-text {
+    vertical-align: top;
+    padding-top: 10px;
+    padding-left: 20px;
   }
 }
 
@@ -475,18 +485,6 @@ ul.vbar {
   dd {
     line-height: 1.2;
     margin-bottom: 15px;
-  }
-  .postcard-image {
-   img {
-      height: auto;
-      border-bottom: 3px solid @su-beige-60;
-      padding-bottom: 2px;
-    }
-}
-  .postcard-text {
-    vertical-align: top;
-    padding-top: 10px;
-    padding-left: 20px;
   }
 }
 
