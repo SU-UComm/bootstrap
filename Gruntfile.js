@@ -19,9 +19,9 @@ module.exports = function(grunt) {
             , 'js/carousel.js'
             , 'js/collapse.js'
           ]
-        , cardinal:  'js/*\\.js' // all
-        , wilbur:    'js/*\\.js' // all
-        , bootstrap: 'js/*\\.js' // all
+        , cardinal:  '<%= concat.bootstrap.src %>' // same as vanilla bootstrap
+        , wilbur:    '<%= concat.bootstrap.src %>' // same as vanilla bootstrap
+        , bootstrap: '<%= concat.bootstrap.src %>' // same as vanilla bootstrapß
       }
   };
   globalConfig.theme = 'homepage'; // default theme, but may be overridden on command line
