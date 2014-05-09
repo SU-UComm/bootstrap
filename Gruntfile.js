@@ -3,8 +3,6 @@
 module.exports = function(grunt) {
   "use strict";
 
-  var homepageRepo = "../su-homepage";
-
   var globalConfig = {
       themes: ['homepage', 'cardinal', 'wilbur', 'bootstrap'] // valid themes
     , repos:  { // repos where theme's files should be deployed
