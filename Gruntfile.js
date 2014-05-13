@@ -19,7 +19,7 @@ module.exports = function(grunt) {
           ]
         , cardinal:  '<%= concat.bootstrap.src %>' // same as vanilla bootstrap
         , wilbur:    '<%= concat.bootstrap.src %>' // same as vanilla bootstrap
-        , bootstrap: '<%= concat.bootstrap.src %>' // same as vanilla bootstrapß
+        , bootstrap: '<%= concat.bootstrap.src %>' // same as vanilla bootstrap
       }
   };
   globalConfig.theme = 'homepage'; // default theme, but may be overridden on command line
