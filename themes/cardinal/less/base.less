@@ -219,9 +219,11 @@ input:-ms-input-placeholder {
   color: @su-warm-gray;
 
 }
-h2.lead {
+h2.headline {
   @font-size: 24px;
   .font-size-em(@font-size);
+  font-weight: 300;
+  color: @headings-color;
   border-bottom: 1px solid @su-beige-40;
 }
 
@@ -369,7 +371,7 @@ ul.vbar {
 	padding: 20px;
 
   h2 {
-    padding: 10px 0;
+    padding: 10px 0 4px;
     font-size: 1.2em;
     text-transform: uppercase;
     color: @su-red-text;
@@ -505,6 +507,10 @@ ul.vbar {
   img {
     width: 33px;
     margin: 0 4px 4px 0;
+  }
+  a:hover img {
+    opacity: .6;
+    transition: all .4s ease-in-out;
   }
 }
 
