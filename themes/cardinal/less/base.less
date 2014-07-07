@@ -137,12 +137,6 @@ input:-ms-input-placeholder {
   color: @su-red-text;
 }
 
-.toc_current, 
-.toc_current a {
-  color: @su-red;
-  background-color: @su-beige-bg;
-}
-
 .uppercase {
   text-transform: uppercase;
 }
@@ -490,16 +484,25 @@ ul.vbar {
   }
 }
 
-#sidebar-first a {
-  text-decoration: none;
-}
-
-#sidebar-first ul {
-  padding-left: 0;
-  list-style: none;
-  margin-bottom: 30px;
-  li {
-    border-bottom: 1px solid @su-beige-30;
+.sidebar-nav {
+  h2 {
+    font-size: 1.2em;
+    color: inherit;
+  }
+  ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 30px;
+    li {
+      border-bottom: 1px solid @su-beige-30;
+      a {
+        text-decoration: none;
+        &.toc_current {
+          color: @su-red;
+          background-color: @su-beige-bg;
+        }
+      }
+    }
   }
 }
 
