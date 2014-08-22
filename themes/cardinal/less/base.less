@@ -147,7 +147,7 @@ input:-ms-input-placeholder {
 
 .info-box {
   margin: 0 15px 30px;
-	display: table;
+  display: table;
 
   .icon-container,
   .text-container {
@@ -368,10 +368,10 @@ ul.vbar {
 }
 
 .well {
-	box-shadow: none;
-	border: medium none;
-	border-radius: 10px 10px 10px 10px;
-	padding: 20px;
+  box-shadow: none;
+  border: medium none;
+  border-radius: 10px 10px 10px 10px;
+  padding: 20px;
   margin-bottom: 30px;
 
   h2 {
@@ -446,20 +446,40 @@ ul.vbar {
   .feature-caption {
     background-color: @su-beige-10;
     opacity: 0.85;
-    bottom: 18px;
-    left: 18px;
     padding: 15px 20px;
-    position: absolute;
-    right: inherit;
-    text-align: left;
-    text-shadow: none;
-    top: inherit;
     width: 400px;
 
     color: @su-black;
     font-size: 1.1em;
     line-height: 1.2;
-    
+    text-shadow: none;
+    text-align: left;
+
+    position: absolute;
+    top: auto;
+    bottom: 18px;
+    left: 18px;
+    right: auto;
+
+    &.left-top {
+      top:    18px;
+      bottom: auto;
+      left:   18px;
+      right:  auto;
+    }
+    &.right-top {
+      top:    18px;
+      bottom: auto;
+      left:   auto;
+      right:  18px;
+    }
+    &.right-bottom {
+      top:    auto;
+      bottom: 18px;
+      left:   auto;
+      right:  18px;
+    }
+
     h2, h3 {
       color: @su-red-text;
       font-size: 1.455em;
