@@ -444,8 +444,6 @@ ul.vbar {
   position: relative;
     
   .feature-caption {
-    background-color: @su-beige-10;
-    opacity: 0.85;
     padding: 15px 20px;
     width: 400px;
 
@@ -456,10 +454,23 @@ ul.vbar {
     text-align: left;
 
     position: absolute;
+    z-index: 1;
     top: auto;
     bottom: 18px;
     left: 18px;
     right: auto;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-color: @su-beige-10;
+      opacity: 0.85;
+    }
 
     &.left-top {
       top:    18px;
