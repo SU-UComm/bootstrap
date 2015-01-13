@@ -128,6 +128,16 @@
       position: relative;
       background-color: @su-beige-bg;
       padding: 1em 15px 1em;
+
+      .white,
+      .clay,
+      .sandstone,
+      .sandstone50,
+      .sandstone25,
+      .red {
+        color: inherit;
+      }
+
       h3 {
         display: inline;
         text-transform: uppercase;
@@ -135,12 +145,34 @@
         font-size: 1.1em;
         font-weight: 600;
         margin-right: 0.4em;
+        color: @su-red-text;
+        // more specific rules to ensure color is overridden
+        &.white,
+        &.clay,
+        &.sandstone,
+        &.sandstone50,
+        &.sandstone25,
+        &.red {
+          color: @su-red-text;
+        }
       }
+
       p {
         display: inline;
         font-weight: 400;
         font-size: 14px;
         line-height: 1.6;
+      }
+
+      &.bg-dark { // if the caption background is dark, make all text be light
+        .white,
+        .clay,
+        .sandstone,
+        .sandstone50,
+        .sandstone25,
+        .red {
+          color: @su-beige-05;
+        }
       }
     }
     .videoblock {
