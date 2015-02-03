@@ -221,7 +221,7 @@ module.exports = function (grunt) {
       },
       stage: {
         options: {
-            paths: ['themes/<%= globalConfig.theme %>/less', 'less']
+          paths: ['themes/<%= globalConfig.theme %>/less', 'less']
         },
         files: [
           {
@@ -612,55 +612,55 @@ module.exports = function (grunt) {
     });
   });
 
-  //// UComm tasks
+  // UComm start
 
   // Theme tasks
   // typical usage: grunt theme:homepage build deploy
 
-  grunt.registerTask('theme', "Specify theme to be built", function(theme) {
-    // grunt.log.writeln('Default theme: ' + globalConfig.theme); //// DEBUG
-    // grunt.log.writeln('Default repo:  ' + globalConfig.repo); //// DEBUG
-    if (typeof theme == "undefined") {
-      grunt.log.writeln("Error: Must specify a theme, e.g. 'grunt theme:homepage' or 'grunt theme:wilbur'");
+  grunt.registerTask('theme', 'Specify theme to be built', function (theme) {
+    grunt.log.debug('Default theme: ' + globalConfig.theme);
+    grunt.log.debug('Default repo:  ' + globalConfig.repo);
+    if (typeof theme == 'undefined') {
+      grunt.log.writeln('Error: Must specify a theme, e.g. \'grunt theme:homepage\' or \'grunt theme:wilbur\'');
       return false;
     }
     if (globalConfig.themes.indexOf(theme) < 0) {
-      grunt.log.writeln("Error: Must specify a valid theme. Please specify one of");
+      grunt.log.writeln('Error: Must specify a valid theme. Please specify one of');
       grunt.log.writeln(globalConfig.themes);
       return false;
     }
     globalConfig.theme = theme;
     globalConfig.repo  = globalConfig.repos[theme];
     globalConfig.js    = globalConfig.bootstrapJS[theme];
-    grunt.log.writeln("Theme set to " + globalConfig.theme);
-//    grunt.log.writeln('Working theme: ' + globalConfig.theme); //// DEBUG
-//    grunt.log.writeln('Working repo:  ' + globalConfig.repo); //// DEBUG
-//    grunt.log.writeln('Working js:    ' + globalConfig.js); //// DEBUG
+    grunt.log.writeln('Theme set to ' + globalConfig.theme);
+    grunt.log.debug('Working theme: ' + globalConfig.theme);
+    grunt.log.debug('Working repo:  ' + globalConfig.repo);
+    grunt.log.debug('Working js:    ' + globalConfig.js);
   });
 
   // grunt build, grunt build:theme (same as grunt build), grunt build:bootstrap or grunt build:all
-  grunt.registerTask('build', 'Build customized bootstrap and css for a theme', function(target) {
-    if (typeof target == "undefined") { // if no target specified, just build theme files
+  grunt.registerTask('build', 'Build customized bootstrap and css for a theme', function (target) {
+    if (typeof target == 'undefined') { // if no target specified, just build theme files
       target = 'theme';
     }
     if (target == 'bootstrap' || target == 'all') {
-      grunt.log.writeln("Generating bootstrap files for " + globalConfig.theme);
+      grunt.log.writeln('Generating bootstrap files for ' + globalConfig.theme);
       grunt.task.run([
-          'copy:themeBefore' // copy theme's customized Bootstrap files into Bootstrap's build space
-        , 'dist-css', 'concat:theme', 'uglify', 'dist-fonts' // build custom Bootstrap
-        , 'copy:themeAfter' // copy Bootstrap's dist/ directory into theme's dist/ directory
+        'copy:themeBefore', // copy theme's customized Bootstrap files into Bootstrap's build space
+        'dist-css', 'concat:theme', 'uglify', 'copy:fonts', // build custom Bootstrap
+        'copy:themeAfter' // copy Bootstrap's dist/ directory into theme's dist/ directory
       ]);
     }
     if (target == 'theme' || target == 'all') {
-      grunt.log.writeln("Generating theme files for " + globalConfig.theme);
+      grunt.log.writeln('Generating theme files for ' + globalConfig.theme);
       grunt.task.run([
-          'less:dev', 'less:stage', 'less:prod' // build theme's css
-        , 'sed:devComments' // remove user-specific paths from comments in .dev.css
+        'less:dev', 'less:stage', 'less:prod', // build theme's css
+        'sed:devComments' // remove user-specific paths from comments in .dev.css
       ]);
     }
   });
 
   grunt.registerTask('deploy',  ['copy:themeDeploy']);
 
-  //// UComm tasks end
+  // UComm end
 };
