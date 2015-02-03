@@ -5,13 +5,11 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-var util = require('util');
-
 module.exports = function (grunt) {
   'use strict';
 
   // UComm start
-  var UComm = {
+  var globalConfig = {
     themes: ['homepage', 'cardinal', 'wilbur', 'bootstrap'], // valid themes
     repos:  { // repos where theme's files should be deployed
         homepage:  '../su-homepage/assets',
@@ -30,9 +28,9 @@ module.exports = function (grunt) {
         bootstrap: '<%= concat.bootstrap.src %>'  // same as vanilla bootstrap
       }
   };
-  UComm.theme = 'homepage'; // default theme, but may be overridden on command line
-  UComm.repo  = UComm.repos[UComm.theme]; // default repo, but may be overridden on command line
-  UComm.js    = UComm.bootstrapJS[UComm.theme]; // default js, but may be overridden on command line
+  globalConfig.theme = 'homepage'; // default theme, but may be overridden on command line
+  globalConfig.repo  = globalConfig.repos[globalConfig.theme]; // default repo, but may be overridden on command line
+  globalConfig.js    = globalConfig.bootstrapJS[globalConfig.theme]; // default js, but may be overridden on command line
   // UComm end
 
   // Force use of Unix newlines
@@ -134,7 +132,7 @@ module.exports = function (grunt) {
       },
       // UComm start
       theme: { // before bootstrap so bootstrap's default dist-js target works properly (it runs all concat tasks)
-        src: ['<%= UComm.js %>'],
+        src: ['<%= globalConfig.js %>'],
         dest: 'dist/js/<%= pkg.name %>.js'
       },
       // UComm end
@@ -208,44 +206,44 @@ module.exports = function (grunt) {
       // UComm start
       dev: {
         options: {
-          paths: ['themes/<%= UComm.theme %>/less', 'less'],
+          paths: ['themes/<%= globalConfig.theme %>/less', 'less'],
           dumpLineNumbers: 'comments'
         },
         files: [
           {
             expand: true,
             flatten: true,
-            src: ['themes/<%= UComm.theme %>/less/[!_]*.less', '!themes/<%= UComm.theme %>/less/custom.less'],
-            dest: 'themes/<%= UComm.theme %>/dist/css',
+            src: ['themes/<%= globalConfig.theme %>/less/[!_]*.less', '!themes/<%= globalConfig.theme %>/less/custom.less'],
+            dest: 'themes/<%= globalConfig.theme %>/dist/css',
             ext: '.dev.css'
           }
         ]
       },
       stage: {
         options: {
-          paths: ['themes/<%= UComm.theme %>/less', 'less']
+          paths: ['themes/<%= globalConfig.theme %>/less', 'less']
         },
         files: [
           {
             expand: true,
             flatten: true,
-            src: 'themes/<%= UComm.theme %>/less/[!_]*.less',
-            dest: 'themes/<%= UComm.theme %>/dist/css',
+            src: 'themes/<%= globalConfig.theme %>/less/[!_]*.less',
+            dest: 'themes/<%= globalConfig.theme %>/dist/css',
             ext: '.css'
           }
         ]
       },
       prod: {
         options: {
-          paths: ['themes/<%= UComm.theme %>/less', 'less'],
+          paths: ['themes/<%= globalConfig.theme %>/less', 'less'],
           yuicompress: true
         },
         files: [
           {
             expand: true,
             flatten: true,
-            src: ['themes/<%= UComm.theme %>/less/[!_]*.less', '!themes/<%= UComm.theme %>/less/custom.less'],
-            dest: 'themes/<%= UComm.theme %>/dist/css',
+            src: ['themes/<%= globalConfig.theme %>/less/[!_]*.less', '!themes/<%= globalConfig.theme %>/less/custom.less'],
+            dest: 'themes/<%= globalConfig.theme %>/dist/css',
             ext: '.min.css'
           }
         ]
@@ -367,22 +365,21 @@ module.exports = function (grunt) {
       // UComm start
       themeBefore: { // copy customized bootstrap files to bootstrap's build directory
         expand: true,
-        //cwd: 'themes/<%= UComm.theme %>/bootstrap/less', // look for src files in this directory
-        //src: '*',
-        src: 'themes/<%= UComm.theme %>/bootstrap/less/*', // look for src files in this directory
+        cwd: 'themes/<%= globalConfig.theme %>/bootstrap/less', // look for src files in this directory
+        src: '*',
         dest: 'less'
       },
       themeAfter: { // copy generated bootstrap files to theme's dist directories
         expand: true,
         cwd: 'dist',
         src: ['css/{bootstrap,bootstrap.min}.css','js/*.js','fonts/*'],
-        dest: 'themes/<%= UComm.theme %>/dist'
+        dest: 'themes/<%= globalConfig.theme %>/dist'
       },
       themeDeploy: { // copy theme's dist directories to appropriate repo
         expand: true,
-        cwd: 'themes/<%= UComm.theme %>/dist', // look for src files in this directory
+        cwd: 'themes/<%= globalConfig.theme %>/dist', // look for src files in this directory
         src: '*/*',
-        dest: '<%= UComm.repo %>'
+        dest: '<%= globalConfig.repo %>'
       }
       // UComm end
     },
@@ -467,7 +464,7 @@ module.exports = function (grunt) {
       },
       // UComm start
       devComments: {
-        path: 'themes/<%= UComm.theme %>/dist/css',
+        path: 'themes/<%= globalConfig.theme %>/dist/css',
         pattern: '([Ll]ine \\d+,).*/themes/',
         replacement: '$1 themes/',
         recursive: true
@@ -621,25 +618,24 @@ module.exports = function (grunt) {
   // typical usage: grunt theme:homepage build deploy
 
   grunt.registerTask('theme', 'Specify theme to be built', function (theme) {
-    grunt.log.debug('Default theme: ' + UComm.theme);
-    grunt.log.debug('Default repo:  ' + UComm.repo);
+    grunt.log.debug('Default theme: ' + globalConfig.theme);
+    grunt.log.debug('Default repo:  ' + globalConfig.repo);
     if (typeof theme == 'undefined') {
       grunt.log.writeln('Error: Must specify a theme, e.g. \'grunt theme:homepage\' or \'grunt theme:wilbur\'');
       return false;
     }
-    if (UComm.themes.indexOf(theme) < 0) {
+    if (globalConfig.themes.indexOf(theme) < 0) {
       grunt.log.writeln('Error: Must specify a valid theme. Please specify one of');
-      grunt.log.writeln(UComm.themes);
+      grunt.log.writeln(globalConfig.themes);
       return false;
     }
-    UComm.theme = theme;
-    UComm.repo  = UComm.repos[theme];
-    UComm.js    = UComm.bootstrapJS[theme];
-    grunt.log.writeln('Theme set to ' + UComm.theme);
-    grunt.log.debug('Working theme: ' + UComm.theme);
-    grunt.log.debug('Working repo:  ' + UComm.repo);
-    grunt.log.debug('Working js:    ' + UComm.js);
-    grunt.log.debug('UComm: ' + util.inspect(UComm));
+    globalConfig.theme = theme;
+    globalConfig.repo  = globalConfig.repos[theme];
+    globalConfig.js    = globalConfig.bootstrapJS[theme];
+    grunt.log.writeln('Theme set to ' + globalConfig.theme);
+    grunt.log.debug('Working theme: ' + globalConfig.theme);
+    grunt.log.debug('Working repo:  ' + globalConfig.repo);
+    grunt.log.debug('Working js:    ' + globalConfig.js);
   });
 
   // grunt build, grunt build:theme (same as grunt build), grunt build:bootstrap or grunt build:all
@@ -648,7 +644,7 @@ module.exports = function (grunt) {
       target = 'theme';
     }
     if (target == 'bootstrap' || target == 'all') {
-      grunt.log.writeln('Generating bootstrap files for ' + UComm.theme);
+      grunt.log.writeln('Generating bootstrap files for ' + globalConfig.theme);
       grunt.task.run([
         'copy:themeBefore', // copy theme's customized Bootstrap files into Bootstrap's build space
         'dist-css', 'concat:theme', 'uglify', 'copy:fonts', // build custom Bootstrap
@@ -656,7 +652,7 @@ module.exports = function (grunt) {
       ]);
     }
     if (target == 'theme' || target == 'all') {
-      grunt.log.writeln('Generating theme files for ' + UComm.theme);
+      grunt.log.writeln('Generating theme files for ' + globalConfig.theme);
       grunt.task.run([
         'less:dev', 'less:stage', 'less:prod', // build theme's css
         'sed:devComments' // remove user-specific paths from comments in .dev.css
