@@ -5,6 +5,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+var util = require('util');
+
 module.exports = function (grunt) {
   'use strict';
 
@@ -636,6 +638,8 @@ module.exports = function (grunt) {
     grunt.log.debug('Working theme: ' + globalConfig.theme);
     grunt.log.debug('Working repo:  ' + globalConfig.repo);
     grunt.log.debug('Working js:    ' + globalConfig.js);
+    grunt.log.debug('globalConfig: ' + util.inspect(globalConfig));
+    grunt.log.debug('template process: ' + grunt.template.process('<%= globalConfig.theme %>'));
   });
 
   // grunt build, grunt build:theme (same as grunt build), grunt build:bootstrap or grunt build:all
