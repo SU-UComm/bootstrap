@@ -10,22 +10,22 @@ module.exports = function (grunt) {
 
   // UComm start
   var globalConfig = {
-      themes: ['homepage', 'cardinal', 'wilbur', 'bootstrap'] // valid themes
-    , repos:  { // repos where theme's files should be deployed
-          homepage:  '../su-homepage/assets'
-        , cardinal:  '../themes-dw/assets/cardinal'
-        , wilbur:    '../themes-dw/assets/wilbur'
-        , bootstrap: '../themes-dw/assets/bootstrap'
-      }
-    , bootstrapJS:  { // Bootstrap js files which should be included with theme
+    themes: ['homepage', 'cardinal', 'wilbur', 'bootstrap'], // valid themes
+    repos:  { // repos where theme's files should be deployed
+        homepage:  '../su-homepage/assets',
+        cardinal:  '../themes-dw/assets/cardinal',
+        wilbur:    '../themes-dw/assets/wilbur',
+        bootstrap: '../themes-dw/assets/bootstrap'
+      },
+    bootstrapJS:  { // Bootstrap js files which should be included with theme
           homepage: [
-              'js/transition.js'
-            , 'js/carousel.js'
-            , 'js/collapse.js'
-          ]
-        , cardinal:  '<%= concat.bootstrap.src %>' // same as vanilla bootstrap
-        , wilbur:    '<%= concat.bootstrap.src %>' // same as vanilla bootstrap
-        , bootstrap: '<%= concat.bootstrap.src %>' // same as vanilla bootstrap
+            'js/transition.js',
+            'js/carousel.js',
+            'js/collapse.js'
+          ],
+        cardinal:  '<%= concat.bootstrap.src %>', // same as vanilla bootstrap
+        wilbur:    '<%= concat.bootstrap.src %>', // same as vanilla bootstrap
+        bootstrap: '<%= concat.bootstrap.src %>'  // same as vanilla bootstrap
       }
   };
   globalConfig.theme = 'homepage'; // default theme, but may be overridden on command line
@@ -202,13 +202,12 @@ module.exports = function (grunt) {
         },
         src: 'less/theme.less',
         dest: 'dist/css/<%= pkg.name %>-theme.css'
-      }
+      },
       // UComm start
-      ,
       dev: {
         options: {
-            paths: ['themes/<%= globalConfig.theme %>/less', 'less']
-          , dumpLineNumbers: "comments"
+          paths: ['themes/<%= globalConfig.theme %>/less', 'less'],
+          dumpLineNumbers: 'comments'
         },
         files: [
           {
@@ -236,8 +235,8 @@ module.exports = function (grunt) {
       },
       prod: {
         options: {
-            paths: ['themes/<%= globalConfig.theme %>/less', 'less']
-          , yuicompress: true
+          paths: ['themes/<%= globalConfig.theme %>/less', 'less'],
+          yuicompress: true
         },
         files: [
           {
@@ -362,9 +361,8 @@ module.exports = function (grunt) {
       docs: {
         src: 'dist/*/*',
         dest: 'docs/'
-      }
+      },
       // UComm start
-      ,
       themeBefore: { // copy customized bootstrap files to bootstrap's build directory
         expand: true,
         cwd: 'themes/<%= globalConfig.theme %>/bootstrap/less', // look for src files in this directory
@@ -463,9 +461,8 @@ module.exports = function (grunt) {
         })(),
         replacement: grunt.option('newver'),
         recursive: true
-      }
+      },
       // UComm start
-      ,
       devComments: {
         path: 'themes/<%= globalConfig.theme %>/dist/css',
         pattern: '([Ll]ine \\d+,).*/themes/',
