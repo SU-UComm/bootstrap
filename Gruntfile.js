@@ -5,6 +5,33 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+// UComm start
+var util = require('util');
+
+var SUConfig = {
+  themes: ['homepage', 'cardinal', 'wilbur', 'bootstrap'], // valid themes
+  repos:  { // repos where theme's files should be deployed
+      homepage:  '../su-homepage/assets',
+      cardinal:  '../themes-dw/assets/cardinal',
+      wilbur:    '../themes-dw/assets/wilbur',
+      bootstrap: '../themes-dw/assets/bootstrap'
+    },
+  bootstrapJS:  { // Bootstrap js files which should be included with theme
+        homepage: [
+          'js/transition.js',
+          'js/carousel.js',
+          'js/collapse.js'
+        ],
+      cardinal:  '<%= concat.bootstrap.src %>', // same as vanilla bootstrap
+      wilbur:    '<%= concat.bootstrap.src %>', // same as vanilla bootstrap
+      bootstrap: '<%= concat.bootstrap.src %>'  // same as vanilla bootstrap
+    }
+};
+SUConfig.theme = 'homepage'; // default theme, but may be overridden on command line
+SUConfig.repo  = SUConfig.repos[SUConfig.theme]; // default repo, but may be overridden on command line
+SUConfig.js    = SUConfig.bootstrapJS[SUConfig.theme]; // default js, but may be overridden on command line
+// UComm end
+
 module.exports = function (grunt) {
   'use strict';
 
@@ -105,6 +132,12 @@ module.exports = function (grunt) {
         banner: '<%= banner %>\n<%= jqueryCheck %>\n<%= jqueryVersionCheck %>',
         stripBanners: false
       },
+      // UComm start
+      theme: { // before bootstrap so bootstrap's default dist-js target works properly (it runs all concat tasks)
+        src: ['<%= suconfig.js %>'],
+        dest: 'dist/js/<%= pkg.name %>.js'
+      },
+      // UComm end
       bootstrap: {
         src: [
           'js/transition.js',
@@ -171,7 +204,53 @@ module.exports = function (grunt) {
         },
         src: 'less/theme.less',
         dest: 'dist/css/<%= pkg.name %>-theme.css'
+      },
+      // UComm start
+      dev: {
+        options: {
+          paths: ['themes/<%= suconfig.theme %>/less', 'less'],
+          dumpLineNumbers: 'comments'
+        },
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            src: ['themes/<%= suconfig.theme %>/less/[!_]*.less', '!themes/<%= suconfig.theme %>/less/custom.less'],
+            dest: 'themes/<%= suconfig.theme %>/dist/css',
+            ext: '.dev.css'
+          }
+        ]
+      },
+      stage: {
+        options: {
+          paths: ['themes/<%= suconfig.theme %>/less', 'less']
+        },
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            src: 'themes/<%= suconfig.theme %>/less/[!_]*.less',
+            dest: 'themes/<%= suconfig.theme %>/dist/css',
+            ext: '.css'
+          }
+        ]
+      },
+      prod: {
+        options: {
+          paths: ['themes/<%= suconfig.theme %>/less', 'less'],
+          yuicompress: true
+        },
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            src: ['themes/<%= suconfig.theme %>/less/[!_]*.less', '!themes/<%= suconfig.theme %>/less/custom.less'],
+            dest: 'themes/<%= suconfig.theme %>/dist/css',
+            ext: '.min.css'
+          }
+        ]
       }
+      // UComm end
     },
 
     autoprefixer: {
@@ -284,7 +363,27 @@ module.exports = function (grunt) {
       docs: {
         src: 'dist/*/*',
         dest: 'docs/'
+      },
+      // UComm start
+      themeBefore: { // copy customized bootstrap files to bootstrap's build directory
+        expand: true,
+        cwd: 'themes/<%= suconfig.theme %>/bootstrap/less', // look for src files in this directory
+        src: '*',
+        dest: 'less'
+      },
+      themeAfter: { // copy generated bootstrap files to theme's dist directories
+        expand: true,
+        cwd: 'dist',
+        src: ['css/{bootstrap,bootstrap.min}.css','js/*.js','fonts/*'],
+        dest: 'themes/<%= suconfig.theme %>/dist'
+      },
+      themeDeploy: { // copy theme's dist directories to appropriate repo
+        expand: true,
+        cwd: 'themes/<%= suconfig.theme %>/dist', // look for src files in this directory
+        src: '*/*',
+        dest: '<%= suconfig.repo %>'
       }
+      // UComm end
     },
 
     connect: {
@@ -344,7 +443,7 @@ module.exports = function (grunt) {
     watch: {
       src: {
         files: '<%= jshint.core.src %>',
-        tasks: ['jshint:src', 'qunit', 'concat']
+        tasks: ['jshint:src', 'qunit', 'concat:bootstrap']
       },
       test: {
         files: '<%= jshint.test.src %>',
@@ -364,7 +463,15 @@ module.exports = function (grunt) {
         })(),
         replacement: grunt.option('newver'),
         recursive: true
+      },
+      // UComm start
+      devComments: {
+        path: 'themes/<%= suconfig.theme %>/dist/css',
+        pattern: '([Ll]ine \\d+,).*/themes/',
+        replacement: '$1 themes/',
+        recursive: true
       }
+      // UComm end
     },
 
     'saucelabs-qunit': {
@@ -449,7 +556,7 @@ module.exports = function (grunt) {
   grunt.registerTask('test-js', ['jshint:core', 'jshint:test', 'jshint:grunt', 'jscs:core', 'jscs:test', 'jscs:grunt', 'qunit']);
 
   // JS distribution task.
-  grunt.registerTask('dist-js', ['concat', 'uglify:core', 'commonjs']);
+  grunt.registerTask('dist-js', ['concat:bootstrap', 'uglify:core', 'commonjs']);
 
   // CSS distribution task.
   grunt.registerTask('less-compile', ['less:compileCore', 'less:compileTheme']);
@@ -464,7 +571,7 @@ module.exports = function (grunt) {
   // Version numbering task.
   // grunt change-version-number --oldver=A.B.C --newver=X.Y.Z
   // This can be overzealous, so its changes should always be manually reviewed!
-  grunt.registerTask('change-version-number', 'sed');
+  grunt.registerTask('change-version-number', 'sed:versionNumber'); // UComm - add ::versionNumber
 
   grunt.registerTask('build-glyphicons-data', function () { generateGlyphiconsData.call(this, grunt); });
 
@@ -506,4 +613,61 @@ module.exports = function (grunt) {
       done();
     });
   });
+
+  // UComm start
+  // place a reference to the global SUConfig object in Grunt's configuration,
+  // where the template processor can find it
+  grunt.config('suconfig', SUConfig);
+
+  // Theme tasks
+  // typical usage: grunt theme:homepage build deploy
+
+  grunt.registerTask('theme', 'Specify theme to be built', function (theme) {
+    grunt.log.debug('Default theme: ' + SUConfig.theme);
+    grunt.log.debug('Default repo:  ' + SUConfig.repo);
+    if (typeof theme == 'undefined') {
+      grunt.log.writeln('Error: Must specify a theme, e.g. \'grunt theme:cardinal\' or \'grunt theme:homepage\'');
+      return false;
+    }
+    if (SUConfig.themes.indexOf(theme) < 0) {
+      grunt.log.writeln('Error: Must specify a valid theme. Please specify one of');
+      grunt.log.writeln(SUConfig.themes);
+      return false;
+    }
+    // only need to modify the global object, since Grunt's config contains a reference / pointer
+    SUConfig.theme = theme;
+    SUConfig.repo  = SUConfig.repos[theme];
+    SUConfig.js    = SUConfig.bootstrapJS[theme];
+    grunt.log.debug('suconfig: ' + util.inspect(SUConfig));
+    grunt.log.debug('Theme: ' + grunt.template.process('<%= suconfig.theme %>'));
+    grunt.log.debug('Repo:  ' + grunt.template.process('<%= suconfig.repo %>'));
+    grunt.log.debug('JS:    ' + grunt.template.process('<%= suconfig.jz %>'));
+    grunt.log.writeln('Theme set to ' + SUConfig.theme);
+  });
+
+  // grunt build, grunt build:theme (same as grunt build), grunt build:bootstrap or grunt build:all
+  grunt.registerTask('build', 'Build customized bootstrap and css for a theme', function (target) {
+    if (typeof target == 'undefined') { // if no target specified, just build theme files
+      target = 'theme';
+    }
+    if (target == 'bootstrap' || target == 'all') {
+      grunt.log.writeln('Generating bootstrap files for ' + SUConfig.theme);
+      grunt.task.run([
+        'copy:themeBefore', // copy theme's customized Bootstrap files into Bootstrap's build space
+        'dist-css', 'concat:theme', 'uglify', 'copy:fonts', // build custom Bootstrap
+        'copy:themeAfter' // copy Bootstrap's dist/ directory into theme's dist/ directory
+      ]);
+    }
+    if (target == 'theme' || target == 'all') {
+      grunt.log.writeln('Generating theme files for ' + SUConfig.theme);
+      grunt.task.run([
+        'less:dev', 'less:stage', 'less:prod', // build theme's css
+        'sed:devComments' // remove user-specific paths from comments in .dev.css
+      ]);
+    }
+  });
+
+  grunt.registerTask('deploy',  ['copy:themeDeploy']);
+
+  // UComm end
 };
