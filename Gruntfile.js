@@ -206,7 +206,7 @@ module.exports = function (grunt) {
         dest: 'dist/css/<%= pkg.name %>-theme.css'
       },
       // UComm start
-      dev: {
+      compileSUdev: {
         options: {
           paths: ['themes/<%= suconfig.theme %>/less', 'less'],
           dumpLineNumbers: 'comments'
@@ -221,7 +221,7 @@ module.exports = function (grunt) {
           }
         ]
       },
-      stage: {
+      compileSU: {
         options: {
           paths: ['themes/<%= suconfig.theme %>/less', 'less']
         },
@@ -232,21 +232,6 @@ module.exports = function (grunt) {
             src: 'themes/<%= suconfig.theme %>/less/[!_]*.less',
             dest: 'themes/<%= suconfig.theme %>/dist/css',
             ext: '.css'
-          }
-        ]
-      },
-      prod: {
-        options: {
-          paths: ['themes/<%= suconfig.theme %>/less', 'less'],
-          yuicompress: true
-        },
-        files: [
-          {
-            expand: true,
-            flatten: true,
-            src: ['themes/<%= suconfig.theme %>/less/[!_]*.less', '!themes/<%= suconfig.theme %>/less/custom.less'],
-            dest: 'themes/<%= suconfig.theme %>/dist/css',
-            ext: '.min.css'
           }
         ]
       }
@@ -314,6 +299,17 @@ module.exports = function (grunt) {
         src: 'dist/css/<%= pkg.name %>-theme.css',
         dest: 'dist/css/<%= pkg.name %>-theme.min.css'
       },
+      // UComm start
+      minifySUTheme: {
+        files: [{
+          expand: true,
+          cwd: 'themes/<%= suconfig.theme %>/dist/css',
+          src: ['*.css', '!*.min.css', '!*.dev.css', '!custom.css'],
+          dest: 'themes/<%= suconfig.theme %>/dist/css',
+          ext: '.min.css'
+        }]
+      },
+      // UComm end
       docs: {
         src: [
           'docs/assets/css/src/docs.css',
@@ -661,8 +657,10 @@ module.exports = function (grunt) {
     if (target == 'theme' || target == 'all') {
       grunt.log.writeln('Generating theme files for ' + SUConfig.theme);
       grunt.task.run([
-        'less:dev', 'less:stage', 'less:prod', // build theme's css
-        'sed:devComments' // remove user-specific paths from comments in .dev.css
+        'less:compileSU',       // build theme's css
+        'cssmin:minifySUTheme', // minify theme's css
+        'less:compileSUdev',    // build theme's css with comments showing corresponding lines of .less
+        'sed:devComments',      // remove user-specific paths from comments in .dev.css
       ]);
     }
   });
