@@ -9,22 +9,24 @@
 var util = require('util');
 
 var SUConfig = {
-  themes: ['homepage', 'cardinal', 'wilbur', 'bootstrap'], // valid themes
+  themes: ['homepage', 'cardinal', 'news-proto', 'wilbur', 'bootstrap'], // valid themes
   repos:  { // repos where theme's files should be deployed
-      homepage:  '../su-homepage/assets',
-      cardinal:  '../themes-dw/assets/cardinal',
-      wilbur:    '../themes-dw/assets/wilbur',
-      bootstrap: '../themes-dw/assets/bootstrap'
+      'homepage':    '../su-homepage/assets',
+      'cardinal':    '../themes-dw/assets/cardinal',
+      'news-proto':  '../news-proto/assets',
+      'wilbur':      '../themes-dw/assets/wilbur',
+      'bootstrap':   '../themes-dw/assets/bootstrap'
     },
   bootstrapJS:  { // Bootstrap js files which should be included with theme
-        homepage: [
+      'homepage': [
           'js/transition.js',
           'js/carousel.js',
           'js/collapse.js'
         ],
-      cardinal:  '<%= concat.bootstrap.src %>', // same as vanilla bootstrap
-      wilbur:    '<%= concat.bootstrap.src %>', // same as vanilla bootstrap
-      bootstrap: '<%= concat.bootstrap.src %>'  // same as vanilla bootstrap
+      'cardinal':    '<%= concat.bootstrap.src %>', // same as vanilla bootstrap
+      'news-proto':  '<%= concat.bootstrap.src %>', // same as vanilla bootstrap
+      'wilbur':      '<%= concat.bootstrap.src %>', // same as vanilla bootstrap
+      'bootstrap':   '<%= concat.bootstrap.src %>'  // same as vanilla bootstrap
     }
 };
 SUConfig.theme = 'homepage'; // default theme, but may be overridden on command line
