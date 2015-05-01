@@ -372,7 +372,7 @@ module.exports = function (grunt) {
       themeAfter: { // copy generated bootstrap files to theme's dist directories
         expand: true,
         cwd: 'dist',
-        src: ['css/{bootstrap,bootstrap.min}.css','js/*.js','fonts/*'],
+        src: ['css/{bootstrap.css,bootstrap.min.css,bootstrap.css.map}','js/*.js','fonts/*'],
         dest: 'themes/<%= suconfig.theme %>/dist'
       },
       themeDeploy: { // copy theme's dist directories to appropriate repo
