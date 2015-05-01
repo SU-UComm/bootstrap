@@ -56,6 +56,7 @@
 @su-sun:           #EAAB00;
 
 @su-beige-bg:  @su-beige-10;
+@alt-bg: white;
 
 
 //== Colors
@@ -82,9 +83,9 @@
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-@body-bg:               @su-beige-05;
+@body-bg:               @su-beige-bg;
 //** Global text color on `<body>`.
-@text-color:            @su-text;
+@text-color:            black;
 
 //** Global textual link color.
 @link-color:            @su-link;
@@ -123,8 +124,8 @@
 //** By default, this inherits from the `<body>`.
 @headings-font-family:    @font-family-base;
 @headings-font-weight:    400;
-@headings-line-height:    1.1;
-@headings-color:          @su-clay;
+@headings-line-height:    1.2;
+@headings-color:          @text-color;
 
 
 //== Iconography
@@ -416,8 +417,8 @@
 @navbar-collapse-max-height:       340px;
 
 @navbar-default-color:             @su-black;
-@navbar-default-bg:                @su-beige-bg;
-@navbar-default-border:            @su-beige-bg;
+@navbar-default-bg:                @alt-bg; // @su-beige-10;
+@navbar-default-border:            @alt-bg; //@su-beige-10;
 
 // Navbar links
 @navbar-default-link-color:                @su-black;

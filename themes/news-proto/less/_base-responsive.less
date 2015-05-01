@@ -237,6 +237,17 @@ body.nav-6 #nav-6 a {
 // tablet and larger
 @media (min-width: @screen-sm-min) {
 
+  article.large {
+    figure {
+      float: none;
+      width: 100%;
+      height: 200px;
+    }
+    time {
+      margin-top: 5px;
+    }
+  }
+
   #global-footer .clear {
     clear:none;
   }
@@ -245,10 +256,10 @@ body.nav-6 #nav-6 a {
     margin:-5px 0 10px;
   }
 
+  #global-footer #bottom-text{
+    margin-top: 2px;
+  }
 
-   #global-footer #bottom-text{
-     margin-top: 2px;
-   }
   #global-footer #bottom-text ul li {
   	width:auto;
   	margin:0 15px 3px 0;
@@ -290,7 +301,7 @@ body.nav-6 #nav-6 a {
 
 .navbar .nav  li { 
    a {
-      border-bottom: 2px solid @su-beige-10;
+      border-bottom: 2px solid @navbar-default-bg;
       }
    a:hover {
 	  border-bottom: 2px solid @su-clay;
