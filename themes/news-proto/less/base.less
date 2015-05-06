@@ -39,6 +39,11 @@ dl {
 	margin-top: 5px;
 }
 
+figcaption {
+  margin-top: 0.5em;
+  line-height: 1.4;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	margin: 0 0 5px 0;
 
@@ -53,7 +58,9 @@ h1 {
 
 h2 {
   color: @su-red-text;
-  font-size: 1.6em;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -187,7 +194,7 @@ article {
 // General classes, id's
 
 .btn {
-  .line-height(21.43; 15);
+  line-height: 1;
 }
 
 .btn-one   { .su-btn(@su-mint); }
@@ -348,6 +355,8 @@ a.more-link {
 
   i {
     font-size: 1.1em;
+    color: @su-red;
+    margin-right: 0.3em;
   }
   
 }
@@ -501,10 +510,6 @@ ul.vbar {
 /////////////////////////////////
 // Page Regions
 
-#content {
-	margin-bottom: 20px;
-}
-
 #top {
   min-height: 10px;
   padding: 4px 0 0;
@@ -512,6 +517,22 @@ ul.vbar {
   color: @su-red;
 }
 
+#content {
+	margin-bottom: 20px;
+}
+
+aside {
+
+  & > div {
+    margin-bottom: 3.5em;
+  }
+
+  a {
+    color: @text-color;
+    text-decoration: none;
+  }
+
+}
 
 /////////////////////////////////
 // Header, Footer
