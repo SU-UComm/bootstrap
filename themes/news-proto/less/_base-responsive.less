@@ -22,12 +22,8 @@ body {
 	max-width: 300px;
 }
 
-#nav-search {
-  width: 300px;
-}
 #search-form {
   #search-field {
-    width: 175px;
     .font-size-em(12);
   }
   .btn-search {
@@ -101,24 +97,6 @@ body {
   padding: 0 15px; // put 15px padding back on left and right
 }
 
-#search-field {
-  -webkit-appearance:none; 
-  left: 0;
-}
-#search-form #search-btn {
-  left: 140px;
-  padding: 0;
-}
-
-#search-type {
-  right: -2px;
-
-  label {
-    color: @su-clay;
-    font-size: .9em;
-  }
-}
-
 body.home #nav-home a, body.nav-1 #nav-1 a, 
 body.nav-2 #nav-2 a, body.nav-3 #nav-3 a, 
 body.nav-4 #nav-4 a, body.nav-5 #nav-5 a, 
@@ -147,12 +125,8 @@ body.nav-6 #nav-6 a {
       text-transform: uppercase;
       border: none;
       float: none;
-      margin: 2px 0 5px;
+      margin: 2px 1em 5px 0;
       padding: 0.1em 0.6em;
-
-      span.icon-bar {
-        background-color: white;
-      }
   }
 
   .navbar-toggle:hover {
@@ -332,7 +306,7 @@ body.nav-6 #nav-6 a {
 
 #nav-search {
   float: right;
-  margin: -60px 0 0 0;
+  margin: -90px 0 0 0;
 }
 
 .navbar .nav  li { 
