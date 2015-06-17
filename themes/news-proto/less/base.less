@@ -3,7 +3,7 @@
 
 /////////////////////////////////
 // Google Fonts
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic|Source+Serif+Pro);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,400italic|Source+Serif+Pro:400,700);
 
 /////////////////////////////////
 // Bootstrap overrides
@@ -55,17 +55,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-h2 {
-  color: @su-red-text;
-  font-size: 1.1em;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-h3 {
-  font-size: 1.4em;
-}
-
 li {
   .line-height(20);
 }
@@ -92,100 +81,6 @@ input:-moz-placeholder { /* Firefox 18- */
 
 input:-ms-input-placeholder {  
    color: rgba(0,0,0,.6) !important; 
-}
-
-section {
-  margin-bottom: 2em;
-
-  .section-title {
-    background-color: @su-driftwood;
-    margin-bottom: 0;
-    padding: 0.5em;
-    color: @text-color;
-    font-size: 1em;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-}
-
-article {
-  border: 1px solid #D5D0C0;
-  background-color: @alt-bg;
-  padding: 5px;
-  position: relative;
-
-  &.facebook,
-  &.instagram,
-  &.twitter {
-    padding: 0;
-    border: none;
-  }
-  &.twitter {
-    margin: 1px !important;
-  }
-
-  figure {
-    float: left;
-    margin-right: 15px;
-    width: 100px;
-    height: 100px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  h3 {
-    font-size: 1.2em;
-    font-weight: 600;
-
-  }
-
-  time {
-    display: block;
-    text-transform: uppercase;
-    color: @su-red-text;
-    font-size: 0.8em;
-    font-weight: 600;
-  }
-
-  .categories {
-    text-align: right;
-    margin-top: 0.5em;
-    clear: both;
-
-    .category {
-      display: inline-block;
-      margin-top: 5px;
-      border-radius: 3px;
-      background-color: @su-driftwood;
-      padding: 0.2em 0.5em;
-    }
-  }
-
-  &.full {
-    figure {
-      float: none;
-      width: 100%;
-      height: 200px;
-    }
-
-    time {
-      margin-top: 5px;
-    }
-  }
-
-  &.full,
-  &.large.three-up {
-    .category {
-      display: none;
-    }
-  }
-
 }
 
 
