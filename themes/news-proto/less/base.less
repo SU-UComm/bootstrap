@@ -346,11 +346,11 @@ ul.vbar {
   ul {
     list-style-type: square;
     list-style-image: url('../images/bullet.gif');
-    
+
     li {
       position: relative;
       margin-bottom: 7px;
-      line-height: 1.1em;      
+      line-height: 1.1em;
     }
   }
 
@@ -376,29 +376,38 @@ ul.vbar {
 // sidebar styles - these apply to the newspage sidebar as well as in-set side bars for bio/related/sidebar story elements on story-level pages
 
 .sidebar-section {
-  margin-left: 1em;
-  
+  margin-left: 2em;
+
   h2 {
     color: @su-red;
     font-family: @font-family-serif;
     .font-size-em(24; 18);
+    //background: @su-beige-20;
+    padding: 5px;
+    margin-left: -5px;
+    margin-bottom: .5em;
+    border-bottom: 1px solid @su-beige-40;
   }
 
   p{
     color: @su-black;
     .font-size-em(16; 16);
     line-height: 1.2em;
-    margin-top: .3em;
+    margin-top: .1em;
+    margin-bottom: 1.4em;
   }
   p.side-byline {
-    color: @su-black;
-    .font-size-em(12; 12);
+    color: @su-red;
+    font-size: .8em;
     font-weight: 600;
     text-transform: uppercase;
-    margin-bottom: .2em;
+    margin-bottom: 0em;
   }
   li {
     
+  }
+  .sidebar-icon {
+    font-size: 12px;
   }
 }
 
