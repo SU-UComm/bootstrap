@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
   font-weight: 300;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 li {
@@ -346,11 +346,11 @@ ul.vbar {
   ul {
     list-style-type: square;
     list-style-image: url('../images/bullet.gif');
-    
+
     li {
       position: relative;
       margin-bottom: 7px;
-      line-height: 1.1em;      
+      line-height: 1.1em;
     }
   }
 
@@ -371,6 +371,46 @@ ul.vbar {
     text-align:right;
   }
 }
+
+
+// sidebar styles - these apply to the newspage sidebar as well as in-set side bars for bio/related/sidebar story elements on story-level pages
+
+.sidebar-section {
+  margin-left: 2em;
+
+  h2 {
+    color: @su-red;
+    font-family: @font-family-serif;
+    .font-size-em(24; 18);
+    //background: @su-beige-20;
+    padding: 5px;
+    margin-left: -5px;
+    margin-bottom: .5em;
+    border-bottom: 1px solid @su-beige-40;
+  }
+
+  p{
+    color: @su-black;
+    .font-size-em(16; 16);
+    line-height: 1.2em;
+    margin-top: .1em;
+    margin-bottom: 1.4em;
+  }
+  p.side-byline {
+    color: @su-red;
+    font-size: .8em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0em;
+  }
+  li {
+    
+  }
+  .sidebar-icon {
+    font-size: 12px;
+  }
+}
+
 
 // style wrapper, embeds to make embedded videos responsive
 .video-container {
