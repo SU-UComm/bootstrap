@@ -16,6 +16,7 @@ article {
   h2 {
     font-weight: 700;
     margin-top: 1em;
+    margin-bottom: .5em;
     font-family: @font-family-sans-serif;
   }
 
@@ -72,10 +73,10 @@ article {
     }
   } 
   .media-attrib{//replaces .photo-credit
-    font-style:italic;
-    text-align:right;
-    margin-bottom:0.2em;//0.5
-    font-size: 1em;
+                font-style:italic;
+                text-align:right;
+                margin-bottom:0.2em;//0.5
+                font-size: 1em;
   }
   .media-caption{
     margin-top:.5em;
@@ -101,9 +102,9 @@ article {
     }
   }
   .align-center{
+    margin-bottom:2em;
     &.inset-width{
       width:75%;
-      margin:0 auto;
     }
   }
   .align-left,
@@ -118,12 +119,12 @@ article {
   }
   .align-left {
     float: left;
-    margin: 0 2em 2em -11%;
+    margin: 0 2em 0 -11%;
   }
   .align-right {
     float: right;
     //margin: 0 -8.3333333% 0 2em;
-    margin:0 -10% 2em 2em;
+    margin:0 -10% 0 2em;
   }
 
   #article-content {
@@ -159,10 +160,39 @@ article {
     h2{
       color:@su-red-text;
       font-family: @font-family-sans-serif;
+      font-weight:500;
     }
 
   }
 }
+
+#main-bottom{
+  border-top:1px solid @gray-lighter;
+  margin-top: 1em;
+  padding-top: 1.5em;
+  .pull-right{
+    a{
+    color:@su-cool-gray;
+    }
+  }
+  .pull-left{
+    a{
+      background-color:@gray-lighter;
+      color: black;
+    }
+  }
+}
+
+#bottom{
+  margin:5em 0 2em 0;
+  h2{
+    color: @su-red-text;
+    font-family: @font-family-serif;
+    font-size:2.5em;
+  }
+}
+
+
 
 /////////////////////////////////
 // media queries
