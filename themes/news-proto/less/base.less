@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
   font-weight: 300;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 li {
@@ -346,11 +346,11 @@ ul.vbar {
   ul {
     list-style-type: square;
     list-style-image: url('../images/bullet.gif');
-    
+
     li {
       position: relative;
       margin-bottom: 7px;
-      line-height: 1.1em;      
+      line-height: 1.1em;
     }
   }
 
@@ -371,6 +371,46 @@ ul.vbar {
     text-align:right;
   }
 }
+
+
+// sidebar styles - these apply to the newspage sidebar as well as in-set side bars for bio/related/sidebar story elements on story-level pages
+
+.sidebar-section {
+  margin-left: 2em;
+
+  h2 {
+    color: @su-red;
+    font-family: @font-family-serif;
+    .font-size-em(24; 18);
+    //background: @su-beige-20;
+    padding: 5px;
+    margin-left: -5px;
+    margin-bottom: .5em;
+    border-bottom: 1px solid @su-beige-40;
+  }
+
+  p{
+    color: @su-black;
+    .font-size-em(16; 16);
+    line-height: 1.2em;
+    margin-top: .1em;
+    margin-bottom: 1.4em;
+  }
+  p.side-byline {
+    color: @su-red;
+    font-size: .8em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0em;
+  }
+  li {
+    
+  }
+  .sidebar-icon {
+    font-size: 12px;
+  }
+}
+
 
 // style wrapper, embeds to make embedded videos responsive
 .video-container {
@@ -427,6 +467,184 @@ aside {
   }
 
 }
+
+/////////////////////////////////
+// Card styles
+
+.card {
+  border-top: none;
+  border-left: none;
+  //border-right: 1px solid #cdccc7;
+  //border-bottom: 1px solid #cdccc7;
+  background-color: @alt-bg;
+  padding: 0px;
+  position: relative;
+  box-shadow: 0 0 8px @su-beige-40;
+  &.facebook,
+  &.instagram,
+  &.twitter {
+    img{
+      margin:0 auto;
+      display:block;
+    }
+    .card-photo{
+
+      i{
+        padding-top:1.2em;
+        padding-bottom:.5em;
+        text-align: center;
+        display:block;
+        color:@su-beige-60;
+      }
+    }
+
+    h3 {
+      font-family: @font-family-sans-serif;
+      .font-size-em(16px);
+      font-weight: normal;
+    }
+    p {
+      text-align: left;
+    }
+    a {
+      color: @su-red;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .share {
+      text-align: center;
+    }
+  }
+
+  figure{
+    img{
+      float: left;
+      width: 100px;
+      height: 100px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 0;
+      margin: 0;
+      padding-right: 1em;
+      padding-bottom: 1em;
+    }
+  }
+  .card-content {
+    padding: 1.2em;
+    width: inherit;
+    clear: both;
+  }
+  &.short{
+    padding:0 1.2em;
+    .card-content{
+      display:inline;
+    }
+    .card-photo{
+      margin-top:1.5em;
+      float:left;
+    }
+  }
+  .card-photo{
+
+  }
+  .category {
+    display: block;
+    text-transform: uppercase;
+    color: @su-red-text;
+    font-size: 0.8em;
+    font-weight: 600;
+    //padding-top: 1.2px;
+    //padding-left: 1.2em;
+    //padding-right: 1.2em;
+  }
+
+  h3 {
+    .font-size-em(18);
+    font-weight: 600;
+    font-family: @font-family-serif;
+    margin: 0;
+    margin-top: .2em;
+    margin-bottom: .4em;
+    padding: 0;
+    //padding-left: 1.2em;
+    //padding-right: 1.2em;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      color: @su-red;
+      text-decoration: underline;
+    }
+  }
+
+  .teaser {
+    .font-size-em(14px);
+    font-weight: 400;
+    font-family: @font-family-sans-serif;
+    //padding-left: 1.2em;
+    //padding-right: 1.2em;
+    padding: 0;
+    margin: 0;
+    //padding-bottom: 1.2em;
+    line-height: 1.3em;
+  }
+
+  time {
+    display: block;
+    text-transform: uppercase;
+    color: @su-red-text;
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+
+  &.full {
+    figure img{
+      float: none;
+      clear: both;
+      width: 100%;
+      height: auto;
+      padding: 0px;
+      margin: 0;
+      padding-bottom: 0px;
+    }
+    .image {
+      width: 100%;
+      height: auto;
+    }
+    .card-content {
+      display: block;
+      height: auto;
+    }
+  }
+
+  &.large {
+    .image {
+      width: 100%;
+      height: auto;
+      padding: 0;
+      margin: 0;
+    }
+    .image img {
+      float: none;
+      clear: both;
+      width: 100%;
+      height: auto;
+      padding: 0;
+      margin: 0;
+    }
+    //    .card-content {
+    //    margin: 1.2em;
+    //    width: inherit;
+    //    clear: both;
+    //    }
+  }
+}
+
+
 
 /////////////////////////////////
 // Header, Footer

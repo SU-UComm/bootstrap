@@ -1,29 +1,140 @@
 //////////////////////////
 // phone
 @media (max-width: @screen-xs-max) {
+  .top-stories {
+    margin: 0px;
+    padding: 0px;
+    padding-top: -1px;
+    //margin-left: -30px;
+    //margin-right: -30px;
+    .row {
+      margin-left: -23px;
+      margin-right: -23px;
+    }
+  }
+
   section#top-stories,
   section#more-stories {
-    margin-left: -23px;
-    margin-right: -23px;
+    margin-left: -30px;
+    margin-right: -30px;
   }
+  #spotlight {
+    margin-bottom: 0;
+    margin: 0;
+  }
+  .spotlight {
+    padding-bottom: -1px;
+  }
+  article{
+    &.card{
+      //padding-left: 1.2em;
+      &.large{
+        padding: 0 1.2em;
+        .card-content{
+          display:inline;
+        }
+      }
+      .card-photo{
+        margin-top:1.5em;
+        float:left;
+      }
+      &.featured {
+        box-shadow: 0 0 8px @su-beige-40;
+        padding:0 1.2em;
+      }
+      &.large {
+        figure.image img {
+          float: left;
+          width: 100px;
+          height: 100px;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          padding: 0;
+          margin: 0;
+          padding-right: 1em;
+          padding-bottom: 1em;
+        }
+      }
+      .featured {
+        border-bottom: #cdccc7;
+      }
+      &.facebook,
+      &.instagram,
+      &.twitter {
+        .card-photo{
+          margin-top:0;
+          //padding-top:1.2em;
+          img{
+            margin:.5em auto;
+            display:block;
+          }
+          i{
+            text-align: center;
+            display:block;
+            color:@su-beige-60;
+          }
+        }      
+      }
+    }
+    &.spotlight-story {
+      min-height: 225px;//270
+      border-bottom: 1px solid #cdccc7;
+      figure.image {
+        width: 150px;
+        float: left;
+        margin-right: 1em;
+      }
+      .btn-su-alert {
+        margin: 0 auto 1em auto;
+        position:relative;
+        left:50%;
+        margin-left:-2.5em;            
+      }
+    }
+    &.spotlight-story:last-child{
+      border:none;
+    }
+  }
+
+
 } // @media (max-width: @screen-xs-max)
 
 
 //////////////////////////
 // phone, tablet
 @media (max-width: @screen-sm-max) {
+  .spotlight {
+    padding-bottom: 0px;
+    padding: 0;
+  }
 } // @media (max-width: @screen-sm-max)
 
 
 //////////////////////////
 // tablet only
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+  .featured {
+    min-height: 400px;
+  }
+  .card {
+    &.full {
+      min-height: auto;
+    }
+  }
+  article.spotlight-story {
+    min-height: 470px;
+  }
+
 } // @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)
 
 
 //////////////////////////
 // tablet and larger
 @media (min-width: @screen-sm-min) {
+  .top-stories {
+    padding-top: 1em;
+  }
   section {
 
     .section-title {
@@ -43,7 +154,6 @@
 
   article {
     margin-bottom: 15px;
-
     &.large {
       figure {
         float: none;
@@ -63,11 +173,19 @@
 
     &.full {
       min-height: 312px;
-
       figure {
         float: left;
         width: 60%;
         height: 300px;
+      }
+    }
+    &.spotlight-story{
+      .btn{
+        margin: 0 auto;
+        position:absolute;
+        bottom:0;
+        left:50%;
+        margin-left:-2.5em;       
       }
     }
   }
@@ -77,12 +195,39 @@
 //////////////////////////
 // desktop
 @media (min-width: @screen-md-min) {
+  .card {
+    &.full {
+      min-height: 735px;
+    }
+  }
+  article.spotlight-story {
+    //min-height: 300px;
+    .btn{
+
+    }
+  }
+  //  .spotlight-story{
+  //    padding-left: 1.4em;
+  //    padding-right: 1.4em;
+  //  }
 } // @media (min-width: @screen-md-min)
 
 
 //////////////////////////
 // small desktop
 @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+  .card {
+    &.full {
+      min-height: 726px;
+    }
+  }
+  article.spotlight-story {
+    //min-height: 300px;
+  }
+  //  .spotlight-story{
+  //    padding-left: .7em;
+  //    padding-right: .7em;
+  //  }
 } // @media (min-width: @screen-md-min) and (max-width: @screen-md-max)
 
 
