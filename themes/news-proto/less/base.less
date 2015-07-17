@@ -15,7 +15,7 @@
 /////////////////////////////////
 // Elements
 a, a:hover, a:active {
-	outline: 0;
+  outline: 0;
 }
 a:focus,
 button:focus {
@@ -27,15 +27,15 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 blockquote {
-	border-left: 5px solid @border-color;
+  border-left: 5px solid @border-color;
 }
 
 div:focus { // for accessbility, some div's get focus - don't outline them
-  outline: none;
+            outline: none;
 }
 
 dl {
-	margin-top: 5px;
+  margin-top: 5px;
 }
 
 figcaption {
@@ -44,7 +44,7 @@ figcaption {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin: 0 0 5px 0;
+  margin: 0 0 5px 0;
 
   i {
     margin-right: 7px;
@@ -68,19 +68,19 @@ label {
 }
 
 input::-webkit-input-placeholder {
-   color: rgba(0,0,0,.6) !important; 
+  color: rgba(0,0,0,.6) !important; 
 }
 
 input::-moz-placeholder {  /* Firefox 19+ */
-   color: rgba(0,0,0,1) !important; 
+  color: rgba(0,0,0,1) !important; 
 }
 
 input:-moz-placeholder { /* Firefox 18- */
-   color: rgba(0,0,0,1) !important;  
+  color: rgba(0,0,0,1) !important;  
 }
 
 input:-ms-input-placeholder {  
-   color: rgba(0,0,0,.6) !important; 
+  color: rgba(0,0,0,.6) !important; 
 }
 
 
@@ -97,16 +97,16 @@ input:-ms-input-placeholder {
 .btn-su-alert { .su-btn(@su-warm-gray); }
 
 .btn-u {
-	display: inline-block;
-	position: relative;
-	padding: 8px 13px;
-	border: 0;
-	cursor: pointer;
-	background: @su-beige-40;
-	color: @btn-txt;
-	.font-size-em(15); // 15px expressed as em's
-	text-decoration: none;
-	text-shadow: none;
+  display: inline-block;
+  position: relative;
+  padding: 8px 13px;
+  border: 0;
+  cursor: pointer;
+  background: @su-beige-40;
+  color: @btn-txt;
+  .font-size-em(15); // 15px expressed as em's
+  text-decoration: none;
+  text-shadow: none;
 
   &:hover {
     color: @su-beige-05;
@@ -157,7 +157,7 @@ input:-ms-input-placeholder {
   .text-container {
     padding-left: 15px;
   }
-  
+
   .offset {
     padding-left: 65px;	
   }
@@ -175,7 +175,7 @@ input:-ms-input-placeholder {
     text-transform: uppercase;
     color: @su-red-text;
   }
-  
+
   ul {
     padding-left: 0;
     list-style: none;
@@ -186,18 +186,18 @@ input:-ms-input-placeholder {
     }
   }
 
-  
+
   dt {
-	  font-size: 1.1em;
+    font-size: 1.1em;
   }
 
   dt, li {
-  	  a	{
-		  text-decoration: none;
-		  &:hover, &:active {
-		    text-decoration: underline;
-		}
-	  }
+    a	{
+      text-decoration: none;
+      &:hover, &:active {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
@@ -234,13 +234,13 @@ h2.headline {
 
 .more-link a,
 a.more-link {
-	font-weight: 600;
-	padding-left: 0;
-	padding-top: 2px;
-	display: inline;
-	text-transform: uppercase;
-	text-decoration: none;
-	color: inherit;
+  font-weight: 600;
+  padding-left: 0;
+  padding-top: 2px;
+  display: inline;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
 
   &:hover {
     color: @su-red;
@@ -252,7 +252,7 @@ a.more-link {
     color: @su-red;
     margin-right: 0.3em;
   }
-  
+
 }
 
 .navbar {
@@ -260,17 +260,17 @@ a.more-link {
 }
 
 img.banner-image {
-    background-color: rgba(0, 0, 0, 0);
-    border: 4px solid @su-beige-60;
-    display: block;
-    height: auto;
-    max-width: 100%;
-    padding: 2px; 
+  background-color: rgba(0, 0, 0, 0);
+  border: 4px solid @su-beige-60;
+  display: block;
+  height: auto;
+  max-width: 100%;
+  padding: 2px; 
 }
 
 img.feature-image{
-    border-bottom: 3px solid @su-beige-60;
-    padding-bottom: 2px;  
+  border-bottom: 3px solid @su-beige-60;
+  padding-bottom: 2px;  
 }
 .image-caption {
   background-color: @su-beige-bg;
@@ -302,18 +302,18 @@ img.feature-image{
 }
 
 .screen-reader { // text that should be read by a screen reader but not rendered on screen
-  display: inline-block;
-  position: absolute;
-  font-size: 0;
-  line-height: 0;
-  height: 1px;
-  overflow: hidden;
+                 display: inline-block;
+                 position: absolute;
+                 font-size: 0;
+                 line-height: 0;
+                 height: 1px;
+                 overflow: hidden;
 }
 
 ul.vbar {
   list-style: none;
   padding: 0;
-  
+
   li {
     display: inline-block;
     padding: 0 0.5em;
@@ -355,10 +355,10 @@ ul.vbar {
   }
 
   img {
-      .img-responsive;
-      background-color: rgba(0, 0, 0, 0);
-      margin-bottom: 6px;
-      padding: 2px;
+    .img-responsive;
+    background-color: rgba(0, 0, 0, 0);
+    margin-bottom: 6px;
+    padding: 2px;
   }
 
   p.caption {
@@ -404,7 +404,7 @@ ul.vbar {
     margin-bottom: 0em;
   }
   li {
-    
+
   }
   .sidebar-icon {
     font-size: 12px;
@@ -419,7 +419,7 @@ ul.vbar {
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
- 
+
   & iframe,
   & object,
   & embed {
@@ -437,8 +437,8 @@ ul.vbar {
   letter-spacing: 0.04em;
   line-height: 1.5;
   margin-bottom: 4px;
-	color: @su-clay;
-    
+  color: @su-clay;
+
 }
 
 /////////////////////////////////
@@ -452,7 +452,7 @@ ul.vbar {
 }
 
 #content {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 aside {
@@ -488,16 +488,14 @@ aside {
       display:block;
     }
     .card-photo{
-
       i{
         padding-top:1.2em;
-        padding-bottom:.5em;
+        //padding-bottom:.5em;
         text-align: center;
         display:block;
         color:@su-beige-60;
       }
     }
-
     h3 {
       font-family: @font-family-sans-serif;
       .font-size-em(16px);
@@ -513,7 +511,14 @@ aside {
       }
     }
     .share {
-      text-align: center;
+      padding-top:1em;
+    }
+    &.instagram{
+      .card-photo{
+        i{
+          padding-bottom:.5em;
+        }
+      }
     }
   }
 
