@@ -209,6 +209,58 @@ article {
   background-color:#c0c0c0;
 }
 
+.align-left-alt {
+  float: left;
+  margin-right: 1em;
+  //border: 1px solid red;
+  width: 40%;
+  .card {
+      background: none;
+      box-shadow: none;
+      margin: 0;
+  }
+  .card-content p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  &.instagram,
+  &.twitter,
+  &.facebook {
+    img{
+      margin:0 auto;
+      display:block;
+    }
+    .card-photo{
+      i{
+        padding-top:1.2em;
+        //padding-bottom:.5em;
+        text-align: center;
+        display:block;
+        color:@su-beige-60;
+      }
+    }
+    h3 {
+      font-family: @font-family-sans-serif;
+      .font-size-em(16px);
+      font-weight: normal;
+    }
+    p {
+      text-align: left;
+    }
+    a {
+      color: @su-red;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .share {
+      padding-top:1em;
+    }
+  }
+}
+
+
+
 /////////////////////////////////
 // media queries
 @import "_story-responsive.less";
