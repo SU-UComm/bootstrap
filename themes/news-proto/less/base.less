@@ -655,7 +655,9 @@ aside {
     //    clear: both;
     //    }
   }
+
   &.story-card {
+
     h2 {
     color: @su-red;
     font-family: @font-family-serif;
@@ -676,15 +678,19 @@ aside {
     }
     .related-story {
       clear: both;
-      min-height: 120px;
       margin: 0;
       padding: 0;
+      h3 {
+        padding: none;
+        margin: none;
+        margin-bottom: 1em;
+      }
     }
     p{
       color: @su-black;
       font-family: @font-family-sans-serif;
       .font-size-em(18; 16);
-      line-height: 1.3em;
+      line-height: 1.4em;
       margin-top: .1em;
       padding-bottom: 1.4em;
     }
@@ -703,6 +709,14 @@ aside {
     }
   }
 }
+
+  .humanities {
+    background-image: url('../images/humanities-infobox-back.png');
+    background-color: white;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    //border: 1px solid red;
+  }
 
 
 
