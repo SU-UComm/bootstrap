@@ -710,15 +710,58 @@ aside {
   }
 }
 
-  .humanities {
-    background-image: url('../images/humanities-infobox-back.png');
-    background-color: white;
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    //border: 1px solid red;
+// This modifies the humanities Sidebar Infobox
+.humanities {
+  background-image: url('../images/humanities-infobox-back.png');
+  background-color: white;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  //border: 1px solid red;
+}
+
+#find-search {
+  width: 100%;
+  padding: .3em;
+}
+
+.find-a-story {
+  //text-align: center;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  mergin-left: 0px;
+  ul {
+    padding-left: 0px;
+    margin-left: 0px;
+    li {
+      list-style-type: none;
+      padding-left: 0px;
+      margin-left: 0px;
+      margin-bottom: .6em;
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
+  .btn{
+      background-color:transparent;
+      border:1px solid @su-cool-gray;
+      padding:12px;
+      &:hover{
+        color: white;
+        background: @su-cool-gray;
+        border-color: @su-cool-gray;
+      }
+  }
+}
 
-
+.datepicker {
+  input {
+    width: 100px;
+  }
+}
 
 /////////////////////////////////
 // Header, Footer
