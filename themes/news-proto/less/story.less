@@ -23,7 +23,8 @@ article {
   time,
   .byline,
   .media-attrib,
-  .media-caption
+  .media-caption,
+  .photo-caption
   {
     font-family: @font-family-sans-serif;
   }
@@ -47,6 +48,15 @@ article {
     font-style: italic;
     font-family: @font-family-serif;
     line-height: 1.5em;
+  }
+
+  figure{
+    figcaption{
+      font-size: @font-size-small;
+      margin: 0;
+      padding: 1em 0;
+      line-height: 1.25em;
+    }
   }
 
   .embed-container{
@@ -74,72 +84,66 @@ article {
     font-size:1em;
   }
 
-  .pull-left,
-  .pull-right,
-  .align-center{
-    img{
-      width:100%;
+  /*.photo-credit {
+    font-size: @font-size-small;
+    font-style: italic;
+    text-align: right;
+    margin-bottom: 0.5em;
+  }
+  .photo-caption {
+    margin-top:.5em;
+    line-height: 1.3em;
+    font-size:1em;
+  }*/
+
+  .align-center, .align-right, align-left {
+    img {
+      width: 100%;
     }
   }
-
-  .pull-left-wide,
-  .pull-right-wide{
-    width:70%;
-  }
-
-  .pull-left-narrow,
-  .pull-right-narrow{
-    width: 50%;
-  }
-
-  .pull-left-wide, .pull-left-narrow{
-    margin: 0 2em 0 -11%;    
-  }
-
-  .pull-right-wide, .pull-right-narrow{
-    margin:0 -10% 0 2em;   
-  }
-  
   .align-center{
     margin-bottom:2em;
     &.inset-width{
       width:75%;
     }
   }
-
-
-  blockquote {
-    border-left: none;//overrides type.less
-    color: @su-red-text;
-    font-family: @font-family-serif;
-    font-size: @blockquote-font-size;
-    font-style: italic;
-    line-height: 1.5;
-    margin-bottom:0;
-    margin-top: 3em;
-    &:before{
-      content:'\201C';
-      font-family: @font-family-serif;
-      display: block;
-      text-align: center;
-      color:lighten(@su-warm-gray-60, 33%);
-      font-size:5em;
-      font-style:normal;
-      font-weight: 600;
-      line-height:.05;
-    } 
+  .align-left,
+  .align-right {
+    width: 70%;//50%
+    /*&.embed-responsive-16by9 {
+      padding-bottom: 28.675%;
+    }
+    &.embed-responsive-4by3 {
+      padding-bottom: 37.5%;
+    }**/
   }
-  .quote-attrib{
-    text-transform: uppercase;
-    font-weight:600;
-    font-family: @font-family-sans-serif;
-    font-size:1em;
-  }  
+  .align-left {
+    float: left;
+    margin: 0 2em 0 -11%;
+  }
+  .align-right {
+    float: right;
+    //margin: 0 -8.3333333% 0 2em;
+    margin:0 -10% 0 2em;
+  }
+  .thin {
+    width: 50%;
+    img {
+      margin:0 auto;
+      display:block;
+      width: auto;
+    }
+  }
 
   .story-social .card {
-    background: none;
-    box-shadow: none;
-    margin: 0;
+      background: none;
+      box-shadow: none;
+      margin: 0;
+      .card-content {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+      }
   }
   .card-content p, .sidebar-story p {
     font-size: 14px;
@@ -160,7 +164,8 @@ article {
     }
     h3 {
       font-family: @font-family-sans-serif;
-      .font-size-em(16px);
+      //.font-size-em(20px);
+      //font-size: 24px;
       font-weight: normal;
     }
     p {
@@ -179,7 +184,7 @@ article {
   }
   &.facebook {
     img {
-      width: 250px;
+      width: 100%;
       margin: 0 auto;
     }
     .share img {
@@ -193,7 +198,7 @@ article {
     }
     img {
       padding-top: 1em;
-      width: 250px;
+      width: 100%;
       margin: 0 auto;
     }
     .share img {
@@ -202,7 +207,7 @@ article {
   }
   &.instagram {
     img {
-      width: 200px;
+      width: 70%;
       margin: 0 auto;
     }
     .share img {
@@ -210,21 +215,11 @@ article {
     }
   }
 
-  #article-content {//to be deleted?
+  #article-content {
     margin-top: 1.8em;
   }
 
-  .share{
-    margin:0 auto;
-    clear:both;
-    padding-bottom:1.2em;
-    text-align:center;
-    img{
-      width:inherit;
-    }
-  }
-  
-  .social-share{
+  #social-share-left {
     a {
       display: block;
       margin-bottom: 8px;
@@ -244,7 +239,7 @@ article {
     margin-bottom:0;
   }
 
-  .byline-link {
+  .byline2 {
     color: @su-black;
     font-style: italic;
     font-family: @font-family-sans-serif;
@@ -276,27 +271,18 @@ article {
   border-top:1px solid @gray-lighter;
   margin-top: 1em;
   padding-top: 1.5em;
-  .pull-right{//categories
-              a{
-                color:@su-cool-gray;
-              }
+  .pull-right{
+    a{
+    color:@su-cool-gray;
+    }
   }
-  .pull-left{//social media
-             a{
-               background-color:@gray-lighter;
-               color: black;
-             }
-  }
-  .pull-right, .pull-left{
-    width:auto;
-    margin:0;
+  .pull-left{
+    a{
+      background-color:@gray-lighter;
+      color: black;
+    }
   }
 }
-
-.btn-category{
-  background-color:#c0c0c0;
-}
-
 
 #bottom{
   margin:5em 0 2em 0;
@@ -307,6 +293,9 @@ article {
   }
 }
 
+.btn-category{
+  background-color:#c0c0c0;
+}
 
 
 
