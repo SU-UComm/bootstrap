@@ -1,34 +1,82 @@
 @import "_less.less";
 
-section {
-  margin-bottom: 2em;
-
-  .section-title {
-    background-color: @su-driftwood;
-    margin-bottom: 0;
-    padding: 0.5em;
-    color: @text-color;
-    font-size: 1em;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-}
-
-.top-stories {
+#section-top-stories {
+  padding-top:1em;
   .background-gradient(@su-warm-gray-60, @su-warm-gray-90);
   width: 100%;
   .card{
     box-shadow:none;
   }
+  #content{
+    margin-bottom:0;
+  }
 }
 
-.spotlight {
-  background: white;
+#section-spotlight, #section-more-stories{
+  padding:3em 0;
+  .container{
+    &>h2, h3{
+      font-family: @font-family-serif;
+      //margin-top: 1.8em;
+      //margin-bottom: .8em;    
+    }
+    &>h2{
+      .font-size-em(32; 18);
+    }
+  }
+}
+
+
+#section-spotlight {
+  background: #fff;
   border-top: 1px solid #cdccc7;
   border-bottom: 1px solid #cdccc7;
-  width: 100%;
-  margin-top: -20px;
-  padding-bottom: 2em;
+  h2{
+    color: @su-red;
+  }
+  h3{
+    .font-size-em(18);
+    font-weight: 600;
+    margin-top: 1em;
+    margin-bottom: .4em;   
+    a{
+      color:@su-black;
+    }
+  }
+  p{
+    //padding-bottom:50px;
+  }
+  img{
+    width:100%;
+  }
+  article{
+    padding-bottom:50px;
+  }
+  .btn{
+    position:absolute;
+    bottom:0;
+    left:50%;
+    margin-left:-45px;
+    background-color:transparent;
+    border:1px solid @su-cool-gray;
+    padding:12px;
+    &:hover{
+      color: white;
+      background: @su-cool-gray;
+      border-color: @su-cool-gray;
+    }    
+  }  
+}
+
+#section-more-stories{
+  .btn{
+    width:250px;
+    margin-top:1em;
+  }
+}
+
+.padding-top{
+  padding-top:1em;
 }
 
 h2.section-title {
@@ -58,8 +106,8 @@ section#more-stories {
 }
 
 article{
-  &.spotlight-story {
-    min-height: 350px;//470//390
+  &.spotlight-story {//to delete
+    //min-height: 350px;//470//390
     display:inline-block;
     float:none;
     text-align:left;
@@ -73,9 +121,9 @@ article{
       height: auto;
 
     }
-    .image {
-      width: 100%;
-      height: auto;
+    .image {// to delete
+            width: 100%;
+            height: auto;
     }
     .category {
       display: block;
@@ -121,29 +169,16 @@ article{
         border-color: @su-cool-gray;
       }
     }
-    
+
   }
 
 }
-
-#more-stories{
-  //margin-bottom:6em;
-  //.btn-su-alert{
-    //position: absolute;
-    //bottom:2em;
-    //left:50%;
-    //margin-left:-6em;
-    //width:200px;
-  //}
-  .btn-su-alert{
-    margin-top:1em;
-  }
-}
-
 
 
 aside {
-
+  h2{
+    .font-size-em(16px);
+  }
   ul {
     list-style: none;
 
@@ -157,7 +192,12 @@ aside {
       }
     }
   }
-
+  .sidebar-section{
+    margin-bottom:3.5em;
+    &#faculty-staff{
+      margin-bottom:0;
+    }
+  }
   #the-dish {
     #dish-logo {
       text-transform: uppercase;

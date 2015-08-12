@@ -375,9 +375,10 @@ ul.vbar {
 
 // sidebar styles - these apply to the newspage sidebar as well as in-set side bars for bio/related/sidebar story elements on story-level pages
 
+
 .sidebar-section {
   margin-left: 2em;
-
+  margin-right: 2em;
   h2 {
     color: @su-red;
     font-family: @font-family-serif;
@@ -457,8 +458,8 @@ ul.vbar {
 
 aside {
 
-  div.sidebar-section {
-    margin-bottom: 3.5em;
+  div.sidebar-section {// to delete; only used on home page
+                       //margin-bottom: 3.5em;
   }
 
   a {
@@ -471,6 +472,11 @@ aside {
 /////////////////////////////////
 // Card styles
 
+.no-underline, .no-underline:hover{
+  text-decoration:none;
+}
+
+
 .card {
   border-top: none;
   border-left: none;
@@ -480,26 +486,30 @@ aside {
   padding: 0px;
   position: relative;
   box-shadow: 0 0 8px @su-beige-40;
+  &:hover{
+    //background-color:@su-beige-40;
+  }
   &.facebook,
   &.instagram,
   &.twitter {
-    img{
-      margin:0 auto;
-      display:block;
-    }
     .card-photo{
       i{
         padding-top:1.2em;
         //padding-bottom:.5em;
-        text-align: center;
         display:block;
         color:@su-warm-gray-60;
+      }
+      img{
+        float:none !important;
       }
     }
     h3 {
       font-family: @font-family-sans-serif;
       .font-size-em(16px);
       font-weight: normal;
+      &:hover{
+        text-decoration:underline;
+      }
     }
     p {
       text-align: left;
@@ -518,42 +528,40 @@ aside {
         i{
           padding-bottom:.5em;
         }
+        img{
+          width:200px;
+        }
+      }
+    }
+    &.twitter, &.facebook{
+      .card-content{
+        &>img{
+          width:250px;
+        }
       }
     }
   }
 
-  figure{
-    img{
-      float: left;
-      width: 100px;
-      height: 100px;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      padding: 0;
-      margin: 0;
-      padding-right: 1em;
-      padding-bottom: 1em;
-    }
+  figure{//to delete
+         img{
+           float: left;
+           width: 100px;
+           height: 100px;
+           background-position: center;
+           background-size: cover;
+           background-repeat: no-repeat;
+           padding: 0;
+           margin: 0;
+           padding-right: 1em;
+           padding-bottom: 1em;
+         }
   }
   .card-content {
     padding: 1.2em;
     width: inherit;
     clear: both;
   }
-  &.short{
-    padding:0 1.2em;
-    .card-content{
-      display:inline;
-    }
-    .card-photo{
-      margin-top:1.5em;
-      float:left;
-    }
-  }
-  .card-photo{
 
-  }
   .category {
     display: block;
     text-transform: uppercase;
@@ -605,9 +613,25 @@ aside {
     font-size: 0.8em;
     font-weight: 600;
   }
+  &.short{
+    padding:0 1.2em;
+    .card-content{
+      display:inline;
+    }
+    .card-photo{
+      margin-top:1.5em;
+      float:left;
+      padding-right:1em;
+      padding-bottom:1em;      
+      img{
+        width:100px;
+        height:100px;
 
+      }
+    }
+  }
   &.full {
-    figure img{
+    img{
       float: none;
       clear: both;
       width: 100%;
@@ -615,10 +639,6 @@ aside {
       padding: 0px;
       margin: 0;
       padding-bottom: 0px;
-    }
-    .image {
-      width: 100%;
-      height: auto;
     }
     .card-content {
       display: block;
@@ -634,40 +654,34 @@ aside {
   }
 
   &.large {
-    .image {
+    img {
       width: 100%;
       height: auto;
       padding: 0;
       margin: 0;
     }
-    .image img {
-      float: none;
-      clear: both;
-      width: 100%;
-      height: auto;
-      padding: 0;
-      margin: 0;
+    .image img {//to delete
+                float: none;
+                clear: both;
+                width: 100%;
+                height: auto;
+                padding: 0;
+                margin: 0;
     }
-
-    //    .card-content {
-    //    margin: 1.2em;
-    //    width: inherit;
-    //    clear: both;
-    //    }
   }
 
   &.story-card {
 
     h2 {
-    color: @su-red;
-    font-family: @font-family-serif;
-    .font-size-em(24);
-    font-weight: normal;
-    text-align: center;
-    //background: @su-beige-20;
-    padding: 5px;
-    margin-left: -5px;
-    margin-bottom: .5em;
+      color: @su-red;
+      font-family: @font-family-serif;
+      .font-size-em(24);
+      font-weight: normal;
+      text-align: center;
+      //background: @su-beige-20;
+      padding: 5px;
+      margin-left: -5px;
+      margin-bottom: .5em;
     }
 
     h3 {
@@ -710,13 +724,13 @@ aside {
   }
 }
 
-  .humanities {
-    background-image: url('../images/humanities-infobox-back.png');
-    background-color: white;
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    //border: 1px solid red;
-  }
+.humanities {
+  background-image: url('../images/humanities-infobox-back.png');
+  background-color: white;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  //border: 1px solid red;
+}
 
 
 

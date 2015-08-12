@@ -108,6 +108,25 @@ body {
   }
 } // #block-search-form
 
+article{
+  &.card{
+    min-height:150px;
+    &.large, &.short {
+      img {
+        width: 100px;
+        height: 100px;
+      }
+     .card-photo{
+        margin-top:1.5em;
+        float:right;
+        padding-left:1em;
+        padding-right:0 !important;
+      }       
+    }   
+  }
+}
+
+
 #footer {
   .container {
     padding: 0 20px !important;
@@ -160,7 +179,7 @@ body.nav-6 #nav-6 a {
   }
 
 .sidebar-section {
-  margin-left: 0em;
+  //margin-left: 0em;
 }
 
 
