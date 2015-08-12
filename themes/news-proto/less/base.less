@@ -86,7 +86,15 @@ input:-ms-input-placeholder {
 
 /////////////////////////////////
 // General classes, id's
-
+.topics-buttons {
+  a {
+    color:@su-cool-gray;
+    .btn-category{
+//      background-color:#c0c0c0;
+      margin-bottom: 5px;
+    }
+  }
+}
 .btn {
   line-height: 1;
 }
@@ -94,7 +102,9 @@ input:-ms-input-placeholder {
 .btn-one   { .su-btn(@su-mint); }
 .btn-two   { .su-btn(@su-lagunita); }
 .btn-three { .su-btn(@su-sage-gray); }
+.btn-four  {.su-btn(@su-red); }
 .btn-su-alert { .su-btn(@su-warm-gray); }
+.btn-category {margin-bottom: 5px;}
 
 .btn-u {
   display: inline-block;
@@ -329,11 +339,13 @@ ul.vbar {
   border-radius: 10px 10px 10px 10px;
   padding: 20px;
   margin-bottom: 30px;
+  background: white;
 
   h2 {
     padding: 10px 0 4px;
     font-size: 1.2em;
-    text-transform: uppercase;
+    //text-transform: uppercase;
+    border-bottom: none;
     color: @su-red-text;
   }
 
@@ -375,9 +387,11 @@ ul.vbar {
 
 // sidebar styles - these apply to the newspage sidebar as well as in-set side bars for bio/related/sidebar story elements on story-level pages
 
-.sidebar-section {
+.sidebar-margin {
   margin-left: 2em;
+}
 
+.sidebar-section {
   h2 {
     color: @su-red;
     font-family: @font-family-serif;
@@ -411,6 +425,9 @@ ul.vbar {
   }
 }
 
+.page-section {
+  margin-left: none;
+}
 
 // style wrapper, embeds to make embedded videos responsive
 .video-container {
@@ -498,8 +515,9 @@ aside {
     }
     h3 {
       font-family: @font-family-sans-serif;
-      .font-size-em(16px);
+      .font-size-em(18px);
       font-weight: normal;
+      text-align: center;
     }
     p {
       text-align: left;
@@ -729,6 +747,11 @@ aside {
   margin-top: 3em;
   margin-bottom: 3em;
   mergin-left: 0px;
+  h2 {
+  //  border-bottom: none;
+  //  text-align: center;
+  margin-right: 5px;
+  }
   ul {
     padding-left: 0px;
     margin-left: 0px;
@@ -745,7 +768,7 @@ aside {
       }
     }
   }
-  .btn{
+  .btn-light{
       background-color:transparent;
       border:1px solid @su-cool-gray;
       padding:12px;
@@ -765,6 +788,23 @@ aside {
   input {
     width: 100px;
   }
+}
+
+
+// Search / Find a Story styles //
+
+.find-sections {
+  li {
+    float: left;
+    width: 220px;
+    display: block;
+    font-size: 18px;
+    line-height: 2em;
+  }
+}
+
+.section-icon {
+  width: 27px;
 }
 
 /////////////////////////////////
