@@ -2,7 +2,7 @@
 // phone
 @media (max-width: @screen-xs-max) {
   article{
-    #social-share{
+    .social-share{
       .list-inline{
         text-align:center;
       }
@@ -24,18 +24,16 @@
       margin:0 0 2em 0;
       width:100%;      
     }
-    
-    
-    
-    
+
     #main-bottom{
       .pull-left{
         display:block;
         width:100%;
       }
       .pull-right{
-        float:left !important;
-        margin-top:1em;
+        .list-inline{
+          text-align:left;
+        }
       }
     }
   }

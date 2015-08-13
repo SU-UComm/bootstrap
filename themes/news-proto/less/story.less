@@ -59,6 +59,9 @@ article {
     }
   }
 
+  .story-margin-top{
+    margin-top:1.8em;
+  }
   .embed-container{
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
@@ -84,19 +87,10 @@ article {
     font-size:1em;
   }
 
-  /*.photo-credit {
-    font-size: @font-size-small;
-    font-style: italic;
-    text-align: right;
-    margin-bottom: 0.5em;
-  }
-  .photo-caption {
-    margin-top:.5em;
-    line-height: 1.3em;
-    font-size:1em;
-  }*/
 
-  .align-center, .align-right, align-left {
+  .align-center,
+  .pull-right,
+  .pull-left {
     img {
       width: 100%;
     }
@@ -107,43 +101,71 @@ article {
       width:75%;
     }
   }
-  .align-left,
-  .align-right {
-    width: 70%;//50%
-    /*&.embed-responsive-16by9 {
-      padding-bottom: 28.675%;
-    }
-    &.embed-responsive-4by3 {
-      padding-bottom: 37.5%;
-    }**/
+  .pull-left-wide,
+  .pull-right-wide {
+    width: 70%;
   }
-  .align-left {
-    float: left;
-    margin: 0 2em 0 -11%;
+  .pull-left-narrow,
+  .pull-right-narrow{
+    width:50%;
   }
-  .align-right {
-    float: right;
-    //margin: 0 -8.3333333% 0 2em;
-    margin:0 -10% 0 2em;
+  .pull-left-wide,
+  .pull-left-narrow{
+    margin: 0 2em 0 -11%;    
   }
-  .thin {
-    width: 50%;
-    img {
-      margin:0 auto;
-      display:block;
-      width: auto;
+  .pull-right-wide,
+  .pull-right-narrow{
+    margin:0 -10% 0 2em;    
+  }
+
+  blockquote{
+    border-left: none;
+    color: #820000;
+    font-family: 'Source Serif Pro', 'Times New Roman', Times, serif;
+    font-size: @blockquote-font-size;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-top: 3em;
+    &:before{
+      content: '\201C';
+      font-family: 'Source Serif Pro', 'Times New Roman', Times, serif;
+      display: block;
+      text-align: center;
+      color: #dad9d6;
+      font-size: 6em;
+      font-style: normal;
+      line-height: .05;      
     }
   }
 
+  .quote-attrib{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 1em;  
+  }
+
+  .share{//call-to-action share for social media
+         margin: 0 auto;
+         clear: both;
+         padding-bottom: 1.2em;
+         text-align: center; 
+         img{
+           width:inherit;
+         }
+  }
+
+
   .story-social .card {
-      background: none;
-      box-shadow: none;
-      margin: 0;
-      .card-content {
-        width: 80%;
-        margin-left: 10%;
-        margin-right: 10%;
-      }
+    background: none;
+    box-shadow: none;
+    margin: 0;
+    .card-content {
+      width: 80%;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
   }
   .card-content p, .sidebar-story p {
     font-size: 14px;
@@ -183,35 +205,39 @@ article {
     }
   }
   &.facebook {
-    img {
-      width: 100%;
-      margin: 0 auto;
-    }
-    .share img {
-      width: auto;
+    .card-content{
+      img {
+        width: 100% !important;
+        margin: 0 auto;
+      }
+      .share img {
+        width: auto !important;
+      }    
     }
   }
   &.twitter {
     .card-content {
-      margin: 0 auto;
       text-align: center;
+      img {
+        padding-top: 1em;
+        width: 100% !important;
+        margin: 0 auto;
+      }
+      .share{
+        img{
+          width:auto !important;
+        }
+      }
     }
-    img {
-      padding-top: 1em;
-      width: 100%;
-      margin: 0 auto;
-    }
-    .share img {
-      width: auto;
-    }
+
   }
   &.instagram {
     img {
-      width: 70%;
+      width: 70% !important;
       margin: 0 auto;
     }
     .share img {
-      width: auto;
+      width: auto !important;
     }
   }
 
@@ -219,7 +245,7 @@ article {
     margin-top: 1.8em;
   }
 
-  #social-share-left {
+  .social-share{
     a {
       display: block;
       margin-bottom: 8px;
@@ -229,17 +255,15 @@ article {
         width: 36px;
       }
     }
-    margin-top:2em;
   }
 
   .byline {
     color: @su-red-text;
     text-transform: uppercase;
-    margin-top:1.8em;
     margin-bottom:0;
   }
 
-  .byline2 {
+  .byline-link {
     color: @su-black;
     font-style: italic;
     font-family: @font-family-sans-serif;
@@ -273,7 +297,7 @@ article {
   padding-top: 1.5em;
   .pull-right{
     a{
-    color:@su-cool-gray;
+      color:@su-cool-gray;
     }
   }
   .pull-left{
