@@ -23,8 +23,7 @@ article {
   time,
   .byline,
   .media-attrib,
-  .media-caption,
-  .photo-caption
+  .media-caption
   {
     font-family: @font-family-sans-serif;
   }
@@ -50,14 +49,6 @@ article {
     line-height: 1.5em;
   }
 
-  figure{
-    figcaption{
-      font-size: @font-size-small;
-      margin: 0;
-      padding: 1em 0;
-      line-height: 1.25em;
-    }
-  }
 
   .story-margin-top{
     margin-top:1.8em;
@@ -86,7 +77,6 @@ article {
     line-height: 1.3em;
     font-size:1em;
   }
-
 
   .align-center,
   .pull-right,
@@ -120,8 +110,8 @@ article {
 
   blockquote{
     border-left: none;
-    color: #820000;
-    font-family: 'Source Serif Pro', 'Times New Roman', Times, serif;
+    color: @su-red-text;
+    font-family: @font-family-serif;
     font-size: @blockquote-font-size;
     font-style: italic;
     line-height: 1.5;
@@ -129,12 +119,13 @@ article {
     margin-top: 3em;
     &:before{
       content: '\201C';
-      font-family: 'Source Serif Pro', 'Times New Roman', Times, serif;
+      font-family: @font-family-serif;
       display: block;
       text-align: center;
-      color: #dad9d6;
-      font-size: 6em;
+      color: @gray-lightest;
+      font-size: 5em;
       font-style: normal;
+      font-weight:600;
       line-height: .05;      
     }
   }
@@ -142,104 +133,52 @@ article {
   .quote-attrib{
     text-transform: uppercase;
     font-weight: 600;
-    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-family: @font-family-sans-serif;
     font-size: 1em;  
   }
 
-  .share{//call-to-action share for social media
-         margin: 0 auto;
-         clear: both;
-         padding-bottom: 1.2em;
-         text-align: center; 
+  .share{//call-to-action share for social media and blockquotes
+         margin-bottom:2em;
+         clear:both;
          img{
            width:inherit;
          }
   }
 
-
-  .story-social .card {
-    background: none;
-    box-shadow: none;
-    margin: 0;
-    .card-content {
-      width: 80%;
-      margin-left: 10%;
-      margin-right: 10%;
+  .story-social{
+    &.card{
+      background: none;
+      box-shadow: none;
+      margin: 0;
+      .card-content {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        img{//twitter
+          width:100% !important;
+        }
+      }
+      .card-photo{
+        img{
+          width:70% !important;
+        }
+      }        
+     img{
+        &.share{
+          padding:1em 0;
+          width:auto;
+      }
+      }
     }
+
   }
   .card-content p, .sidebar-story p {
     font-size: 14px;
     line-height: 1.6;
     font-family: @font-family-sans-serif;
   }
-  &.instagram,
-  &.twitter,
-  &.facebook {
-    .card-photo{
-      i{
-        padding-top:1.2em;
-        //padding-bottom:.5em;
-        text-align: center;
-        display:block;
-        color: @su-warm-gray-60;
-      }
-    }
-    h3 {
-      font-family: @font-family-sans-serif;
-      //.font-size-em(20px);
-      //font-size: 24px;
-      font-weight: normal;
-    }
-    p {
-      text-align: center;
-      padding-bottom: .5em;
-    }
-    a {
-      color: @su-red;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-    .share {
-      padding-top:1em;
-    }
-  }
-  &.facebook {
-    .card-content{
-      img {
-        width: 100% !important;
-        margin: 0 auto;
-      }
-      .share img {
-        width: auto !important;
-      }    
-    }
-  }
-  &.twitter {
-    .card-content {
-      text-align: center;
-      img {
-        padding-top: 1em;
-        width: 100% !important;
-        margin: 0 auto;
-      }
-      .share{
-        img{
-          width:auto !important;
-        }
-      }
-    }
 
-  }
-  &.instagram {
-    img {
-      width: 70% !important;
-      margin: 0 auto;
-    }
-    .share img {
-      width: auto !important;
-    }
-  }
+
 
   #article-content {
     margin-top: 1.8em;
