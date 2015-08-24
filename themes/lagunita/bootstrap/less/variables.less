@@ -55,7 +55,9 @@
 @su-poppy:         #E98300;
 @su-sun:           #EAAB00;
 
-@su-beige-bg:  @su-beige-10;
+@su-beige-bg:      @su-beige-10;
+@su-header-bg:     #F8F7F2;
+@su-header-color:  #333333;
 
 
 //== Colors
@@ -415,15 +417,15 @@
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 @navbar-collapse-max-height:       340px;
 
-@navbar-default-color:             @su-black;
-@navbar-default-bg:                @su-beige-bg;
-@navbar-default-border:            @su-beige-bg;
+@navbar-default-color:             @su-header-color;
+@navbar-default-bg:                @su-header-bg;
+@navbar-default-border:            @su-header-bg;
 
 // Navbar links
-@navbar-default-link-color:                @su-black;
-@navbar-default-link-hover-color:          @su-black;
+@navbar-default-link-color:                @su-red-text;
+@navbar-default-link-hover-color:          @su-header-color;
 @navbar-default-link-hover-bg:             transparent;
-@navbar-default-link-active-color:         @su-red-text;
+@navbar-default-link-active-color:         @su-black;
 @navbar-default-link-active-bg:            @navbar-default-bg;
 @navbar-default-link-disabled-color:       #ccc;
 @navbar-default-link-disabled-bg:          transparent;
