@@ -187,10 +187,27 @@ body.nav-6 #nav-6 a {
       }
       & > a:hover,
       & > a:focus {
-        background-color: @su-beige-05;
+        background-color: @navbar-default-link-color;
+        color: @navbar-default-bg;
         border-bottom:none;
       }
     } // .nav > li
+
+    .dropdown-menu {
+      li {
+        a {
+          font-weight: 600;
+          font-size: 1.15em;
+
+          &:hover,
+          &:focus {
+            background-color: @navbar-default-link-color !important;
+            color: @navbar-default-bg !important;
+            border-bottom:none;
+          }
+        }
+      }
+    } // .dropdown-menu
   } // .nav
 } // .navbar
 
@@ -285,16 +302,6 @@ body.nav-6 #nav-6 a {
 #nav-search {
   float: right;
   margin: -60px 0 0 0;
-}
-
-.navbar .nav  li { 
-   a {
-      border-bottom: 5px solid @su-header-bg;
-      }
-   a:hover {
-	  border-bottom: 5px solid @su-beige-20;
-    color: inherit;
-    }
 }
 
 .two-column {
