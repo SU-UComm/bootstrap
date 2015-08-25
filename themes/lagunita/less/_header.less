@@ -38,23 +38,27 @@
 	background-color: @su-header-bg;
 }
 
-#logo {
-	border-right: 1px solid @su-header-color;
+#header a, #mainmenu a {
+  text-decoration: none;
+}
+
+#logo,
+#logo-pad,
+#signature {
   display: table-cell;
+}
+#logo {
+  border-right: 1px solid @su-header-color;
   float: none;
-  margin-right: 10px;
   padding: 0 10px 0 0;
   vertical-align: bottom;
 
-	img {max-width: 160px;}
+  img {max-width: 160px;}
 }
-
-#header a, #mainmenu a {
-	text-decoration: none;
+#logo-pad {
+  width: 10px;
 }
-
 #signature {
-  display: table-cell;
   height: auto;
   vertical-align: bottom;
 
