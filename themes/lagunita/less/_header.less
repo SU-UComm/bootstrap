@@ -52,24 +52,20 @@
 }
 
 #logo,
-#logo-pad,
 #signature {
   display: table-cell;
+  vertical-align: middle;
 }
 #logo {
-  border-right: 1px solid @su-header-color;
   float: none;
-  padding: 0 10px 0 0;
-  vertical-align: bottom;
+  padding: 0 15px 0 0;
 
-  img {max-width: 160px;}
-}
-#logo-pad {
-  width: 10px;
+  img {
+    max-width: 160px;
+  }
 }
 #signature {
   height: auto;
-  vertical-align: bottom;
 
   #site-name, #site-slogan {
     font-family: inherit;
