@@ -1,0 +1,175 @@
+.footer {
+	padding: 0 !important;
+	position: relative;
+	margin-top: -120px;
+	min-height: 120px;
+	clear: both;
+	.box-shadow(0 4px 8px -8px rgba(0, 0, 0, 0.2) inset);
+	background-color: @su-header-bg;
+  border-top: 1px solid @su-beige-20;
+
+  ul {
+    padding-left: 0;
+    margin: 0 0 20px 0;
+    list-style: none;
+
+    &.footer-list {
+      padding-bottom: .4em;
+
+      li {
+        line-height: 1.1;
+        padding-bottom: .4em;
+      }
+    }
+  }
+  #footer-content {
+    padding: 30px 0;
+  }
+  h3 {
+    color: @su-red-text;
+    font-size: 1em;
+    line-height: 1em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  p,
+  a {
+    color: @su-clay;
+  }
+  a {
+	text-decoration: none;  
+  }
+  a:hover, a:active {
+    text-decoration: underline;
+    color: @su-red-text;
+    .transition(all 0.4s ease-in-out);
+  }
+  #hp-buttons {
+    ul {
+      margin-bottom: 0;
+  
+      li {
+        margin-bottom: 5px;
+  
+        a {
+          text-align: left;
+
+          &:hover {
+            text-decoration: none;
+            color: white;
+          }
+          &:focus {
+            outline: 2px solid @su-sky;
+          }
+          i {
+            margin: 0 5px 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Global Footer and Copyright*/
+#global-footer {
+	position: relative;
+	margin-top: 0 !important; /* negative value of footer height */
+	height: 120px;
+	clear: both;
+  background-color: @su-red;
+  color: @su-beige-30;
+  box-shadow:inset 0 4px 8px -2px rgba(0, 0, 0, 0.2); /* Horizontal offset , vertical offset, blur, internal spacing */
+
+  .clear {
+    clear:both;
+  }
+
+  .container {
+    background-color: @su-red;
+    color: @su-beige-30;
+    .row {
+         margin: 30px 0 0 0;
+    }
+    
+  }
+  a {
+    color:@su-beige-30;
+  }
+
+  #bottom-logo {
+      margin: 0 0 10px;
+      padding: 0;
+      img{
+        display: block;
+        margin: 0 auto;
+      }
+  }
+  
+  #bottom-text ul {
+      margin: 0;
+      line-height: 1em;
+      
+      li {
+        display:block;
+        list-style:none;
+      }
+  
+      li a {
+        font-size: 15px;
+        line-height: 20px;
+      }
+  }
+  
+  p.copyright {
+    color: @su-beige-30;
+    padding: 0 15px;
+    margin: 0;
+    font-size: 13px;
+    line-height:1.5em;
+    text-align:center;  
+
+    #termsofuse {
+      margin-left: 10px;
+      font-size: 12px;
+    }
+  }
+}
+.no-brand-footer {
+  #global-footer {
+    display: none;
+  }
+}
+
+/*
+Sticky Footer Solution
+by Steve Hatcher 
+http://stever.ca
+http://www.cssstickyfooter.com
+*/
+
+html, body {
+	height: 100%;
+}
+#su-wrap {
+	min-height: 100%;
+	overflow-x: hidden;
+}
+#su-content {
+	overflow:visible;
+	padding-bottom: 120px; /* must be same height as the footer - set in js */
+}
+#global-footer {
+	position: relative;
+	margin-top: -120px; /* negative value of footer height - set in js */
+	height: 120px;
+	clear:both;
+} 
+
+/*Opera Fix*/
+	body:before { /* thanks to Maleika (Kohoutec)*/
+	content:"";
+	height:100%;
+	float:left;
+	width:0;
+	margin-top:-32767px;/* thank you Erik J - negate effect of float*/
+}
