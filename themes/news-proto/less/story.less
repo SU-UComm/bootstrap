@@ -69,6 +69,11 @@ article {
     line-height: 1.3em;
     font-size:1em;
   }
+  .mugshot-caption{
+    text-align:center;
+    margin-top: .6em;
+    font-family: @font-family-sans-serif;
+  }
   .align-center,
   .pull-right,
   .pull-left {
@@ -90,12 +95,18 @@ article {
   .pull-right-narrow{
     width:50%;
   }
+  .pull-left-portrait,
+  .pull-right-portrait{
+    width:40%;
+  }
   .pull-left-wide,
-  .pull-left-narrow{
+  .pull-left-narrow,
+  .pull-left-portrait{
     margin: 0 2em 0 -11%;    
   }
   .pull-right-wide,
-  .pull-right-narrow{
+  .pull-right-narrow,
+  .pull-right-portrait{
     margin:0 -10% 0 2em;    
   }
   blockquote{
@@ -236,14 +247,45 @@ article {
 
 
 /*** Sidebar infobox styles ***/
-.humanities {
-  background-image: url('../images/humanities-infobox-back.png');
+.commencement,
+.cybersecurity,
+.election,
+.environment,
+.humanities,
+.law,
+.undergrad {
   background-color: white;
   background-position: right bottom;
   background-repeat: no-repeat;
-  //border: 1px solid red;
 }
 
+
+
+.humanities {
+  background-image: url('../images/humanities-infobox-back.png');
+}
+
+.commencement {
+  background-image: url('../images/commencement-infobox-back.png');
+}
+.cybersecurity {
+  background-image: url('../images/cybersecurity-infobox-back.png');
+}
+.election {
+  background-image: url('../images/election-infobox.png');
+}
+.environment {
+  background-image: url('../images/environment-infobox-back.png');
+}
+.humanities {
+  background-image: url('../images/humanities-infobox-back.png');
+}
+.law {
+  background-image: url('../images/law-infobox-back.png');
+}
+.undergrad {
+  background-image: url('../images/commencement-infobox-back.png');
+}
 
 
 /*** temp space for print ***/
