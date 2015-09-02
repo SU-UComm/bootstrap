@@ -13,7 +13,7 @@ var SUConfig = {
   repos:  { // repos where theme's files should be deployed
       'homepage':    '../su-homepage/assets',
       'cardinal':    '../themes-dw/assets/cardinal',
-      'lagunita':    '../wordpress/wp-content/themes/lagunita',
+      'lagunita':    '../themes-dw/assets/lagunita',
       'news-proto':  '../news-proto/assets',
       'wilbur':      '../themes-dw/assets/wilbur',
       'bootstrap':   '../themes-dw/assets/bootstrap'
