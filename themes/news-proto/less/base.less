@@ -26,21 +26,12 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: @su-red-text;
 }
 
-blockquote {
-  border-left: 5px solid @border-color;
-}
-
 div:focus { // for accessbility, some div's get focus - don't outline them
             outline: none;
 }
 
 dl {
   margin-top: 5px;
-}
-
-figcaption {
-  margin-top: 0.5em;
-  line-height: 1.4;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -90,7 +81,7 @@ input:-ms-input-placeholder {
   a {
     color:@su-cool-gray;
     .btn-category{
-//      background-color:#c0c0c0;
+      //      background-color:#c0c0c0;
       margin-bottom: 5px;
     }
   }
@@ -211,28 +202,6 @@ input:-ms-input-placeholder {
   }
 }
 
-.lead {
-  @font-size: 20px;
-  .font-size-em(@font-size);
-  .line-height(28; @font-size);
-  color: @su-warm-gray;
-
-}
-h2.headline {
-  @font-size: 24px;
-  .font-size-em(@font-size);
-  font-weight: 300;
-  color: @headings-color;
-  border-bottom: 1px solid @su-beige-40;
-}
-
-.larger {
-  @font-size: 18px;
-  .font-size-em(@font-size);
-  .line-height(20; @font-size);
-  font-weight: @headings-font-weight;
-}
-
 .margin-bottom-5  { .margin-bottom(5);  }
 .margin-bottom-10 { .margin-bottom(10); }
 .margin-bottom-20 { .margin-bottom(20); }
@@ -242,74 +211,11 @@ h2.headline {
 .margin-bottom-50 { .margin-bottom(50); }
 .margin-bottom-60 { .margin-bottom(60); }
 
-.more-link a,
-a.more-link {
-  font-weight: 600;
-  padding-left: 0;
-  padding-top: 2px;
-  display: inline;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: inherit;
-
-  &:hover {
-    color: @su-red;
-    text-decoration: underline;
-  }
-
-  i {
-    font-size: 1.1em;
-    color: @su-red;
-    margin-right: 0.3em;
-  }
-
-}
-
 .navbar {
   border: none;
 }
 
-img.banner-image {
-  background-color: rgba(0, 0, 0, 0);
-  border: 4px solid @su-beige-60;
-  display: block;
-  height: auto;
-  max-width: 100%;
-  padding: 2px; 
-}
 
-img.feature-image{
-  border-bottom: 3px solid @su-beige-60;
-  padding-bottom: 2px;  
-}
-.image-caption {
-  background-color: @su-beige-bg;
-  color: inherit;
-  text-shadow: none;
-  width: 100%;
-  position: static;
-  text-align: left;
-  padding: 10px;
-
-  h3, h4, p {
-    display: inline;
-    margin: 0;
-  }
-
-  h3, h4 {
-    font-size: 1em;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: @su-red-text;
-    margin-right: .4em;
-  }
-} // .image-caption
-
-#hero-image {
-  clear: both;
-  margin-bottom: 20px;
-  position: relative;
-}
 
 .screen-reader { // text that should be read by a screen reader but not rendered on screen
                  display: inline-block;
@@ -373,21 +279,10 @@ ul.vbar {
     padding: 2px;
   }
 
-  p.caption {
-    color: @su-warm-gray-60;
-    font-size: 13px;
-    font-style: italic;
-    letter-spacing: 0.01em;
-  }
-  .more-link {
-    text-align:right;
-  }
 }
 
 
 // sidebar styles - these apply to the newspage sidebar as well as in-set side bars for bio/related/sidebar story elements on story-level pages
-
-
 
 
 .sidebar-margin {
@@ -435,25 +330,6 @@ ul.vbar {
   margin-left: none;
 }
 
-// style wrapper, embeds to make embedded videos responsive
-.video-container {
-  position: relative;
-  padding-top: 30px;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-
-  & iframe,
-  & object,
-  & embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-
 .descriptor {
   font-size: 0.9em;
   font-weight: 600;
@@ -461,7 +337,6 @@ ul.vbar {
   line-height: 1.5;
   margin-bottom: 4px;
   color: @su-clay;
-
 }
 
 /////////////////////////////////
@@ -480,10 +355,6 @@ ul.vbar {
 
 aside {
 
-  div.sidebar-section {// to delete; only used on home page
-                       //margin-bottom: 3.5em;
-  }
-
   a {
     color: @text-color;
     text-decoration: none;
@@ -498,19 +369,13 @@ aside {
   text-decoration:none;
 }
 
-
 .card {
   border-top: none;
   border-left: none;
-  //border-right: 1px solid #cdccc7;
-  //border-bottom: 1px solid #cdccc7;
   background-color: @alt-bg;
   padding: 0px;
   position: relative;
   box-shadow: 0 0 8px @su-beige-40;
-  &:hover{
-    //background-color:@su-beige-40;
-  }
   &.facebook,
   &.instagram,
   &.twitter {
@@ -565,20 +430,6 @@ aside {
     }
   }
 
-  figure{//to delete
-         img{
-           float: left;
-           width: 100px;
-           height: 100px;
-           background-position: center;
-           background-size: cover;
-           background-repeat: no-repeat;
-           padding: 0;
-           margin: 0;
-           padding-right: 1em;
-           padding-bottom: 1em;
-         }
-  }
   .card-content {
     padding: 1.2em;
     width: inherit;
@@ -587,11 +438,8 @@ aside {
       .font-size-em(14px);
       font-weight: 400;
       font-family: @font-family-sans-serif;
-      //padding-left: 1.2em;
-      //padding-right: 1.2em;
       padding: 0;
       margin: 0;
-      //padding-bottom: 1.2em;
       line-height: 1.3em;     
     }
   }
@@ -602,9 +450,6 @@ aside {
     color: @su-red-text;
     font-size: 0.8em;
     font-weight: 600;
-    //padding-top: 1.2px;
-    //padding-left: 1.2em;
-    //padding-right: 1.2em;
   }
 
   h3 {
@@ -615,8 +460,6 @@ aside {
     margin-top: .2em;
     margin-bottom: .4em;
     padding: 0;
-    //padding-left: 1.2em;
-    //padding-right: 1.2em;
   }
 
   a {
@@ -682,18 +525,9 @@ aside {
       padding: 0;
       margin: 0;
     }
-    .image img {//to delete
-                float: none;
-                clear: both;
-                width: 100%;
-                height: auto;
-                padding: 0;
-                margin: 0;
-    }
   }
 
   &.story-card {
-
     h2 {
       color: @su-red;
       font-family: @font-family-serif;
@@ -758,9 +592,7 @@ aside {
   margin-bottom: 3em;
   mergin-left: 0px;
   h2 {
-  //  border-bottom: none;
-  //  text-align: center;
-  margin-right: 5px;
+    margin-right: 5px;
   }
   ul {
     padding-left: 0px;
@@ -779,14 +611,14 @@ aside {
     }
   }
   .btn-light{
-      background-color:transparent;
-      border:1px solid @su-cool-gray;
-      padding:12px;
-      &:hover{
-        color: white;
-        background: @su-cool-gray;
-        border-color: @su-cool-gray;
-      }
+    background-color:transparent;
+    border:1px solid @su-cool-gray;
+    padding:12px;
+    &:hover{
+      color: white;
+      background: @su-cool-gray;
+      border-color: @su-cool-gray;
+    }
   }
 }
 
