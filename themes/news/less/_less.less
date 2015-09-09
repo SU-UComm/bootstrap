@@ -1,0 +1,69 @@
+/////////////////////////////////
+// Bootstrap variables and mixins
+@import "variables.less";
+@import "mixins.less";
+
+
+/////////////////////////////////
+// UComm variables
+@border-color: #E3DFD5;
+@btn-txt: @su-clay;
+@heading-weight: 300;
+
+
+/////////////////////////////////
+// UComm mixins
+.font-size-em (@target-px, @base-px:@font-size-base) {
+  font-size: unit( round( (unit(@target-px) / unit(@base-px)), 5 ), em );
+}
+
+.line-height (@target-px, @base-px:@font-size-base) {
+  line-height: round( (unit(@target-px) / unit(@base-px)), 5 );
+}
+
+.margin-bottom (@margin) {
+  margin-bottom: unit(@margin, px);
+  clear: both;
+}
+
+.small-square { // for li's - use a small clay square as the bullet
+  color: @su-clay;
+  position: absolute;
+  top: 0;
+  margin: 0 0 0 -15px;
+  content: '\25AA';
+}
+
+.su-btn (@bg, @fg:white, @border:darken(@bg,5%), @bg-hover:lighten(@bg,5%), @fg-hover:@fg, @border-hover:@border) {
+  background-color: @bg;
+  border-color: @border;
+  color: @fg;
+  text-decoration: none;
+  padding: 12px 3px;
+
+  &:hover, &:focus, &:active {
+    background-color: @bg-hover;
+    border-color: @border-hover;
+    color: @fg-hover;
+    text-decoration: none;
+  }
+}
+
+.background-gradient (@start, @stop) {
+    background: mix(@start, @stop, 50%);
+    background: -webkit-gradient(linear, left top, left bottom, from(@start), to(@stop));
+    background: -webkit-linear-gradient(top, @start, @stop);
+    background:    -moz-linear-gradient(top, @start, @stop);
+    background:      -o-linear-gradient(top, @start, @stop);
+    background:         linear-gradient(to bottom, @start, @stop);
+}
+
+// Webkit-style focus
+.tab-focus() {
+  // Default
+  outline: 2px solid @su-sky;
+  text-decoration: none;
+  // Webkit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}

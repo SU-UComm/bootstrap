@@ -9,12 +9,13 @@
 var util = require('util');
 
 var SUConfig = {
-  themes: ['homepage', 'cardinal', 'lagunita', 'news-proto', 'wilbur', 'bootstrap'], // valid themes
+  themes: ['homepage', 'cardinal', 'lagunita', 'news-proto', 'news', 'wilbur', 'bootstrap'], // valid themes
   repos:  { // repos where theme's files should be deployed
       'homepage':    '../su-homepage/assets',
       'cardinal':    '../themes-dw/assets/cardinal',
       'lagunita':    '../themes-dw/assets/lagunita',
       'news-proto':  '../news-proto/assets',
+      'news':        '../wpe-stanfordnews/wp-content/themes/news',
       'wilbur':      '../themes-dw/assets/wilbur',
       'bootstrap':   '../themes-dw/assets/bootstrap'
     },
@@ -25,8 +26,15 @@ var SUConfig = {
           'js/collapse.js'
         ],
       'cardinal':    '<%= concat.bootstrap.src %>', // same as vanilla bootstrap
+      'news-proto': [
+        'js/transition.js',
+        'js/collapse.js'
+      ],
+      'news': [
+        'js/transition.js',
+        'js/collapse.js'
+      ],
       'lagunita':    '<%= concat.bootstrap.src %>', // same as vanilla bootstrap
-      'news-proto':  '<%= concat.bootstrap.src %>', // same as vanilla bootstrap
       'wilbur':      '<%= concat.bootstrap.src %>', // same as vanilla bootstrap
       'bootstrap':   '<%= concat.bootstrap.src %>'  // same as vanilla bootstrap
     }

@@ -1,0 +1,680 @@
+@import "_less.less";
+
+
+/////////////////////////////////
+// Google Fonts
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,400italic|Source+Serif+Pro:400,700);
+
+/////////////////////////////////
+// Bootstrap overrides
+.container {
+  padding: 0; // remove 15px padding on left and right so elements actually lay on the grid
+}
+
+
+/////////////////////////////////
+// Elements
+a, a:hover, a:active {
+  outline: 0;
+}
+a:focus,
+button:focus {
+  .tab-focus();
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  text-decoration: none;
+  color: @su-red-text;
+}
+
+div:focus { // for accessbility, some div's get focus - don't outline them
+            outline: none;
+}
+
+dl {
+  margin-top: 5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 5px 0;
+
+  i {
+    margin-right: 7px;
+  }
+}
+h1 {
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+li {
+  .line-height(20);
+}
+
+hr {
+  border-color: @su-beige-40;
+}
+
+label {
+  font-weight: 600;
+}
+
+input::-webkit-input-placeholder {
+  color: rgba(0,0,0,.6) !important; 
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+  color: rgba(0,0,0,1) !important; 
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+  color: rgba(0,0,0,1) !important;  
+}
+
+input:-ms-input-placeholder {  
+  color: rgba(0,0,0,.6) !important; 
+}
+
+
+/////////////////////////////////
+// General classes, id's
+.topics-buttons {
+  a {
+    color:@su-cool-gray;
+    .btn-category{
+      //      background-color:#c0c0c0;
+      margin-bottom: 5px;
+    }
+  }
+}
+.btn {
+  line-height: 1;
+}
+
+.btn-one   { .su-btn(@su-mint); }
+.btn-two   { .su-btn(@su-lagunita); }
+.btn-three { .su-btn(@su-sage-gray); }
+.btn-four  {.su-btn(@su-red); }
+.btn-su-alert { .su-btn(@su-warm-gray); }
+.btn-category {margin-bottom: 5px;}
+
+.btn-u {
+  display: inline-block;
+  position: relative;
+  padding: 8px 13px;
+  border: 0;
+  cursor: pointer;
+  background: @su-beige-40;
+  color: @btn-txt;
+  .font-size-em(15); // 15px expressed as em's
+  text-decoration: none;
+  text-shadow: none;
+
+  &:hover {
+    color: @su-beige-05;
+    background: @su-warm-gray;
+    text-decoration: none;
+    .transition(all 0.4s ease-in-out);
+  }
+
+  i {
+    .font-size-em(17; 15);
+  }
+}
+
+.small-square {
+  color: #5f574f;
+  position: absolute;
+  top: 0;
+  margin: 0 0 0 -15px;
+  content: '\25AA';
+}
+
+.color-red {
+  color: @su-red-text;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+#hero-image img {
+  .img-responsive;
+}
+
+.info-box {
+  margin: 0 15px 30px;
+  display: table;
+
+  .icon-container,
+  .text-container {
+    display: table-cell;
+    vertical-align: top;
+    min-width: 65px;
+  }
+
+  .icon-container {
+    text-align: center;
+  }
+  .text-container {
+    padding-left: 15px;
+  }
+
+  .offset {
+    padding-left: 65px;	
+  }
+
+  i {
+    color: #DAD7CB;
+    margin: 0;
+  }
+
+  h2 {
+    .font-size-em(18);
+    font-weight: normal;
+    line-height: 1.2em;
+    padding: 5px 0;
+    text-transform: uppercase;
+    color: @su-red-text;
+  }
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      line-height: 1.1em;
+      margin-bottom: 10px;
+    }
+  }
+
+
+  dt {
+    font-size: 1.1em;
+  }
+
+  dt, li {
+    a	{
+      text-decoration: none;
+      &:hover, &:active {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.margin-bottom-5  { .margin-bottom(5);  }
+.margin-bottom-10 { .margin-bottom(10); }
+.margin-bottom-20 { .margin-bottom(20); }
+.margin-bottom-25 { .margin-bottom(25); }
+.margin-bottom-30 { .margin-bottom(30); }
+.margin-bottom-40 { .margin-bottom(40); }
+.margin-bottom-50 { .margin-bottom(50); }
+.margin-bottom-60 { .margin-bottom(60); }
+
+.navbar {
+  border: none;
+}
+
+
+
+.screen-reader { // text that should be read by a screen reader but not rendered on screen
+                 display: inline-block;
+                 position: absolute;
+                 font-size: 0;
+                 line-height: 0;
+                 height: 1px;
+                 overflow: hidden;
+}
+
+ul.vbar {
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    padding: 0 0.5em;
+    border-right: 1px solid @text-color;
+  }
+  li:first-of-type { padding-left: 0; }
+  li:last-of-type  { border-right: none; }
+}
+
+.well {
+  box-shadow: none;
+  border: medium none;
+  border-radius: 10px 10px 10px 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  background: white;
+
+  h2 {
+    padding: 10px 0 4px;
+    font-size: 1.2em;
+    //text-transform: uppercase;
+    border-bottom: none;
+    color: @su-red-text;
+  }
+
+  h3 {
+    font-size: 1em;
+    text-transform: uppercase;
+  }
+
+
+  ul {
+    list-style-type: square;
+    list-style-image: url('../images/bullet.gif');
+
+    li {
+      position: relative;
+      margin-bottom: 7px;
+      line-height: 1.1em;
+    }
+  }
+
+  img {
+    .img-responsive;
+    background-color: rgba(0, 0, 0, 0);
+    margin-bottom: 6px;
+    padding: 2px;
+  }
+
+}
+
+
+// sidebar styles - these apply to the newspage sidebar as well as in-set side bars for bio/related/sidebar story elements on story-level pages
+
+
+.sidebar-margin {
+  margin-left: 2em;
+  margin-right:2em;
+}
+
+.sidebar-section {
+  //margin-left: 2em;
+  //margin-right: 2em;
+  h2 {
+    color: @su-red;
+    font-family: @font-family-serif;
+    .font-size-em(24; 18);
+    //background: @su-beige-20;
+    padding: 5px;
+    margin-left: -5px;
+    margin-bottom: .5em;
+    border-bottom: 1px solid @su-beige-40;
+  }
+
+  p{
+    color: @su-black;
+    .font-size-em(16; 16);
+    line-height: 1.2em;
+    margin-top: .1em;
+    margin-bottom: 1.4em;
+  }
+  p.side-byline {
+    color: @su-red;
+    font-size: .8em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0em;
+  }
+  li {
+
+  }
+  .sidebar-icon {
+    font-size: 12px;
+  }
+}
+
+.page-section {
+  margin-left: none;
+}
+
+.descriptor {
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  margin-bottom: 4px;
+  color: @su-clay;
+}
+
+/////////////////////////////////
+// Page Regions
+
+#top {
+  min-height: 10px;
+  padding: 4px 0 0;
+  background-color: @su-red;
+  color: @su-red;
+}
+
+#content {
+  margin-bottom: 20px;
+}
+
+aside {
+
+  a {
+    color: @text-color;
+    text-decoration: none;
+  }
+
+}
+
+/////////////////////////////////
+// Card styles
+
+.no-underline, .no-underline:hover{
+  text-decoration:none;
+}
+
+.card {
+  border-top: none;
+  border-left: none;
+  background-color: @alt-bg;
+  padding: 0px;
+  position: relative;
+  box-shadow: 0 0 8px @su-beige-40;
+  &.facebook,
+  &.instagram,
+  &.twitter {
+    .card-photo{
+      i{
+        padding-top:1.2em;
+        //padding-bottom:.5em;
+        display:block;
+        color:@su-warm-gray-60;
+      }
+      img{
+        float:none !important;
+      }
+    }
+    h3 {
+      font-family: @font-family-sans-serif;
+      .font-size-em(18px);
+      font-weight: normal;
+      &:hover{
+        text-decoration:underline;
+      }
+      text-align: center;
+    }
+    p {
+      text-align: left;
+    }
+    a {
+      color: @su-red;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .share {
+      padding-top:1em;
+    }
+    &.instagram{
+      .card-photo{
+        i{
+          padding-bottom:.5em;
+        }
+        img{
+          width:200px;
+        }
+      }
+    }
+    &.twitter, &.facebook{
+      .card-content{
+        &>img{
+          width:250px;
+        }
+      }
+    }
+  }
+
+  .card-content {
+    padding: 1.2em;
+    width: inherit;
+    clear: both;
+    p{
+      .font-size-em(14px);
+      font-weight: 400;
+      font-family: @font-family-sans-serif;
+      padding: 0;
+      margin: 0;
+      line-height: 1.3em;     
+    }
+  }
+
+  .category {
+    display: block;
+    text-transform: uppercase;
+    color: @su-red-text;
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+
+  h3 {
+    .font-size-em(18);
+    font-weight: 600;
+    font-family: @font-family-serif;
+    margin: 0;
+    margin-top: .2em;
+    margin-bottom: .4em;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      color: @su-red;
+      text-decoration: underline;
+    }
+  }
+
+  time {
+    display: block;
+    text-transform: uppercase;
+    color: @su-red-text;
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+  &.short{
+    padding:0 1.2em;
+    .card-content{
+      display:inline;
+    }
+    .card-photo{
+      margin-top:1.5em;
+      float:right;
+      padding-left:1em;
+      padding-bottom:1em;      
+      img{
+        width:100px;
+        height:100px;
+
+      }
+    }
+  }
+  &.full {
+    img{
+      float: none;
+      clear: both;
+      width: 100%;
+      height: auto;
+      padding: 0px;
+      margin: 0;
+      padding-bottom: 0px;
+    }
+    .card-content {
+      display: block;
+      height: auto;
+    }
+    h3{
+      font-size:2.1em;
+    }
+    .teaser{
+      font-size:1.1em;
+      line-height:1.4;
+    }
+  }
+
+  &.large {
+    img {
+      width: 100%;
+      height: auto;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &.story-card {
+    h2 {
+      color: @su-red;
+      font-family: @font-family-serif;
+      .font-size-em(24);
+      font-weight: normal;
+      text-align: center;
+      //background: @su-beige-20;
+      padding: 5px;
+      margin-left: -5px;
+      margin-bottom: .5em;
+    }
+
+    h3 {
+      font-family: @font-family-serif;
+    }
+    h3.sidebar-subhead {
+      font-family: @font-family-sans-serif;
+    }
+    .related-story {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      h3 {
+        padding: none;
+        margin: none;
+        margin-bottom: 1em;
+      }
+    }
+    p{
+      color: @su-black;
+      font-family: @font-family-sans-serif;
+      .font-size-em(18; 16);
+      line-height: 1.4em;
+      margin-top: .1em;
+      padding-bottom: 1.4em;
+    }
+
+    .card-content-side {
+      padding-top: .01em;
+      clear: both;
+      margin: 1em;
+
+      img {
+        float: left;
+        margin-right: 0em;
+        width: 120px;
+        height: 120px;
+      }
+    }
+  }
+}
+
+
+#find-search {
+  width: 80%;
+  padding: .3em;
+}
+
+.find-a-story {
+  //text-align: center;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  mergin-left: 0px;
+  h2 {
+    margin-right: 5px;
+  }
+  ul {
+    padding-left: 0px;
+    margin-left: 0px;
+    li {
+      list-style-type: none;
+      padding-left: 0px;
+      margin-left: 0px;
+      margin-bottom: .6em;
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .btn-light{
+    background-color:transparent;
+    border:1px solid @su-cool-gray;
+    padding:12px;
+    &:hover{
+      color: white;
+      background: @su-cool-gray;
+      border-color: @su-cool-gray;
+    }
+  }
+}
+
+#searchresult {
+  font-size: 30px;
+}
+
+.datepicker {
+  input {
+    width: 100px;
+  }
+}
+
+
+
+// Search / Find a Story styles //
+
+.find-sections {
+  li {
+    float: left;
+    width: 220px;
+    display: block;
+    font-size: 18px;
+    line-height: 2em;
+  }
+}
+
+.section-icon {
+  width: 27px;
+}
+
+.btn-category{
+  background-color:#c0c0c0;
+}
+
+.btn-three {
+  margin-bottom: 10px;
+}
+
+/////////////////////////////////
+// Header, Footer
+@import "_header.less";
+@import "_footer.less";
+
+
+/////////////////////////////////
+// classes whose visibility we can test in JS to determine screen size
+// classes will be made visible in the appropriate breakpoints in base-responsive.less
+.size-detect-xs,
+.size-detect-sm,
+.size-detect-md,
+.size-detect-lg  {
+  display: none;
+}
+
+
+/////////////////////////////////
+// media queries
+@import "_base-responsive.less";
