@@ -183,6 +183,18 @@ article {
       img {
         width: 36px;
       }
+
+      &:hover {
+        .fa-facebook-square {
+          color: @facebook-blue;
+        }
+        .fa-twitter-square {
+          color: @twitter-blue;
+        }
+        .fa-envelope-square {
+          color: #B43525;
+        }
+      }
     }
   }
   .byline {
@@ -227,12 +239,19 @@ article {
     }
     .pull-left{
       a{
-        background-color:@gray-lighter;
         color: black;
+        text-decoration: none;
       }
     }
     .btn-category{
       background-color:#c0c0c0;
+      &:hover {
+        color: white;
+        background-color: @su-cool-gray;
+        a {
+          color: white;
+        }
+      }
     }
 }
 
