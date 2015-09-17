@@ -59,10 +59,10 @@ article {
     }
   }
   .media-attrib{//replaces .photo-credit
-    font-style:italic;
-    text-align:right;
-    margin-bottom:0.2em;//0.5
-    font-size: 1em;
+                font-style:italic;
+                text-align:right;
+                margin-bottom:0.2em;//0.5
+                font-size: 1em;
   }
   .media-caption{
     margin-top:.5em;
@@ -155,7 +155,7 @@ article {
           line-height: 1.6;
         }
         img{//twitter
-          width:100% !important;
+            width:100% !important;
         }
       }
       .card-photo{
@@ -163,11 +163,11 @@ article {
           width:70% !important;
         }
       }        
-     img{
+      img{
         &.share{
           padding:1em 0;
           width:auto;
-      }
+        }
       }
     }
   }
@@ -203,7 +203,7 @@ article {
     }
   }
   #media-contact{
-    margin-top:4em;      
+    //margin-top:4em;      
     p{
       margin:0;
       font-family: @font-family-sans-serif; 
@@ -221,19 +221,19 @@ article {
   margin-top: 1em;
   padding-top: 1.5em;
   .pull-right{
-      a{
-        color:@su-cool-gray;
-      }
+    a{
+      color:@su-cool-gray;
     }
-    .pull-left{
-      a{
-        background-color:@gray-lighter;
-        color: black;
-      }
+  }
+  .pull-left{
+    a{
+      background-color:@gray-lighter;
+      color: black;
     }
-    .btn-category{
-      background-color:#c0c0c0;
-    }
+  }
+  .btn-category{
+    background-color:#c0c0c0;
+  }
 }
 
 #bottom{
@@ -288,103 +288,10 @@ article {
   background-image: url('../images/commencement-infobox-back.png');
 }
 
-
-/*** temp space for print ***/
-@media print{
-  /*@page{
-    size: 8.5in 11in;
-  };*/
-  
-  body{
-    font-size: 1em;
-  }
-  
-  h1, h2, h3, h4, h5, h6{
-    page-break-after: avoid;
-  }
-  ul, img{
-    page-break-inside: avoid;
-  }
-  a:after > img{
-    content: "";
-  }
-  #logo{
-    img{
-      width:200px;
-    }
-  }
-  #signature{
-    position:relative;
-    vertical-align: baseline;
-    top:4px;//15
-    #site-name{
-      font-weight: 500;
-      font-size:40px;
-    }
-  }
-  #header{
-    padding-bottom:0;
-  }
-  *{   
-    margin:0 !important;
-  }
-  article{
-    margin-top:0;
-    .col-lg-10, .col-lg-8{
-      width:100%;
-      margin-left:0;
-    }
-    img{
-      width:50%;
-    }
-    h1{
-      font-size: 2.5em;
-      font-weight:500;
-    }
-    .story-margin-top{
-      margin-top:1em;
-    }
-    .pull-right-wide{
-      margin:0 0 0 1em;     
-    }
-    .visible-print-styles{
-      padding:10px;
-      border:1px solid black;
-    }
-    #main-bottom{
-      margin-top:0;
-      padding-top:0;
-    }
-  }
-  /*article{  //Chrome prints out urls 
-    a[href^=http]:after{
-      content: " <" attr(href) "> ";
-    }
-  }*/
-  #header{
-    img{
-      filter: url(inverse.svg#negative);
-      -webkit-filter: invert(100%);
-      filter: invert(100%);
-    }
-  }
-
-  .container{
-    //width:auto;
-  }
-  
-  /*** items to hide ***/
-  
-  
-  
-  
-}
-
-
-
 /////////////////////////////////
 // media queries
 @import "_story-responsive.less";
+@import "print.less";
 
 
 
