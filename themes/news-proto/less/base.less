@@ -36,7 +36,6 @@ dl {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 5px 0;
-
   i {
     margin-right: 7px;
   }
@@ -44,6 +43,11 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-weight: 300;
   margin-bottom: 25px;
+  font-family: @font-family-serif;
+  color:@su-red;
+  margin-top:1.5em;
+  font-size:2.2em;
+  border-bottom:1px solid @su-beige-40;
 }
 
 li {
@@ -350,7 +354,7 @@ ul.vbar {
 }
 
 #content {
-  margin-bottom: 20px;
+  margin-bottom: 3em;//20px
 }
 
 aside {
@@ -586,7 +590,7 @@ aside {
   padding: .3em;
 }
 
-.find-a-story {
+.find-a-story, #non-story-content {
   //text-align: center;
   margin-top: 3em;
   margin-bottom: 3em;
@@ -622,7 +626,7 @@ aside {
   }
 }
 
-#searchresult {
+#searchresult {//this should be the font size for h1 only
   font-size: 30px;
 }
 
