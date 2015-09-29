@@ -40,16 +40,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 7px;
   }
 }
-h1 {
-  //font-weight: 300;
-  margin-bottom: 25px;
-  font-family: @font-family-serif;
-  color:@su-red;
-  margin-top:1.5em;
-  font-size:2.2em;
-  border-bottom:1px solid @su-beige-40;
-}
-
 li {
   .line-height(20);
 }
@@ -285,6 +275,18 @@ ul.vbar {
 
 }
 
+.non-story{
+  h1 {
+      //font-weight: 300;
+      margin-bottom: 25px;
+      font-family: @font-family-serif;
+      color:@su-red;
+      //margin-top:1.5em;
+      font-size:2.2em;
+      border-bottom:1px solid @su-beige-40;
+    }
+}
+
 
 // sidebar styles - these apply to the newspage sidebar as well as in-set side bars for bio/related/sidebar story elements on story-level pages
 
@@ -354,6 +356,7 @@ ul.vbar {
 }
 
 #content {
+  margin-top:3em;
   margin-bottom: 3em;//20px
 }
 
@@ -590,7 +593,9 @@ aside {
   padding: .3em;
 }
 
-.find-a-story, #non-story-content {
+
+// Styles for Find Stories page
+.find-a-story{
   //text-align: center;
   margin-top: 3em;
   margin-bottom: 3em;
@@ -599,12 +604,12 @@ aside {
     margin-right: 5px;
   }
   ul {
-    padding-left: 0px;
-    margin-left: 0px;
+    padding-left: 0;
+    margin-left: 0;
     li {
       list-style-type: none;
-      padding-left: 0px;
-      margin-left: 0px;
+      padding-left: 0;
+      margin-left: 0;
       margin-bottom: .6em;
       a {
         text-decoration: none;
@@ -626,7 +631,9 @@ aside {
   }
 }
 
-#searchresult {//this should be the font size for h1 only
+
+
+#searchresult {//this should be the font size for h1 only; delete it
   font-size: 30px;
 }
 
