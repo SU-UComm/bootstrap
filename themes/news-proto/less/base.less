@@ -238,9 +238,8 @@ ul.vbar {
   border: medium none;
   border-radius: 10px 10px 10px 10px;
   padding: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 3em;
   background: white;
-
   h2 {
     padding: 10px 0 4px;
     font-size: 1.2em;
@@ -248,10 +247,10 @@ ul.vbar {
     border-bottom: none;
     color: @su-red-text;
   }
-
   h3 {
     font-size: 1em;
-    text-transform: uppercase;
+    //text-transform: uppercase;
+    font-weight:700; 
   }
 
 
@@ -272,19 +271,22 @@ ul.vbar {
     margin-bottom: 6px;
     padding: 2px;
   }
-
-}
-
-.non-story{
-  h1 {
-      //font-weight: 300;
-      margin-bottom: 25px;
-      font-family: @font-family-serif;
-      color:@su-red;
-      //margin-top:1.5em;
-      font-size:2.2em;
-      border-bottom:1px solid @su-beige-40;
+  &.well-calendar-list{
+    h3{
+      display:inline-block;
+      padding-right:4px;
     }
+    ul{
+      display:inline-block;
+      padding:0;
+      list-style-type:none;
+      li{
+        display:inline-block;
+        padding-right:3px;
+      }
+    }
+    
+  }
 }
 
 
@@ -297,8 +299,6 @@ ul.vbar {
 }
 
 .sidebar-section {
-  //margin-left: 2em;
-  //margin-right: 2em;
   h2 {
     color: @su-red;
     font-family: @font-family-serif;
@@ -344,6 +344,100 @@ ul.vbar {
   margin-bottom: 4px;
   color: @su-clay;
 }
+
+
+/////////////////////////////////
+// Non-story page styles
+.non-story{
+  h1 {
+    margin-bottom: .7em;
+    font-family: @font-family-serif;
+    color:@su-red;
+    font-size:2.2em;
+    border-bottom:1px solid @su-beige-40;
+  }
+  h2 {
+    color: @su-red;
+    font-family: @font-family-serif;
+    .font-size-em(24; 18);
+    //background: @su-beige-20;
+    padding: 5px;
+    margin-left: -5px;
+    margin-bottom: .5em;
+    border-bottom: 1px solid @su-beige-40;
+  }
+  p{
+    color: @su-black;
+    .font-size-em(16; 16);
+    line-height: 1.4;
+    margin-top: .1em;
+    &.lead{
+      margin-bottom:3em;
+      font-weight:inherit;
+    }
+  }
+  .non-story-wrapper{
+    margin-bottom:2em;
+    ul{
+      list-style-type: none;
+      padding:0;
+      margin:0;
+      li{
+        line-height:1.7;
+      }
+    }
+    a{
+      h3{
+        font-size:1em;
+        font-weight:700;
+      }
+    }
+    &.classified-ad{
+      h2{
+        border:none;
+        font-family: @font-family-sans-serif;
+        color:@su-black;
+        font-size:1.6em;
+        margin-bottom:.2em;
+      }
+      h3{
+        font-weight:700;
+        font-size:1.1em;
+      }
+    }   
+    /*h2{
+      &#todo-heading{
+        font-family:@font-family-sans-serif;
+        color:@su-black;
+        font-weight:400;
+        line-height:1.2;
+        border:none;
+        font-size:1.5em;
+        margin-bottom:1em;
+      }
+    }*/
+  }
+  .non-story-buttons{
+    .pull-right{
+      .fa{
+        margin-right:5px;
+      }
+    }
+  }
+  .source-label{
+    padding-bottom:.5em;
+    display:inline-block;
+  }
+
+}
+
+
+
+
+
+
+
+
 
 /////////////////////////////////
 // Page Regions
@@ -588,53 +682,24 @@ aside {
 }
 
 
-#find-search {
-  width: 80%;
-  padding: .3em;
-}
+
 
 
 // Styles for Find Stories page
 .find-a-story{
-  //text-align: center;
-  margin-top: 3em;
-  margin-bottom: 3em;
-  mergin-left: 0px;
-  h2 {
-    margin-right: 5px;
-  }
-  ul {
-    padding-left: 0;
-    margin-left: 0;
-    li {
-      list-style-type: none;
-      padding-left: 0;
-      margin-left: 0;
-      margin-bottom: .6em;
-      a {
-        text-decoration: none;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-  .btn-light{
-    background-color:transparent;
-    border:1px solid @su-cool-gray;
-    padding:12px;
-    &:hover{
-      color: white;
-      background: @su-cool-gray;
-      border-color: @su-cool-gray;
-    }
-  }
+
+
 }
-
-
-
-#searchresult {//this should be the font size for h1 only; delete it
-  font-size: 30px;
+#find-search {
+  width: 80%;
+  padding: .3em;
+}
+.search-or{
+  p{
+    text-align:center;
+    font-size:2em;
+    line-height:2;
+  }
 }
 
 .datepicker {
@@ -647,19 +712,43 @@ aside {
 
 // Search / Find a Story styles //
 
-.find-sections {
-  li {
-    float: left;
-    width: 220px;
-    display: block;
-    font-size: 18px;
-    line-height: 2em;
+.find-stories{
+  ul {
+    list-style-type: none;    
+    padding-left: 0;
+    margin:0;
+
+    li {
+      display:inline-block;
+      width: 220px;
+      padding-left: 0;
+      margin-left: 0;
+      margin-bottom: .6em;
+      font-size: 18px;
+      line-height: 2em;
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .section-icon {
+        padding-right:1em;
+      }
+    }
   }
+  .btn-light{
+    background-color:transparent;
+    border:1px solid @su-cool-gray;
+    padding:12px;
+    &:hover{
+      color: white;
+      background: @su-cool-gray;
+      border-color: @su-cool-gray;
+    }
+  }  
 }
 
-.section-icon {
-  width: 27px;
-}
 
 .btn-category{
   background-color:#c0c0c0;
@@ -668,6 +757,9 @@ aside {
 .btn-three {
   margin-bottom: 10px;
 }
+
+
+
 
 /////////////////////////////////
 // Header, Footer
