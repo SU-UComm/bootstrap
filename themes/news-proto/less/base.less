@@ -322,7 +322,7 @@ ul.vbar {
     font-size: .8em;
     font-weight: 600;
     text-transform: uppercase;
-    margin-bottom: 0em;
+    margin-bottom: 0;
   }
   li {
 
@@ -510,27 +510,36 @@ aside {
       }
     }
     .share {
-      padding-top:1em;
+      //padding-top:1em;
     }
-    &.instagram{
-      .card-photo{
-        i{
-          padding-bottom:.5em;
-        }
-        img{
-          width:200px;
-        }
+  }
+  &.instagram{
+    .card-photo{
+      i{
+        padding-bottom:.5em;
       }
-    }
-    &.twitter, &.facebook{
-      .card-content{
-        &>img{
-          width:250px;
-        }
+      img{
+        width:200px;
       }
     }
   }
-
+  &.twitter, &.facebook{
+    .card-content{
+      &>img{
+        width:250px;
+        padding-bottom:1em;
+      }
+    }
+  }
+  &.twitter{
+    .card-content{
+      p{
+        font-size:1.3em;
+        text-align:center;
+        line-height:1.4 !important;
+      }
+    }
+  }
   .card-content {
     padding: 1.2em;
     width: inherit;
@@ -541,7 +550,8 @@ aside {
       font-family: @font-family-sans-serif;
       padding: 0;
       margin: 0;
-      line-height: 1.3em;     
+      line-height: 1.3em; 
+      margin-bottom:1em;
     }
   }
 
@@ -625,58 +635,6 @@ aside {
       height: auto;
       padding: 0;
       margin: 0;
-    }
-  }
-
-  &.story-card {
-    h2 {
-      color: @su-red;
-      font-family: @font-family-serif;
-      .font-size-em(24);
-      font-weight: normal;
-      text-align: center;
-      //background: @su-beige-20;
-      padding: 5px;
-      margin-left: -5px;
-      margin-bottom: .5em;
-    }
-
-    h3 {
-      font-family: @font-family-serif;
-    }
-    h3.sidebar-subhead {
-      font-family: @font-family-sans-serif;
-    }
-    .related-story {
-      clear: both;
-      margin: 0;
-      padding: 0;
-      h3 {
-        padding: none;
-        margin: none;
-        margin-bottom: 1em;
-      }
-    }
-    p{
-      color: @su-black;
-      font-family: @font-family-sans-serif;
-      .font-size-em(18; 16);
-      line-height: 1.4em;
-      margin-top: .1em;
-      padding-bottom: 1.4em;
-    }
-
-    .card-content-side {
-      padding-top: .01em;
-      clear: both;
-      margin: 1em;
-
-      img {
-        float: left;
-        margin-right: 0em;
-        width: 120px;
-        height: 120px;
-      }
     }
   }
 }
