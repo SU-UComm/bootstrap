@@ -26,6 +26,14 @@
   clear: both;
 }
 
+.center-vertical (@position:relative) {
+  position: @position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .small-square { // for li's - use a small clay square as the bullet
   color: @su-clay;
   position: absolute;
