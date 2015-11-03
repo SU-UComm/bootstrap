@@ -182,10 +182,7 @@ article {
         //padding: 5px;
       }
       h3 {
-        font-family: @font-family-serif;
-        &.sidebar-subhead{
-          font-family: @font-family-sans-serif;
-        }
+        font-family: @font-family-sans-serif;
       }
       /*.related-story {
         clear: both;
@@ -207,12 +204,31 @@ article {
           line-height: 1.4em;
           margin-top: .1em;
           //padding-bottom: 1.4em;
-        }        
-        img {
-          float: left;
-          margin-right: 1em;
-          width: 120px;
-          height: 120px;
+          &.media-attrib,
+          &.media-caption {
+            font-size: inherit;
+          }
+        }
+        a {
+          text-decoration: underline;
+        }
+        .pull-left-wide,
+        .pull-left-narrow,
+        .pull-left-portrait,
+        .pull-right-wide,
+        .pull-right-narrow,
+        .pull-right-portrait{
+          margin: 0 1em 0 0; // for pull-left-*
+          width: auto;
+          img {
+            width: 120px;
+            height: 120px;
+          }
+        }
+        .pull-right-wide,
+        .pull-right-narrow,
+        .pull-right-portrait{
+          margin: 0 0 0 1em;
         }
         &.popular-stories{
           font-family: @font-family-serif;
