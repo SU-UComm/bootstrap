@@ -233,7 +233,7 @@ article {
         &.popular-stories{
           font-family: @font-family-serif;
           ul{
-            margin-bottom:0;
+            margin-bottom: 1.5em;
             li{
               font-size:1.3em;
               font-weight:400;
@@ -241,7 +241,22 @@ article {
           }
         }
       }
-    }    
+    }
+    &.related-story:after {
+      .bottom-right-text;
+      content: "Related Story";
+    }
+    &.related-stories:after {
+      .bottom-right-text;
+      content: "Related Stories";
+    }
+    &.related-story,
+    &.related-stories {
+      padding-bottom: 0.6em;
+      hr {
+        margin-top: -1em;
+      }
+    }
     &.story-social{
       background: none;
       box-shadow: none;
