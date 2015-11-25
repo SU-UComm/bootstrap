@@ -1,6 +1,4 @@
 @import "_less.less";
-
-
 /////////////////////////////////
 // Google Fonts
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,400italic|Source+Serif+Pro:400,600,700);
@@ -11,26 +9,28 @@
   padding: 0; // remove 15px padding on left and right so elements actually lay on the grid
 }
 
-
 /////////////////////////////////
 // Elements
 a {
   font-weight: 600;
 }
+
 a, a:hover, a:active {
   outline: 0;
 }
+
 a:focus,
 button:focus {
   .tab-focus();
 }
+
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   text-decoration: none;
   color: @su-red-text;
 }
 
 div:focus { // for accessbility, some div's get focus - don't outline them
-            outline: none;
+  outline: none;
 }
 
 dl {
@@ -43,6 +43,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 7px;
   }
 }
+
 li {
   .line-height(20);
 }
@@ -56,43 +57,62 @@ label {
 }
 
 input::-webkit-input-placeholder {
-  color: rgba(0,0,0,.6) !important; 
+  color: rgba(0, 0, 0, .6) !important;
 }
 
-input::-moz-placeholder {  /* Firefox 19+ */
-  color: rgba(0,0,0,1) !important; 
+input::-moz-placeholder { /* Firefox 19+ */
+  color: rgba(0, 0, 0, 1) !important;
 }
 
 input:-moz-placeholder { /* Firefox 18- */
-  color: rgba(0,0,0,1) !important;  
+  color: rgba(0, 0, 0, 1) !important;
 }
 
-input:-ms-input-placeholder {  
-  color: rgba(0,0,0,.6) !important; 
+input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, .6) !important;
 }
-
 
 /////////////////////////////////
 // General classes, id's
 .topics-buttons {
   a {
-    color:@su-cool-gray;
-    .btn-category{
+    color: @su-cool-gray;
+    .btn-category {
       //      background-color:#c0c0c0;
       margin-bottom: 5px;
     }
   }
 }
+
 .btn {
   line-height: 1;
 }
 
-.btn-one      { .su-btn(@su-mint); }
-.btn-two      { .su-btn(@su-lagunita); }
-.btn-three    { .su-btn(@su-sage-gray); margin-bottom: 10px; }
-.btn-four     { .su-btn(@su-red); }
-.btn-su-alert { .su-btn(@su-warm-gray); }
-.btn-category { background-color: #c0c0c0; margin-bottom: 5px;}
+.btn-one {
+  .su-btn(@su-mint);
+}
+
+.btn-two {
+  .su-btn(@su-lagunita);
+}
+
+.btn-three {
+  .su-btn(@su-sage-gray);
+  margin-bottom: 10px;
+}
+
+.btn-four {
+  .su-btn(@su-red);
+}
+
+.btn-su-alert {
+  .su-btn(@su-warm-gray);
+}
+
+.btn-category {
+  background-color: #c0c0c0;
+  margin-bottom: 5px;
+}
 
 .btn-u {
   display: inline-block;
@@ -157,7 +177,7 @@ input:-ms-input-placeholder {
   }
 
   .offset {
-    padding-left: 65px;	
+    padding-left: 65px;
   }
 
   i {
@@ -184,13 +204,12 @@ input:-ms-input-placeholder {
     }
   }
 
-
   dt {
     font-size: 1.1em;
   }
 
   dt, li {
-    a	{
+    a {
       text-decoration: none;
       &:hover, &:active {
         text-decoration: underline;
@@ -199,14 +218,37 @@ input:-ms-input-placeholder {
   }
 }
 
-.margin-bottom-5  { .margin-bottom(5);  }
-.margin-bottom-10 { .margin-bottom(10); }
-.margin-bottom-20 { .margin-bottom(20); }
-.margin-bottom-25 { .margin-bottom(25); }
-.margin-bottom-30 { .margin-bottom(30); }
-.margin-bottom-40 { .margin-bottom(40); }
-.margin-bottom-50 { .margin-bottom(50); }
-.margin-bottom-60 { .margin-bottom(60); }
+.margin-bottom-5 {
+  .margin-bottom(5);
+}
+
+.margin-bottom-10 {
+  .margin-bottom(10);
+}
+
+.margin-bottom-20 {
+  .margin-bottom(20);
+}
+
+.margin-bottom-25 {
+  .margin-bottom(25);
+}
+
+.margin-bottom-30 {
+  .margin-bottom(30);
+}
+
+.margin-bottom-40 {
+  .margin-bottom(40);
+}
+
+.margin-bottom-50 {
+  .margin-bottom(50);
+}
+
+.margin-bottom-60 {
+  .margin-bottom(60);
+}
 
 .navbar {
   border: none;
@@ -232,8 +274,12 @@ ul.vbar {
     padding: 0 0.5em;
     border-right: 1px solid @text-color;
   }
-  li:first-of-type { padding-left: 0; }
-  li:last-of-type  { border-right: none; }
+  li:first-of-type {
+    padding-left: 0;
+  }
+  li:last-of-type {
+    border-right: none;
+  }
 }
 
 .well {
@@ -253,9 +299,8 @@ ul.vbar {
   h3 {
     font-size: 1em;
     //text-transform: uppercase;
-    font-weight:700; 
+    font-weight: 700;
   }
-
 
   ul {
     list-style-type: square;
@@ -274,31 +319,29 @@ ul.vbar {
     margin-bottom: 6px;
     padding: 2px;
   }
-  &.well-calendar-list{
-    h3{
-      display:inline-block;
-      padding-right:4px;
+  &.well-calendar-list {
+    h3 {
+      display: inline-block;
+      padding-right: 4px;
     }
-    ul{
-      display:inline-block;
-      padding:0;
-      list-style-type:none;
-      li{
-        display:inline-block;
-        padding-right:3px;
+    ul {
+      display: inline-block;
+      padding: 0;
+      list-style-type: none;
+      li {
+        display: inline-block;
+        padding-right: 3px;
       }
     }
-    
+
   }
 }
 
-
 // sidebar styles - these apply to the newspage sidebar as well as in-set side bars for bio/related/sidebar story elements on story-level pages
-
 
 .sidebar-margin {
   margin-left: 2em;
-  margin-right:2em;
+  margin-right: 2em;
 }
 
 .sidebar-section {
@@ -313,7 +356,7 @@ ul.vbar {
     border-bottom: 1px solid @su-beige-40;
   }
 
-  p{
+  p {
     color: @su-black;
     .font-size-em(16; 16);
     line-height: 1.2em;
@@ -348,16 +391,15 @@ ul.vbar {
   color: @su-clay;
 }
 
-
 /////////////////////////////////
 // Non-story page styles
-.non-story{
+.non-story {
   h1 {
     margin-bottom: .7em;
     font-family: @font-family-serif;
-    color:@su-red;
-    font-size:2.2em;
-    border-bottom:1px solid @su-beige-40;
+    color: @su-red;
+    font-size: 2.2em;
+    border-bottom: 1px solid @su-beige-40;
   }
   h2 {
     color: @su-red;
@@ -369,60 +411,59 @@ ul.vbar {
     margin-bottom: .5em;
     border-bottom: 1px solid @su-beige-40;
   }
-  p{
+  p {
     color: @su-black;
     .font-size-em(16; 16);
     line-height: 1.4;
     margin-top: .1em;
-    &.lead{
-      margin-bottom:3em;
-      font-weight:inherit;
+    &.lead {
+      margin-bottom: 3em;
+      font-weight: inherit;
     }
   }
-  .non-story-wrapper{
-    margin-bottom:2em;
-    ul{
+  .non-story-wrapper {
+    margin-bottom: 2em;
+    ul {
       list-style-type: none;
-      padding:0;
-      margin:0;
-      li{
-        line-height:1.7;
+      padding: 0;
+      margin: 0;
+      li {
+        line-height: 1.7;
       }
     }
-    a{
-      h3{
-        font-size:1em;
-        font-weight:700;
+    a {
+      h3 {
+        font-size: 1em;
+        font-weight: 700;
       }
     }
-    &.classified-ad{
-      h2{
-        border:none;
+    &.classified-ad {
+      h2 {
+        border: none;
         font-family: @font-family-sans-serif;
-        color:@su-black;
-        font-size:1.6em;
-        margin-bottom:.2em;
+        color: @su-black;
+        font-size: 1.6em;
+        margin-bottom: .2em;
       }
-      h3{
-        font-weight:700;
-        font-size:1.1em;
-      }
-    }   
-  }
-  .non-story-buttons{
-    .pull-right{
-      .fa{
-        margin-right:5px;
+      h3 {
+        font-weight: 700;
+        font-size: 1.1em;
       }
     }
   }
-  .source-label{
-    padding-bottom:.5em;
-    display:inline-block;
+  .non-story-buttons {
+    .pull-right {
+      .fa {
+        margin-right: 5px;
+      }
+    }
+  }
+  .source-label {
+    padding-bottom: .5em;
+    display: inline-block;
   }
 
 }
-
 
 /////////////////////////////////
 // Page Regions
@@ -435,8 +476,8 @@ ul.vbar {
 }
 
 #content {
-  margin-top:3em;
-  margin-bottom: 3em;//20px
+  margin-top: 3em;
+  margin-bottom: 3em; //20px
 }
 
 aside {
@@ -452,8 +493,8 @@ aside {
 /////////////////////////////////
 // Card styles
 
-.no-underline, .no-underline:hover{
-  text-decoration:none;
+.no-underline, .no-underline:hover {
+  text-decoration: none;
 }
 
 .card {
@@ -466,22 +507,22 @@ aside {
   &.facebook,
   &.instagram,
   &.twitter {
-    .card-photo{
-      i{
-        padding-top:1.2em;
-        display:block;
-        color:@su-warm-gray-60;
+    .card-photo {
+      i {
+        padding-top: 1.2em;
+        display: block;
+        color: @su-warm-gray-60;
       }
-      img{
-        float:none !important;
+      img {
+        float: none !important;
       }
     }
     h3 {
       font-family: @font-family-sans-serif;
       .font-size-em(18px);
       font-weight: normal;
-      &:hover{
-        text-decoration:underline;
+      &:hover {
+        text-decoration: underline;
       }
       text-align: center;
     }
@@ -498,30 +539,30 @@ aside {
       //padding-top:1em;
     }
   }
-  &.instagram{
-    .card-photo{
-      i{
-        padding-bottom:.5em;
+  &.instagram {
+    .card-photo {
+      i {
+        padding-bottom: .5em;
       }
-      img{
-        width:200px;
-      }
-    }
-  }
-  &.twitter, &.facebook{
-    .card-content{
-      &>img{
-        width:250px;
-        padding-bottom:1em;
+      img {
+        width: 200px;
       }
     }
   }
-  &.twitter{
-    .card-content{
-      p{
-        font-size:1.3em;
-        text-align:center;
-        line-height:1.4 !important;
+  &.twitter, &.facebook {
+    .card-content {
+      & > img {
+        width: 250px;
+        padding-bottom: 1em;
+      }
+    }
+  }
+  &.twitter {
+    .card-content {
+      p {
+        font-size: 1.3em;
+        text-align: center;
+        line-height: 1.4 !important;
       }
     }
   }
@@ -529,14 +570,14 @@ aside {
     padding: 1.2em;
     width: inherit;
     clear: both;
-    p{
+    p {
       .font-size-em(14px);
       font-weight: 400;
       font-family: @font-family-sans-serif;
       padding: 0;
       margin: 0;
-      line-height: 1.3em; 
-      margin-bottom:1em;
+      line-height: 1.3em;
+      margin-bottom: 1em;
     }
   }
 
@@ -574,25 +615,25 @@ aside {
     font-size: 0.8em;
     font-weight: 600;
   }
-  &.short{
-    padding:0 1.2em;
-    .card-content{
-      display:inline;
+  &.short {
+    padding: 0 1.2em;
+    .card-content {
+      display: inline;
     }
-    .card-photo{
-      margin-top:1.5em;
-      float:right;
-      padding-left:1em;
-      padding-bottom:1em;      
-      img{
-        width:100px;
-        height:100px;
+    .card-photo {
+      margin-top: 1.5em;
+      float: right;
+      padding-left: 1em;
+      padding-bottom: 1em;
+      img {
+        width: 100px;
+        height: 100px;
 
       }
     }
   }
   &.full {
-    img{
+    img {
       float: none;
       clear: both;
       width: 100%;
@@ -605,12 +646,12 @@ aside {
       display: block;
       height: auto;
     }
-    h3{
-      font-size:2.1em;
+    h3 {
+      font-size: 2.1em;
     }
-    .teaser{
-      font-size:1.1em;
-      line-height:1.4;
+    .teaser {
+      font-size: 1.1em;
+      line-height: 1.4;
     }
   }
 
@@ -624,20 +665,17 @@ aside {
   }
 }
 
-
-
-
-
 // Styles for Find Stories page
 #find-search {
   width: 80%;
   padding: .3em;
 }
-.search-or{
-  p{
-    text-align:center;
-    font-size:2em;
-    line-height:2;
+
+.search-or {
+  p {
+    text-align: center;
+    font-size: 2em;
+    line-height: 2;
   }
 }
 
@@ -647,18 +685,16 @@ aside {
   }
 }
 
-
-
 // Search / Find a Story styles //
 
-.find-stories{
+.find-stories {
   ul {
-    list-style-type: none;    
+    list-style-type: none;
     padding-left: 0;
-    margin:0;
+    margin: 0;
 
     li {
-      display:inline-block;
+      display: inline-block;
       width: 220px;
       padding-left: 0;
       margin-left: 0;
@@ -672,28 +708,26 @@ aside {
         }
       }
       .section-icon {
-        padding-right:1em;
+        padding-right: 1em;
       }
     }
   }
-  .btn-light{
-    background-color:transparent;
-    border:1px solid @su-cool-gray;
-    padding:12px;
-    &:hover{
+  .btn-light {
+    background-color: transparent;
+    border: 1px solid @su-cool-gray;
+    padding: 12px;
+    &:hover {
       color: white;
       background: @su-cool-gray;
       border-color: @su-cool-gray;
     }
-  }  
+  }
 }
-
 
 /////////////////////////////////
 // Header, Footer
 @import "_header.less";
 @import "_footer.less";
-
 
 /////////////////////////////////
 // classes whose visibility we can test in JS to determine screen size
@@ -701,10 +735,9 @@ aside {
 .size-detect-xs,
 .size-detect-sm,
 .size-detect-md,
-.size-detect-lg  {
+.size-detect-lg {
   display: none;
 }
-
 
 /////////////////////////////////
 // media queries
