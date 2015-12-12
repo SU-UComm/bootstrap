@@ -33,6 +33,21 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+.center-horizontal (@position:relative) {
+  position: @position;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.center-both (@position:relative) {
+  position: @position;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
 
 .bottom-right-text {
   content: "";
