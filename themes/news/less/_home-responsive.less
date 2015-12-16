@@ -109,12 +109,20 @@
   }
 
   #section-top-stories {
-    // Modifier class for 16:9 aspect ratio
-    .card.large .embed-responsive.embed-responsive-16by9 {
-      padding-bottom: 230px; // adjust height to match photos in Top Stories
+    .card.large {
+      .card-photo {
+        height: 230px; // force integer height
+      }
+      .embed-responsive.embed-responsive-16by9 { // modifier class for 16:9 aspect ratio
+        padding-bottom: 230px; // adjust height to match photos in Top Stories
+      }
     }
   }
+
   #section-spotlight {
+    .card-photo {
+      height: 135px; // force integer height
+    }
     .embed-responsive.embed-responsive-16by9 {
       padding-bottom: 135px; // adjust height to match photos in In The Spotlight
     }
@@ -180,16 +188,22 @@
     #top-story-1 .card-content {
       height: 44.3em;
     }
-  }
-
-  #section-top-stories {
-    .card.large .embed-responsive.embed-responsive-16by9 {
-      padding-bottom: 152px; // adjust height to match photos in Top Stories
+    .card.large {
+      .card-photo {
+        height: 152px; // force integer height
+      }
+      .embed-responsive.embed-responsive-16by9 { // modifier class for 16:9 aspect ratio
+        padding-bottom: 152px; // adjust height to match photos in Top Stories
+      }
     }
   }
+
   #section-spotlight {
     .embed-responsive.embed-responsive-16by9 {
       padding-bottom: 184px; // adjust height to match photos in In The Spotlight
+    }
+    .card-photo {
+      height: 184px; // force integer height
     }
   }
 } // @media (min-width: @screen-md-min) and (max-width: @screen-md-max)
@@ -206,13 +220,16 @@
     #top-story-1 .card-content {
       height: 36.2em;
     }
-  }
-
-  #section-top-stories {
-    .card.large .embed-responsive.embed-responsive-16by9 {
-      padding-bottom: 185px; // adjust height to match photos in Top Stories
+    .card.large {
+      .card-photo {
+        height: 185px; // force integer height
+      }
+      .embed-responsive.embed-responsive-16by9 { // modifier class for 16:9 aspect ratio
+        padding-bottom: 185px; // adjust height to match photos in Top Stories
+      }
     }
   }
+
   #section-spotlight {
     .embed-responsive.embed-responsive-16by9 {
       padding-bottom: 223px; // adjust height to match photos in In The Spotlight
