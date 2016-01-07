@@ -508,9 +508,9 @@ aside {
   &.instagram,
   &.twitter {
     .card-photo {
+      text-align: center;
       i {
         padding-top: 1.2em;
-        display: block;
         color: @su-warm-gray-60;
       }
       img {
@@ -535,8 +535,17 @@ aside {
         text-decoration: underline;
       }
     }
+    .card-content {
+      & > img {
+        margin: auto;
+      }
+    }
     .share {
-      //padding-top:1em;
+      text-align: center;
+      a {
+        display: inline-block;
+        margin: 0 4px;
+      }
     }
   }
   &.instagram {
@@ -552,7 +561,6 @@ aside {
   &.twitter, &.facebook {
     .card-content {
       & > img {
-        width: 250px;
         padding-bottom: 1em;
       }
     }
@@ -563,6 +571,23 @@ aside {
         font-size: 1.3em;
         text-align: center;
         line-height: 1.4 !important;
+      }
+    }
+    .share {
+      a.reply {
+        background: url('../images/twittersharebuttons.png') no-repeat 0 -2px;
+        width: 19px;
+        height: 12px;
+      }
+      a.retweet {
+        background: url('../images/twittersharebuttons.png') no-repeat -33px -2px;
+        width: 17px;
+        height: 12px;
+      }
+      a.favorite {
+        background: url('../images/twittersharebuttons.png') no-repeat -64px 0px;
+        width: 15px;
+        height: 15px;
       }
     }
   }
