@@ -2,39 +2,42 @@
 ------------------------------------*/
 #skip { // skip navigation (accessibility)
   a, a:hover, a:visited {
-    position:absolute; 
-    left:0px; 
-    top:-500px; 
-    width:1px; 
-    height:1px; 
-    overflow:hidden;
+    position: absolute;
+    left: 0px;
+    top: -500px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
   }
   a:active, a:focus {
-    position:static; 
-    width:auto; 
-    height:auto; 
+    position: static;
+    width: auto;
+    height: auto;
     color: white;
   }
 }
+
 #header {
-	z-index: 999;
-	padding: 12px 0 30px 0;
-	background-color: @su-red;
+  z-index: 999;
+  padding: 12px 0 30px 0;
+  background-color: @su-red;
 }
 
 #logo {
-	border-right: 1px solid @su-beige-10;
-    display: table-cell;
-    float: none;
-    margin: 0;
-    padding: 0 10px 0 0;
-    vertical-align: bottom;
+  border-right: 1px solid @su-beige-10;
+  display: table-cell;
+  float: none;
+  margin: 0;
+  padding: 0 10px 0 0;
+  vertical-align: bottom;
 
-	img {max-width: 160px;}
+  img {
+    max-width: 160px;
+  }
 }
 
 #header a, #mainmenu a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 #signature {
@@ -56,9 +59,10 @@
     margin-bottom: -3px;
 
     a {
-	    color: @su-beige-10;
-	    text-decoration: none;
-	  }
+      color: @su-beige-10;
+      text-decoration: none;
+      font-weight: 300;
+    }
 
     #site-name-2 {
       display: none;
@@ -69,6 +73,7 @@
     display: none;
   }
 }
+
 body.two-line-signature #signature #site-name span {
   font-size: .7em;
   line-height: 1.1em;
@@ -77,6 +82,7 @@ body.two-line-signature #signature #site-name span {
     display: block;
   }
 }
+
 body.site-slogan #signature #site-slogan {
   display: block;
   margin-bottom: -4px;
@@ -93,44 +99,47 @@ body.site-slogan #signature #site-slogan {
 
 /* Search */
 #nav-search {
-	min-height: 30px;
-	position: relative;
+  min-height: 30px;
+  position: relative;
   display: inline-block;
 }
 
 #search-form {
   position: relative;
 }
+
 #search-field {
-	.size(220px; 30px);
-	color: @su-clay;
-	padding: 4px 33px 4px 10px;
-	border: 2px solid @su-beige-20;
+  .size(220px; 30px);
+  color: @su-clay;
+  padding: 4px 33px 4px 10px;
+  border: 2px solid @su-beige-20;
   background-color: @su-beige-05;
-	border-radius: 8px;
+  border-radius: 8px;
 }
 
 #search-type input:focus {
-  outline: 2px solid @su-sky; 
+  outline: 2px solid @su-sky;
 }
 
 #search-form #search-btn {
-    cursor: pointer;
-    border: none;
-    height: 26px;
-    width: 26px;
-    background-color: @su-beige-05;
-    position: absolute;
-    right: 5px;
-    top: 2px;
+  cursor: pointer;
+  border: none;
+  height: 26px;
+  width: 26px;
+  background-color: @su-beige-05;
+  position: absolute;
+  right: 5px;
+  top: 2px;
 
-    i {
-      color: @su-clay;
-    }
+  i {
+    color: @su-clay;
+  }
 }
+
 #search-form #search-btn:hover {
-	opacity: 0.6;
+  opacity: 0.6;
 }
+
 #search-form #search-btn:focus {
   outline: 2px solid @su-sky;
 }
@@ -139,10 +148,11 @@ body.site-slogan #signature #site-slogan {
 #mainmenu {
   background-color: @navbar-default-bg;
   border-bottom: 1px solid #cdccc7;
-	.box-shadow(0 -4px 8px -2px rgba(0, 0, 0, 0.2));
+  .box-shadow(0 -4px 8px -2px rgba(0, 0, 0, 0.2));
 }
+
 #mainmenu ul {
-	padding-left: 0;
+  padding-left: 0;
 }
 
 .navbar {
@@ -174,12 +184,11 @@ body.site-slogan #signature #site-slogan {
   }
 
   .menu-text {
-	  display: none;
+    display: none;
   }
 }
 
-
 .nav-pills > li {
-	border-radius: 6px;
-	margin-right: 2px;
+  border-radius: 6px;
+  margin-right: 2px;
 }
