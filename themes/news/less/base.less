@@ -550,6 +550,14 @@ aside {
   }
   &.instagram {
     .card-photo {
+      a {
+        &:hover {
+          text-decoration: none;
+          i {
+            color: @instagram-blue;
+          }
+        }
+      }
       i {
         padding-bottom: .5em;
       }
@@ -565,7 +573,29 @@ aside {
       }
     }
   }
+  &.facebook {
+    .card-photo {
+      a {
+        &:hover {
+          text-decoration: none;
+          i {
+            color: @facebook-blue;
+          }
+        }
+      }
+    }
+  }
   &.twitter {
+    .card-photo {
+      a {
+        &:hover {
+          text-decoration: none;
+          i {
+            color: @twitter-blue;
+          }
+        }
+      }
+    }
     .card-content {
       p {
         font-size: 1.3em;
@@ -574,20 +604,22 @@ aside {
       }
     }
     .share {
-      a.reply {
-        background: url('../images/twittersharebuttons.png') no-repeat 0 -2px;
-        width: 19px;
-        height: 12px;
-      }
-      a.retweet {
-        background: url('../images/twittersharebuttons.png') no-repeat -33px -2px;
-        width: 17px;
-        height: 12px;
-      }
-      a.favorite {
-        background: url('../images/twittersharebuttons.png') no-repeat -64px 0px;
-        width: 15px;
-        height: 15px;
+      a {
+        &.reply {
+          background: url('../images/twittersharebuttons.png') no-repeat 0 -2px;
+          width: 19px;
+          height: 12px;
+        }
+        &.retweet {
+          background: url('../images/twittersharebuttons.png') no-repeat -33px -2px;
+          width: 17px;
+          height: 12px;
+        }
+        &.favorite {
+          background: url('../images/twittersharebuttons.png') no-repeat -64px 0px;
+          width: 15px;
+          height: 15px;
+        }
       }
     }
   }
