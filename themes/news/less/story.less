@@ -283,15 +283,22 @@ article {
           width:auto;
         }
       }
-    }
-    &.twitter, &.facebook{
-      .card-content{
-        &>img{
-          width:100%;
+      &.twitter, &.facebook{
+        .card-content{
+          &>img{
+            width:100%;
 
+          }
         }
       }
-    }    
+      &.instagram {
+        .card-content {
+          img {
+            width: auto;
+          }
+        }
+      }
+    }
   }
   .byline {
     color: @su-red-text;
