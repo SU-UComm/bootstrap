@@ -73,6 +73,16 @@
       font-weight: normal;
       text-decoration: none;
     }
+    &.btn-category {
+      a {
+        color: @su-black;
+      }
+      &:hover {
+        a {
+          color: white;
+        }
+      }
+    }
     .pull-right {
       .fa {
         margin-right: 5px;
@@ -81,6 +91,75 @@
     .pull-right {
       .fa {
         margin-left: 5px;
+      }
+    }
+  }
+
+  // Styles for Find Stories page
+  #find-search {
+    width: 80%;
+    padding: .3em;
+  }
+
+  .search-or {
+    p {
+      text-align: center;
+      font-size: 2em;
+      line-height: 2;
+    }
+  }
+
+  .datepicker {
+    input {
+      width: 100px;
+    }
+  }
+
+  // Search / Find a Story styles //
+  .find-stories {
+    section {
+      margin-top: 2em;
+
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 0;
+
+        li {
+          display: inline-block;
+          width: 220px;
+          padding-left: 0;
+          margin-left: 0;
+          margin-bottom: .6em;
+          font-size: 18px;
+          line-height: 2em;
+
+          a {
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          .section-icon {
+            padding-right: 1em;
+          }
+        }
+        }
+      }
+    }
+
+    .btn-light {
+      background-color: transparent;
+      border: 1px solid @su-cool-gray;
+      padding: 12px;
+      &:hover {
+        background: @su-cool-gray;
+        border-color: @su-cool-gray;
+        a {
+          color: white;
+        }
+      }
+      a {
+        color: @su-black;
       }
     }
   }
