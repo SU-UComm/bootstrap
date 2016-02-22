@@ -32,7 +32,8 @@ var SUConfig = {
       ],
       'news': [
         'js/transition.js',
-        'js/collapse.js'
+        'js/collapse.js',
+        'js/modal.js'
       ],
       'lagunita':    '<%= concat.bootstrap.src %>', // same as vanilla bootstrap
       'wilbur':      '<%= concat.bootstrap.src %>', // same as vanilla bootstrap
