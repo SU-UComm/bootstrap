@@ -24,6 +24,18 @@ button:focus {
   .tab-focus();
 }
 
+.external-link {
+  &:after {
+    font-family: FontAwesome;
+    font-size: 0.6em;
+    font-weight: 200;
+    margin-left: .4em;
+    vertical-align: middle;
+    content: " \f08e";
+    color: @su-black;
+  }
+}
+
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   text-decoration: none;
   color: @su-red-text;
@@ -107,6 +119,24 @@ input:-ms-input-placeholder {
 
 .btn-su-alert {
   .su-btn(@su-warm-gray);
+}
+.btn-light {
+  .su-btn(transparent, @su-black, @su-cool-gray, @su-cool-gray, white);
+  /*
+  background-color: transparent;
+  border: 1px solid @su-cool-gray;
+  padding: 12px;
+  &:hover {
+    background: @su-cool-gray;
+    border-color: @su-cool-gray;
+    a {
+      color: white;
+    }
+  }
+  a {
+    color: @su-black !important;
+  }
+  */
 }
 
 .btn-category {
@@ -685,6 +715,27 @@ aside {
       margin: 0;
     }
   }
+  &.story-supplement {
+    h2 {
+      color: #8c1515;
+      font-family: 'Source Serif Pro', 'Times New Roman', Times, serif;
+      font-size: 1.5em;
+      font-weight: normal;
+      text-align: center;
+      border-bottom: none;
+    }
+    .story-supplement-content {
+      padding: 1em;
+    }
+  }
+}
+
+/*** Sidebar infobox styles ***/
+.infobox {
+  background-color: white;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  min-height:180px;
 }
 
 /////////////////////////////////
