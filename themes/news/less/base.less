@@ -26,13 +26,22 @@ button:focus {
 
 .external-link {
   &:after {
+    content: "\f08e";
     font-family: FontAwesome;
     font-size: 0.6em;
     font-weight: 200;
+    margin-left: .6em;
+    vertical-align: middle;
+    color: @su-black;
+  }
+}
+.see-all-link {
+  &:after {
+    content: "\f138";
+    font-family: FontAwesome;
+    font-size: 0.65em;
     margin-left: .4em;
     vertical-align: middle;
-    content: " \f08e";
-    color: @su-black;
   }
 }
 
