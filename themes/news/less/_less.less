@@ -73,14 +73,21 @@
   background-color: @bg;
   border-color: @border;
   color: @fg;
-  text-decoration: none;
-  padding: 12px 3px;
 
   &:hover, &:focus, &:active {
     background-color: @bg-hover;
     border-color: @border-hover;
     color: @fg-hover;
-    text-decoration: none;
+  }
+
+  a {
+    color: @fg;
+
+    &:hover, &:focus, &:active {
+      background-color: @bg-hover;
+      border-color: @border-hover;
+      color: @fg-hover;
+    }
   }
 }
 

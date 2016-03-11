@@ -107,8 +107,24 @@ input:-ms-input-placeholder {
 
 .btn {
   line-height: 1;
-}
+  padding: 0; // put the padding on the <a> tag so the whole button is clickable
 
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0.75em;
+    font-weight: normal;
+    text-decoration: none;
+
+    &:hover, &:focus, &:active {
+      text-decoration: none;
+    }
+  }
+}
+.btn-primary {
+  .su-btn(@su-red);
+}
 .btn-one {
   .su-btn(@su-mint);
 }
@@ -131,26 +147,12 @@ input:-ms-input-placeholder {
 }
 .btn-light {
   .su-btn(transparent, @su-black, @su-cool-gray, @su-cool-gray, white);
-  /*
-  background-color: transparent;
-  border: 1px solid @su-cool-gray;
-  padding: 12px;
-  &:hover {
-    background: @su-cool-gray;
-    border-color: @su-cool-gray;
-    a {
-      color: white;
-    }
-  }
-  a {
-    color: @su-black !important;
-  }
-  */
 }
 
 .btn-category {
-  background-color: #c0c0c0;
+  .su-btn(#C0C0C0, @su-black, #C0C0C0, @su-cool-gray, white);
   margin-bottom: 5px;
+  margin-right: 2px;
 }
 
 .btn-u {
