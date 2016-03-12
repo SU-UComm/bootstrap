@@ -50,6 +50,16 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: @su-red-text;
 }
 
+p {
+  &.lead{
+    margin-bottom: 1em;
+    font-size: 1.4em;
+    a {
+      font-weight: 400;
+    }
+  }
+}
+
 div:focus { // for accessbility, some div's get focus - don't outline them
   outline: none;
 }
