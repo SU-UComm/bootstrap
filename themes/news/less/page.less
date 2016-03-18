@@ -129,7 +129,7 @@
   // Search / Find a Story styles //
   .find-stories {
     section {
-      margin-top: 2em;
+      margin: 1em 0;
 
       ul {
         list-style-type: none;
@@ -137,35 +137,32 @@
         margin: 0;
 
         li {
-          display: inline-block;
-          width: 220px;
-          padding-left: 0;
-          margin-left: 0;
-          margin-bottom: .6em;
           font-size: 18px;
-          line-height: 2em;
+          line-height: 1.2;
+          list-style-image: none;
+          padding: 0.4em 0;
 
-          &#featured {
+          &#spotlight {
+            display: block;
             width: 100%;
             border-bottom: 1px solid @su-beige-30;
           }
 
           a {
             text-decoration: none;
+            &:after {
+              content: "\f101";
+              font-family: FontAwesome;
+              font-size: 0.9em;
+              margin-left: 0.6em;
+            }
             &:hover {
               text-decoration: underline;
             }
-          .section-icon {
-            padding-right: 1em;
+            .section-icon {
+              padding-right: 1em;
+            }
           }
-        }
-        }
-
-        li::before {
-          content: "";
-          font-family: FontAwesome;
-          font-size: 13px;
-          margin: 0 10px 0 0;
         }
       }
     }
