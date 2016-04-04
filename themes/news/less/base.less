@@ -108,7 +108,6 @@ input:-ms-input-placeholder {
   a {
     color: @su-cool-gray;
     .btn-category {
-      //      background-color:#c0c0c0;
       margin-bottom: 5px;
     }
   }
@@ -118,7 +117,7 @@ input:-ms-input-placeholder {
   line-height: 1;
   padding: 0; // put the padding on the <a> tag so the whole button is clickable
 
-  a {
+  a { // format when a is nested within, e.g. <div class="btn">
     display: block;
     width: 100%;
     height: 100%;
@@ -130,6 +129,11 @@ input:-ms-input-placeholder {
     &:hover, &:focus, &:active {
       text-decoration: none;
     }
+  }
+  a& { // format when .btn is on the <a>, i.e. <a class="btn">
+    padding: 0.5em 0.75em;
+    font-weight: normal;
+    text-decoration: none;
   }
 }
 .btn-primary {
