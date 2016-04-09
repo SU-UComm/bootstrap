@@ -141,11 +141,14 @@ input:-ms-input-placeholder {
       text-decoration: none;
     }
   }
-  a&,
-  input& { // format when .btn is directly on the <a> or the <input>, i.e. <a class="btn">
+  a& { // format when .btn is directly on the <a> or the <input>, i.e. <a class="btn">
     padding: 0.5em 0.75em;
     font-weight: normal;
     text-decoration: none;
+  }
+  .modal &,
+  input& {
+    padding: 0.5em 0.75em;
   }
 }
 .btn-primary {
