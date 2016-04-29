@@ -93,13 +93,29 @@
   }
 
   // .navbar
+  #mainmenu {
+    position: relative;
+    width: 100%;
+  }
+
   #mainmenu.fixed {
     position: fixed;
-    top: 0;
+    top: -16em;
     z-index: 100;
     width: 100%;
-    border-bottom: 1px solid @su-driftwood;
-    display: none;
+    display: block;
+    -webkit-transition: all 0.5s cubic-bezier(1, 0.01, 1, 0.76);
+    -o-transition: all 0.5s cubic-bezier(1, 0.01, 1, 0.76);
+    transition: all 0.5s cubic-bezier(1, 0.01, 1, 0.76);
+  }
+
+  #mainmenu.fixed.visible {
+    top: 0;
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.5s cubic-bezier(0, 0.8, 0.33, 1);
+    -o-transition: all 0.5s cubic-bezier(0, 0.8, 0.33, 1);
+    transition: all 0.5s cubic-bezier(0, 0.8, 0.33, 1);
   }
 
   #search-form {
