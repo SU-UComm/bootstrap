@@ -548,6 +548,8 @@ aside {
           background-size: 160px 61px;
           width:  23px;
           height: 16px;
+          background-position: 0px 0px;
+          background-position: var(--bgX) var(--bgY);
         }
       }
     }
@@ -569,18 +571,24 @@ aside {
       .actions {
         a {
           background-position-y: -46px;
+          --bgY: -46px;
           &.like {
             width: 16px;
             background-position-x: -1px;
+            --bgX: -1px;
+
             &:hover {
               background-position-x: -84px;
+              --bgX: -84px;
             }
           }
           &.comment {
             width: 16px;
             background-position-x: -32px;
+            --bgX: -32px;
             &:hover {
               background-position-x: -115px;
+              --bgX: -115px;
             }
           }
         }
@@ -605,16 +613,19 @@ aside {
       }
       .actions {
         a {
-          background-position-y: 0;
+          background-position-y: 0px;
+          --bgY: 0px;
           &.like {
             width: 19px;
-            background-position-x: 0;
-            &:hover { background-position-x: -83px; }
+            background-position-x: 0px;
+            --bgX: 0px;
+            &:hover { background-position-x: -83px; --bgX:-83px; }
           }
           &.share {
             width: 20px;
             background-position-x: -32px;
-            &:hover { background-position-x: -115px; }
+            --bgX: -32px;
+            &:hover { background-position-x: -115px; --bgX: -115px; }
           }
         }
       }
@@ -639,20 +650,24 @@ aside {
       .actions {
         a {
           background-position-y: -22px;
+          --bgY: -22px;
           &.reply {
             width: 20px;
             background-position-x: 0;
-            &:hover { background-position-x: -83px; }
+            --bgX: 0px;
+            &:hover { background-position-x: -83px; --bgX: -83px;}
           }
           &.retweet {
             width: 23px;
             background-position-x: -28px;
-            &:hover { background-position-x: -111px; }
+            --bgX: -28px;
+            &:hover { background-position-x: -111px; --bgX: -111px; }
           }
           &.favorite {
             width: 17px;
             background-position-x: -60px;
-            &:hover { background-position-x: -143px; }
+            --bgX: -60px;
+            &:hover { background-position-x: -143px; --bgX: -143px;}
           }
         }
       }
