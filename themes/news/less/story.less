@@ -4,8 +4,34 @@
   margin-top:0;
 }
 
+.banner-full-width {
+  img {
+    width: 100%;
+  }
+}
+
+.media-attrib,
+.media-caption
+{
+  font-family: @font-family-sans-serif;
+}
+.media-attrib{//replaces .photo-credit
+  font-style:italic;
+  text-align:right;
+  margin-bottom:0.2em;//0.5
+  font-size: 1em; // 14px
+}
+.media-caption{
+  margin-top:.5em;
+  line-height: 1.3em;
+  font-size:1em; // 14px
+}
+
 article {
   margin-top: 1em;
+  &.no-margin {
+    margin-top: 0;
+  }
   /* fonts */
   h1, h2, h3, h4, h5, h6,
   ul,
@@ -25,9 +51,7 @@ article {
   }
 
   time,
-  .byline,
-  .media-attrib,
-  .media-caption
+  .byline
   {
     font-family: @font-family-sans-serif;
   }
@@ -81,17 +105,6 @@ article {
       width: 100%;
       height: 100%;
     }
-  }
-  .media-attrib{//replaces .photo-credit
-    font-style:italic;
-    text-align:right;
-    margin-bottom:0.2em;//0.5
-    font-size: 1em; // 14px
-  }
-  .media-caption{
-    margin-top:.5em;
-    line-height: 1.3em;
-    font-size:1em; // 14px
   }
   .mugshot {
     .media-caption{
