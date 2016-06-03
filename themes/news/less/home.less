@@ -19,11 +19,12 @@
   .container{
     &>h2, h3{
       font-family: @font-family-serif;
-      //margin-top: 1.8em;
-      //margin-bottom: .8em;    
     }
     &>h2{
       .font-size-em(32; 18);
+      a {
+        font-weight: inherit;
+      }
     }
   }
 }
@@ -32,15 +33,6 @@
   background: #fff;
   border-top: 1px solid #cdccc7;
   border-bottom: 1px solid #cdccc7;
-  h2{
-    color: @su-red;
-    a {
-      font-weight: inherit;
-      .fa {
-        font-size: 0.6em;
-      }
-    }
-  }
   h3{
     .font-size-em(18);
     font-weight: 600;
@@ -73,9 +65,12 @@
 }
 
 #section-more-stories{
-  .btn{
-    width:250px;
-    margin-top:1em;
+  .container {
+    &>h2 {
+      a {
+        color: inherit;
+      }
+    }
   }
 }
 
