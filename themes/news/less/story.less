@@ -1,5 +1,8 @@
 @import "_less.less";
 
+#content-wrapper {
+  background-color: @su-beige-10;
+}
 #content{
   margin-top: 0;
   margin-bottom: 0;
@@ -13,15 +16,19 @@
 
 #story-banner.banner-full-screen {
     overflow: hidden;
-    position:relative;
+    position:fixed;
+    top: 0;
     width: 100%;
-    min-height: 80vh;
-
+    z-index: -1;
     transform: translate3d(0,0,0); // force GUI acceleration
     transform-style: preserve-3d;
+    min-height: 80vh;
 
-    @media (max-width: @screen-xs-max) {
-      min-height: 400px!important;
+    @media (min-width: @screen-lg-min) {
+      position: relative;
+      height: 100vh;
+      min-height: 60vh;
+      max-height: 80vh;
     }
 
     > #banner-image {
@@ -34,6 +41,7 @@
     background-attachment: scroll;
       @media (min-width: @screen-lg-min) {
         background-attachment: fixed;
+        position:relative;
       } // @media (min-width: @screen-md-min)
 
     }
@@ -42,6 +50,7 @@
     position: absolute;
     width: 100%;
     bottom: 0;
+    background-color: @su-beige-10;
 
     @media (min-width: @screen-lg-min) {
       bottom: 0!important;
@@ -61,19 +70,28 @@
   }
 }
 
+#banner-caption-wrapper {
+  background-color: @su-beige-10;
+  margin-top: 70vh;
+}
+
 #banner-head {
-  margin-top: 1em;
+  padding-top: 1em;
   margin-bottom: -1em;
+  background-color: @su-beige-10;
 }
 
 #banner-caption {
-  min-height: 2em;
   @media (min-width: @screen-lg-min) {
     min-height: 1em;
     margin-bottom: 0!important;
   }
 }
 
+.panel-collection {
+  background-color: @su-beige-10;
+  overflow: hidden;
+}
 .media-attrib,
 .media-caption
 {
@@ -442,6 +460,10 @@ article {
   }
 }
 
+#main-bottom-wrapper {
+  overflow:hidden;
+  background-color: @su-beige-10;
+}
 #main-bottom{
   clear:both;
   margin-top: 1em;
@@ -470,6 +492,10 @@ article {
   }
 }
 
+#bottom-wrapper {
+  overflow:hidden;
+  background-color: @su-beige-10;
+}
 #bottom{
   margin-top: 5em;
   margin-bottom: 5em;
