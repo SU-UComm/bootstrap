@@ -53,6 +53,20 @@
     }
   }
 }
+.gallery.layout-grid {
+  .t-gallery {
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+      figure {
+        width: 32%;
+      }
+    }
+    @media (min-width: @screen-md-min) {
+      figure {
+        width: 24%;
+      }
+    }
+  }
+}
 
 .gallery-fullscreen {
   &.pull-right {
