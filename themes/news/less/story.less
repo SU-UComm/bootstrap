@@ -1,5 +1,8 @@
 @import "_less.less";
 
+#content-wrapper {
+  background-color: @su-beige-10;
+}
 #content{
   margin-top: 0;
   margin-bottom: 0;
@@ -12,32 +15,83 @@
 }
 
 #story-banner.banner-full-screen {
-    position:relative;
-    width: 100%;
     overflow: hidden;
-    min-height: 415px;
-    background-size: cover;
-    background-position: top center;
-    background-attachment: fixed;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
     transform: translate3d(0,0,0); // force GUI acceleration
     transform-style: preserve-3d;
+    min-height: 80vh;
+
+    @media (min-width: @screen-lg-min) {
+      position: relative;
+      height: 100vh;
+      min-height: 60vh;
+      max-height: 80vh;
+    }
+
+    > #banner-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-position: top center;
+    background-attachment: scroll;
+      @media (min-width: @screen-lg-min) {
+        background-attachment: fixed;
+        position:relative;
+      } // @media (min-width: @screen-md-min)
+
+    }
 
   #banner-head {
     position: absolute;
-    bottom: 0;
     width: 100%;
-    padding: 4em 0 1.5em;
-    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.85) 100%); // FF3.6-15
-    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 30%,rgba(0,0,0,0.85) 100%); // Chrome10-25,Safari5.1-6
-    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 30%,rgba(0,0,0,0.85) 100%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#e6000000',GradientType=0 ); // IE6-9
+    bottom: 0;
+    background-color: @su-beige-10;
 
-    color: #fff;
+    @media (min-width: @screen-lg-min) {
+      bottom: 0!important;
+      padding: 4em 0 1.5em;
+      background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.85) 100%); // FF3.6-15
+      background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 30%,rgba(0,0,0,0.85) 100%); // Chrome10-25,Safari5.1-6
+      background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 30%,rgba(0,0,0,0.85) 100%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#e6000000',GradientType=0 ); // IE6-9
+      color: #fff;
+      margin:0;
 
-    h1, p, time {color: #fff;}
+      h1, p, time {
+        color: #fff;
+      }
+
+    }
   }
 }
 
+#banner-caption-wrapper {
+  background-color: @su-beige-10;
+  margin-top: 70vh;
+}
+
+#banner-head {
+  padding-top: 1em;
+  margin-bottom: -1em;
+  background-color: @su-beige-10;
+}
+
+#banner-caption {
+  @media (min-width: @screen-lg-min) {
+    min-height: 1em;
+    margin-bottom: 0!important;
+  }
+}
+
+.panel-collection {
+  background-color: @su-beige-10;
+  overflow: hidden;
+}
 .media-attrib,
 .media-caption
 {
@@ -406,6 +460,10 @@ article {
   }
 }
 
+#main-bottom-wrapper {
+  overflow:hidden;
+  background-color: @su-beige-10;
+}
 #main-bottom{
   clear:both;
   margin-top: 1em;
@@ -434,6 +492,10 @@ article {
   }
 }
 
+#bottom-wrapper {
+  overflow:hidden;
+  background-color: @su-beige-10;
+}
 #bottom{
   margin-top: 5em;
   margin-bottom: 5em;
