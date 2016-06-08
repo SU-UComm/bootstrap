@@ -77,9 +77,25 @@
         }
       }
     }
-    @media (min-width: @screen-sm-min) {
+  }
+  &.columns-4 {
+    .t-gallery {
       figure {
-        width: 32%;
+        @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+          width: 33%;
+        }
+        @media (min-width: @screen-md-min) {
+          width: 24.5%;
+        }
+      }
+    }
+  }
+  &.columns-3 {
+    .t-gallery {
+      figure {
+        @media (min-width: @screen-sm-min) {
+          width: 33%;
+        }
       }
     }
   }
