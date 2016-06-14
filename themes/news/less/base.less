@@ -250,11 +250,6 @@ input:-ms-input-placeholder {
     padding-left: 65px;
   }
 
-  i {
-    color: #DAD7CB;
-    margin: 0;
-  }
-
   h2 {
     .font-size-em(18);
     font-weight: normal;
@@ -353,9 +348,9 @@ ul.vbar {
 }
 
 .well {
-  box-shadow: none;
+  box-shadow: 0 0 8px #d5d0c0;
   border: medium none;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 0;
   padding: 20px;
   margin-bottom: 3em;
   background: white;
@@ -404,6 +399,14 @@ ul.vbar {
       }
     }
 
+  }
+}
+
+.info-box,
+.well {
+  i {
+    color: #DAD7CB;
+    margin: 0;
   }
 }
 
