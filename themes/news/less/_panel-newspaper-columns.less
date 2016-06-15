@@ -5,10 +5,12 @@
 @column-gap-lg: 1.5em;
 
 .newspaper-columns-content {
+  & > p,
   & > div {
     -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
     page-break-inside: avoid; /* Firefox */
     break-inside: avoid; /* IE 10+ */
+    display: inline-block;
   }
 }
 
