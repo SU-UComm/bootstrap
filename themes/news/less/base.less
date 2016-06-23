@@ -410,6 +410,35 @@ ul.vbar {
   }
 }
 
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.media-attrib,
+.media-caption {
+  font-family: @font-family-sans-serif;
+}
+.media-attrib {
+  font-style:italic;
+  text-align:right;
+  margin-bottom:0.2em;//0.5
+  font-size: 1em; // 14px
+}
+.media-caption {
+  margin-top:.5em;
+  line-height: 1.3em;
+  font-size:1em; // 14px
+}
+
 // sidebar styles - these apply to the newspage sidebar as well as in-set side bars for bio/related/sidebar story elements on story-level pages
 
 .sidebar-margin {
