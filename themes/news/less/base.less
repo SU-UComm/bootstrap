@@ -428,6 +428,8 @@ ul.vbar {
     height: 100%;
   }
 }
+
+// Media Captions
 .media-attrib,
 .media-caption {
   font-family: @font-family-sans-serif;
@@ -435,13 +437,27 @@ ul.vbar {
 .media-attrib {
   font-style:italic;
   text-align:right;
-  margin-bottom:0.2em;//0.5
-  font-size: 1em; // 14px
 }
+
 .media-caption {
-  margin-top:.5em;
+  margin-top: .5em;
   line-height: 1.3em;
-  font-size:1em; // 14px
+  font-size: @font-size-small;
+
+  .mugshot & {
+      .base-responsive-paragraph(); // inherits responsive paragraph attributes
+      text-align: center;
+      margin-top: .6em;
+  }
+
+  .media-attrib {
+    .mugshot & {
+      display: block;
+      text-align: center;
+      font-size: 14px; // fallback for ie8 and older iOS safari
+      font-size: 1.4rem; // 10px HTML base * 1.4 = 14px;
+    }
+  }
 }
 
 // sidebar styles - these apply to the newspage sidebar as well as in-set side bars for bio/related/sidebar story elements on story-level pages
