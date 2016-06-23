@@ -109,3 +109,36 @@
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
+
+// Base responsive paragraph
+.base-responsive-paragraph() {
+  //////////////////////////
+  // phone
+  @media (max-width: @screen-xs-max) {
+    font-size: 1.0625em; // 17px
+    line-height: 1.52941em; // 17 * 1.52941 = 26px
+    margin-bottom: 0.764705em; // 13 / 17 = 13px
+  } // @media (max-width: @screen-xs-max)
+  //////////////////////////
+  // tablet only
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    font-size: inherit; //inherits font size from body. in this case, 16px
+    line-height: 1.5em; // 24px
+    margin-bottom: .75em; // 12px
+
+  } // @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)
+  //////////////////////////
+  // small desktop
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    font-size: 1.0625em; // 17px
+    line-height: 1.64706em; // 28px;
+    margin-bottom: .82353em; // ~14px;
+  } // @media (min-width: @screen-md-min) and (max-width: @screen-md-max)
+  //////////////////////////
+  // big desktop
+  @media (min-width: @screen-lg-min) {
+    font-size: 1.0625em; // 17px
+    line-height: 1.588235em; // 27px
+    margin-bottom: .79412em; // ~13.5px
+  } // @media (min-width: @screen-lg-min)
+}
