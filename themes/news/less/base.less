@@ -11,7 +11,11 @@
 
 /////////////////////////////////
 // Elements
+
 body, h1, h2, h3, h4, h5, h6 {
+  font-size-adjust: 0.475; // normalize x-heights. Set correct x-height / cap height ratio for source sans and source serif, which allows for more graceful fallbacks on browsers that support it.
+}
+
 a {
   font-weight: 600;
 }
