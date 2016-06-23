@@ -91,35 +91,6 @@
 .panel-collection {
   background-color: @su-beige-10;
 }
-.media-attrib,
-.media-caption
-{
-  font-family: @font-family-sans-serif;
-}
-.media-attrib{ //replaces .photo-credit
-  font-style:italic;
-  text-align:right;
-}
-.media-caption {
-  margin-top: .5em;
-  line-height: 1.3em;
-  font-size: @font-size-small;
-
-  .mugshot & {
-    .base-responsive-paragraph(); // inherits attributes from paragraph
-    text-align: center;
-    margin-top: .6em;
-  }
-
-  .media-attrib {
-    .mugshot & {
-      display: block;
-      text-align: center;
-      font-size: 14px; // fallback for ie8 and older iOs safari
-      font-size: 1.4rem; // because this is a special case, where the parent attribute is calculated via media queries, we calculate these units with rem, which uses the HTML 10px units as base.
-    }
-  }
-}
 
 article {
   margin-top: 1em;
@@ -185,20 +156,19 @@ article {
   .story-margin-top{
     margin-top:1.8em;
   }
-  .embed-container{
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    padding-top: 25px;
-    height: 0;
-    iframe{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+  .mugshot {
+    .media-caption{
+      text-align:center;
+      margin-top: .6em;
+      font-size: 1.2em; // 14px * 1.2 = 16.8px
+      line-height: 1.7em;
+    }
+    .media-attrib {
+      display: block;
+      text-align: center;
+      font-size: 0.8em; // 14px * .8 = 11.2px;
     }
   }
-
   .align-center,
   .pull-right,
   .pull-left {
