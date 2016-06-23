@@ -148,11 +148,11 @@ article {
   {
     font-family: @font-family-sans-serif;
   }
+
   time,
   ul,
   p {
-    font-size: 1.2em; // 14px * 1.2 = 16.8px
-    line-height: 1.7em;
+    .base-responsive-paragraph();
   }
   time {
     display: block;
@@ -174,10 +174,9 @@ article {
     margin-top: 1em;
   }
   .excerpt {
-    font-size: 1.3em; // 14px * 1.3 = 18.2px
+    font-size: 1.125em; // 16px * 1.125 = 18px
     font-style: italic;
     font-family: @font-family-serif;
-    line-height: 1.5em;
 
     em {
       font-style: normal;
