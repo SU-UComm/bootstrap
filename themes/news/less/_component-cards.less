@@ -18,6 +18,16 @@
   box-shadow: 0 0 8px @su-beige-40;
   min-height: 140px;
 
+  @media (max-width: @screen-xs-max) { // Mobile
+    min-height: 150px;
+  }
+
+  .large& {
+    @media (max-width: @screen-xs-max) {  // Mobile
+      padding-right: 1.2em;
+    }
+  }
+
   .short& { // ( .short.card ) | add left and right padding to short cards.
     padding: 0 1.2em;
   } // .short& ( .short.card )
@@ -40,6 +50,13 @@
       padding: 0;
       margin: 0;
     } // .full& ( .full.card img )
+
+    .large&, .short& {
+      @media (max-width: @screen-xs-max) {  // Mobile
+        width: 100px;
+        height: 100px;
+      }
+    }
   }
 
   h2 {
@@ -56,15 +73,35 @@
   h3 { // ( .card h3 )
     .full& { // ( .full.card h3)
       font-size: 2.1em;
+
+      @media (min-width: @screen-md-min) {  // Desktop and above
+        font-size: 3.1em;
+      } // @media
     } // .full& ( .full.card h3 )
+    // Responsive Overrides
+    @media (max-width: @screen-xs-max) { // Mobile
+      .font-size-em(20px);
+    }
   } // h3 ( .card h3 )
 
-  .teaser { // .teaser ( .card .teaser )
+  .teaser { // ( .card .teaser )
     .full& { // ( .full.card .teaser )
       font-size: 1.1em;
       line-height: 1.4;
+
+      @media (min-width: @screen-md-min) { // Desktop and above
+        // Desktop and above
+        font-size: 1.4em;
+        line-height: 1.6;
+      } // @media
     } // .full& // ( .full.card .teaser )
   } // .teaser ( .card .teaser )
+
+  .category { //  ( .card .category )
+    @media (min-width: @screen-md-min) {  // Desktop and above
+      font-size: 1.2em;
+    }
+  }
 
   .card-photo { // ( .card .card-photo )
     .short& { // ( .short.card .card-photo ) floats the card photo to the right on short cards.
@@ -73,11 +110,56 @@
       padding-left: 1em;
       padding-bottom: 1em;
     }
+
+    .large&, .short& { // ( .large.card .card-photo, .short.card .card-photo )
+      @media (max-width: @screen-xs-max) {  // Mobile
+        margin-top: 1.5em;
+        float: right;
+        padding-left: 1em;
+        padding-right: 0 !important;
+      } // @media @screen-xs-max
+    } // ( .large.card .card-photo, .short.card .card-photo ) .large&, .short&
+    #top-story-1& {
+      @media (max-width: @screen-xs-max) {  // Mobile
+        padding-top: 20px;
+      }
+    }
   } // .card-photo ( .card .card-photo )
+
+  .embed-responsive { // ( .card .embed-responsive )
+    .large&, .short&, { // ( large.card .embed-responsive, short.card .embed-responsive )
+      @media (max-width: @screen-xs-max) {
+        // Mobile
+        padding-top: 1.5em;
+      } // @media
+    } // ( large.card .embed-responsive, short.card .embed-responsive )
+
+    // .card .embed-responsive .embed-responsive-item,
+    // .card .embed-responsive iframe,
+    // .card .embed-responsive embed,
+    // .card .embed-responsive object,
+    // .card .embed-responsive video,
+    .embed-responsive-item, iframe, embed, object, video {
+      .large&, .short&, {
+        @media (max-width: @screen-xs-max) {  // Mobile
+          border-top: 20px solid white;
+        } // @media
+      } // ( .large&, .short& )
+    } // ( .embed-responsive-item, iframe, embed, object, video
+
+  }
 
   .card-content { // ( .card .card-content )
     padding: 1.2em;
     clear: both;
+
+    @media (max-width: @screen-xs-max) {  // Mobile
+      clear: none;
+    } // @media
+
+    @media (min-width: @screen-md-min) {  // Desktop and above
+      padding: 2.4em;
+    } // @media
 
     .short& { // ( .short.card .card-content ) | display card-content inline on short cards.
       display: inline;
