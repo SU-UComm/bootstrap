@@ -110,8 +110,37 @@
   outline-offset: -2px;
 }
 
+///////////////////////////////
+// Modular Type Scale
+//                  | Base | xs  | sm  | md  | lg  |
+//               p: | 16   | 17  | 16  | 17  | 17  |
+//     Line Height: | 22   | 26  | 24  | 28  | 27  |
+
+//              h1: | 48   | 32  | 40  | 48  | 48  |
+//     Line Height: | 50   | 40  | 45  | 52  | 50  |
+
+//              h2: | 36   | 26  | 32  | 36  | 36  |
+//     Line Height: | 46   | 30  | 36  | 45  | 42  |
+
+//              h3: | 28   | 22  | 24  | 28  | 28  |
+//     Line Height: | 35   | 24  | 36  | 36  | 35  |
+
+//              h4: | 18   | 18  | 18  | 18  | 18  |
+//     Line Height: | 22   | 20  | 20  | 22  | 22  |
+
+//              h5: | 17   | 17  | 16  | 17  | 17  |
+//     Line Height: | 22   | 26  | 24  | 28  | 27  |
+
+//              h6: | 17   | 17  | 16  | 17  | 17  |
+//     Line Height: | 22   | 26  | 24  | 28  | 27  |
+
+
 // Base responsive paragraph
-.base-responsive-paragraph() {
+.responsive-base-text() {
+  //                  | Base | xs  | sm  | md  | lg  |
+  //               p: | 16   | 17  | 16  | 17  | 17  |
+  //     Line Height: | 22   | 26  | 24  | 28  | 27  |
+
   //////////////////////////
   // phone
   @media (max-width: @screen-xs-max) {
@@ -141,4 +170,12 @@
     line-height: 1.588235em; // 27px
     margin-bottom: .79412em; // ~13.5px
   } // @media (min-width: @screen-lg-min)
+}
+
+.responsive-small-text {
+
+}
+
+.responsive-large-text {
+
 }
