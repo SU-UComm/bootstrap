@@ -119,6 +119,7 @@
         padding-right: 0 !important;
       } // @media @screen-xs-max
     } // ( .large.card .card-photo, .short.card .card-photo ) .large&, .short&
+
     #top-story-1& {
       @media (max-width: @screen-xs-max) {  // Mobile
         padding-top: 20px;
@@ -157,10 +158,6 @@
       clear: none;
     } // @media
 
-    @media (min-width: @screen-md-min) {  // Desktop and above
-      padding: 2.4em;
-    } // @media
-
     .short& { // ( .short.card .card-content ) | display card-content inline on short cards.
       display: inline;
     } // ( .short.card .card-content )
@@ -168,6 +165,10 @@
     .full& { // ( .full.card .card-content )
       display: block;
       height: auto;
+
+      @media (min-width: @screen-md-min) {  // Desktop and above
+        padding: 2.4em;
+      } // @media
     } // ( .full.card .card-content )
 
     /////////////////////////////
@@ -210,6 +211,20 @@
       margin-top: .2em;
       margin-bottom: .4em;
       padding: 0;
+
+      // Duplicated from plain h3 above. TODO: fix correct inheritance. Is .card-content necessary?
+
+      .full& { // ( .full.card .card-content h3)
+        font-size: 2.1em;
+
+        @media (min-width: @screen-md-min) {  // Desktop and above
+          font-size: 3.1em;
+        } // @media
+      } // .full& ( .full.card h3 )
+      // Responsive Overrides
+      @media (max-width: @screen-xs-max) { // Mobile
+        .font-size-em(20px);
+      }
 
       .social& { // ( .social.card .card-content h3 ) | Social override for h3
         font-family: @font-family-sans-serif;
