@@ -7,6 +7,7 @@
   .box-shadow(0 4px 8px -8px rgba(0, 0, 0, 0.2) inset);
   background-color: @alt-bg;
   border-top: 1px solid #cdccc7;
+  font-size: .875em; // 14px; resets base footer font from 16px to 14px. Was 14px on .body prior to changing @base-font-size
 
   ul {
     padding-left: 0;
@@ -31,6 +32,7 @@
     line-height: 1em;
     text-transform: uppercase;
     font-weight: 600;
+    margin: 0 0 5px 0;
   }
   p,
   a {
@@ -46,6 +48,10 @@
   }
   input[type="email"] {
     width: 150px;
+  }
+
+  .btn {
+    font-size: .875em; // 14px buttons on footer
   }
   #awesome-weather-widget {
     .awesome-weather-current-temp {
