@@ -151,12 +151,14 @@ body.site-slogan #signature #site-slogan {
 
 /* Nav */
 #mainmenu {
+  font-family: @font-family-sans-serif; // catch all for all menu substyles
   background-color: @navbar-default-bg;
   border-bottom: 1px solid #cdccc7;
   .box-shadow(0 -4px 8px -2px rgba(0, 0, 0, 0.2));
 }
 
 #mainmenu ul {
+  font-family: inherit; // inherits from #mainmenu
   padding-left: 0;
 }
 
