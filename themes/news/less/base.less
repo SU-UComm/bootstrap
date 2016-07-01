@@ -170,6 +170,7 @@ input:-ms-input-placeholder {
 .btn {
   line-height: 1;
   padding: 0; // put the padding on the <a> tag so the whole button is clickable
+  font-size: @font-size-small;
 
   a { // format when a is nested within, e.g. <div class="btn">
     display: block;
@@ -471,6 +472,7 @@ ul.vbar {
 .media-attrib,
 .media-caption {
   font-family: @font-family-sans-serif;
+  font-size: @font-size-small;
 }
 .media-attrib {
   font-style:italic;
@@ -480,15 +482,15 @@ ul.vbar {
 .media-caption {
   margin-top: .5em;
   line-height: 1.3em;
-  font-size: @font-size-small;
 
   .mugshot & {
-      .responsive-base-text(); // inherits responsive paragraph attributes
+      .responsive-type(base); // responsive paragraph from _less.less mixin
       text-align: center;
       margin-top: .6em;
   }
 
   .media-attrib {
+    font-size: inherit;
     .mugshot & {
       display: block;
       text-align: center;
