@@ -7,12 +7,14 @@
   .box-shadow(0 4px 8px -8px rgba(0, 0, 0, 0.2) inset);
   background-color: @alt-bg;
   border-top: 1px solid #cdccc7;
+  font-family: @font-family-sans-serif;
   font-size: .875em; // 14px; resets base footer font from 16px to 14px. Was 14px on .body prior to changing @base-font-size
 
   ul {
     padding-left: 0;
     margin: 0 0 20px 0;
     list-style: none;
+    font-family: inherit;
 
     &.footer-list {
       padding-bottom: .4em;
@@ -33,9 +35,11 @@
     text-transform: uppercase;
     font-weight: 600;
     margin: 0 0 5px 0;
+    font-family: inherit;
   }
   p,
   a {
+    font-family: inherit;
     color: @su-clay;
   }
   a:hover, a:active {
@@ -83,6 +87,7 @@
   .container {
     background-color: @su-red;
     color: @su-beige-30;
+
     .row {
       margin: 30px 0 0 0;
     }
