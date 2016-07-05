@@ -23,7 +23,7 @@ h2, .h2, h3, .h3 {
   margin-bottom: .5em;
   section &, .well & {
     margin-top: .75em;
-    &:first-of-type {
+    &:first-child {
       margin-top: 0; // remove margins from first element in section
     }
   }
@@ -34,7 +34,7 @@ h4, .h4, h5, .h5, h6, .h6 {
   margin-bottom:.25em;
   section &, .well & {
     margin-top: .75em;
-    &:first-of-type {
+    &:first-child {
       margin-top: 0; // remove margins from first element in section
     }
   }
@@ -64,6 +64,12 @@ p, ul, ol {
   font-family: @font-family-serif;
   .responsive-type(base);
   margin-bottom: 1em;
+
+  section &, .well & {
+    &:last-child {
+      margin-bottom: .5em; // adjust bottom margin when one of these elements is the last child of a well or section
+    }
+  }
 }
 
 li {
