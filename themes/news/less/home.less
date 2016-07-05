@@ -1,5 +1,10 @@
 @import "_less.less";
 
+h1, h2, h3, h4, h5, h6 { // Reset headline weight and margins
+  font-weight: 400;
+  margin-top: 0;
+}
+
 #section-top-stories {
   padding-top:1em;
   background-color: @su-beige-20;
@@ -44,6 +49,9 @@
     a{
       color:@su-black;
     }
+  }
+  p {
+    font-size: @font-size-small;
   }
   img{
     width:100%;
@@ -101,9 +109,14 @@ aside {
   .sidebar-section{
     margin-bottom:3.5em;
     clear: both;
+    font-family: @font-family-sans-serif;
 
     h2 {
       .font-size-em(20px);
+    }
+
+    p {
+      font-family: inherit;
     }
 
     #rss-feed-item {
