@@ -86,13 +86,25 @@
 
   .teaser { // ( .card .teaser )
     .full& { // ( .full.card .teaser )
-      font-size: 1.1em;
-      line-height: 1.4;
+      & {
+        @px-base: 16px;
+        @px-val: 18px;
+        font-size: @unit-em;
+      }
 
       @media (min-width: @screen-md-min) { // Desktop and above
         // Desktop and above
-        font-size: 1.4em;
-        line-height: 1.6;
+        // font-size: 1.4em;
+        & {
+          @px-base: 16px;
+          @px-val: 20px;
+          font-size: @unit-em;
+        }
+        & {
+          @px-base: 20px;
+          @px-val: 27px;
+          line-height: @unit-em;
+        }
       } // @media
     } // .full& // ( .full.card .teaser )
   } // .teaser ( .card .teaser )
@@ -215,12 +227,20 @@
       // Duplicated from plain h3 above. TODO: fix correct inheritance. Is .card-content necessary?
 
       .full& { // ( .full.card .card-content h3)
-        font-size: 2.1em;
+        & {
+          @px-base: 16;
+          @px-val: 30;
+          font-size: @unit-em;
+        }
 
         @media (min-width: @screen-md-min) {  // Desktop and above
-          font-size: 3.1em;
+          & {
+            @px-base: 16;
+            @px-val: 42;
+            font-size: @unit-em;
+          }
         } // @media
-      } // .full& ( .full.card h3 )
+      } // .full& ( .full.card .card-content h3 )
       // Responsive Overrides
       @media (max-width: @screen-xs-max) { // Mobile
         .font-size-em(20px);
