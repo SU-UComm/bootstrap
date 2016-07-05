@@ -21,11 +21,23 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 h2, .h2, h3, .h3 {
   margin-top: 1.25em;
   margin-bottom: .5em;
+  section &, .well & {
+    margin-top: .75em;
+    &:first-of-type {
+      margin-top: 0; // remove margins from first element in section
+    }
+  }
 }
 
 h4, .h4, h5, .h5, h6, .h6 {
   margin-top: 1.25em;
   margin-bottom:.25em;
+  section &, .well & {
+    margin-top: .75em;
+    &:first-of-type {
+      margin-top: 0; // remove margins from first element in section
+    }
+  }
 }
 
 h1, .h1 {
