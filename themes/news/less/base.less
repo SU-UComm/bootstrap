@@ -495,11 +495,18 @@ ul.vbar {
 .media-attrib {
   font-style:italic;
   text-align:right;
+  p& {
+    margin-bottom: .25em;
+  }
 }
 
 .media-caption {
   margin-top: .5em;
   line-height: 1.3em;
+
+  p& {
+    margin-bottom: 0;
+  }
 
   .mugshot & {
       .responsive-type(base); // responsive paragraph from _less.less mixin
