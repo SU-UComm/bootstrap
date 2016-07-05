@@ -29,16 +29,16 @@
 // Usage:
 // & {
 // @px-base:17;
-// @em-val:12;
+// @px-val:12;
 // margin-bottom: @unit-em;
 // }
 //
 // Note: &{ } scopes the variables to that specific modifier. This allows for setting multiple values with this method in a single element.
 //----------------------------------------------------------------------------------------
 
-@em-val: 1; //default
+@px-val: 1; //default
 @px-base: @font-size-base; // default
-@unit-em: unit( (unit(@em-val) / unit(@px-base)), em );
+@unit-em: unit( (unit(@px-val) / unit(@px-base)), em );
 
 //----------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------
@@ -145,7 +145,7 @@
     .font-size-em(28px);
     & {
       @px-base:28px;
-      @em-val:33px;
+      @px-val:33px;
       line-height: @unit-em;
     }
   }
@@ -154,7 +154,7 @@
     .font-size-em(36px);
     & {
       @px-base:36px;
-      @em-val:40px;
+      @px-val:40px;
       line-height: @unit-em;
     }
   }
@@ -163,7 +163,7 @@
     .font-size-em(46px);
     & {
       @px-base:46px;
-      @em-val:52px;
+      @px-val:52px;
       line-height: @unit-em;
     }
   }
@@ -172,7 +172,7 @@
     .font-size-em(45px);
     & {
       @px-base:45px;
-      @em-val:50px;
+      @px-val:50px;
       line-height: @unit-em;
     }
   }
@@ -184,7 +184,7 @@
     .font-size-em(22px);
     & {
       @px-base: 22px;
-      @em-val: 27px;
+      @px-val: 27px;
       line-height: @unit-em;
     }
   }
@@ -193,7 +193,7 @@
     .font-size-em(26px);
     & {
       @px-base: 26px;
-      @em-val: 32px;
+      @px-val: 32px;
       line-height: @unit-em;
     }
   }
@@ -202,7 +202,7 @@
     .font-size-em(29px);
     & {
       @px-base: 29px;
-      @em-val: 34px;
+      @px-val: 34px;
       line-height: @unit-em;
     }
   }
@@ -213,7 +213,7 @@
     .font-size-em(19px);
     & {
       @px-base: 19px;
-      @em-val: 26px;
+      @px-val: 26px;
       line-height: @unit-em;
     }
   }
@@ -222,7 +222,7 @@
     .font-size-em(22px);
     & {
       @px-base: 22px;
-      @em-val: 28px;
+      @px-val: 28px;
       line-height: @unit-em;
     }
   }
@@ -231,7 +231,7 @@
     .font-size-em(24px);
     & {
       @px-base:24;
-      @em-val:29;
+      @px-val:29;
       line-height: @unit-em;
     }
   }
@@ -243,7 +243,7 @@
     .font-size-em(17px);
     & {
       @px-base: 17px;
-      @em-val: 22px;
+      @px-val: 22px;
       line-height: @unit-em;
     }
   }
@@ -252,7 +252,7 @@
     .font-size-em(18px);
     & {
       @px-base: 18px;
-      @em-val: 24px;
+      @px-val: 24px;
       line-height: @unit-em;
     }
   }
@@ -261,7 +261,7 @@
     .font-size-em(19px);
     & {
       @px-base: 19px;
-      @em-val: 24px;
+      @px-val: 24px;
       line-height: @unit-em;
     }
   }
@@ -275,7 +275,7 @@
     .font-size-em(17px);
     & {
       @px-base:17;
-      @em-val:24;
+      @px-val:24;
       line-height: @unit-em;
     }
   }
@@ -284,7 +284,7 @@
     .font-size-em(16px);
     & {
       @px-base:16;
-      @em-val:23;
+      @px-val:23;
       line-height: @unit-em;
     }
   }
@@ -293,7 +293,7 @@
     .font-size-em(17px);
     & {
       @px-base:17;
-      @em-val:26;
+      @px-val:26;
       line-height: @unit-em;
     }
   }
@@ -302,7 +302,7 @@
     .font-size-em(17px);
     & {
       @px-base:17;
-      @em-val:25;
+      @px-val:25;
       line-height: @unit-em;
     }
   }
