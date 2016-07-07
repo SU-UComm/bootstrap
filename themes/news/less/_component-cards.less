@@ -216,10 +216,24 @@
       color: @su-red-text;
       font-size: 0.8em;
       font-weight: 600;
+      & {
+        @px-base: 16;
+        @px-val: 13;
+        font-size: @unit-em;
+      }
+      & {
+        @px-base: 13;
+        @px-val: 20;
+        line-height: @unit-em;
+      }
+      & {
+        @px-base: 13;
+        @px-val: 6;
+        margin-bottom: @unit-em;
+      }
     } // .meta ( .card .card-content .meta )
 
     h3 { // ( .card .card-content h3 )
-      .font-size-em(18, 16);
       font-weight: 600;
       font-family: @font-family-serif;
       color: @text-color; // was @headings-color
@@ -227,6 +241,25 @@
       margin-top: .2em;
       margin-bottom: .4em;
       padding: 0;
+      & {
+        @px-base: 16;
+        @px-val: 19;
+        font-size: @unit-em;
+      }
+      & {
+        @px-base: 19;
+        @px-val: 21;
+        line-height: @unit-em;
+      }
+      & {
+        @px-base: 19;
+        @px-val: 6;
+        margin-bottom: @unit-em;
+      }
+
+      @media (max-width: @screen-xs-max) { // Mobile
+        .font-size-em(20px);
+      }
 
       // Duplicated from plain h3 above. TODO: fix correct inheritance. Is .card-content necessary?
 
@@ -236,6 +269,16 @@
           @px-val: 30;
           font-size: @unit-em;
         }
+        & {
+          @px-base: 30;
+          @px-val: 34;
+          line-height: @unit-em;
+        }
+        & {
+          @px-base: 30;
+          @px-val: 6;
+          margin-bottom: @unit-em;
+        }
 
         @media (min-width: @screen-md-min) {  // Desktop and above
           & {
@@ -243,12 +286,19 @@
             @px-val: 42;
             font-size: @unit-em;
           }
+          & {
+            @px-base: 42;
+            @px-val: 48;
+            line-height: @unit-em;
+          }
+          & {
+            @px-base: 42;
+            @px-val: 6;
+            margin-bottom: @unit-em;
+          }
         } // @media
       } // .full& ( .full.card .card-content h3 )
-      // Responsive Overrides
-      @media (max-width: @screen-xs-max) { // Mobile
-        .font-size-em(20px);
-      }
+
 
       .social& { // ( .social.card .card-content h3 ) | Social override for h3
         font-family: @font-family-sans-serif;
