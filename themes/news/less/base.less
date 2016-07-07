@@ -512,6 +512,11 @@ ul.vbar {
 
   p& {
     margin-bottom: 0;
+    .pull-right.pull-right-wide & {
+      @media (max-width: 767px) {
+        margin-bottom: 1em; // Except when being pulled
+      }
+    }
   }
 
   .mugshot & {
