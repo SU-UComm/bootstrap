@@ -51,7 +51,11 @@
     clear: both;
   }
   input[type="email"] {
-    width: 150px;
+    width: 175px; // older browsers
+    max-width: 200px;
+    width: ~"calc(100% - 56px)"; // escapes calc value direct to css
+    padding: 2px;
+    border: 1px solid @gray-lighter;
   }
 
   .btn {
