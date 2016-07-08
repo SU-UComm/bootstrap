@@ -512,11 +512,17 @@ ul.vbar {
 
   p& {
     margin-bottom: 0;
+
+    #story-banner & {
+      margin-bottom: 1em; // Except when part of the story banner
+    }
     .pull-right.pull-right-wide & {
-      @media (max-width: 767px) {
-        margin-bottom: 1em; // Except when being pulled
+      @media (max-width: @screen-xs-max) {
+        margin-bottom: 1em; // Except when being pulled on mobile
       }
     }
+
+
   }
 
   .mugshot & {
