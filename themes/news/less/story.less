@@ -144,6 +144,11 @@ article {
     img {
       .img-responsive;
     }
+
+    @media (max-width: @screen-xs-max) {
+      margin-top: .75em;
+      margin-bottom: 1.5em;
+    }
   }
   .inline,
   .align-center{
@@ -169,11 +174,20 @@ article {
   .pull-left-narrow,
   .pull-left-portrait{
     margin: 0.35em 2em 1em -11%;
+    @media (max-width: @screen-xs-max) {
+      margin-top: .75em;
+      margin-bottom: 1.5em;
+    }
   }
   .pull-right-wide,
   .pull-right-narrow,
   .pull-right-portrait{
     margin: 0.35em -10% 1em 2em;
+
+    @media (max-width: @screen-xs-max) {
+      margin-top: .75em;
+      margin-bottom: 1.5em;
+    }
   }
   blockquote{
     border-left: none;
