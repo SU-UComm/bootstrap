@@ -21,6 +21,28 @@
   line-height: round( (unit(@target-px) / unit(@base-px)), 5 );
 }
 
+//----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------
+// Creates a method in which we can calculate EM values when we know the base pixel size.
+// See http://stackoverflow.com/questions/22794231/lesscss-use-calculation-and-return-value for an example, specifically the Fourth method.
+//
+// Usage:
+// & {
+// @px-base:17;
+// @px-val:12;
+// margin-bottom: @unit-em;
+// }
+//
+// Note: &{ } scopes the variables to that specific modifier. This allows for setting multiple values with this method in a single element.
+//----------------------------------------------------------------------------------------
+
+@px-val: 1; //default
+@px-base: @font-size-base; // default
+@unit-em: unit( (unit(@px-val) / unit(@px-base)), em );
+
+//----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------
+
 .margin-bottom (@margin) {
   margin-bottom: unit(@margin, px);
   clear: both;
@@ -108,4 +130,180 @@
   // Webkit
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
+}
+
+
+//////////////////////////////////
+// Responsive Typography Mixins
+
+// Heading 1
+.responsive-type(@element) when (@element = h1) {
+  font-weight: 400;
+  margin-top:0;
+
+  @media (max-width: @screen-xs-max) {
+    .font-size-em(28px);
+    & {
+      @px-base:28px;
+      @px-val:33px;
+      line-height: @unit-em;
+    }
+  }
+
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    .font-size-em(36px);
+    & {
+      @px-base:36px;
+      @px-val:40px;
+      line-height: @unit-em;
+    }
+  }
+
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    .font-size-em(46px);
+    & {
+      @px-base:46px;
+      @px-val:52px;
+      line-height: @unit-em;
+    }
+  }
+
+  @media (min-width: @screen-lg-min) {
+    .font-size-em(45px);
+    & {
+      @px-base:45px;
+      @px-val:50px;
+      line-height: @unit-em;
+    }
+  }
+}
+
+// Heading 2
+.responsive-type(@element) when (@element = h2) {
+  @media (max-width: @screen-xs-max) {
+    .font-size-em(22px);
+    & {
+      @px-base: 22px;
+      @px-val: 27px;
+      line-height: @unit-em;
+    }
+  }
+
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    .font-size-em(26px);
+    & {
+      @px-base: 26px;
+      @px-val: 32px;
+      line-height: @unit-em;
+    }
+  }
+
+  @media (min-width: @screen-md-min) {
+    .font-size-em(29px);
+    & {
+      @px-base: 29px;
+      @px-val: 34px;
+      line-height: @unit-em;
+    }
+  }
+}
+// Heading 3
+.responsive-type(@element) when (@element = h3) {
+  @media (max-width: @screen-xs-max) {
+    .font-size-em(19px);
+    & {
+      @px-base: 19px;
+      @px-val: 26px;
+      line-height: @unit-em;
+    }
+  }
+
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    .font-size-em(22px);
+    & {
+      @px-base: 22px;
+      @px-val: 28px;
+      line-height: @unit-em;
+    }
+  }
+
+  @media (min-width: @screen-md-min) {
+    .font-size-em(24px);
+    & {
+      @px-base:24;
+      @px-val:29;
+      line-height: @unit-em;
+    }
+  }
+}
+
+// Heading 4
+.responsive-type(@element) when (@element = h4) {
+  @media (max-width: @screen-xs-max) {
+    .font-size-em(17px);
+    & {
+      @px-base: 17px;
+      @px-val: 22px;
+      line-height: @unit-em;
+    }
+  }
+
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    .font-size-em(18px);
+    & {
+      @px-base: 18px;
+      @px-val: 24px;
+      line-height: @unit-em;
+    }
+  }
+
+  @media (min-width: @screen-md-min) {
+    .font-size-em(19px);
+    & {
+      @px-base: 19px;
+      @px-val: 24px;
+      line-height: @unit-em;
+    }
+  }
+}
+
+// Base text
+// Defaults to this when any of the above declarations are not true.
+
+.responsive-type(@element) when (default()) {
+  @media (max-width: @screen-xs-max) {
+    .font-size-em(17px);
+    & {
+      @px-base:17;
+      @px-val:25;
+      line-height: @unit-em;
+    }
+  }
+
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    .font-size-em(16px);
+    & {
+      @px-base:16;
+      @px-val:23;
+      line-height: @unit-em;
+    }
+  }
+
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    .font-size-em(17px);
+    & {
+      @px-base:17;
+      @px-val:27;
+      line-height: @unit-em;
+    }
+  }
+
+  @media (min-width: @screen-lg-min) {
+    .font-size-em(17px);
+    & {
+      @px-base:17;
+      @px-val:26;
+      line-height: @unit-em;
+    }
+  }
 }

@@ -11,6 +11,99 @@
 
 /////////////////////////////////
 // Elements
+
+// normalize x-heights. Set correct x-height / cap height ratio for source sans and source serif, which allows for more graceful fallbacks on browsers that support it.
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-size-adjust: 0.475;
+}
+
+// Adjust margins to be more comfortable across headlines and sections
+h2, .h2, h3, .h3 {
+  margin-top: 1.25em;
+  margin-bottom: .5em;
+  section &, .well & {
+    margin-top: .75em;
+    &:first-child {
+      margin-top: 0; // remove margins from first element in section
+    }
+  }
+}
+
+h4, .h4, h5, .h5, h6, .h6 {
+  margin-top: 1.25em;
+  margin-bottom:.25em;
+  section &, .well & {
+    margin-top: .75em;
+    &:first-child {
+      margin-top: 0; // remove margins from first element in section
+    }
+  }
+}
+
+h1, .h1 {
+  .responsive-type(h1);
+}
+
+h2, .h2 {
+  .responsive-type(h2);
+}
+
+h3, .h3 {
+  .responsive-type(h3);
+}
+
+h4, .h4 {
+  .responsive-type(h4);
+}
+
+h5, h6, .h5, .h6 {
+  .responsive-type(base);
+}
+
+p, ul, ol {
+  font-family: @font-family-serif;
+  .responsive-type(base);
+  margin-bottom: 1em;
+
+  section &, .well & {
+    &:last-child {
+      margin-bottom: .5em; // adjust bottom margin when one of these elements is the last child of a well or section
+    }
+  }
+}
+
+li {
+  margin-bottom: .5em;
+  .navbar & {
+    margin-bottom: 0; // remove margin bottom in navbar
+  }
+  .footer & {
+    margin-bottom: .125em; // add a slight margin bottom on footer
+  }
+}
+
+p {
+  &.lead{
+    margin-bottom: 1em;
+    font-size: 1.4em;
+    a {
+      font-weight: 400;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+
+  .fa {
+    margin-right: 7px;
+  }
+
+  a {
+    text-decoration: none;
+    color: @su-red-text;
+  }
+}
+
 a {
   font-weight: 600;
 }
@@ -38,24 +131,9 @@ button:focus {
   &:after {
     content: "\f138";
     font-family: FontAwesome;
-    font-size: 0.65em;
+    font-size: 0.7125em;
     margin-left: .4em;
     vertical-align: middle;
-  }
-}
-
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-  text-decoration: none;
-  color: @su-red-text;
-}
-
-p {
-  &.lead{
-    margin-bottom: 1em;
-    font-size: 1.4em;
-    a {
-      font-weight: 400;
-    }
   }
 }
 
@@ -65,17 +143,6 @@ div:focus { // for accessbility, some div's get focus - don't outline them
 
 dl {
   margin-top: 5px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 5px 0;
-  i {
-    margin-right: 7px;
-  }
-}
-
-li {
-  .line-height(20);
 }
 
 hr {
@@ -127,6 +194,7 @@ input:-ms-input-placeholder {
 .btn {
   line-height: 1;
   padding: 0; // put the padding on the <a> tag so the whole button is clickable
+  font-size: @font-size-small;
 
   a { // format when a is nested within, e.g. <div class="btn">
     display: block;
@@ -423,20 +491,55 @@ ul.vbar {
     height: 100%;
   }
 }
+
+// Media Captions
 .media-attrib,
 .media-caption {
   font-family: @font-family-sans-serif;
+  font-size: @font-size-small;
 }
 .media-attrib {
   font-style:italic;
   text-align:right;
-  margin-bottom:0.2em;//0.5
-  font-size: 1em; // 14px
+  p& {
+    margin-bottom: .25em;
+  }
 }
+
 .media-caption {
-  margin-top:.5em;
+  margin-top: .5em;
   line-height: 1.3em;
-  font-size:1em; // 14px
+
+  p& {
+    margin-bottom: 0;
+
+    #story-banner & {
+      margin-bottom: 1em; // Except when part of the story banner
+    }
+    .pull-right.pull-right-wide & {
+      @media (max-width: @screen-xs-max) {
+        margin-bottom: 1em; // Except when being pulled on mobile
+      }
+    }
+
+
+  }
+
+  .mugshot & {
+      .responsive-type(base); // responsive paragraph from _less.less mixin
+      text-align: center;
+      margin-top: .6em;
+  }
+
+  .media-attrib {
+    font-size: inherit;
+    .mugshot & {
+      display: block;
+      text-align: center;
+      font-size: 14px; // fallback for ie8 and older iOS safari
+      font-size: 1.4rem; // 10px HTML base * 1.4 = 14px;
+    }
+  }
 }
 
 // sidebar styles - these apply to the newspage sidebar as well as in-set side bars for bio/related/sidebar story elements on story-level pages
@@ -518,306 +621,6 @@ aside {
   }
 }
 
-/////////////////////////////////
-// Card styles
-
-.no-underline, .no-underline:hover {
-  text-decoration: none;
-}
-
-.card {
-  border-top: none;
-  border-left: none;
-  background-color: @alt-bg;
-  padding: 0px;
-  position: relative;
-  box-shadow: 0 0 8px @su-beige-40;
-  min-height: 140px;
-  &.social {
-    .channel-icon {
-      text-align: center;
-      a {
-        i {
-          padding-top: 1.2em;
-          color: @su-warm-gray-60;
-        }
-        &:hover {
-          text-decoration: none;
-        }
-      }
-      img {
-        float: none !important;
-      }
-    }
-    .card-content {
-      h3 {
-        font-family: @font-family-sans-serif;
-        .font-size-em(18px);
-        font-weight: normal;
-        &:hover {
-          text-decoration: underline;
-        }
-        text-align: center;
-      }
-      p {
-        text-align: left;
-      }
-      a {
-        color: @su-red;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-      .social-img {
-        img {
-          margin: auto;
-        }
-      }
-      .actions {
-        text-align: center;
-        vertical-align: middle;
-        a {
-          display: inline-block;
-          margin: 0 8px;
-          background: url('../images/social_actions.png') no-repeat 0 0;
-          background-size: 160px 61px;
-          width:  23px;
-          height: 16px;
-          background-position: 0px 0px;
-          background-position: var(--bgX) var(--bgY);
-        }
-      }
-    }
-    &.instagram {
-      .channel-icon {
-        a {
-          &:hover {
-            i {
-              color: @instagram-blue;
-            }
-          }
-        }
-      }
-      .card-content {
-        img {
-          width: 200px;
-        }
-      }
-      .actions {
-        a {
-          background-position-y: -46px;
-          --bgY: -46px;
-          &.like {
-            width: 16px;
-            background-position-x: -1px;
-            --bgX: -1px;
-
-            &:hover {
-              background-position-x: -84px;
-              --bgX: -84px;
-            }
-          }
-          &.comment {
-            width: 16px;
-            background-position-x: -32px;
-            --bgX: -32px;
-            &:hover {
-              background-position-x: -115px;
-              --bgX: -115px;
-            }
-          }
-        }
-      }
-    }
-    &.twitter, &.facebook {
-      .card-content {
-        & > img {
-          padding-bottom: 1em;
-        }
-      }
-    }
-    &.facebook {
-      .channel-icon {
-        a {
-          &:hover {
-            i {
-              color: @facebook-blue;
-            }
-          }
-        }
-      }
-      .actions {
-        a {
-          background-position-y: 0px;
-          --bgY: 0px;
-          &.like {
-            width: 19px;
-            background-position-x: 0px;
-            --bgX: 0px;
-            &:hover { background-position-x: -83px; --bgX:-83px; }
-          }
-          &.share {
-            width: 20px;
-            background-position-x: -32px;
-            --bgX: -32px;
-            &:hover { background-position-x: -115px; --bgX: -115px; }
-          }
-        }
-      }
-    }
-    &.twitter {
-      .channel-icon {
-        a {
-          &:hover {
-            i {
-              color: @twitter-blue;
-            }
-          }
-        }
-      }
-      .card-content {
-        p {
-          font-size: 1.3em;
-          text-align: center;
-          line-height: 1.4 !important;
-        }
-      }
-      .actions {
-        a {
-          background-position-y: -22px;
-          --bgY: -22px;
-          &.reply {
-            width: 20px;
-            background-position-x: 0;
-            --bgX: 0px;
-            &:hover { background-position-x: -83px; --bgX: -83px;}
-          }
-          &.retweet {
-            width: 23px;
-            background-position-x: -28px;
-            --bgX: -28px;
-            &:hover { background-position-x: -111px; --bgX: -111px; }
-          }
-          &.favorite {
-            width: 17px;
-            background-position-x: -60px;
-            --bgX: -60px;
-            &:hover { background-position-x: -143px; --bgX: -143px;}
-          }
-        }
-      }
-    }
-  }
-  .card-content {
-    padding: 1.2em;
-    clear: both;
-    p {
-      .font-size-em(14px);
-      font-weight: 400;
-      font-family: @font-family-sans-serif;
-      padding: 0;
-      margin: 0;
-      line-height: 1.3em;
-      margin-bottom: 1em;
-    }
-
-    .meta {
-      display: block;
-      text-transform: uppercase;
-      color: @su-red-text;
-      font-size: 0.8em;
-      font-weight: 600;
-    }
-
-    h3 {
-      .font-size-em(18);
-      font-weight: 600;
-      font-family: @font-family-serif;
-      color: @headings-color;
-      margin: 0;
-      margin-top: .2em;
-      margin-bottom: .4em;
-      padding: 0;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-      &:hover {
-        color: @su-red;
-        text-decoration: underline;
-      }
-    }
-  }
-
-  &.short {
-    padding: 0 1.2em;
-    .card-content {
-      display: inline;
-    }
-    .card-photo {
-      margin-top: 1.5em;
-      float: right;
-      padding-left: 1em;
-      padding-bottom: 1em;
-      img {
-        width: 100px;
-        height: 100px;
-
-      }
-    }
-  }
-  &.full {
-    img {
-      float: none;
-      clear: both;
-      width: 100%;
-      height: auto;
-      padding: 0px;
-      margin: 0;
-      padding-bottom: 0px;
-    }
-    .card-content {
-      display: block;
-      height: auto;
-    }
-    h3 {
-      font-size: 2.1em;
-    }
-    .teaser {
-      font-size: 1.1em;
-      line-height: 1.4;
-    }
-  }
-
-  &.large {
-    img {
-      width: 100%;
-      height: auto;
-      padding: 0;
-      margin: 0;
-    }
-  }
-  &.story-supplement {
-    h2 {
-      color: #8c1515;
-      font-family: 'Source Serif Pro', 'Times New Roman', Times, serif;
-      font-size: 1.5em;
-      font-weight: normal;
-      text-align: center;
-      border-bottom: none;
-    }
-    .story-supplement-content {
-      padding: 1em;
-    }
-  }
-
-  // When in the "What to read next" position
-  #bottom & {
-    margin-top:1em;
-  }
-}
-
 /*** Sidebar infobox styles ***/
 .infobox {
   background-color: white;
@@ -825,6 +628,10 @@ aside {
   background-repeat: no-repeat;
   min-height:180px;
 }
+
+/////////////////////////////////
+// Cards
+@import "_component-cards.less";
 
 /////////////////////////////////
 // Header, Footer

@@ -1,13 +1,13 @@
 @import "_less.less";
 @import "_page-responsive.less";
 
+//TODO: Look at these sizes in responsive contexts
+
 .page,
 .archive,
 .blog,
 .error404 {
   h1 {
-    margin-bottom: .7em;
-    font-family: @font-family-serif;
     color:@su-red;
     font-size:2.2em;
     border-bottom:1px solid @su-beige-40;
@@ -15,35 +15,31 @@
   }
   h2 {
     color: @su-red;
-    font-family: @font-family-serif;
     .font-size-em(24; 18);
-    //background: @su-beige-20;
     padding: 5px;
     margin-left: -5px;
-    margin-bottom: .5em;
     border-bottom: 1px solid @su-beige-40;
   }
   p {
     color: @su-black;
-    .font-size-em(16; 16);
-    line-height: 1.4;
-    margin-top: .1em;
-    &.lead {
-      font-size: 1.4em;
-    }
+  }
+
+  .lead {
+    font-family: @font-family-serif;
+    font-size: 1.125em;
   }
 
   section {
     margin-bottom:2em;
     ul{
       list-style-type: none;
-      padding:0;
-      margin:0;
-      li{
-        line-height:1.7;
-      }
     }
     h3{
+      margin-bottom: 0;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
       a{
         font-size: @font-size-base;
         font-weight: 700;

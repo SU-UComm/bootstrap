@@ -32,144 +32,13 @@
     max-width: 300px;
   }
 
-  .navbar {
-    margin: 5px 0 3px 0;
-    padding: 3px 0;
-
-    .menu-text {
-      display: inline;
-      text-transform: uppercase;
-      left: 50px;
-      top: 7px;
-      position: absolute;
-      color: @su-red-text;
-      font-size: 0.85em;
-      font-weight: 700;
-    }
-
-    .navbar-toggle {
-      background-color: @su-red;
-      color: white;
-      text-transform: uppercase;
-      border: none;
-      float: none;
-      margin: 2px 1em 5px 0;
-      padding: 0.1em 0.6em;
-    }
-
-    .navbar-toggle:hover {
-      background-color: @su-clay;
-    }
-
-    button.collapsed {
-      background-color: @su-red !important;
-    }
-    .navbar-collapse {
-      width: 100%;
-      &.in {
-        overflow-y: visible;
-      }
-    }
-
-    .nav {
-      margin: 8px 0 15px 0;
-
-      & > li {
-        display: block;
-        padding-right: 0;
-
-        & > a,
-        & > a:focus,
-        & > a:hover {
-          display: block;
-          border-radius: 3px;
-          padding: 9px 15px;
-          margin-right: 0;
-          width: 100%;
-        }
-        & > a:hover,
-        & > a:focus {
-          background-color: @su-beige-05;
-          border-bottom: none;
-        }
-      }
-      // .nav > li
-    }
-    // .nav
-  }
-
-  // .navbar
-  #mainmenu {
-    position: relative;
-    width: 100%;
-  }
-
-  #mainmenu.fixed {
-    position: fixed;
-    top: -16em;
-    z-index: 100;
-    width: 100%;
-    display: block;
-    -webkit-transition: all 0.5s cubic-bezier(1, 0.01, 1, 0.76);
-    -o-transition: all 0.5s cubic-bezier(1, 0.01, 1, 0.76);
-    transition: all 0.5s cubic-bezier(1, 0.01, 1, 0.76);
-  }
-
-  #mainmenu.fixed.visible {
-    top: 0;
-    -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
-    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
-    -webkit-transition: all 0.5s cubic-bezier(0, 0.8, 0.33, 1);
-    -o-transition: all 0.5s cubic-bezier(0, 0.8, 0.33, 1);
-    transition: all 0.5s cubic-bezier(0, 0.8, 0.33, 1);
-  }
-
   #search-form {
-    #search-field {
-      .font-size-em(12);
-    }
+
     .btn-search {
       width: 22px;
       height: 22px;
       top: 5px;
       right: 5px;
-    }
-  }
-
-  .card {
-    h3 {
-      .font-size-em(20px);
-    }
-    min-height: 150px;
-
-    &#top-story-1 .card-photo {
-      padding-top: 20px;
-    }
-    &.large {
-      padding-right: 1.2em;
-      .card-content {
-        clear: none;
-      }
-    }
-    &.large, &.short {
-      img {
-        width: 100px;
-        height: 100px;
-      }
-      .card-photo {
-        margin-top: 1.5em;
-        float: right;
-        padding-left: 1em;
-        padding-right: 0 !important;
-      }
-      .embed-responsive {
-        padding-top:1.5em;
-      }
-      .embed-responsive .embed-responsive-item,
-      .embed-responsive iframe, .embed-responsive embed,
-      .embed-responsive object, .embed-responsive video {
-        border-top: 20px solid white;
-      }
     }
   }
 
@@ -236,10 +105,6 @@
 // tablet and larger
 @media (min-width: @screen-sm-min) {
 
-  #nav-search {
-    float: right;
-    margin: -60px 0 0 0;
-  }
 
   #global-footer .clear {
     clear: none;
@@ -282,10 +147,6 @@
   #footer-3 {
     clear: both;
   }
-
-  #search-form #search-btn {
-    left: 190px;
-  }
 }
 
 // @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)
@@ -293,16 +154,6 @@
 //////////////////////////
 // desktop
 @media (min-width: @screen-md-min) {
-
-  .navbar .nav li {
-    a {
-      border-bottom: 2px solid @navbar-default-bg;
-    }
-    a:hover {
-      border-bottom: 2px solid @su-clay;
-      color: inherit;
-    }
-  }
 
   .two-column {
     -moz-column-count: 2;
@@ -321,24 +172,6 @@
     border-bottom: 2px solid @su-red;
   }
 
-  .card {
-    &.full {
-      h3 {
-        font-size: 3.1em;
-      }
-      .category {
-        font-size: 1.2em;
-      }
-      .teaser {
-        font-size: 1.4em;
-        line-height: 1.6;
-      }
-      .card-content {
-        padding: 2.4em;
-      }
-    }
-  }
-
 }
 
 // @media (min-width: @screen-md-min)
@@ -353,14 +186,6 @@
   .auto-clear .col-md-3:nth-child(4n+1){clear:left;}
   .auto-clear .col-md-4:nth-child(3n+1){clear:left;}
   .auto-clear .col-md-6:nth-child(odd){clear:left;}
-
-  .navbar .nav > li {
-    padding: 0 10px 0 0;
-
-    & > a {
-      font-size: 1.3em;
-    }
-  }
 }
 
 // @media (min-width: @screen-md-min) and (max-width: @screen-md-max)

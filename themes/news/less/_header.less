@@ -102,6 +102,14 @@ body.site-slogan #signature #site-slogan {
   min-height: 30px;
   position: relative;
   display: inline-block;
+  width: 260px;
+  width: ~"calc(100% - 70px)"; // escapes calc value direct to css
+
+  @media (min-width: @screen-sm-min) {
+    float: right;
+    margin: -60px 0 0 0;
+    max-width: 320px;
+  }
 }
 
 #search-form {
@@ -109,12 +117,34 @@ body.site-slogan #signature #site-slogan {
 }
 
 #search-field {
-  .size(220px; 30px);
+  height: 30px;
+  width: 100%;
   color: @su-clay;
   padding: 4px 33px 4px 10px;
   border: 2px solid @su-beige-20;
   background-color: @su-beige-05;
   border-radius: 8px;
+  font-size: @font-size-small;
+  transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -webkit-transition: all .25s ease-in-out;
+  appearance: none; // Appearance none removes the inner shadow from mobile
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  &:focus { // return keyboard focus indicator
+    outline:none;
+    border:2px solid #4D90FE;
+    -webkit-box-shadow: 0px 0px 5px  #4D90FE;
+    box-shadow: 0px 0px 5px  #4D90FE;
+
+    @media (min-width: @screen-sm-min) {
+      border:2px solid #4D90FE;
+      -webkit-box-shadow: 0px 0px 7px 2px  #ffa000;
+      box-shadow: 0px 0px 7px 2px #ffa000;
+    }
+  }
+
 }
 
 #search-type input:focus {
@@ -130,6 +160,7 @@ body.site-slogan #signature #site-slogan {
   position: absolute;
   right: 5px;
   top: 2px;
+  font-size: @font-size-small; // 14px – override now that we increased base font size to 16px
 
   i {
     color: @su-clay;
@@ -146,35 +177,122 @@ body.site-slogan #signature #site-slogan {
 
 /* Nav */
 #mainmenu {
+  font-family: @font-family-sans-serif; // catch all for all menu substyles
   background-color: @navbar-default-bg;
   border-bottom: 1px solid #cdccc7;
   .box-shadow(0 -4px 8px -2px rgba(0, 0, 0, 0.2));
+
+  @media (max-width: @screen-xs-max) {
+    position: relative;
+    width: 100%;
+  }
+  &.fixed {
+    @media (max-width: @screen-xs-max) {
+      position: fixed;
+      top: -16em;
+      z-index: 100;
+      width: 100%;
+      display: block;
+      -webkit-transition: all 0.5s cubic-bezier(1, 0.01, 1, 0.76);
+      -o-transition: all 0.5s cubic-bezier(1, 0.01, 1, 0.76);
+      transition: all 0.5s cubic-bezier(1, 0.01, 1, 0.76);
+    }
+
+    &.visible {
+      @media (max-width: @screen-xs-max) {
+        top: 0;
+        -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+        box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+        -webkit-transition: all 0.5s cubic-bezier(0, 0.8, 0.33, 1);
+        -o-transition: all 0.5s cubic-bezier(0, 0.8, 0.33, 1);
+        transition: all 0.5s cubic-bezier(0, 0.8, 0.33, 1);
+      }
+    }
+  }
 }
 
+
 #mainmenu ul {
+  font-family: inherit; // inherits from #mainmenu
   padding-left: 0;
+  font-size: 1em; // reset to 16px;
 }
 
 .navbar {
   margin: 0;
   min-height: 0.5em;
 
-  .nav > li {
-    display: block;
-    position: relative;
-    padding: 0 15px 0 0;
+  @media (max-width: @screen-xs-max) {
+    margin: 5px 0 3px 0;
+    padding: 3px 0;
+  }
 
-    &:last-child {
-      padding-right: 0;
+  .nav {
+    @media (max-width: @screen-xs-max) {
+      margin: 8px 0 15px 0;
     }
 
-    & > a {
-      font-size: 1.4em;
-      font-weight: 300;
-      padding: 5px 0 6px 0;
-      margin-right: 30px;
-      line-height: 1em;
-      border-bottom: none;
+    > li {
+      display: block;
+      position: relative;
+      padding: 0 15px 0 0;
+
+      @media (max-width: @screen-xs-max) {
+        display: block;
+        padding-right: 0;
+      }
+
+      @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+        padding: 0 10px 0 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      & > a {
+        & {
+          @px-base: 16px;
+          @px-val: 20px;
+          font-size: @unit-em;
+        }
+        font-weight: 300;
+        padding: 5px 0 6px 0;
+        margin-right: 30px;
+        line-height: 1em;
+        border-bottom: none;
+
+        @media (min-width: @screen-md-min) {
+          border-bottom: 2px solid @navbar-default-bg;
+        }
+
+        &:hover {
+          @media (min-width: @screen-md-min) {
+            border-bottom: 2px solid @su-clay;
+            color: inherit;
+          }
+        }
+      }
+
+      & > a,
+      & > a:focus,
+      & > a:hover {
+        @media (max-width: @screen-xs-max) {
+          display: block;
+          border-radius: 3px;
+          padding: 9px 15px;
+          margin-right: 0;
+          width: 100%;
+        }
+      }
+
+      & > a:hover,
+      & > a:focus {
+        @media (max-width: @screen-xs-max) {
+          background-color: @su-beige-05;
+          border-bottom: none;
+        }
+      } // >li
     }
   }
 
@@ -185,7 +303,54 @@ body.site-slogan #signature #site-slogan {
 
   .menu-text {
     display: none;
+
+    @media (max-width: @screen-xs-max) {
+      display: inline;
+      text-transform: uppercase;
+      left: 50px;
+      top: 7px;
+      position: absolute;
+      color: @su-red-text;
+      font-size: 0.85em;
+      font-weight: 700;
+    }
   }
+
+  .navbar-toggle {
+    @media (max-width: @screen-xs-max) {
+      background-color: @su-red;
+      color: white;
+      text-transform: uppercase;
+      border: none;
+      float: none;
+      margin: 2px 1em 5px 0;
+      padding: 0.1em 0.6em;
+      font-size: .875em; // 14px;
+    }
+
+    &:hover {
+      @media (max-width: @screen-xs-max) {
+        background-color: @su-clay;
+      }
+    }
+  }
+
+  button.collapsed {
+    @media (max-width: @screen-xs-max) {
+      background-color: @su-red !important;
+    }
+  }
+
+  .navbar-collapse {
+    @media (max-width: @screen-xs-max) {
+      width: 100%;
+      &.in {
+        overflow-y: visible;
+      }
+    }
+  }
+
+
 }
 
 .nav-pills > li {
