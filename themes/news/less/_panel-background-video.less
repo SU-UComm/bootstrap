@@ -85,14 +85,51 @@
   }
 }
 
-  video.bigvideo {
-    min-width: 100%;
-    min-height: 100%;
+#video-modal {
+
+  .modal-backdrop.in {
+    filter: aplha(opacity=70);
+    opacity: .70;
   }
 
-  .text-overlay-container {
+  .modal-content {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0;
     background-color: transparent;
-    margin: 0 auto;
-    z-index: 10;
+  }
+
+  .modal-header {
+    border: 0;
+    text-align: right;
+    margin-bottom: 0;
+
+    .btn.btn-icon-large {
+      font-size: 1.2em;
+      color: #fff;
+      background-color: transparent;
+      margin-right: -1.5em;
+      &:hover {
+        opacity: 0.8;
+      }
+      .fa {
+        -webkit-text-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+        text-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 0;
+  }
+
+  .embed-container {
+    border: 2px solid #fff;
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+
+    iframe {
+      border: 0;
+    }
   }
 }
