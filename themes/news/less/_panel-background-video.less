@@ -1,21 +1,89 @@
 @import "_less.less";
 
 .panel.background-video {
-  position: relative;
+  .video-container {
+    position: relative;
+    padding: 0;
 
-  video.bigvideo,
-  .text-overlay-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background-size: cover;
-    transition: 1s opacity;
+      &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: percentage(9/16); // aspect ratio: 16:9 (height / width)
+      }
+
+      &:after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: traslateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+
+        content: " ";
+        width: 100%;
+        height: 100%;
+        min-height: 30%;
+        background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0) 100%);
+        background: -webkit-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, .2) 100%);
+        background: linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0) 100%);
+        z-index: 2;
+      }
+
+    video,
+    .overlay-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: traslateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      max-width: 100%;
+      max-height: 100%;
+      z-index: 3;
+    }
+
+    video {
+      width: 100%;
+      z-index: 1;
+
+      &:before {
+        width: 100%;
+        position: absolute;
+        content: " ";
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #000;
+      }
+    }
+
+    .overlay-content {
+      text-align: center;
+      width: auto;
+
+      .btn.btn-primary.btn-lg {
+        font-size: 7em;
+        padding: .25em;
+        margin: 0;
+        background:none;
+        border:none;
+        color: #fff;
+        opacity: .6;
+        transition: opacity .25s ease-in-out;
+        &:hover {
+          opacity: 0.9;
+        }
+
+      }
+
+      .fa-play-circle {
+        background: transparent;
+        color: #fff;
+      }
+    }
   }
+}
 
   video.bigvideo {
     min-width: 100%;
