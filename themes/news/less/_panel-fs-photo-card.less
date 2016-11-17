@@ -1,0 +1,112 @@
+@import "_less.less";
+
+@gutter: 1.5rem;
+
+.slide {
+  backface-visibility: hidden;
+  background-color: #ffffff;
+  height: auto;
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  transition: all .25s ease-in-out;
+  width: 100%;
+
+  .slide-content {
+    backface-visibility: inherit;
+    background-color: rgba(255, 255, 255, .8);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: block;
+    margin-top: ~"calc(100vh - 110px)";
+    max-width: 600px;
+    padding: 2em;
+    position: relative;
+    width: 100%;
+
+    &.fixed {
+      margin-top: 0;
+      position: fixed;
+      top: ~"calc(100vh - 110px)";
+    }
+
+    &.relative {
+      margin-top: @gutter;
+      position: relative;
+      top: 0;
+    }
+
+    &.slide-left {
+      left: 0;
+      float: left;
+      margin-left: @gutter * 3;
+    }
+
+    &.slide-right {
+      float: right;
+      margin-right: @gutter * 4;
+      right: 0;
+    }
+
+    &.slide-center {
+      left: 50%;
+      transform: translateX(-50%);
+      // margin-right: @gutter;
+    }
+  }
+
+  .social-share {
+    backface-visibility: inherit;
+    background-color: inherit;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    display: block;
+    height: 8.5em;
+    opacity: 1;
+    padding-left: 0;
+    padding-top: 1em;
+    position: absolute;
+    right: -3em;
+    text-align: center;
+    top: ~"calc(50% - 5em)";
+    width: 3em;
+
+    ul {
+      font-size: 24px;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: block;
+        padding: 0;
+        margin-bottom: 0;
+
+        a {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .slide-image {
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    min-height: 100vh;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    backface-visibility: inherit;
+
+    &.fixed-bg {
+      background-attachment: fixed;
+    }
+  }
+
+}
