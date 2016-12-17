@@ -1,6 +1,6 @@
 @import "_less.less";
 
-@gutter: 1.5rem;
+@gutter: 1.6875rem;
 @_content-breakpoint: 820px;
 
 .slide {
@@ -26,7 +26,7 @@
       border-top-left-radius: 8px;
       border-top-right-radius: 8px;
       display: block;
-      margin: ~"calc(100vh - 75px)" (@gutter * 2) -1px;
+      margin: ~"calc(100vh - 74px)" (@gutter * 2) -1px;
       position: relative;
     }
 
@@ -198,14 +198,13 @@
       right: 0;
       bottom: 0;
       width: 100vw;
-      height: 100vh;
+      height: 100%;
       overflow: hidden;
-
     }
 
     &.fixed-bg {
       @media screen and (min-width: 640px) {
-        position: fixed;
+        background-attachment: fixed;
       }
     }
   }
