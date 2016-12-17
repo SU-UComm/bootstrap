@@ -61,14 +61,14 @@
       @media screen and (min-width: @_content-breakpoint) {
         left: 0;
         float: left;
-        margin-left: @gutter * 2.8; // visually centers at 820px
+        margin-left: 11rem; // magic number. visually centered at 820px
       }
     }
 
     &.slide-right {
       @media screen and (min-width: @_content-breakpoint) {
         float: right;
-        margin-right: @gutter * 3.66666667; // visually centers at 820px
+        margin-right: 11rem; // magic number. visually centered at 820px
         right: 0;
       }
 
@@ -76,7 +76,7 @@
 
     &.slide-center {
       @media screen and (min-width: @_content-breakpoint) {
-        left: 42.5%;
+        left: ~"calc(50% - 2.125em)";
         transform: translateX(-50%);
       }
     }
