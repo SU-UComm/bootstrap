@@ -1,6 +1,6 @@
 @import "_less.less";
 
-@gutter: 2.7rem;
+@gutter: (27 / 16) * 1em;
 @_content-breakpoint: 820px;
 
 .slide {
@@ -61,14 +61,14 @@
       @media screen and (min-width: @_content-breakpoint) {
         left: 0;
         float: left;
-        margin-left: 11rem; // magic number. visually centered at 820px
+        margin-left: (110 / 16) * 1em; // magic number. visually centered at 820px
       }
     }
 
     &.slide-right {
       @media screen and (min-width: @_content-breakpoint) {
         float: right;
-        margin-right: 11rem; // magic number. visually centered at 820px
+        margin-right: (110 / 16) * 1em; // magic number. visually centered at 820px
         right: 0;
       }
 
@@ -76,7 +76,7 @@
 
     &.slide-center {
       @media screen and (min-width: @_content-breakpoint) {
-        left: ~"calc(50% - 2.125em)";
+        left: ~"calc(50% - 3.375em)";
         transform: translateX(-50%);
       }
     }
@@ -124,8 +124,8 @@
       width: 100%;
       position: absolute;
       bottom: 0;
-      height: 3em;
-      padding-top: 1em;
+      height: (65 / 16) * 1em;
+      padding-top: (35 / 16) * 1em;
       text-align: center;
     }
 
