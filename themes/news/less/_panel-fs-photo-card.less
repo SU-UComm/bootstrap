@@ -1,6 +1,6 @@
 @import "_less.less";
 
-@gutter: 1.6875rem;
+@gutter: 2.7rem;
 @_content-breakpoint: 820px;
 
 .slide {
@@ -18,15 +18,15 @@
     min-height: 100vh;
   }
   .slide-content {
-    padding: 1.5em;
+    padding: @gutter;
 
     @media screen and (min-width: 640px) {
       backface-visibility: inherit;
       background-color: rgba( 255, 255, 255, .85 );
       border-top-left-radius: 8px;
       border-top-right-radius: 8px;
-      display: block;
-      margin: ~"calc(100vh - 74px)" (@gutter * 2) -1px;
+      margin-top: 0;
+      margin: ~"calc(100vh - 73px)" (@gutter * 2) -1px;
       position: relative;
     }
 
