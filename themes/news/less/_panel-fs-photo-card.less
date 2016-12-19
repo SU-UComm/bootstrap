@@ -209,7 +209,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      width: 100vw;
+      width: ~"calc(100vw - 15px)"; // we do this to account for the scrollbar, which otherwise causes a jump when the image transforms to background-attachment fixed
       height: 100%;
       overflow: hidden;
     }
