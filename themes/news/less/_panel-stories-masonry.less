@@ -2,60 +2,62 @@
 
 .masonry-grid {
   min-height: 200px;
+  @_masonry-gutter: 16px;
 
   .masonry-item {
     float: left;
-    margin-bottom: 10px;
+    margin-bottom: (@_masonry-gutter + 1px);
     width: 100%; // mobile-first
   }
   &.columns-5 {
     @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
       .masonry-item {
-        width: 32%;
+        width: ~"calc((100% - (@{_masonry-gutter} * 2)) / 3)";
       }
     }
     @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
       .masonry-item {
-        width: 24%;
+        width: ~"calc((100% - (@{_masonry-gutter} * 3)) / 4)";
       }
     }
     @media (min-width: @screen-lg-min) {
       .masonry-item {
-        width: 19%;
+        width: ~"calc((100% - (@{_masonry-gutter} * 4)) / 5)";
       }
     }
   }
   &.columns-4 {
     @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
       .masonry-item {
-        width: 32%;
+        width: ~"calc((100% - (@{_masonry-gutter} * 2)) / 3)";
       }
     }
     @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
       .masonry-item {
-        width: 24%;
+        width: ~"calc((100% - (@{_masonry-gutter} * 3)) / 4)";
       }
     }
     @media (min-width: @screen-lg-min) {
       .masonry-item {
-        width: 24%;
+        width: ~"calc( (100% - (@{_masonry-gutter} * 3)) / 4)";
       }
     }
   }
   &.columns-3 {
+    @_masonry-columns: 3;
     @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
       .masonry-item {
-        width: 49%;
+        width: ~"calc((100% - (@{_masonry-gutter} * 1)) / 2)";
       }
     }
     @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
       .masonry-item {
-        width: 32%;
+        width: ~"calc((100% - (@{_masonry-gutter} * 2)) / 3)";
       }
     }
     @media (min-width: @screen-lg-min) {
       .masonry-item {
-        width: 32%;
+        width: ~"calc((100% - (@{_masonry-gutter} * 2)) / 3)";
       }
     }
   }
