@@ -44,7 +44,6 @@
     }
   }
   &.columns-3 {
-    @_masonry-columns: 3;
     @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
       .masonry-item {
         width: ~"calc((100% - (@{_masonry-gutter} * 1)) / 2)";
@@ -58,6 +57,13 @@
     @media (min-width: @screen-lg-min) {
       .masonry-item {
         width: ~"calc((100% - (@{_masonry-gutter} * 2)) / 3)";
+      }
+    }
+  }
+  &.columns-2 {
+    @media (min-width: @screen-md-min) {
+      .masonry-item {
+        width: ~"calc((100% - (@{_masonry-gutter} * 2)) / 2)";
       }
     }
   }
