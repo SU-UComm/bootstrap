@@ -191,12 +191,14 @@ article {
   }
   .pullquote {
     img.headshot {
+      display:    block;
       margin:     0 auto;
       max-width:  140px;
       max-height: 140px;
     }
   }
   blockquote{
+    display: block;
     border-left: none;
     color: @su-red-text;
     font-family: @font-family-serif;
@@ -230,6 +232,10 @@ article {
         margin-top: -1.2em;
       }
     }
+  }
+  .align-none blockquote {
+    padding-left: 0;
+    padding-right: 0;
   }
   .share{//call-to-action share for social media and blockquotes
          margin-bottom:2em;
