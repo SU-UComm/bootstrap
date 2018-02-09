@@ -40,7 +40,7 @@ var SUConfig = {
       'bootstrap':   '<%= concat.bootstrap.src %>'  // same as vanilla bootstrap
     }
 };
-SUConfig.theme = 'news-proto'; // default theme, but may be overridden on command line
+SUConfig.theme = 'news'; // default theme, but may be overridden on command line
 SUConfig.repo  = SUConfig.repos[SUConfig.theme]; // default repo, but may be overridden on command line
 SUConfig.js    = SUConfig.bootstrapJS[SUConfig.theme]; // default js, but may be overridden on command line
 // UComm end
