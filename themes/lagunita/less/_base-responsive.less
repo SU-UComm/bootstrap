@@ -119,13 +119,16 @@ body {
   }
 }
 
-body.home #nav-home a, body.nav-1 #nav-1 a, 
-body.nav-2 #nav-2 a, body.nav-3 #nav-3 a, 
-body.nav-4 #nav-4 a, body.nav-5 #nav-5 a, 
-body.nav-6 #nav-6 a {
-  color: @su-red-text;
-  border-bottom: none;
+body.home #nav-home, body.nav-1 #nav-1,
+body.nav-2 #nav-2, body.nav-3 #nav-3,
+body.nav-4 #nav-4, body.nav-5 #nav-5,
+body.nav-6 #nav-6  {
+  >a {
+    color: @su-beige-05;
+    background-color: @navbar-default-link-color;
+    border-bottom: none;
   }
+}
 
 .navbar {
 
@@ -262,7 +265,9 @@ body.nav-6 #nav-6 a {
 
           &:hover,
           &:focus {
-            border-bottom: solid 5px @navbar-default-link-color !important;
+            border-bottom: solid 5px @navbar-default-bg !important;
+            font-weight:bold;
+            background-color: @navbar-default-bg;
           }
         }
       }
@@ -321,11 +326,11 @@ body.nav-6 #nav-6 a {
   margin: -100px 0 0 0;
 }
 
-.navbar .nav  li { 
-  a {
+.navbar .nav  >li {
+  >a {
     border-bottom: 5px solid @su-header-bg;
   }
-  a:hover {
+  >a:hover {
     border-bottom: 5px solid @navbar-default-link-color;
   }
 }
@@ -340,11 +345,18 @@ body.nav-6 #nav-6 a {
 }
 
 // highlight active nav item
-body.home #nav-home a, body.nav-1 #nav-1 a, 
-body.nav-2 #nav-2 a, body.nav-3 #nav-3 a, 
-body.nav-4 #nav-4 a, body.nav-5 #nav-5 a, 
-body.nav-6 #nav-6 a {
+body.home #nav-home >a, body.nav-1 #nav-1 >a,
+body.nav-2 #nav-2 >a, body.nav-3 #nav-3 >a,
+body.nav-4 #nav-4 >a, body.nav-5 #nav-5 >a,
+body.nav-6 #nav-6 >a {
   border-bottom: 5px solid @su-red;
+}
+.dropdown-menu >.active {
+  >a, >a:hover, >a:focus {
+    background-color: @navbar-default-bg;
+    color: @navbar-default-link-color;
+    font-weight:bold;
+  }
 }
 
 .image-caption.overlay { // USAGE: ensure containing element has position:relative and :hover .overlay { .opacity(1); }

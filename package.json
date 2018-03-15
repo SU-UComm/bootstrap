@@ -79,5 +79,8 @@
     "buildConfig": {
       "uglify": true
     }
+  },
+  "dependencies": {
+    "npm": "^5.7.1"
   }
 }
