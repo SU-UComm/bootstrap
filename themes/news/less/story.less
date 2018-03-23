@@ -244,7 +244,109 @@ article {
            width:inherit;
          }
   }
-  .card{   
+  .fact {
+    position: relative;
+    padding: 36px;
+    font-size: 1.7em;
+    line-height: 1.8em;
+    color: #fff;
+    vertical-align: middle;
+    em {
+      font-size: 2em;
+      font-style: inherit;
+      font-weight: 200;
+    }
+    a {
+      text-decoration:none;
+      color:#fff;
+    }
+    &.center-block {
+      &.arrow-bottom:after {
+        content: "";
+        position: absolute;
+        height: 26px;
+        width: 26px;
+        top: 100%;
+        right: 50%;
+        margin-top: -13px;
+        transform: rotateZ(45deg);
+        z-index: 1;
+      }
+    }
+    &.color-redwood {
+      background-color: @su-redwood;
+      &.arrow-right:before, &.arrow-left:after, &.arrow-bottom:after {
+        background-color: @su-redwood;
+      }
+    }
+    &.color-lagunita {
+      background-color: @su-lagunita;
+      &.arrow-right:before, &.arrow-left:after, &.arrow-bottom:after {
+        background-color: @su-lagunita;
+      }
+    }
+    &.color-teal {
+      background-color: @su-teal;
+      &.arrow-right:before, &.arrow-left:after, &.arrow-bottom:after {
+        background-color: @su-teal;
+      }
+    }
+    &.color-palo-alto {
+      background-color: @su-palo-alto;
+      &.arrow-right:before, &.arrow-left:after, &.arrow-bottom:after {
+        background-color: @su-palo-alto;
+      }
+    }
+    @media (min-width: 992px) {
+      &.arrow-right:before {
+        content: "";
+        position: absolute;
+        height: 26px;
+        width: 26px;
+        top: 50%;
+        left: -13px;
+        margin-top: -13px;
+        transform: rotateZ(45deg);
+        z-index: 1;
+      }
+      &.arrow-left:after {
+        content: "";
+        position: absolute;
+        height: 26px;
+        width: 26px;
+        top: 50%;
+        right: -13px;
+        margin-top: -13px;
+        transform: rotateZ(45deg);
+        z-index: 1;
+      }
+    }
+    @media (max-width: 991px) {
+      &.arrow-left:after {
+        content: "";
+        position: absolute;
+        height: 26px;
+        width: 26px;
+        top: 100%;
+        left: 47%;
+        margin-top: -13px;
+        transform: rotateZ(45deg);
+        z-index: 1;
+      }
+      &.arrow-right:before {
+        content: "";
+        position: absolute;
+        height: 26px;
+        width: 26px;
+        left: 47%;
+        top: 100%;
+        margin-top: -13px;
+        transform: rotateZ(45deg);
+        z-index: 1;
+      }
+    }
+  }
+  .card{
     &.story-supplement {
       clear: both;
 
