@@ -260,45 +260,43 @@ article {
       text-decoration:none;
       color:#fff;
     }
-    &.center-block {
-      &.arrow-bottom:after {
-        content: "";
-        position: absolute;
-        height: 26px;
-        width: 26px;
-        top: 100%;
-        right: 50%;
-        margin-top: -13px;
-        transform: rotateZ(45deg);
-        z-index: 1;
-      }
+    &.center-block:after {
+      content: "";
+      position: absolute;
+      height: 26px;
+      width: 26px;
+      top: 100%;
+      right: 50%;
+      margin-top: -13px;
+      transform: rotateZ(45deg);
+      z-index: 1;
     }
     &.color-redwood {
       background-color: @su-redwood;
-      &.arrow-right:before, &.arrow-left:after, &.arrow-bottom:after {
+      &.pull-right:before, &.pull-left:after, &.center-block:after {
         background-color: @su-redwood;
       }
     }
     &.color-lagunita {
       background-color: @su-lagunita;
-      &.arrow-right:before, &.arrow-left:after, &.arrow-bottom:after {
+      &.pull-right:before, &.pull-left:after, &.center-block:after {
         background-color: @su-lagunita;
       }
     }
     &.color-teal {
       background-color: @su-teal;
-      &.arrow-right:before, &.arrow-left:after, &.arrow-bottom:after {
+      &.pull-right:before, &.pull-left:after, &.center-block:after {
         background-color: @su-teal;
       }
     }
     &.color-palo-alto {
       background-color: @su-palo-alto;
-      &.arrow-right:before, &.arrow-left:after, &.arrow-bottom:after {
+      &.pull-right:before, &.pull-left:after, &.center-block:after {
         background-color: @su-palo-alto;
       }
     }
-    @media (min-width: 992px) {
-      &.arrow-right:before {
+    @media (min-width: @screen-sm) {
+      &.pull-right:before {
         content: "";
         position: absolute;
         height: 26px;
@@ -309,7 +307,7 @@ article {
         transform: rotateZ(45deg);
         z-index: 1;
       }
-      &.arrow-left:after {
+      &.pull-left:after {
         content: "";
         position: absolute;
         height: 26px;
@@ -321,8 +319,8 @@ article {
         z-index: 1;
       }
     }
-    @media (max-width: 991px) {
-      &.arrow-left:after {
+    @media (max-width: @screen-sm) {
+      &.pull-left:after {
         content: "";
         position: absolute;
         height: 26px;
@@ -333,7 +331,7 @@ article {
         transform: rotateZ(45deg);
         z-index: 1;
       }
-      &.arrow-right:before {
+      &.pull-right:before {
         content: "";
         position: absolute;
         height: 26px;
