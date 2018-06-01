@@ -1,3 +1,7 @@
+@font-size-footer-primary-links: unit( round( (15 / unit(@font-size-base)), 5 ), em ); // 15px expressed as em's
+@font-size-footer-policy-links:  unit( round( (15 / unit(@font-size-base)), 5 ), em ); // 15px expressed as em's
+@font-size-footer-copyright:     unit( round( (14 / unit(@font-size-base)), 5 ), em ); // 14px expressed as em's
+
 .footer {
 	padding: 0 !important;
 	position: relative;
@@ -77,6 +81,7 @@
   background-color: @su-red;
   color: @su-beige-30;
   box-shadow:inset 0 4px 8px -2px rgba(0, 0, 0, 0.2); /* Horizontal offset , vertical offset, blur, internal spacing */
+  padding-bottom: unit( round( unit( @grid-gutter-width ) / 2, 5 ), px);
 
   .clear {
     clear:both;
@@ -84,18 +89,15 @@
 
   .container {
     background-color: @su-red;
-    color: @su-beige-30;
+    color: white;
     .row {
-         margin: 30px 0 0 0;
+         margin: 20px 0 0 0;
     }
     
   }
-  a {
-    color:@su-beige-30;
-  }
 
   #bottom-logo {
-    margin: 0 0 10px;
+    margin: 0 0 15px;
     padding: 0;
     img{
       display: block;
@@ -103,24 +105,41 @@
     }
   }
   
-  #bottom-text ul {
-    margin: 0;
+  #bottom-text {
+    ul {
+      margin: 0;
 
-    li {
-      display: block;
-      list-style: none;
-      font-size: 15px;
-      line-height: 2;
+      li {
+        display: block;
+        list-style: none;
+        line-height: 2;
+
+        a {
+          color: white;
+        }
+      }
+
+      &#primary-links {
+        li {
+          font-size: unit( round( (15 / unit(@font-size-base)), 5 ), em ); // 15px expressed as em's
+        }
+      }
+      &#policy-links {
+        li {
+          font-size: unit( round( (15 / unit(@font-size-base)), 5 ), em ); // 15px expressed as em's
+        }
+      }
     }
-  }
-  
-  p.copyright {
-    color: @su-beige-30;
-    padding: 0 0 15px;
-    margin: 0;
-    font-size: 13px;
-    line-height: 1.5em;
-    text-align: center;
+
+    p.copyright {
+      color: white;
+      padding: 0 0 15px;
+      margin: 0;
+      font-size: unit( round( (14 / unit(@font-size-base)), 5 ), em ); // 14px expressed as em's
+      font-weight: 300;
+      line-height: 1.5em;
+      text-align: center;
+    }
   }
 }
 
