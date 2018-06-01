@@ -108,21 +108,11 @@
       li {
         display: block;
         list-style: none;
+        font-size: unit( round( (15 / unit(@font-size-base)), 5 ), em ); // 15px expressed as em's
         line-height: 2;
 
         a {
           color: white;
-        }
-      }
-
-      &#primary-links {
-        li {
-          font-size: unit( round( (15 / unit(@font-size-base)), 5 ), em ); // 15px expressed as em's
-        }
-      }
-      &#policy-links {
-        li {
-          font-size: unit( round( (15 / unit(@font-size-base)), 5 ), em ); // 15px expressed as em's
         }
       }
     }
