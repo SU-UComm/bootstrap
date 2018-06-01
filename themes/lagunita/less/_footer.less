@@ -1,11 +1,11 @@
 .footer {
-	padding: 0 !important;
-	position: relative;
-	margin-top: -120px;
-	min-height: 120px;
-	clear: both;
-	.box-shadow(0 4px 8px -8px rgba(0, 0, 0, 0.2) inset);
-	background-color: @su-header-bg;
+  padding: 0 !important;
+  position: relative;
+  margin-top: -120px;
+  min-height: 120px;
+  clear: both;
+  .box-shadow(0 4px 8px -8px rgba(0, 0, 0, 0.2) inset);
+  background-color: @su-header-bg;
   border-top: 1px solid @su-beige-20;
 
   ul {
@@ -37,7 +37,7 @@
     color: @su-clay;
   }
   a {
-	text-decoration: none;  
+    text-decoration: none;
   }
   a:hover, a:active {
     text-decoration: underline;
@@ -47,10 +47,10 @@
   #hp-buttons {
     ul {
       margin-bottom: 0;
-  
+
       li {
         margin-bottom: 5px;
-  
+
         a {
           text-align: left;
 
@@ -72,12 +72,13 @@
 
 /* Global Footer and Copyright*/
 #global-footer {
-	position: relative;
-	margin-top: 0 !important;
-	clear: both;
+  position: relative;
+  margin-top: 0 !important;
+  clear: both;
   background-color: @su-red;
   color: @su-beige-30;
   box-shadow:inset 0 4px 8px -2px rgba(0, 0, 0, 0.2); /* Horizontal offset , vertical offset, blur, internal spacing */
+  padding-bottom: unit( round( unit( @grid-gutter-width ) / 2, 5 ), px);
 
   .clear {
     clear:both;
@@ -85,43 +86,47 @@
 
   .container {
     background-color: @su-red;
-    color: @su-beige-30;
+    color: white;
     .row {
-         margin: 30px 0 0 0;
+      margin: 20px 0 0 0;
     }
-    
-  }
-  a {
-    color:@su-beige-30;
+
   }
 
   #bottom-logo {
-    margin: 0 0 10px;
+    margin: 0 0 15px;
     padding: 0;
     img{
       display: block;
       margin: 0 auto;
     }
   }
-  
-  #bottom-text ul {
-    margin: 0;
 
-    li {
-      display: block;
-      list-style: none;
-      font-size: 15px;
-      line-height: 2;
+  #bottom-text {
+    ul {
+      margin: 0;
+
+      li {
+        display: block;
+        list-style: none;
+        font-size: unit( round( (15 / unit(@font-size-base)), 5 ), em ); // 15px expressed as em's
+        line-height: 2;
+
+        a {
+          color: white;
+        }
+      }
     }
-  }
-  
-  p.copyright {
-    color: @su-beige-30;
-    padding: 0 0 15px;
-    margin: 0;
-    font-size: 13px;
-    line-height: 1.5em;
-    text-align: center;
+
+    p.copyright {
+      color: white;
+      padding: 0 0 15px;
+      margin: 0;
+      font-size: unit( round( (14 / unit(@font-size-base)), 5 ), em ); // 14px expressed as em's
+      font-weight: 300;
+      line-height: 1.5em;
+      text-align: center;
+    }
   }
 }
 
@@ -133,27 +138,27 @@ http://www.cssstickyfooter.com
 */
 
 html, body {
-	height: 100%;
+  height: 100%;
 }
 #su-wrap {
-	min-height: 100%;
-	overflow-x: hidden;
+  min-height: 100%;
+  overflow-x: hidden;
 }
 #su-content {
-	overflow:visible;
-	padding-bottom: 120px; /* must be same height as the footer - set in js */
+  overflow:visible;
+  padding-bottom: 120px; /* must be same height as the footer - set in js */
 }
 #global-footer {
-	position: relative;
-	margin-top: -120px; /* negative value of footer height - set in js */
-	clear:both;
-} 
+  position: relative;
+  margin-top: -120px; /* negative value of footer height - set in js */
+  clear:both;
+}
 
 /*Opera Fix*/
-	body:before { /* thanks to Maleika (Kohoutec)*/
-	content:"";
-	height:100%;
-	float:left;
-	width:0;
-	margin-top:-32767px;/* thank you Erik J - negate effect of float*/
+body:before { /* thanks to Maleika (Kohoutec)*/
+  content:"";
+  height:100%;
+  float:left;
+  width:0;
+  margin-top:-32767px;/* thank you Erik J - negate effect of float*/
 }
