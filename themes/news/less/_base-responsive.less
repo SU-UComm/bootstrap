@@ -69,9 +69,8 @@
       }
     }
   }
-}
+} // @media (max-width: @screen-xs-max)
 
-// @media (max-width: @screen-xs-max)
 
 //////////////////////////
 // phone, tablet
@@ -88,23 +87,14 @@
     border-bottom: none;
   }
 
-}
+} // @media (max-width: @screen-sm-max)
 
-// @media (max-width: @screen-sm-max)
 
 //////////////////////////
 // tablet and larger
 @media (min-width: @screen-sm-min) {
 
   #global-footer {
-    .clear {
-      clear:none;
-    }
-
-    #bottom-logo {
-      margin-top: 5px;
-    }
-
     #bottom-text {
       margin-top: 2px;
 
@@ -114,28 +104,31 @@
           margin:0 15px 3px 0;
           padding:0;
           display:inline-block;
+          line-height: 1.5;
 
           &:last-of-type {
             margin-right: 0;
           }
         }
-
-        &#primary-links {
+        &#policy-links {
           li {
             a {
-              font-weight: 600;
+              font-weight: 300;
+              font-size: unit( round( (13 / 14), 5 ), em ); // 13px expressed as em's
             }
           }
         }
       }
 
       p.copyright {
-        padding-top: 5px;
+        font-weight: 300;
+        line-height: 1.5;
       }
     }
   }
 
-}
+} // @media (min-width: @screen-sm-min)
+
 
 //////////////////////////
 // tablet only
@@ -153,23 +146,39 @@
   }
 
   #global-footer {
+    #bottom-logo {
+      margin-top: 5px;
+    }
+
     #bottom-text {
       text-align: center;
 
       ul {
-        li {
-          font-size: 1.15em;
+        margin-bottom: .5em;
+
+        &#primary-links {
+          li {
+            a {
+              font-size: 1.075em; // 15px expressed as em's
+            }
+          }
+        }
+        &#policy-links {
+          li {
+            a {
+              font-size: 0.93em; // 13px expressed as em's
+            }
+          }
         }
       }
 
       p.copyright {
-        padding-top: 15px;
+        padding-top: 2px;
       }
     }
   }
-}
+} // @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)
 
-// @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)
 
 //////////////////////////
 // desktop
@@ -193,24 +202,18 @@
   }
 
   #global-footer {
-    #bottom-text{
+    #bottom-text {
       ul {
-        li {
-          a {
-            font-size: 1.14em;
-          }
-        }
+        margin-bottom: .2em;
       }
-
       p.copyright {
         text-align: left;
       }
     }
   }
 
-}
+} // @media (min-width: @screen-md-min)
 
-// @media (min-width: @screen-md-min)
 
 //////////////////////////
 // small desktop
@@ -222,9 +225,33 @@
   .auto-clear .col-md-3:nth-child(4n+1){clear:left;}
   .auto-clear .col-md-4:nth-child(3n+1){clear:left;}
   .auto-clear .col-md-6:nth-child(odd){clear:left;}
-}
 
-// @media (min-width: @screen-md-min) and (max-width: @screen-md-max)
+  #global-footer {
+    #bottom-text{
+      ul {
+        &#primary-links {
+          li {
+            a {
+              font-size: 1.143em; // 17px expressed as em's
+            }
+          }
+        }
+        &#policy-links {
+          li {
+            a {
+              font-size: 1.0083em; // 15px expressed as em's
+            }
+          }
+        }
+      }
+
+      p.copyright {
+        font-size: 1.07143em; // 15px expressed as em's
+      }
+    }
+  }
+} // @media (min-width: @screen-md-min) and (max-width: @screen-md-max)
+
 
 //////////////////////////
 // big desktop
@@ -236,6 +263,29 @@
   .auto-clear .col-lg-3:nth-child(4n+1){clear:left;}
   .auto-clear .col-lg-4:nth-child(3n+1){clear:left;}
   .auto-clear .col-lg-6:nth-child(odd){clear:left;}
-}
 
-// @media (min-width: @screen-lg-min)
+  #global-footer {
+    #bottom-text{
+      ul {
+        &#primary-links {
+          li {
+            a {
+              font-size: 1.2125em; // 18px expressed as em's
+            }
+          }
+        }
+        &#policy-links {
+          li {
+            a {
+              font-size: 1.075em; // 16px expressed as em's
+            }
+          }
+        }
+      }
+
+      p.copyright {
+        font-size: 1.15em; // 16px expressed as em's
+      }
+    }
+  }
+} // @media (min-width: @screen-lg-min)
