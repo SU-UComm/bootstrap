@@ -289,8 +289,10 @@ body.nav-6 #nav-6 a {
       ul {
         margin-bottom: .5em;
 
-        li {
-          font-size: 1.15em;
+        &#primary-links {
+          li {
+            font-size: unit( round( (15 / unit(@font-size-base)), 5 ), em ); // 15px expressed as em's
+          }
         }
         &#policy-links {
           li {
