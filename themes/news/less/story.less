@@ -387,6 +387,9 @@ article {
         a {
           text-decoration: underline;
         }
+        .btn a, a.btn {
+          text-decoration: none;
+        }
         .pull-left-wide,
         .pull-left-narrow,
         .pull-left-portrait,
@@ -536,6 +539,70 @@ article {
       font-weight:500;
       margin-top: .75em;
     }
+  }
+}
+
+.modal {
+  .modal-header {
+    background-color: @brand-primary;
+    h1, h2, h3, h4, h5, h6 {
+      color: #ffffff;
+    }
+  }
+  .modal-body {
+
+    .align-center,
+    .pull-right,
+    .pull-left {
+      img {
+        .img-responsive;
+      }
+
+      @media (max-width: @screen-xs-max) {
+        margin-top: .75em;
+        margin-bottom: 1.5em;
+      }
+    }
+    .inline,
+    .align-center{
+      margin-top: 2em;
+      margin-bottom:2em;
+      &.inset-width{
+        width:75%;
+      }
+    }
+    .pull-left-wide,
+    .pull-right-wide {
+      width: 70%;
+    }
+    .pull-left-narrow,
+    .pull-right-narrow{
+      width:50%;
+    }
+    .pull-left-portrait,
+    .pull-right-portrait{
+      width:40%;
+    }
+    .pull-left-wide,
+    .pull-left-narrow,
+    .pull-left-portrait{
+      margin: 0.35em 2em 1em 0;
+      @media (max-width: @screen-xs-max) {
+        margin-top: .75em;
+        margin-bottom: 1.5em;
+      }
+    }
+    .pull-right-wide,
+    .pull-right-narrow,
+    .pull-right-portrait{
+      margin: 0.35em 0 1em 2em;
+
+      @media (max-width: @screen-xs-max) {
+        margin-top: .75em;
+        margin-bottom: 1.5em;
+      }
+    }
+
   }
 }
 
