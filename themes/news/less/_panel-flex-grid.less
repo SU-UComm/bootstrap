@@ -1,0 +1,75 @@
+@import "_less.less";
+
+.flex-grid-container {
+  @_flex-gutter: 16px;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  min-height: 200px;
+
+  &.flex-grid-container--equal-height {
+    align-items: stretch;
+  }
+
+  .flex-grid__item {
+    flex: 0 0 auto;
+    margin-bottom: (@_flex-gutter + 1px);
+    width: 100%; // mobile-first
+  }
+  &.flex-grid-container--columns-5 {
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+      .flex-grid__item {
+        max-width: ~"calc( ( 100% - (@{_flex-gutter} * 2) ) / 3 )";
+      }
+    }
+    @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+      .flex-grid__item {
+        max-width: ~"calc( ( 100% - (@{_flex-gutter} * 3) ) / 4 )";
+      }
+    }
+    @media (min-width: @screen-lg-min) {
+      .flex-grid__item {
+       max-width: ~"calc( ( 100% - (@{_flex-gutter} * 4) ) / 5 )";
+      }
+    }
+  }
+  &.flex-grid-container--columns-4 {
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+      .flex-grid__item {
+        max-width: ~"calc( ( 100% - @{_flex-gutter} ) / 2 )";
+      }
+    }
+    @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+      .flex-grid__item {
+        max-width: ~"calc( ( 100% - (@{_flex-gutter} * 2) ) / 3 )";
+      }
+    }
+    @media (min-width: @screen-lg-min) {
+      .flex-grid__item {
+        max-width: ~"calc( ( 100% - (@{_flex-gutter} * 3) ) / 4 )";
+      }
+    }
+  }
+  &.flex-grid-container--columns-3 {
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+      .flex-grid__item {
+       max-width: ~"calc( ( 100% - @{_flex-gutter} ) / 2 )";
+      }
+    }
+    @media (min-width: @screen-md-min) {
+      .flex-grid__item {
+       max-width: ~"calc( ( 100% - (@{_flex-gutter} * 2) ) / 3 )";
+      }
+    }
+  }
+  &.flex-grid-container--columns-2 {
+    @media (min-width: @screen-md-min) {
+      .flex-grid__item {
+       max-width: ~"calc( ( 100% - @{_flex-gutter} ) / 2 )";
+      }
+    }
+  }
+}
