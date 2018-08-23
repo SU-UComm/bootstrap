@@ -2,13 +2,19 @@
 
 .flex-grid-container {
   @_flex-gutter: 16px;
+  @_flex-gutter--half: (@_flex-gutter / 2);
 
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   align-content: flex-start;
   min-height: 200px;
+
+  @media (min-width: @screen-sm-min) {
+    margin-left:  -@_flex-gutter--half;
+    margin-right: -@_flex-gutter--half;
+  }
 
   &.flex-grid-container--equal-height {
     align-items: stretch;
@@ -17,58 +23,65 @@
   .flex-grid__item {
     flex: 0 0 auto;
     margin-bottom: (@_flex-gutter + 1px);
-    width: 100%; // mobile-first
+    width: 100%;
+    margin-left:  @_flex-gutter--half;
+    margin-right: @_flex-gutter--half;
   }
   &.flex-grid-container--columns-5 {
     @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
       .flex-grid__item {
-        max-width: ~"calc( ( 100% - (@{_flex-gutter} * 2) ) / 3 )";
+        max-width: ~"calc( ( 100% / 3 ) - @{_flex-gutter} )";
       }
     }
     @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
       .flex-grid__item {
-        max-width: ~"calc( ( 100% - (@{_flex-gutter} * 3) ) / 4 )";
+        max-width: ~"calc( ( 100% / 4 ) - @{_flex-gutter} )";
       }
     }
     @media (min-width: @screen-lg-min) {
       .flex-grid__item {
-       max-width: ~"calc( ( 100% - (@{_flex-gutter} * 4) ) / 5 )";
+        max-width: ~"calc( ( 100% / 5 ) - @{_flex-gutter} )";
       }
     }
   }
   &.flex-grid-container--columns-4 {
     @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
       .flex-grid__item {
-        max-width: ~"calc( ( 100% - @{_flex-gutter} ) / 2 )";
+        max-width: ~"calc( ( 100% / 2 ) - @{_flex-gutter} )";
       }
     }
     @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
       .flex-grid__item {
-        max-width: ~"calc( ( 100% - (@{_flex-gutter} * 2) ) / 3 )";
+        max-width: ~"calc( ( 100% / 3 ) - @{_flex-gutter} )";
       }
     }
     @media (min-width: @screen-lg-min) {
       .flex-grid__item {
-        max-width: ~"calc( ( 100% - (@{_flex-gutter} * 3) ) / 4 )";
+        max-width: ~"calc( ( 100% / 4 ) - @{_flex-gutter} )";
       }
     }
   }
   &.flex-grid-container--columns-3 {
     @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
       .flex-grid__item {
-       max-width: ~"calc( ( 100% - @{_flex-gutter} ) / 2 )";
+        max-width: ~"calc( ( 100% / 2 ) - @{_flex-gutter} )";
       }
     }
     @media (min-width: @screen-md-min) {
       .flex-grid__item {
-       max-width: ~"calc( ( 100% - (@{_flex-gutter} * 2) ) / 3 )";
+        max-width: ~"calc( ( 100% / 3 ) - @{_flex-gutter} )";
       }
     }
   }
   &.flex-grid-container--columns-2 {
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+      margin-left:  0;
+      margin-right: 0;
+    }
+
     @media (min-width: @screen-md-min) {
       .flex-grid__item {
-       max-width: ~"calc( ( 100% - @{_flex-gutter} ) / 2 )";
+        max-width: ~"calc( ( 100% / 2 ) - @{_flex-gutter} )";
       }
     }
   }
