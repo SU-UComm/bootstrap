@@ -30,46 +30,46 @@
   &.flex-grid-container--columns-5 {
     @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
       .flex-grid__item {
-        max-width: ~"calc( ( 100% / 3 ) - @{_flex-gutter} )";
+        max-width: ~"calc( 33.33% - @{_flex-gutter} )"; // 3-up
       }
     }
     @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
       .flex-grid__item {
-        max-width: ~"calc( ( 100% / 4 ) - @{_flex-gutter} )";
+        max-width: ~"calc( 25% - @{_flex-gutter} )"; // 4-up
       }
     }
     @media (min-width: @screen-lg-min) {
       .flex-grid__item {
-        max-width: ~"calc( ( 100% / 5 ) - @{_flex-gutter} )";
+        max-width: ~"calc( 20% - @{_flex-gutter} )"; // 5-up
       }
     }
   }
   &.flex-grid-container--columns-4 {
     @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
       .flex-grid__item {
-        max-width: ~"calc( ( 100% / 2 ) - @{_flex-gutter} )";
+        max-width: ~"calc( 50% - @{_flex-gutter} )"; // 2-up
       }
     }
     @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
       .flex-grid__item {
-        max-width: ~"calc( ( 100% / 3 ) - @{_flex-gutter} )";
+        max-width: ~"calc( 33.33% - @{_flex-gutter} )"; // 3-up
       }
     }
     @media (min-width: @screen-lg-min) {
       .flex-grid__item {
-        max-width: ~"calc( ( 100% / 4 ) - @{_flex-gutter} )";
+        max-width: ~"calc( 25% - @{_flex-gutter} )"; // 4-up
       }
     }
   }
   &.flex-grid-container--columns-3 {
     @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
       .flex-grid__item {
-        max-width: ~"calc( ( 100% / 2 ) - @{_flex-gutter} )";
+        max-width: ~"calc( 50% - @{_flex-gutter} )"; // 2-up
       }
     }
     @media (min-width: @screen-md-min) {
       .flex-grid__item {
-        max-width: ~"calc( ( 100% / 3 ) - @{_flex-gutter} )";
+        max-width: ~"calc( 33.33% - @{_flex-gutter} )"; // 3-up
       }
     }
   }
@@ -81,7 +81,7 @@
 
     @media (min-width: @screen-md-min) {
       .flex-grid__item {
-        max-width: ~"calc( ( 100% / 2 ) - @{_flex-gutter} )";
+        max-width: ~"calc( 50% - @{_flex-gutter} )"; // 2-up
       }
     }
   }
