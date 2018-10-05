@@ -7,62 +7,66 @@
   .masonry-item {
     float: left;
     margin-bottom: (@_masonry-gutter + 1px);
+  }
+  // .masonry-sizer is used by the masonry-highlight panel, but it's styled
+  // here so the width stays the same as .masonry-item's
+  .masonry-item, .masonry-sizer {
     width: 100%; // mobile-first
   }
   &.columns-5 {
     @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-      .masonry-item {
+      .masonry-item, .masonry-sizer {
         width: ~"calc((100% - (@{_masonry-gutter} * 2)) / 3)";
       }
     }
     @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-      .masonry-item {
+      .masonry-item, .masonry-sizer {
         width: ~"calc((100% - (@{_masonry-gutter} * 3)) / 4)";
       }
     }
     @media (min-width: @screen-lg-min) {
-      .masonry-item {
+      .masonry-item, .masonry-sizer {
         width: ~"calc((100% - (@{_masonry-gutter} * 4)) / 5)";
       }
     }
   }
   &.columns-4 {
     @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-      .masonry-item {
+      .masonry-item, .masonry-sizer {
         width: ~"calc((100% - (@{_masonry-gutter} * 2)) / 3)";
       }
     }
     @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-      .masonry-item {
+      .masonry-item, .masonry-sizer {
         width: ~"calc((100% - (@{_masonry-gutter} * 3)) / 4)";
       }
     }
     @media (min-width: @screen-lg-min) {
-      .masonry-item {
+      .masonry-item, .masonry-sizer {
         width: ~"calc( (100% - (@{_masonry-gutter} * 3)) / 4)";
       }
     }
   }
   &.columns-3 {
     @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-      .masonry-item {
+      .masonry-item, .masonry-sizer {
         width: ~"calc((100% - (@{_masonry-gutter} * 1)) / 2)";
       }
     }
     @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-      .masonry-item {
+      .masonry-item, .masonry-sizer {
         width: ~"calc((100% - (@{_masonry-gutter} * 2)) / 3)";
       }
     }
     @media (min-width: @screen-lg-min) {
-      .masonry-item {
+      .masonry-item, .masonry-sizer {
         width: ~"calc((100% - (@{_masonry-gutter} * 2)) / 3)";
       }
     }
   }
   &.columns-2 {
     @media (min-width: @screen-md-min) {
-      .masonry-item {
+      .masonry-item, .masonry-sizer {
         width: ~"calc((100% - (@{_masonry-gutter} * 2)) / 2)";
       }
     }
