@@ -2,11 +2,18 @@
 
 .panel.panel-card {
 
+  backface-visibility: hidden;
+  perspective: 1000px;
+
   .card-content {
 
     a {
       color: @su-red-text;
       text-decoration: underline;
+    }
+
+    .btn a {
+      color: #fff;
     }
 
     > *:last-child {
@@ -26,4 +33,62 @@
     }
   } // @media (max-width: @screen-sm-max)
 
+}
+
+// Only for Masonry Highlight panels
+.masonry-highlight {
+
+  .panel.panel-card {
+    padding: 0 0 1.2em 0;
+
+    .card-content {
+      padding: 0;
+
+      .meta {
+        padding: 16px 20px;
+        font-size: 16px;
+        line-height: 1.2;
+        letter-spacing: .03em;
+        background: #eee;
+        color: #000;
+      }
+
+      p {
+        padding: 0 20px;
+      }
+
+      h3 {
+        padding-top: 10px;
+      }
+
+      h3, h4, h5, h6, ul, ol {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      div {
+        padding: 0 20px;
+
+        &.embed-container {
+          padding-bottom: 56.25%;
+          width: ~"calc(100% - 40px)";
+          margin: 0 auto;
+        }
+
+        p {
+          padding: 0;
+        }
+      }
+    }
+
+    .card-photo {
+      margin-top: 22px;
+      padding-right: 20px;
+      padding-bottom: 6px;
+
+      @media (max-width: @screen-xs-max) {
+        padding-right: 20px!important;
+      }
+    }
+  }
 }

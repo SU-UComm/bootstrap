@@ -1,0 +1,102 @@
+@import "_less.less";
+
+.masonry-highlight {
+
+  //text-align:center;
+
+  .topic-filter {
+
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      height: 0;
+      width: 0;
+      opacity: 0;
+      z-index: -1000;
+      position: absolute;
+      left: -99999px;
+
+      & + label {
+        display: inline-block;
+        margin: 0 -1px 8px;
+        background: #fff;
+        padding: 6px 16px 7px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.2;
+        color: #333;
+        text-align: center;
+        z-index: 100;
+        cursor: pointer;
+        border: 2px solid #a29786;
+        transition: all .3s ease-in-out;
+      }
+
+      //works only in firefox for now
+      &:focus:not(:focus-visible) + label {
+        outline: none;
+      }
+
+      &:checked + label {
+        background: #5f574f;
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      &:hover + label {
+        box-shadow: inset 0 0 4px 0 rgba(33, 33, 33, .4),
+        inset 0 0 10px 0 rgba(82, 60, 3, .1);
+        text-decoration: underline;
+        background: rgba(255, 255, 255, .4);
+      }
+
+      &:checked:hover + label {
+        background: #5f574f;
+        box-shadow: none;
+        cursor: default;
+      }
+
+    }
+
+  }
+
+  .panel.panel-card {
+    filter: gray;
+    filter: grayscale(100%);
+    opacity: .4;
+
+    &.card--highlight {
+      filter: none;
+      filter: grayscale(0%);
+      opacity: 1;
+      box-shadow: rgba(0,0,0,.2) 0 0 4px, rgba(0,0,0,.14) 0 0 20px;
+    }
+  }
+
+}
+
+// only show outline for keyboard users
+body.user-is-tabbing {
+
+  .masonry-highlight .topic-filter {
+
+    input[type="radio"],
+    input[type="checkbox"] {
+
+      &:focus + label {
+        outline: 5px #5e9ed6 solid;
+        outline: 5px -webkit-focus-ring-color auto;
+        outline-offset: 2px;
+        z-index: 2000;
+      }
+
+    }
+
+  }
+
+}
