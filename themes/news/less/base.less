@@ -180,21 +180,40 @@ input:-ms-input-placeholder {
   }
 }
 
+/*
 .abs-right,
 .abs-left {
   .center-vertical(absolute);
 }
+
 .abs-left {
   left: 10px;
 }
 .abs-right {
   right: 10px;
 }
+*/
 
 .btn {
   line-height: 1;
-  padding: 0; // put the padding on the <a> tag so the whole button is clickable
+  padding: 0!important; // put the padding on the <a> tag so the whole button is clickable
   font-size: @font-size-small;
+  margin-bottom: 10px;
+
+  & .abs-right {
+    float: right;
+    padding-right: 0;
+  }
+
+  & .abs-left {
+    float: left;
+    padding-left: 0;
+  }
+
+  & .abs-auto {
+    float: none;
+    padding-right: 0;
+  }
 
   a { // format when a is nested within, e.g. <div class="btn">
     display: block;
@@ -203,20 +222,25 @@ input:-ms-input-placeholder {
     padding: 0.75em;
     font-weight: normal;
     text-transform: capitalize;
-    text-decoration: none;
+    text-decoration: none!important;
 
     &:hover, &:focus, &:active {
       text-decoration: none;
     }
   }
   a& { // format when .btn is directly on the <a> or the <input>, i.e. <a class="btn">
-    padding: 0.5em 0.75em;
+    padding: 0.5em 0.75em!important;
     font-weight: normal;
     text-decoration: none;
   }
   .modal &,
   input& {
-    padding: 0.5em 0.75em;
+    padding: 0.5em 0.75em!important;
+    margin-bottom: 0;
+  }
+
+  i {
+    padding: 0 6px;
   }
 }
 .btn-primary {
@@ -232,11 +256,20 @@ input:-ms-input-placeholder {
 
 .btn-three {
   .su-btn(@su-sage-gray);
-  margin-bottom: 10px;
+  //margin-bottom: 10px;
 }
 
 .btn-four {
   .su-btn(@su-red);
+}
+
+.btn-fullwidth {
+  display: block;
+}
+
+.btn-auto {
+  display: inline-block;
+  margin-right: .5em;
 }
 
 .btn-su-alert {
